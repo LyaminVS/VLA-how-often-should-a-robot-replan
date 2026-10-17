@@ -1,0 +1,66 @@
+{
+  "model_id": "HuggingFaceVLA/smolvla_libero",
+  "model_revision": "6721902bc4d61e50a3bfdb11dfb4cb626f05d102",
+  "backbone_id": "HuggingFaceTB/SmolVLM2-500M-Instruct",
+  "backbone_revision": "7b375e1b73b11138ff12fe22c8f2822d8fe03467",
+  "tasks": [
+    {
+      "suite": "libero_object",
+      "name": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "max_steps": 280
+    },
+    {
+      "suite": "libero_spatial",
+      "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "max_steps": 280
+    },
+    {
+      "suite": "libero_goal",
+      "name": "open_the_middle_drawer_of_the_cabinet",
+      "max_steps": 300
+    }
+  ],
+  "intervals": [
+    1,
+    5,
+    10,
+    25,
+    50
+  ],
+  "order_seed": 20261017,
+  "chunk_size": 50,
+  "num_denoising_steps": 10,
+  "control_hz": 20,
+  "settle_steps": 10,
+  "precision": "fp32",
+  "record_video": true,
+  "warmup_calls": 2,
+  "name": "full",
+  "initial_states": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "policy_seeds": [
+    11,
+    29,
+    47
+  ]
+}

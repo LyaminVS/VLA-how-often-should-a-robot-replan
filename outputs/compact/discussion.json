@@ -1,0 +1,41 @@
+{
+  "findings": [
+    "In this series, K=5 achieved 5 successes out of 6, K=10 achieved 4/6, and K=1,25,50 achieved 2/6 each. These are results for six selected situations, not evidence of a universal optimum. For the bowl, the best interval changed: K=1/5 completed state 0, whereas only K=50 completed state 1.",
+    "K=1 required an average of 228.2 model calls and 180.6 s for model inference and simulation; K=10 required 17.8 calls and 17.8 s; K=50 required 5.2 calls and 9.6 s. Even with the same successful outcome for drawer state 1, K=1 made 154 calls versus 11 for K=10. More frequent feedback did not reach the goal sooner here.",
+    "For the can in state 1, K=10 completed the task, whereas K=25 lost the can at steps 93–96. Replanning at 100 did not lead to recovery: the empty hand continued along its path. A new observation provides an opportunity to correct an error, but the policy need not use it.",
+    "For the drawer in state 0 at K=25, after an unsuccessful pull at 105–135, the hand approached again at 140–200 and opened the drawer at 205–228. Replans at 125/150 coincided with the changed approach. This is an observed correction; its causal dependence on the new observation was not tested separately."
+  ],
+  "cases": [
+    {
+      "title": "Can: object loss at K=25",
+      "episode_ids": [
+        "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s1__r11__k10",
+        "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s1__r11__k25"
+      ],
+      "observation": "K=10 carries the can and completes the task at 136. At K=25, the can is held at approximately 55–92, then falls outside the basket at 93–96; after the update at 100, the empty hand continues towards the basket. The gripper command remains closing during the loss.",
+      "hypothesis": "Slipping or unfavorable contact geometry are possible explanations. A longer interval leaves more motion without a new observation, but even the next plan does not recover the grasp. Contact forces were not recorded, so the exact cause is unknown.",
+      "evidence": "Two cameras: steps 55–100. steps.jsonl: grip at 85–100 ≈ +0.987…+1; fingers converge after the loss. chunks.jsonl: updates at 75 and 100. The annotation records one clear drop; the number of early missed grasps is unknown."
+    },
+    {
+      "title": "Bowl: infrequent updates can work",
+      "episode_ids": [
+        "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s1__r11__k5",
+        "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s1__r11__k50"
+      ],
+      "observation": "K=50 carries the bowl to the plate edge at approximately 50–75; after the update at 150, it returns and adjusts the position at 160–190, succeeding at 191. K=5 interacts near the plate and tilts it, but does not reach the goal within 280 steps.",
+      "hypothesis": "Executing a long action chunk may have preserved motion consistency. One example cannot establish this: in state 0, K=5 succeeds and K=50 fails. The initial scene geometry affects the outcome.",
+      "evidence": "K=50: 4 calls, 8.24 s for model + simulation. K=5: 56 calls, 50.29 s. Video: plate contact at 107–118/199–204 for K=5; return at 160–190 for K=50. Ambiguous grasp events are not treated as zero."
+    },
+    {
+      "title": "Drawer: same success, different cost",
+      "episode_ids": [
+        "libero_goal__open_the_middle_drawer_of_the_cabinet__s1__r11__k1",
+        "libero_goal__open_the_middle_drawer_of_the_cabinet__s1__r11__k10"
+      ],
+      "observation": "Both settings open the drawer. K=1 succeeds after 154 steps and 154 calls; K=10 after 109 steps and 11 calls. The gripper stays open: motion relies on contact with the handle rather than finger closure.",
+      "hypothesis": "Rebuilding the plan after every step may have disrupted a consistent pull. This cause is not established; the reliable measurements show only that K=1 had no outcome advantage and had a higher cost.",
+      "evidence": "summary.json and video: K=1 — 121.27 s for model + simulation; K=10 — 10.62 s. Paired initial states and observations match. Zero missed finger grasps does not imply zero failures to engage the handle."
+    }
+  ],
+  "conclusion": "Replanning frequency creates a trade-off between updating the observation, motion consistency, and computational cost. Across the six tested situations, K=5 produced the most successes; K=10 was close in success rate and cheaper, whereas K=50 sharply reduced the number of calls but lost some successful outcomes. K=1 did not deliver the highest success rate and was the most expensive setting. Choosing an operating K requires testing on new initial states. The current data support a non-monotonic relationship, but do not determine a universal frequency."
+}

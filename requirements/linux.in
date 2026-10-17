@@ -1,0 +1,15 @@
+# Linux x86_64, Python 3.12, NVIDIA driver compatible with the installed CUDA wheels.
+# Torch 2.7 / TorchCodec 0.3 are a matched pair. Avoid CUDA 13 wheels on RTX 2060.
+lerobot[smolvla,libero,evaluation]==0.6.1
+# egl_probe builds from source and invokes cmake; keep the pre-4.x policy behavior.
+cmake==3.31.6
+hf-libero==0.1.4
+mujoco==3.3.2
+torch==2.7.1
+torchvision==0.22.1
+torchcodec==0.3.0
+numpy==2.2.6
+matplotlib==3.10.8
+Pillow==11.3.0
+imageio==2.37.0
+imageio-ffmpeg==0.6.0

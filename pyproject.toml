@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=71"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vla-replan"
+version = "0.1.0"
+description = "Paired experiments on action execution horizons in SmolVLA / LIBERO"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+analysis = ["numpy==2.2.6", "matplotlib==3.10.8", "Pillow==11.3.0", "imageio==2.37.0", "imageio-ffmpeg==0.6.0"]
+report = ["reportlab==4.4.9", "pypdf==6.10.0"]
+dev = ["pytest==8.4.2", "ruff==0.14.1"]
+
+[project.scripts]
+vla-replan = "vla_replan.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["vla_replan*"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = ["E501"]

@@ -1,0 +1,40 @@
+{
+  "scope": "libero_object / pick_up_the_alphabet_soup_and_place_it_in_the_basket / state1 / policy_seed11 / K1,5,10,25,50",
+  "method": "All sheets in the five sets were visually reviewed: every 5th frame, ±2 steps around changes in the sign of grip, the last action frame and the final frame; both cameras. For K25, every frame at 36–107 was additionally reviewed; for K50, every frame at 36–71 and an enlarged view at 40–65. This is visual annotation by the assistant, not an independent expert review. reviewed=no means that counts remain uncertain after review. Events were not inferred automatically from gripper_close_commands.",
+  "cases": [
+    {
+      "case": "Frequent updates do not guarantee completion",
+      "observation": "From the same initial state, K1 gets stuck near the tilted can and reaches the limit of 280; K5/K10 grasp, carry, and place it in the basket in 145/136 steps. The model is called 280/29/14 times; rollout_wall_s≈223.97/26.62/14.94.",
+      "hypothesis": "Executing only the first action of each new plan may disrupt a continuous grasping phase and amplify oscillations in the gripper command. This explanation is consistent with the behavior in these videos but is not established: the comparison contains one state/seed pair, and subsequent context and the sequence of random model samples diverge.",
+      "evidence": [
+        "k1: sheet_001 steps45–54; sheets_002…014 steps55–280",
+        "k5: sheet_001…003, final145 SUCCESS",
+        "k10: sheet_001…003, final136 SUCCESS",
+        "All five summary.json files have initial_state_sha256=2fe669827623c130cb212d851d2ac5189aa22d888856b2c056ee744b2b698bcc and initial_observation_sha256=5bb3c25ef3ffeaa4d42b84fff9cf1b442f9449b6877ea026dc51f151e51e0272."
+      ]
+    },
+    {
+      "case": "K25 loses retention within the 75–99 interval",
+      "observation": "The can is held during transport until 92, then falls outside the basket at 93–96. The grip command continues to request closing, and the fingers converge. The new observation at 100 does not lead to a return to the can; the hand continues towards the basket.",
+      "hypothesis": "Slipping during transport or insufficient contact geometry/force are possible, but contact forces and the exact object state were not logged. The video and commands do not support an explanation based on a premature opening command. The lack of a new observation before 100 may have delayed the response, but even after 100 there is no clear recovery.",
+      "evidence": [
+        "review/object-state1/k25-every-frame/sheet_005.png steps72–89",
+        "review/object-state1/k25-every-frame/sheet_006.png steps90–107",
+        "steps85–100: min(action[6])≈0.98656, max=1.0; previous replan75, next100",
+        "gripper qpos step90=[0.017691,-0.017405], step95=[0.004115,-0.003776], step100=[0.001312,-0.001031] (observations before the corresponding action)",
+        "review/object-state1/k25/sheet_003.png … sheet_005.png: no recovery before 280"
+      ]
+    },
+    {
+      "case": "Unstable initial grasp at K50",
+      "observation": "After closing at 45, the can briefly moves upwards around 54–55, separates from the fingers at 57–60, and the hand continues towards the basket empty. A failed grasp cannot be clearly distinguished from very brief retention followed by a drop.",
+      "hypothesis": "Insufficiently precise alignment or unstable contact before lifting may have caused the loss. A specific cause cannot be asserted without contact telemetry. Replanning at 50 occurs before separation; the next update at 100 occurs after it, but even the later observation does not trigger a return.",
+      "evidence": [
+        "review/object-state1/k50-grasp-detail.png (steps40,45,50,52,54,55,56,57,58,59,60,65)",
+        "review/object-state1/k50-every-frame/sheet_003.png, sheet_004.png",
+        "steps50–65: action[6]>0; qpos at 60≈[0.001208,-0.001188]",
+        "review/object-state1/k50/sheet_002.png … sheet_004.png: empty hand near the basket, final280 time_limit"
+      ]
+    }
+  ]
+}

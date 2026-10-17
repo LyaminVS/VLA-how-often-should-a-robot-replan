@@ -1,0 +1,47 @@
+[
+  {
+    "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__k1",
+    "reviewed": "no",
+    "missed_grasps": null,
+    "dropped_objects": null,
+    "correction_after_replan": "yes",
+    "failure_category": "timeout",
+    "notes": "Annotation by the assistant using frames and logs. Transfer of visual observations from the technical test video is permitted after verifying that all actions and decoded frames fully match this main episode; see review-object-state0-equivalence.json. PRELIMINARY: outputs/remote-smoke was reviewed, not compact. Transfer to the main annotation is permitted only after separate confirmation of complete equality of actions and decoded frames. All 8 sheets were reviewed, with 141 selected frames at 0–280. After closing around 45–50, the can briefly follows the fingers at 55–57, then separates at 58–60. The hand descends towards it again at 85–95; a new closing command occurs at 95, after which the hand rises again without sustained transport at 105–110. Another approach is visible at 125–140, then the hand stays near the can until 280. Exact numbers of missed grasps and brief holds followed by loss cannot be distinguished: single-frame grip changes and partial occlusion do not allow each of the 22 gripper_close_commands to be counted as a separate error. correction=yes means only a visible return to the target at 85–95 after the previous separation; chunks.jsonl confirms new plans at every step at 80–100. This is neither proof of causality nor a successful recovery. Evidence: outputs/remote-smoke/review/object-state0/k1/sheet_001.png … sheet_008.png; steps/chunks85–105."
+  },
+  {
+    "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__k5",
+    "reviewed": "yes",
+    "missed_grasps": 0,
+    "dropped_objects": 0,
+    "correction_after_replan": "unclear",
+    "failure_category": "none",
+    "notes": "Annotation by the assistant using frames and logs. Transfer of visual observations from the technical test video is permitted after verifying that all actions and decoded frames fully match this main episode; see review-object-state0-equivalence.json. PRELIMINARY: outputs/remote-smoke was reviewed, not compact. Transfer to the main annotation is permitted only after separate confirmation of complete equality of actions and decoded frames. All 3 sheets were reviewed, with 53 selected frames. A continuous grasp at 45–55, lifting/transport with retention at 60–115, then positioning above the basket at 120–149. Grip changes at 133–150 occur during placement: the can is not lost outside the basket. At 151–152, it is released inside, with the outcome success152. No distinct missed grasps or unintended drops are observed; 4 gripper_close_commands do not equal the number of errors. A specific useful correction after a replan cannot be visually separated from ordinary execution. Evidence: outputs/remote-smoke/review/object-state0/k5/sheet_001.png … sheet_003.png."
+  },
+  {
+    "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__k10",
+    "reviewed": "yes",
+    "missed_grasps": 0,
+    "dropped_objects": 0,
+    "correction_after_replan": "unclear",
+    "failure_category": "none",
+    "notes": "Annotation by the assistant using frames and logs. Transfer of visual observations from the technical test video is permitted after verifying that all actions and decoded frames fully match this main episode; see review-object-state0-equivalence.json. PRELIMINARY: outputs/remote-smoke was reviewed, not compact. Transfer to the main annotation is permitted only after separate confirmation of complete equality of actions and decoded frames. All 3 sheets were reviewed, with 43 selected frames. Closing at 44–46, continuous lifting at 55–65, and transport at 70–115. A single-frame negative grip at 120 is not accompanied by visible loss; planned release at 130–137 occurs above the basket and ends in success137. No distinct missed grasps or unintended drops are observed. A specific useful correction after a replan is not established. Evidence: outputs/remote-smoke/review/object-state0/k10/sheet_001.png … sheet_003.png."
+  },
+  {
+    "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__k25",
+    "reviewed": "yes",
+    "missed_grasps": 0,
+    "dropped_objects": 0,
+    "correction_after_replan": "unclear",
+    "failure_category": "none",
+    "notes": "Annotation by the assistant using frames and logs. Transfer of visual observations from the technical test video is permitted after verifying that all actions and decoded frames fully match this main episode; see review-object-state0-equivalence.json. PRELIMINARY: outputs/remote-smoke was reviewed, not compact. Transfer to the main annotation is permitted only after separate confirmation of complete equality of actions and decoded frames. Both sheets were reviewed, with 33 selected frames. One continuous grasp at 46–55, retention during transport at 60–110, and lowering of the can into the basket at 115–121. A brief negative grip at 49 is not counted as a separate missed grasp: qpos converges at 48=[0.03732,-0.03734], 49=[0.03395,-0.03396], 50=[0.03270,-0.03134], and no return to the open position or distinct new approach is visible. No unintended losses are observed. An important limitation of the result: env success at step 121 is reached with action[6]120≈+1 and visible contact between the fingers and the can; the video ends before explicit release. This is success according to the environment criterion, not evidence of fully completed release. A specific useful correction after a replan is not established. Evidence: outputs/remote-smoke/review/object-state0/k25/sheet_001.png, sheet_002.png; steps46–50,119–120."
+  },
+  {
+    "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__k50",
+    "reviewed": "yes",
+    "missed_grasps": 0,
+    "dropped_objects": 0,
+    "correction_after_replan": "unclear",
+    "failure_category": "none",
+    "notes": "Annotation by the assistant using frames and logs. Transfer of visual observations from the technical test video is permitted after verifying that all actions and decoded frames fully match this main episode; see review-object-state0-equivalence.json. PRELIMINARY: outputs/remote-smoke was reviewed, not compact. Transfer to the main annotation is permitted only after separate confirmation of complete equality of actions and decoded frames. All 3 sheets were reviewed, with 37 selected frames. One closing at 45, successful lifting at 55–65, and retention during transport at 70–115. The opening command at 121–123 is executed above the basket; release is visible at 130–132, with the outcome success132. No distinct missed grasps or unintended drops are observed. New plans at 50/100 do not allow a distinct useful correction to be identified from one video. Evidence: outputs/remote-smoke/review/object-state0/k50/sheet_001.png … sheet_003.png."
+  }
+]

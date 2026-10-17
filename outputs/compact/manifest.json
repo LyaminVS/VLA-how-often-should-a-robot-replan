@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "data_kind": "real_libero",
+  "created_utc": "2026-10-17T16:57:50.172060+00:00",
+  "config_fingerprint": "077d7985f55beedf7f738c9dda9e9f1d226110e3d9e82f98c4c7a78970509eee",
+  "config": {
+    "name": "compact",
+    "model_id": "HuggingFaceVLA/smolvla_libero",
+    "model_revision": "6721902bc4d61e50a3bfdb11dfb4cb626f05d102",
+    "backbone_id": "HuggingFaceTB/SmolVLM2-500M-Instruct",
+    "backbone_revision": "7b375e1b73b11138ff12fe22c8f2822d8fe03467",
+    "tasks": [
+      {
+        "suite": "libero_object",
+        "name": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+        "max_steps": 280
+      },
+      {
+        "suite": "libero_spatial",
+        "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+        "max_steps": 280
+      },
+      {
+        "suite": "libero_goal",
+        "name": "open_the_middle_drawer_of_the_cabinet",
+        "max_steps": 300
+      }
+    ],
+    "intervals": [
+      1,
+      5,
+      10,
+      25,
+      50
+    ],
+    "initial_states": [
+      0,
+      1
+    ],
+    "policy_seeds": [
+      11
+    ],
+    "order_seed": 20261017,
+    "chunk_size": 50,
+    "num_denoising_steps": 10,
+    "control_hz": 20,
+    "settle_steps": 10,
+    "precision": "fp32",
+    "record_video": true,
+    "warmup_calls": 2
+  },
+  "runtime": {
+    "python": "3.12.3",
+    "system": "Linux",
+    "machine": "x86_64",
+    "packages": {
+      "lerobot": "0.6.1",
+      "hf-libero": "0.1.4",
+      "mujoco": "3.3.2",
+      "robosuite": "1.4.0",
+      "torch": "2.7.1",
+      "torchvision": "0.22.1",
+      "transformers": "5.5.4",
+      "numpy": "2.2.6",
+      "Pillow": "11.3.0",
+      "imageio": "2.37.0",
+      "imageio-ffmpeg": "0.6.0",
+      "huggingface-hub": "1.33.0"
+    },
+    "code_sha256": "d96cfeded0dc6e1ca630d2fbdc9f23e1cdf51806bfbe14211327200da412902e",
+    "dependency_lock_sha256": "8574b51f0fad0b6ec40c02b3c6192da4606e30a94fd8dc1e18068b461d81212a",
+    "simulator_assets": {
+      "repo_id": "lerobot/libero-assets",
+      "revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6"
+    },
+    "render_backend": "egl",
+    "cpu_count": 12
+  },
+  "hardware": {
+    "device": "NVIDIA GeForce RTX 2060",
+    "vram_bytes": 6014369792,
+    "cuda": "12.6",
+    "precision": "fp32",
+    "deterministic_algorithms": true,
+    "torch_cpu_threads": 6
+  },
+  "git": {
+    "commit": null,
+    "status": null
+  },
+  "planned_episode_ids": [
+    "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s1__r11__k5",
+    "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s1__r11__k1",
+    "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s1__r11__k50",
+    "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s1__r11__k10",
+    "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s1__r11__k25",
+    "libero_goal__open_the_middle_drawer_of_the_cabinet__s1__r11__k5",
+    "libero_goal__open_the_middle_drawer_of_the_cabinet__s1__r11__k1",
+    "libero_goal__open_the_middle_drawer_of_the_cabinet__s1__r11__k10",
+    "libero_goal__open_the_middle_drawer_of_the_cabinet__s1__r11__k50",
+    "libero_goal__open_the_middle_drawer_of_the_cabinet__s1__r11__k25",
+    "libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__k10",
+    "libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__k25",
+    "libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__k1",
+    "libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__k50",
+    "libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__k5",
+    "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s1__r11__k5",
+    "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s1__r11__k1",
+    "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s1__r11__k50",
+    "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s1__r11__k25",
+    "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s1__r11__k10",
+    "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__k5",
+    "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__k25",
+    "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__k50",
+    "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__k10",
+    "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__k1",
+    "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__k25",
+    "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__k10",
+    "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__k5",
+    "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__k1",
+    "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__k50"
+  ]
+}
