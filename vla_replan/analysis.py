@@ -68,7 +68,7 @@ def load_results(root, allow_incomplete=False):
                 raise ValueError(f"Invalid metric: {field}")
         rows.append(row)
     if not rows:
-        raise ValueError("No completed real episodes. Run the smoke experiment on Linux first.")
+        raise ValueError("No completed real episodes. Run the smoke experiment first.")
     groups = defaultdict(list)
     for row in rows:
         groups[(row["suite"], row["task"], row["state"])].append(row)

@@ -95,6 +95,22 @@ The implementation is in `vla_replan/`, experiment configurations in `configs/`,
 and model revisions, checks initial conditions, and supports resuming interrupted runs.
 Execution details are provided in the documentation.
 
+## Native Apple Silicon macOS
+
+The runner also supports MPS inference and GLFW rendering on Apple Silicon. Install
+from the dedicated macOS lock, then run a smoke check in a new output directory:
+
+```bash
+bash scripts/macos_setup.sh
+bash scripts/run_macos.sh configs/smoke.json outputs/mac-smoke --limit 1
+```
+
+`--device auto` selects CUDA on Linux or MPS on macOS; `--device mps` is explicit.
+See [macOS setup, measurement and reproducibility](docs/macos.md) for the EGL dependency
+override, CPU-generated sampling noise, memory reporting, and validation scope.
+The published 30-episode results above remain the original Linux/CUDA experiment.
+Mac runs use a different PyTorch/MuJoCo stack and must be reported separately.
+
 ## Sources
 
 - [SmolVLA paper](https://arxiv.org/abs/2506.01844).

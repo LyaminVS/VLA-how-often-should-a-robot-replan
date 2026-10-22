@@ -37,6 +37,12 @@ def exclusive_run(directory):
             fcntl.flock(lock, fcntl.LOCK_UN)
 
 
+def dependency_lock_path(system=None):
+    project = Path(__file__).resolve().parents[1]
+    name = "macos" if (system or platform.system()) == "Darwin" else "linux"
+    return project / "requirements" / f"{name}.lock.txt"
+
+
 def runtime_metadata():
     packages = {}
     for name in (
@@ -62,7 +68,7 @@ def runtime_metadata():
         source.update(path.name.encode())
         source.update(path.read_bytes())
     project = Path(__file__).resolve().parents[1]
-    lock = project / "requirements/linux.lock.txt"
+    lock = dependency_lock_path()
     asset_record = (
         Path(os.environ.get("LIBERO_CONFIG_PATH", project / ".cache/libero")) / "asset_revision.json"
     )

@@ -35,7 +35,7 @@ def test_libero_adapter_pins_reset_index_and_camera_orientation(monkeypatch):
 
     suite = SimpleNamespace(n_tasks=1, get_task=lambda i: SimpleNamespace(name="test_task"))
     benchmark = SimpleNamespace(get_benchmark_dict=lambda: {"libero_object": lambda: suite})
-    monkeypatch.setattr(backend, "check_linux", lambda: None)
+    monkeypatch.setattr(backend, "check_platform", lambda: None)
     monkeypatch.setitem(sys.modules, "libero.libero", SimpleNamespace(benchmark=benchmark))
     monkeypatch.setitem(sys.modules, "lerobot.envs.libero", SimpleNamespace(LiberoEnv=FakeLibero))
     config = SimpleNamespace(control_hz=20, settle_steps=10)

@@ -24,6 +24,7 @@ sys.path.insert(0, str(PROJECT))
 
 from scripts.build_report import validate_discussion, validate_statistics  # noqa: E402
 from vla_replan.analysis import load_results, summarize_annotations  # noqa: E402
+from vla_replan.storage import dependency_lock_path  # noqa: E402
 
 ARCHIVE_ROOT = PurePosixPath("vla-replan")
 DATA_DESTINATION = PurePosixPath("outputs/compact")
@@ -107,7 +108,7 @@ def collect_inputs(root, pdf):
         code_hash.update(source.read_bytes())
     if code_hash.hexdigest() != manifest["runtime"]["code_sha256"]:
         raise ValueError("Current package sources differ from the code used for the measured run")
-    if sha256_file(PROJECT / "requirements/linux.lock.txt") != manifest["runtime"]["dependency_lock_sha256"]:
+    if sha256_file(dependency_lock_path(manifest["runtime"]["system"])) != manifest["runtime"]["dependency_lock_sha256"]:
         raise ValueError("Current dependency lock differs from the measured run")
 
     for name in ("manifest.json", "annotations.csv", "discussion.json", "demo.mp4"):

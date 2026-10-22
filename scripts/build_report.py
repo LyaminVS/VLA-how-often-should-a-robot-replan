@@ -619,12 +619,17 @@ def build_report(args):
     hardware = manifest["hardware"]
     runtime = manifest["runtime"]
     packages = runtime["packages"]
+    macos = hardware.get("backend") == "mps"
+    setup_script = "macos_setup.sh" if macos else "remote_setup.sh"
+    run_script = "run_macos.sh" if macos else "run_remote.sh"
+    reproduction_output = "outputs/mac-compact" if macos else "outputs/compact"
     story.extend(
         [
             p("Reproducibility and materials", "h1"),
             p(
                 f"Run created: {manifest['created_utc']}. Device: {hardware['device']}; "
-                f"CUDA {hardware['cuda']}; Python {runtime['python']}; {runtime['system']}. "
+                f"{('MPS / Metal' if hardware.get('backend') == 'mps' else 'CUDA ' + str(hardware['cuda']))}; "
+                f"Python {runtime['python']}; {runtime['system']}. "
                 f"LeRobot {packages['lerobot']}; hf-libero {packages['hf-libero']}; "
                 f"MuJoCo {packages['mujoco']}; PyTorch {packages['torch']}.",
                 "small",
@@ -636,9 +641,9 @@ def build_report(args):
             ),
             p("Commands from the repository root", "h2"),
             p(
-                "bash scripts/remote_setup.sh\n"
-                "bash scripts/run_remote.sh configs/compact.json outputs/compact\n"
-                ".venv/bin/python scripts/finish_run.py outputs/compact",
+                f"bash scripts/{setup_script}\n"
+                f"bash scripts/{run_script} configs/compact.json {reproduction_output}\n"
+                f".venv/bin/python scripts/finish_run.py {reproduction_output}",
                 "code",
             ),
             p(
@@ -647,11 +652,11 @@ def build_report(args):
                 "small",
             ),
             p(
-                ".venv/bin/python -m vla_replan analyze outputs/compact "
-                "--output outputs/compact/report --annotations outputs/compact/annotations.csv\n"
-                ".venv/bin/python scripts/build_figures.py --run outputs/compact\n"
-                "python scripts/build_report.py --run outputs/compact "
-                "--discussion outputs/compact/discussion.json",
+                f".venv/bin/python -m vla_replan analyze {reproduction_output} "
+                f"--output {reproduction_output}/report --annotations {reproduction_output}/annotations.csv\n"
+                f".venv/bin/python scripts/build_figures.py --run {reproduction_output}\n"
+                f"python scripts/build_report.py --run {reproduction_output} "
+                f"--discussion {reproduction_output}/discussion.json",
                 "code",
             ),
             p("Saved materials", "h2"),

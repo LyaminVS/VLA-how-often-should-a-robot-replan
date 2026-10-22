@@ -4,16 +4,18 @@ import traceback
 from datetime import datetime, timezone
 from pathlib import Path
 
+from .accelerator import prepare_platform
 from .core import run_episode
 from .storage import atomic_json, exclusive_run, git_metadata, runtime_metadata, write_jsonl
 
 
-def run(config, output, device="cuda", limit=None):
+def run(config, output, device="auto", limit=None):
     from .backend import LiberoEnvironment, SmolVLAPolicy
     from .video import EpisodeVideo
 
     output = Path(output)
     with exclusive_run(output):
+        prepare_platform()
         metadata = runtime_metadata()
         manifest_path = output / "manifest.json"
         manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else None

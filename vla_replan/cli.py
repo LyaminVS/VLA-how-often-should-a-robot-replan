@@ -1,5 +1,6 @@
 import argparse
 import json
+import os
 import platform
 from pathlib import Path
 
@@ -20,10 +21,10 @@ def main(argv=None):
     estimate = sub.add_parser("estimate", help="Estimate runtime from measured pilot timings")
     estimate.add_argument("config")
     estimate.add_argument("--from-run", required=True)
-    run = sub.add_parser("run", help="Run real SmolVLA + LIBERO on Linux/CUDA; automatically resume")
+    run = sub.add_parser("run", help="Run real SmolVLA + LIBERO on CUDA or Apple Silicon MPS; resume")
     run.add_argument("config")
     run.add_argument("--output", required=True)
-    run.add_argument("--device", default="cuda", choices=["cuda"])
+    run.add_argument("--device", default="auto", choices=["auto", "cuda", "mps"])
     run.add_argument(
         "--limit", type=int, help="Maximum new episodes this invocation; does not change experiment"
     )
@@ -74,16 +75,27 @@ def main(argv=None):
                 )
         elif args.command == "doctor":
             info = runtime_metadata()
-            info["real_rollouts_supported_os"] = platform.system() == "Linux"
+            from .accelerator import prepare_platform
+
+            supported = platform.system() == "Linux" or (
+                platform.system() == "Darwin" and platform.machine() == "arm64"
+            )
+            info["real_rollouts_supported_os"] = supported
+            if supported:
+                prepare_platform()
             try:
                 import torch
 
                 info["cuda_available"] = torch.cuda.is_available()
+                info["mps_available"] = torch.backends.mps.is_available()
+                info["default_device"] = "mps" if platform.system() == "Darwin" else "cuda"
+                info["render_backend"] = os.environ.get("MUJOCO_GL")
                 if torch.cuda.is_available():
                     info["gpu"] = torch.cuda.get_device_name(0)
                     info["vram_gib"] = torch.cuda.get_device_properties(0).total_memory / 2**30
             except ImportError:
                 info["cuda_available"] = False
+                info["mps_available"] = False
             print(json.dumps(info, indent=2))
         elif args.command == "run":
             from .runner import run

@@ -1,0 +1,121 @@
+{
+  "validated_utc": "2026-10-22T13:27:21.167509+00:00",
+  "scope": "Execution smoke check, one task/state/seed and all five K values; not an accuracy benchmark",
+  "unit_tests": {
+    "passed": 46
+  },
+  "checks": [
+    "fresh setup from macOS lock",
+    "ruff and bash syntax",
+    "direct CLI --device auto",
+    "resume through run_macos.sh preserves completed episode",
+    "paired state and observation hashes",
+    "every action matches clipped K-prefix of full 50x7 chunks",
+    "sampling seeds",
+    "20fps videos contain steps+20 frames",
+    "both cameras contain nonconstant image data",
+    "MPS private CPU generator repeats by seed without changing global CPU RNG"
+  ],
+  "hardware": {
+    "backend": "mps",
+    "precision": "fp32",
+    "deterministic_algorithms": true,
+    "torch_cpu_threads": 4,
+    "noise_device": "cpu",
+    "mps_fallback": "1",
+    "device": "Apple M5",
+    "shared_memory_bytes": 34359738368,
+    "vram_bytes": null,
+    "cuda": null,
+    "macos": "26.5",
+    "peak_memory_supported": false
+  },
+  "runtime": {
+    "python": "3.12.13",
+    "system": "Darwin",
+    "machine": "arm64",
+    "packages": {
+      "lerobot": "0.6.1",
+      "hf-libero": "0.1.4",
+      "mujoco": "3.3.7",
+      "robosuite": "1.4.0",
+      "torch": "2.11.0",
+      "torchvision": "0.26.0",
+      "transformers": "5.5.4",
+      "numpy": "2.2.6",
+      "Pillow": "11.3.0",
+      "imageio": "2.37.0",
+      "imageio-ffmpeg": "0.6.0",
+      "huggingface-hub": "1.33.0"
+    },
+    "render_backend": "glfw",
+    "code_sha256": "2229abe9192d927ae5ad2f951be665ab524e2e7d1f6500b3aebf6b2e8b1917ee",
+    "dependency_lock_sha256": "8f457f09fe0ddaddecb93cb0a8fd7d66a9378e7aa5736fc2505e4b86c68de930"
+  },
+  "config_fingerprint": "62680d0240e48d3997a35a613aaaa9f05f3cd730c50d727a8c238cf0b36442d3",
+  "initial_state_sha256": "6cd4976519943bdc84677396a6e2942e9816ae87e56fc72943914e147f9b6e1e",
+  "initial_observation_sha256": "007d9b5d19af8cadcf5b427eef91df6db3acb2f15f42ae61f3447d93552849e8",
+  "first_chunk_max_abs_difference": 0.0,
+  "episodes": [
+    {
+      "k": 1,
+      "steps": 207,
+      "model_calls": 207,
+      "success": true,
+      "inference_s": 135.33583033364266,
+      "simulation_s": 2.618830387480557,
+      "compute_s": 137.95466072112322,
+      "video_frames": 227,
+      "video_sha256": "3f689f64daa990490ca6fdd251cf6d1c29291c4e5f2b8ec0edc3515fe4aa9252"
+    },
+    {
+      "k": 5,
+      "steps": 142,
+      "model_calls": 29,
+      "success": true,
+      "inference_s": 18.813547583296895,
+      "simulation_s": 1.7122939536347985,
+      "compute_s": 20.525841536931694,
+      "video_frames": 162,
+      "video_sha256": "4d00d8bc7b7c62c82923ddc486920a5fe846d60e5700097517bba99219c5a1f9"
+    },
+    {
+      "k": 10,
+      "steps": 143,
+      "model_calls": 15,
+      "success": true,
+      "inference_s": 10.105699835345149,
+      "simulation_s": 1.8529281001538038,
+      "compute_s": 11.958627935498953,
+      "video_frames": 163,
+      "video_sha256": "18123eea3b90285ed84234ab2a362cb40daeac53009438b050c2903b2c818b10"
+    },
+    {
+      "k": 25,
+      "steps": 137,
+      "model_calls": 6,
+      "success": true,
+      "inference_s": 3.9142119577154517,
+      "simulation_s": 1.663091205060482,
+      "compute_s": 5.577303162775934,
+      "video_frames": 157,
+      "video_sha256": "66680ee0c9b70627451677cabe11a32649305a76fad14e5f8dcc6d9322c35225"
+    },
+    {
+      "k": 50,
+      "steps": 126,
+      "model_calls": 3,
+      "success": true,
+      "inference_s": 2.008012834005058,
+      "simulation_s": 1.5940050296485424,
+      "compute_s": 3.6020178636536,
+      "video_frames": 146,
+      "video_sha256": "3763bc54f6dfdea3f0ce2a811a4a65993e77f886c018531f062592c86582ceca"
+    }
+  ],
+  "limitations": [
+    "NVIDIA GPU not available for a fresh CUDA rollout; CUDA paths covered with unit tests",
+    "MPS and CUDA noise streams differ",
+    "No accuracy comparison across devices or real robot validation"
+  ]
+}
