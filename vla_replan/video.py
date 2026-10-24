@@ -6,13 +6,14 @@ from pathlib import Path
 
 
 class EpisodeVideo:
-    def __init__(self, path, episode, fps):
+    def __init__(self, path, episode, fps, label=None):
         import imageio.v2 as imageio
 
         self.writer = imageio.get_writer(
             str(path), fps=fps, codec="libx264", quality=7, macro_block_size=16, ffmpeg_log_level="error"
         )
         self.episode = episode
+        self.label = label
         self.fps = fps
         self.instruction = episode.task.replace("_", " ")
         self.last_replan = 0
@@ -39,9 +40,10 @@ class EpisodeVideo:
         if outcome is not None:
             status = "SUCCESS" if outcome else "FAILURE / EPISODE ENDED"
             color = "#71e4ac" if outcome else "#ff8d91"
+        execution = f"{self.label} | K={row.get('active_k', '?')}" if self.label else f"K={self.episode.k}"
         draw.text(
             (16, 76),
-            f"K={self.episode.k} | step {row['step']} | t={row['sim_time_s']:.2f}s | calls={row['model_calls']}",
+            f"{execution} | step {row['step']} | t={row['sim_time_s']:.2f}s | calls={row['model_calls']}",
             font=font,
             fill="white",
         )

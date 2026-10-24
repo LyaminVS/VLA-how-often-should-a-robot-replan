@@ -1,11 +1,9 @@
-"""Version-pinned LeRobot adapter. Imports/downloads occur only for real Linux runs."""
+"""Version-pinned LeRobot adapter for Linux/CUDA and native macOS/MPS."""
 
 import hashlib
-import os
-import platform
-from contextlib import nullcontext
 from importlib.metadata import version
 
+from .accelerator import Accelerator, prepare_platform
 from .core import Observation
 
 
@@ -29,19 +27,15 @@ def observation_hash(data):
     return result.hexdigest()
 
 
-def check_linux():
-    if platform.system() != "Linux":
-        raise RuntimeError(
-            "Real LIBERO runs require Linux. Planning, tests, analysis and video work on macOS."
-        )
+def check_platform():
+    prepare_platform()
     if version("lerobot") != "0.6.1":
-        raise RuntimeError("This adapter requires lerobot==0.6.1. Install requirements/linux.lock.txt.")
+        raise RuntimeError("This adapter requires lerobot==0.6.1. Use the setup script for your platform.")
 
 
 class LiberoEnvironment:
     def __init__(self, config):
-        check_linux()
-        os.environ.setdefault("MUJOCO_GL", "egl")
+        check_platform()
         from libero.libero import benchmark
 
         self.benchmark = benchmark
@@ -120,10 +114,11 @@ class LiberoEnvironment:
 
 
 class SmolVLAPolicy:
-    def __init__(self, experiment, device="cuda"):
-        check_linux()
-        os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
-        import torch
+    def __init__(self, experiment, device="auto"):
+        check_platform()
+        self.accelerator = Accelerator(device, experiment.precision)
+        device = self.accelerator.device
+        torch = self.accelerator.torch
         from huggingface_hub import snapshot_download
         from lerobot.envs.utils import preprocess_observation
         from lerobot.policies.factory import make_pre_post_processors
@@ -131,12 +126,6 @@ class SmolVLAPolicy:
         from lerobot.policies.smolvla.modeling_smolvla import SmolVLAPolicy as HFSmolVLA
         from lerobot.processor.env_processor import LiberoProcessorStep
 
-        if device != "cuda" or not torch.cuda.is_available():
-            raise RuntimeError("Use the Linux NVIDIA machine for measured runs (--device cuda)")
-        torch.backends.cudnn.benchmark = False
-        torch.backends.cuda.matmul.allow_tf32 = False
-        torch.backends.cudnn.allow_tf32 = False
-        torch.use_deterministic_algorithms(True)
         self.torch = torch
         self.device = device
         self.precision = experiment.precision
@@ -168,14 +157,7 @@ class SmolVLAPolicy:
         )
         self.env_processor = LiberoProcessorStep()
         self.preprocess_observation = preprocess_observation
-        self.runtime = {
-            "device": torch.cuda.get_device_name(),
-            "vram_bytes": torch.cuda.get_device_properties(0).total_memory,
-            "cuda": torch.version.cuda,
-            "precision": self.precision,
-            "deterministic_algorithms": True,
-            "torch_cpu_threads": torch.get_num_threads(),
-        }
+        self.runtime = self.accelerator.metadata()
 
     def reset(self):
         self.policy.reset()
@@ -201,17 +183,11 @@ class SmolVLAPolicy:
             raw = self.env_processor.observation(raw)
             raw["task"] = [observation.payload["instruction"]]
             inputs = self.pre(raw)
-            generator = torch.Generator(device=self.device).manual_seed(seed)
-            noise = torch.randn(
+            noise = self.accelerator.noise(
                 (1, self.policy.config.chunk_size, self.policy.config.max_action_dim),
-                generator=generator,
-                device=self.device,
-                dtype=torch.float32,
+                seed,
             )
-            context = (
-                torch.autocast("cuda", dtype=torch.float16) if self.precision == "fp16" else nullcontext()
-            )
-            with context:
+            with self.accelerator.autocast():
                 actions = self.policy.predict_action_chunk(inputs, noise=noise)
             # Processor acts on [batch, action_dim]; retain the checkpoint's unnormalizer.
             result = [
@@ -221,10 +197,10 @@ class SmolVLAPolicy:
         return result
 
     def synchronize(self):
-        self.torch.cuda.synchronize()
+        self.accelerator.synchronize()
 
     def peak_memory(self):
-        return self.torch.cuda.max_memory_allocated()
+        return self.accelerator.peak_memory()
 
     def reset_peak_memory(self):
-        self.torch.cuda.reset_peak_memory_stats()
+        self.accelerator.reset_peak_memory()

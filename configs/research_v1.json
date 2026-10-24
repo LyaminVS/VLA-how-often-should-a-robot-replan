@@ -1,0 +1,16 @@
+{
+  "name": "adaptive_and_causal_v1_20261024",
+  "specified_utc": "2026-10-24T11:06:54Z",
+  "base_config": "compact.json",
+  "development_states": [2, 3],
+  "development_methods": ["fixed10", "adaptive_v1"],
+  "heldout_states": [4, 5, 6, 7],
+  "methods": ["fixed1", "fixed10", "fixed25", "adaptive_v1"],
+  "policy_seeds": [11],
+  "causal_states": [4, 5, 6],
+  "fork_step": 80,
+  "order_seed": 20261024,
+  "record_video": true,
+  "adaptive_rule": "Frozen v1: gripper sign transition in next 10 predictions or translation cosine(first,index9)<0.5 -> K5; otherwise positive closing command -> K10; otherwise K25. No simulator privileged state.",
+  "selection": "All 3 existing tasks and listed states, chosen before new outcomes. Causal continuations include successes and failures if baseline still active after step 80. No post-result tuning. One policy seed: conditional exploratory study."
+}

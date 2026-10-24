@@ -1,0 +1,16 @@
+{
+  "name": "supplementary_fixed5_fixed50_20261024",
+  "specified_utc": "2026-10-24T11:17:34Z",
+  "base_config": "compact.json",
+  "development_states": [],
+  "development_methods": [],
+  "heldout_states": [4, 5, 6, 7],
+  "methods": ["fixed5", "fixed50"],
+  "policy_seeds": [11],
+  "causal_states": [],
+  "fork_step": 80,
+  "order_seed": 20261024,
+  "record_video": true,
+  "adaptive_rule": "Not applicable; supplementary fixed-K baselines only.",
+  "selection": "Supplement specified before primary heldout outcomes. Same checkpoint, software, hardware, tasks, states and seed as primary study. Start only if primary completes by 12:20 UTC (15:20 Moscow) to respect 90 minute total task budget; never select cases based on outcomes."
+}

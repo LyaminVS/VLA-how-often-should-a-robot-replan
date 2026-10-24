@@ -1,0 +1,16 @@
+{
+  "name": "frozen_rule_seed_replication_20261024",
+  "specified_utc": "2026-10-24T11:59:20Z",
+  "base_config": "compact.json",
+  "development_states": [],
+  "development_methods": [],
+  "heldout_states": [8, 9],
+  "methods": ["fixed10", "adaptive_v1"],
+  "policy_seeds": [29, 47],
+  "causal_states": [],
+  "fork_step": 80,
+  "order_seed": 20261024,
+  "record_video": true,
+  "adaptive_rule": "Exactly the unchanged primary adaptive_v1 implementation and thresholds.",
+  "selection": "Follow-up replication specified after primary evaluation outcomes, before replication data. New states 8,9 and seeds 29,47. No rule tuning. Separate cohort, six physical-state clusters with two seeds each; not pooled with the six-method primary comparison. Start only if earlier model runs finish by 12:14 UTC."
+}

@@ -1,0 +1,4 @@
+# These discovery helpers target Linux EGL. MuJoCo uses GLFW on macOS.
+# Override the unconditional transitive requirements from hf-libero and robomimic.
+hf-egl-probe; sys_platform == "linux"
+egl-probe; sys_platform == "linux"
