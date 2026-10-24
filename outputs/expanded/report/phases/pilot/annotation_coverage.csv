@@ -1,0 +1,6 @@
+k,total_episodes,selected_for_visual_review,inspected_episodes,annotation_rows_provided,fully_reviewed_episodes,missed_grasps_known_episodes,missed_grasps_total_known,dropped_objects_known_episodes,dropped_objects_total_known
+1,6,6,6,6,3,3,0,3,0
+5,6,6,6,6,5,5,0,5,0
+10,6,6,6,6,4,4,0,4,0
+25,6,6,6,6,3,3,0,4,1
+50,6,6,6,6,4,4,0,4,0

@@ -1,0 +1,56 @@
+[
+  {
+    "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s2__r11__k50",
+    "reviewed": "no",
+    "missed_grasps": null,
+    "dropped_objects": null,
+    "correction_after_replan": "yes",
+    "failure_category": "timeout",
+    "notes": "The assistant inspected both cameras: all 8 stride=5 sheets (132 selected frames), gripper-sign-change neighborhoods of +/-2 steps, action 279 and final outcome 280; additionally every frame at 33-74 (3 dense sheets, 42 frames). No human review was performed. Action frames precede their logged action; the outcome frame follows the last action. Closing starts at 35 over the target area. The wrist and fingers hide retention, with repeated sign changes from 61 onward; a secure initial grasp or distinct unintended loss cannot be established. The wrist turns above the bowls at 80-175, then moves over the empty plate at 185-220. At 225-250 it returns towards the visible target bowl and closes again at 250; this is a visible corrective re-approach after unsuccessful transport. chunks.jsonl and steps.jsonl confirm replans at 200 and 250, with action_translation_jump_l2=0.448543 and 0.403893 respectively; plan_revision_translation_l2 is null because H=50 is exhausted. This temporal association does not prove a benefit from fresh observations. At 265-280 the target remains separate from the plate while fingers contact the bowl area; summary.json confirms time_limit failure at 280. Exact failed-grasp and unintended-drop totals remain ambiguous, so both are null and reviewed=no. The 15 closing transitions in summary.json are not treated as 15 grasp errors. Hypothesis: insecure initial retention followed by movement towards the placement area contributes to failure; object-contact data were not recorded."
+  },
+  {
+    "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s3__r11__k1",
+    "reviewed": "yes",
+    "missed_grasps": 0,
+    "dropped_objects": 0,
+    "correction_after_replan": "no",
+    "failure_category": "none",
+    "notes": "The assistant inspected both cameras: all 2 stride=5 sheets (23 selected frames), gripper-sign-change neighborhoods of +/-2 steps, action 79 and final outcome 80. No human review was performed. Action frames precede their logged action; the outcome frame follows the last action. Approach at 0-40; the gripper command changes sign at 42, 43 and 44 during the same approach. The bowl then moves with the wrist at 50-80 to the plate. The brief command reversal does not establish a distinct failed attempt; no visually separate missed grasp or unintended loss is observed. Two closing transitions in summary.json are not two grasp attempts. The native success signal at 80 is confirmed by summary.json. There is no visible retreat and corrective re-approach after an error; ordinary smooth transport is not counted as correction. The closing command remains positive at termination: native success does not establish post-release stability. The zero event counts refer to observed behavior across these frames, rather than being inferred from success alone."
+  },
+  {
+    "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s3__r11__k10",
+    "reviewed": "yes",
+    "missed_grasps": 0,
+    "dropped_objects": 0,
+    "correction_after_replan": "no",
+    "failure_category": "none",
+    "notes": "The assistant inspected both cameras: all 2 stride=5 sheets (21 selected frames), gripper-sign-change neighborhoods of +/-2 steps, action 74 and final outcome 75. No human review was performed. Action frames precede their logged action; the outcome frame follows the last action. Approach at 0-35; the only closing transition is at 35. The bowl moves with the wrist at 40-75 to the plate, without a visible failed attempt or unintended loss. The native success signal at 75 is confirmed by summary.json. There is no visible retreat and corrective re-approach after an error; ordinary smooth transport is not counted as correction. The closing command remains positive at termination: native success does not establish post-release stability. The zero event counts refer to observed behavior across these frames, rather than being inferred from success alone."
+  },
+  {
+    "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s3__r11__k25",
+    "reviewed": "yes",
+    "missed_grasps": 0,
+    "dropped_objects": 0,
+    "correction_after_replan": "no",
+    "failure_category": "none",
+    "notes": "The assistant inspected both cameras: all 2 stride=5 sheets (28 selected frames), gripper-sign-change neighborhoods of +/-2 steps, action 88 and final outcome 89. No human review was performed. Action frames precede their logged action; the outcome frame follows the last action. Approach at 0-33. The close command at 33 briefly reverses at 35 before closing again at 38, without a separate retreat or visible failed attempt. The bowl then moves with the wrist at 50-89 towards the plate. No visually distinct missed grasp or unintended loss is observed; the two closing transitions belong to one continuous approach in the available views. Native success at 89 is confirmed by summary.json. There is no visible corrective re-approach following an error; ordinary transport and placement adjustments are not counted as correction. No separate post-release stability test was performed. The zero counts describe the observed sequence and are not inferred from the success label alone."
+  },
+  {
+    "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s3__r11__k5",
+    "reviewed": "yes",
+    "missed_grasps": 0,
+    "dropped_objects": 0,
+    "correction_after_replan": "no",
+    "failure_category": "none",
+    "notes": "The assistant inspected both cameras: all 2 stride=5 sheets (35 selected frames), gripper-sign-change neighborhoods of +/-2 steps, action 93 and final outcome 94. No human review was performed. Action frames precede their logged action; the outcome frame follows the last action. Approach at 0-40; closing at 40 is followed by visible retention and transport at 50-75. Opening/closing commands at 79-86 occur in the placement region while the bowl remains close to the plate. The fingers open and the wrist rises by 90-94; the bowl remains at the destination. No visually distinct missed grasp or unintended loss during transport is observed. Three closing transitions are not three grasp attempts, and opening at the destination is not by itself a drop. Native success at 94 is confirmed by summary.json. There is no visible corrective re-approach following an error; ordinary transport and placement adjustments are not counted as correction. No separate post-release stability test was performed. The zero counts describe the observed sequence and are not inferred from the success label alone."
+  },
+  {
+    "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s3__r11__k50",
+    "reviewed": "no",
+    "missed_grasps": null,
+    "dropped_objects": null,
+    "correction_after_replan": "yes",
+    "failure_category": "placement",
+    "notes": "The assistant inspected both camera views: all 6 stride=5 sheets (105 selected frames), gripper-sign-change neighborhoods of +/-2 steps, action 279 and final outcome 280; additionally every frame at 33-76 and155-175 (4 dense sheets, 65 frames). No human review was performed. Action frames precede their logged action; the outcome frame follows the last action. The first close command is at 35, followed by several open/close transitions at 52-74; contact is occluded and secure initial retention is not established. The wrist retreats at 80-100 and returns to the target bowl at 105-125, then visibly transports it towards the plate at 130-160. This return is an observed corrective approach: chunks.jsonl includes replan 100; steps.jsonl at 100 has replanned=true, action_translation_jump_l2=0.742472, plan_revision_translation_l2=null because H=50 is exhausted. Temporal alignment does not prove that new visual feedback caused or improved the correction. An opening command at 160 occurs in the placement region; the bowl remains offset near the plate rim at 175-205. Further wrist contacts at 210-245 and retreat at 250-280 leave the bowl off-center; summary.json confirms failure/time_limit at 280. The final failure is classified as incomplete placement. Initial retention and rapid recontacts remain ambiguous even in dense frames, so exact missed-grasp and unintended-drop counts are null, reviewed=no. The 8 closing transitions in summary.json are not 8 grasp errors. The visible release near the destination is not by itself an unintended drop. Hypothesis: insecure initial contact delays transport, and off-center release prevents the native placement criterion; contact causality was not measured."
+  }
+]

@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "moving_target_demo",
+  "data_kind": "moving_target_stress_test",
+  "episodes_in_results": 135,
+  "config_fingerprint": "ac5a6c8af0fb65b513a00de6099a050a368a4dee7a252a8adaafad0c29bcc859",
+  "manifest_sha256": "6cf87e33c05220542f46f6d65690421051b86934934dc7bde028eaefe947a118",
+  "statistics_sha256": "811879ce7dc63ecf1cb783a26c14d02a39a97bd2562ee244afb865aa52a3ce00",
+  "generator_sha256": "c142627583aed81ea5b9eb7275f4ab6e339bb0de39563fc67dc4ab3b169f2691",
+  "analysis_source_sha256": "d7597ae3b8e2605dab4f3c79122e234c729cdcc832b496846d66b1ac7bf9df9c",
+  "video_sha256": "a90f4a0a838792667c3824424edbea5b2a65463fb61b7ef96ab6d1aeaf70458c",
+  "selected_episodes": [
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k10__motion_fast",
+      "files": {
+        "summary.json": "02db6ba47c8215983cbb6e09a6a67dbd1cd578f1843c69548e92f01cc8b596a6",
+        "steps.jsonl": "06bb98b58c3779d3f94e2b3d3e0c73aa24a0006136afb298a2725120ee219dcd",
+        "chunks.jsonl": "3e163443bf15546ef062a8104d271aaf7b112fa66e8bb345050fba6f80b135c8",
+        "video.mp4": "4b8043eb3cf26aaf7579a71f7ef002014d38e9c264ba8df9ede34696693a90b4"
+      },
+      "evidence_sha256": "48a9f2b2e34543a93893d02483087635b04e551b8063d644a221e76bd8e41f80"
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k10__motion_slow",
+      "files": {
+        "summary.json": "960bc8b58dfd72d03aaa81a2a0e79ad736dfdd76ed9c0d0554b9cfd11122cf9f",
+        "steps.jsonl": "ca6add83cf6b468624bd11a188af80daaccf787865a9eb4be637a27292a3a28e",
+        "chunks.jsonl": "16858b9357fc88706dff4c1efbca0dad8230f800b4a58dcaa54574b5ea1ec647",
+        "video.mp4": "de0f0b0a9dbd516349f2da4614a194aa4ee87932c278d5c9197b54172982fa8b"
+      },
+      "evidence_sha256": "5eb93f5eb4f9dd1e30a37c5f8874e21ad8b736c977b1f3b7ec10750d7e74b44e"
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k10__motion_static",
+      "files": {
+        "summary.json": "b5f623e022ba1f0c152cc47cb93b328ba855c169ffa0ecd45294ae7d5f08fc2e",
+        "steps.jsonl": "25f1daa447ac54b28201194745df2e38c61091795be7ff7fd964e1aa63b22f67",
+        "chunks.jsonl": "7025310dd1cf897dd49bb06d75f0d551f37abda9563b179cf9fe47227a616a84",
+        "video.mp4": "0748031ae7eeb0dee9f3881b8e6d826687c4484f1db5ab3b6a4952fe8656a8e8"
+      },
+      "evidence_sha256": "f392c2bbf747dfad648c9c50ebdc90f8b10181647823d64bba8961d595c2bbbc"
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k50__motion_fast",
+      "files": {
+        "summary.json": "2df8f3fb4b42cc7829635da335fddf37863b5e3c381e333a87cecc22e5e2cf48",
+        "steps.jsonl": "7dd6074cc7cebb99fbb385389dd79c4166807ac031022a691b4b2aca727b5649",
+        "chunks.jsonl": "92eb16d5fab5ef8efc7f1632df3dcd828195bfc4e55661487d18fcc05ca8143d",
+        "video.mp4": "bf2e59c0dbacd4d0431c33447abb4506222b71edec28504b7423a8cbef001bac"
+      },
+      "evidence_sha256": "c044d0519e141dc74450d465d9e30cd7cefd76d4f4de48e23afd3e6ee3226178"
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k5__motion_fast",
+      "files": {
+        "summary.json": "c180cd80e1ae9687d0a79b2514af9b26ab296850d281ad5a101f1b38ca19d524",
+        "steps.jsonl": "6988882534fe13beb301a211236b8b15ea8799aeee559359f13bee524e748d8e",
+        "chunks.jsonl": "5533ae83c35d31f2bbce4d6e07dbefaad7722674482b69d1c1a3462af73d4d31",
+        "video.mp4": "0e8c3e77506f86d4735b159d45548be9b5396f93098882eb3138b77dc518dfee"
+      },
+      "evidence_sha256": "b4b33384780ceab0bccde7fd683944a5e5ad3f0f640ed19d97ce94587c1c41ec"
+    }
+  ],
+  "illustration_selection": {
+    "state": 10,
+    "policy_seed": 11,
+    "rule": "Fixed before collection; no selection by outcome"
+  },
+  "full_results_table": [
+    {
+      "condition": "static",
+      "k": 5,
+      "successes": 12,
+      "episodes": 15,
+      "mean_model_calls": 35.8
+    },
+    {
+      "condition": "static",
+      "k": 10,
+      "successes": 13,
+      "episodes": 15,
+      "mean_model_calls": 17.333333333333332
+    },
+    {
+      "condition": "static",
+      "k": 50,
+      "successes": 6,
+      "episodes": 15,
+      "mean_model_calls": 4.8
+    },
+    {
+      "condition": "slow",
+      "k": 5,
+      "successes": 8,
+      "episodes": 15,
+      "mean_model_calls": 42.13333333333333
+    },
+    {
+      "condition": "slow",
+      "k": 10,
+      "successes": 13,
+      "episodes": 15,
+      "mean_model_calls": 17.4
+    },
+    {
+      "condition": "slow",
+      "k": 50,
+      "successes": 5,
+      "episodes": 15,
+      "mean_model_calls": 5.066666666666666
+    },
+    {
+      "condition": "fast",
+      "k": 5,
+      "successes": 13,
+      "episodes": 15,
+      "mean_model_calls": 32.86666666666667
+    },
+    {
+      "condition": "fast",
+      "k": 10,
+      "successes": 15,
+      "episodes": 15,
+      "mean_model_calls": 14.6
+    },
+    {
+      "condition": "fast",
+      "k": 50,
+      "successes": 6,
+      "episodes": 15,
+      "mean_model_calls": 4.8
+    }
+  ],
+  "timeline": [
+    {
+      "kind": "intro",
+      "start_frame": 0,
+      "frames": 40
+    },
+    {
+      "kind": "comparison",
+      "title": "Same K=10: changing target motion",
+      "start_frame": 40,
+      "frames": 259,
+      "episode_ids": [
+        "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k10__motion_static",
+        "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k10__motion_slow",
+        "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k10__motion_fast"
+      ]
+    },
+    {
+      "kind": "divider",
+      "start_frame": 299,
+      "frames": 40
+    },
+    {
+      "kind": "comparison",
+      "title": "Fast reference: changing replanning interval",
+      "start_frame": 339,
+      "frames": 300,
+      "episode_ids": [
+        "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k5__motion_fast",
+        "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k10__motion_fast",
+        "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k50__motion_fast"
+      ]
+    },
+    {
+      "kind": "results",
+      "start_frame": 639,
+      "frames": 80
+    }
+  ],
+  "frames": 719,
+  "fps": 20,
+  "size": [
+    1536,
+    512
+  ],
+  "duration_s": 35.95,
+  "audio": false,
+  "visual_review_required": true,
+  "note": "Aligned simulation time; model-inference pauses omitted; one-second terminal hold retained; shorter episodes hold their terminal frame."
+}

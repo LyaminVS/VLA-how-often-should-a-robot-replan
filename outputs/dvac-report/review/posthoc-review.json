@@ -1,0 +1,38 @@
+{
+  "status": "reviewed",
+  "reviewer": "assistant",
+  "independent_human_review": false,
+  "selection": "First DVAC failure in the frozen planned order with a matched fixed_10 success; selected after observing outcomes, for diagnosis only.",
+  "pair_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket/state16/seed22",
+  "summary": "In the outcome-selected soup-can example (state 16, seed 22), sampled frames show the can remaining on the table while the DVAC arm moves toward the basket. At steps 3 and 53, DVAC selected K=50: maximum V was 0.0301 and 0.0140, below thresholds 0.0435 and 0.0388. Later K=1 calls near the basket did not recover completion. The matched fixed-10 run visibly carries the can to the basket and succeeds in 143 actions; DVAC times out at 280. This is consistent with a missed initial grasp, but the sampled views do not identify the contact-mechanical cause or prove that another interval would have corrected that same trajectory.",
+  "episodes": [
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s16__r22__dvac",
+      "video_sha256": "ab63bde491b9d0c025f5699404d1dce5dfd8eb4cce45fbaf4c05ef1466b61aa7",
+      "reviewed": true,
+      "review_roles": ["posthoc_discordant_failure"],
+      "observed_facts": [
+        "Frames 47, 50 and 57 show the gripper at the can. At frames 75 and 100 the arm has moved away while the can remains on the table.",
+        "Frames 119 through 152 show the gripper near the basket; the target can is still visible at its table location.",
+        "Later sampled frames through the final frame at step 280 continue to show the can outside the basket. The recorded outcome is TIME_LIMIT.",
+        "The logged calls at steps 3 and 53 both select K=50 with no strict variance crossing. At step 3 max V=0.03006962949948863 < threshold=0.04352006375213215; at step 53 max V=0.01395655442709705 < threshold=0.038826907417090384.",
+        "Logged calls at steps 125, 126 and 129 select K=1; the episode still ends unsuccessfully after 23 calls."
+      ],
+      "interpretations": ["The sampled sequence is consistent with a missed initial grasp followed by motion toward the placement location without the target.", "The variance rule did not shorten the two blocks spanning approach and attempted grasp in this run. Internal FM stability did not establish action correctness."],
+      "uncertain_observations": ["Exact finger contact, transient contact between sampled frames, and the mechanical cause of the failed grasp remain unresolved.", "This outcome-selected pair is not an estimate of error prevalence or a causal test of a different K on the same subsequent trajectory."],
+      "frame_references": [47,50,57,75,100,119,125,126,129,142,152,175,225,280],
+      "inspected_sheets": ["sheet_001.png", "sheet_002.png", "sheet_003.png"]
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s16__r22__fixed_10",
+      "video_sha256": "f1a5799415891eec46fd662cb8e33b7a6c779180458baf0dc2158d4e879fb27c",
+      "reviewed": true,
+      "review_roles": ["posthoc_discordant_failure"],
+      "observed_facts": ["The can is visibly beneath the gripper and elevated in frames 65, 75 and 100.", "Frames 120 through 142 show the can at the basket; the final frame 143 displays SUCCESS.", "The recorded run uses 15 model calls and 143 executed actions."],
+      "interpretations": ["The sampled views support successful pickup and transport in this matched fixed-K run."],
+      "uncertain_observations": ["Final success does not establish stable post-release placement because native success stops execution.", "The successful fixed-K trajectory is not a controlled intervention on the DVAC trajectory after its initial divergence."],
+      "frame_references": [55,58,65,75,100,120,125,127,130,139,142,143],
+      "inspected_sheets": ["sheet_001.png", "sheet_002.png"]
+    }
+  ]
+}

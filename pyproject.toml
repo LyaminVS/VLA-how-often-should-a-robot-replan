@@ -18,7 +18,7 @@ dev = ["pytest==8.4.2", "ruff==0.14.1"]
 vla-replan = "vla_replan.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["vla_replan*"]
+include = ["vla_replan*", "moving_target*", "adaptive_replan*", "capped_replan*"]
 
 [tool.ruff]
 line-length = 110

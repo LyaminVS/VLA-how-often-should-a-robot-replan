@@ -1,0 +1,92 @@
+[
+  {
+    "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k1",
+    "reviewed": "no",
+    "missed_grasps": null,
+    "dropped_objects": null,
+    "correction_after_replan": "unclear",
+    "failure_category": "unclear",
+    "notes": "Assistant inspection of both camera views at stride 5, every gripper sign-change neighborhood (+/-2 steps), the final action, and the final outcome frame; no independent human review. Dense inspection additionally covered steps 50-68, 94-110, and 240-260. The can tilts during approach at steps 53-61 (2.65-3.05 s), before the first positive gripper command at step 62. It remains tilted beside the milk carton through step 98, then becomes horizontal near its original table position at steps 100-107. Whether it was temporarily secured or supported by surrounding contacts is not visually resolved, so neither a distinct miss count nor a held-object drop count is assigned. Further approach and contact at steps 240-260 do not produce transport to the basket. Native time-limit failure at step 280 despite 280 model calls. Command sign changes are not counted as grasp attempts, and replanning at every step does not establish a causal correction."
+  },
+  {
+    "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k5",
+    "reviewed": "yes",
+    "missed_grasps": 0,
+    "dropped_objects": 0,
+    "correction_after_replan": "unclear",
+    "failure_category": "none",
+    "notes": "Assistant inspection of both camera views at stride 5, every gripper sign-change neighborhood (+/-2 steps), the final action, and the final outcome frame; no independent human review. The gripper closes at step 54; the can is visibly lifted by steps 65-75 and carried toward the basket through steps 130-139. Opening commands begin at step 140, with brief sign changes at 141, 142, 145, and 146; no visible unintended loss occurs. The native success predicate is reached at step 150 (7.50 s), with the can in the basket region and still near the fingers. No claim is made about stability after termination. No distinct missed grasp or unintended drop is visible in the inspected sequence. Regular replanning and successful transport alone do not identify a specific corrective response."
+  },
+  {
+    "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k10",
+    "reviewed": "yes",
+    "missed_grasps": 0,
+    "dropped_objects": 0,
+    "correction_after_replan": "unclear",
+    "failure_category": "none",
+    "notes": "Assistant inspection of both camera views at stride 5, every gripper sign-change neighborhood (+/-2 steps), the final action, and the final outcome frame; no independent human review. The gripper closes at step 47; the can is visibly lifted and retained by steps 55-60, then carried toward the basket through step 129. The one-step opening command at step 60 does not produce a visible loss. Opening from step 130 precedes placement in the basket and native success at step 139 (6.95 s). This intentional release is not counted as a drop. No distinct missed grasp or unintended drop is visible in the inspected sequence. There is no isolated visual event that establishes a beneficial correction caused by a new plan."
+  },
+  {
+    "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k25",
+    "reviewed": "yes",
+    "missed_grasps": 0,
+    "dropped_objects": 1,
+    "correction_after_replan": "no",
+    "failure_category": "dropped_object",
+    "notes": "Assistant inspection of both camera views at stride 5, every gripper sign-change neighborhood (+/-2 steps), the final action, and the final outcome frame; no independent human review. Dense inspection additionally covered every frame at steps 76-94. The initial pickup secures and lifts the can by steps 55-60, and it remains carried through step 81. Separation is visible at steps 82-83; the can falls at steps 84-85, contacts the table outside the basket around step 86, and settles by step 90 (4.50 s). Gripper commands remain positive throughout steps 76-94 (minimum 0.987), so this is a visible unintended loss of a held object, not an intentional placement release. The robot continues toward the basket after replans at steps 100 and 125 and never returns to retrieve the can before native time-limit failure at step 280. One drop and no distinct missed grasp are visible. Slippage or contact mechanics are possible causes; the recording does not establish that K caused the drop."
+  },
+  {
+    "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k50",
+    "reviewed": "no",
+    "missed_grasps": null,
+    "dropped_objects": null,
+    "correction_after_replan": "unclear",
+    "failure_category": "unclear",
+    "notes": "Assistant inspection of both camera views at stride 5, every gripper sign-change neighborhood (+/-2 steps), the final action, and the final outcome frame; no independent human review. Dense inspection additionally covered every frame at steps 44-70. The fingers approach the can at steps 45-54; close commands at 48-49 are followed by opening at 50-53 and closing from step 54. Contact and any brief retention are partly occluded at steps 54-65, so a failed pickup cannot be separated confidently into a distinct missed grasp versus a brief held-object loss. The hand withdraws at steps 65-85 without transporting the can, which remains in the original table area. It moves toward the basket at steps 90-135 and stays there through step 280; later replans at 100, 150, 200, and 250 do not lead to retrieval. Native time-limit failure after 6 model calls. Unknown event counts are retained; command changes and plan-boundary action jumps are not counted as error or correction events."
+  },
+  {
+    "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s2__r11__k1",
+    "reviewed": "yes",
+    "missed_grasps": 0,
+    "dropped_objects": 0,
+    "correction_after_replan": "unclear",
+    "failure_category": "none",
+    "notes": "Assistant inspection of both camera views at stride 5, every gripper sign-change neighborhood (+/-2 steps), the final action, and the final outcome frame; no independent human review. The initial approach closes around the can at steps 48-54; the brief sign changes at 48-52 belong to the same pickup sequence, without a distinct failed withdrawal or retry. The can is visibly carried off the table by steps 60-65 and remains held through transport to the basket at steps 125-133. Repeated opening and closing commands at steps 134-154 do not visibly lose the can outside the basket or form new pickup attempts. Release into the basket occurs by the native success frame at step 162 (8.10 s). No distinct missed grasp or unintended drop is visible. Replanning at every step does not identify an isolated corrective event or prove that frequent updates were needed for this success."
+  },
+  {
+    "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s2__r11__k5",
+    "reviewed": "yes",
+    "missed_grasps": 0,
+    "dropped_objects": 0,
+    "correction_after_replan": "unclear",
+    "failure_category": "none",
+    "notes": "Assistant inspection of both camera views at stride 5, every gripper sign-change neighborhood (+/-2 steps), the final action, and the final outcome frame; no independent human review. Closing begins at step 50; the can is visibly lifted by steps 60-65 and retained while travelling toward the basket at steps 75-135. Opening starts at step 136 and the can is visibly released into the basket by the final native success frame at step 144 (7.20 s). No distinct failed pickup or unintended loss is visible. Intentional release into the target is not a drop. Small changes in the successful transport trajectory are not assigned a causal correction label merely because replanning occurs every five steps."
+  },
+  {
+    "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s2__r11__k10",
+    "reviewed": "yes",
+    "missed_grasps": 0,
+    "dropped_objects": 0,
+    "correction_after_replan": "unclear",
+    "failure_category": "none",
+    "notes": "Assistant inspection of both camera views at stride 5, every gripper sign-change neighborhood (+/-2 steps), the final action, and the final outcome frame; no independent human review. The initial closing sequence at steps 45-48 secures the can; it is visibly lifted by steps 55-58. The one-step negative gripper command at step 60 is not accompanied by a visible loss, and retention continues during transport through step 126. Opening commands at steps 127 and 130 precede release into the basket and native success at step 139 (6.95 s). No distinct missed grasp or unintended drop is visible. The successful path and periodic replans alone do not establish a particular corrective response."
+  },
+  {
+    "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s2__r11__k25",
+    "reviewed": "yes",
+    "missed_grasps": 0,
+    "dropped_objects": 0,
+    "correction_after_replan": "unclear",
+    "failure_category": "none",
+    "notes": "Assistant inspection of both camera views at stride 5, every gripper sign-change neighborhood (+/-2 steps), the final action, and the final outcome frame; no independent human review. The initial closing sequence at steps 46-52 secures the can, which is visibly lifted by steps 60-65 and retained throughout transport at steps 70-124. Brief early opening commands at steps 48-49 occur within the same approach, without a distinct failed withdrawal or new attempt. The robot lowers the can into the basket region at steps 120-125; an opening command at step 125 is followed by native success at step 126 (6.30 s). The can is still close to the fingers at termination, so post-release stability is not established. No distinct missed grasp or unintended drop is visible. There is no isolated visual event proving a beneficial correction after replanning."
+  },
+  {
+    "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s2__r11__k50",
+    "reviewed": "yes",
+    "missed_grasps": 1,
+    "dropped_objects": 0,
+    "correction_after_replan": "no",
+    "failure_category": "missed_grasp",
+    "notes": "Assistant inspection of both camera views at stride 5, every gripper sign-change neighborhood (+/-2 steps), the final action, and the final outcome frame; no independent human review. Dense inspection additionally covered every frame at steps 43-65, with original-resolution checks at 45, 54, 56, 58, and 60. Closing commands at 45-46 and from 48 occur during one continuous pickup approach. The fingers close and then withdraw at steps 56-65 while the can remains upright at its original table position; no carried lift or held-object fall is visible. This is counted as one distinct unsuccessful pickup sequence, not one miss per gripper sign change. The empty hand travels toward the basket at steps 70-125, opens from step 122, and remains near the basket through native time-limit failure at step 280. Replans at 100, 150, 200, and 250 do not lead to retrieval. One missed grasp and no visible dropped object are recorded; the mechanical reason for the failed contact remains a hypothesis."
+  }
+]

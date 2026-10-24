@@ -1,0 +1,281 @@
+{
+  "role": "physics calibration without policy, excluded from experiment results",
+  "motion": {
+    "amplitude_m": 0.02,
+    "periods_s": {
+      "static": null,
+      "slow": 8.0,
+      "fast": 4.0
+    },
+    "start_delay_s": 0.5,
+    "ramp_s": 1.0,
+    "kp_n_per_m": 100.0,
+    "kd_ns_per_m": 0.5,
+    "max_force_n": 1.0,
+    "force_application_offset_z_m": -0.03,
+    "force_axis": "x",
+    "stop_on_contact": true
+  },
+  "state": 20,
+  "steps": 240,
+  "results": {
+    "static": {
+      "reset": {
+        "instruction": "pick up the alphabet soup and place it in the basket",
+        "resolved_task_id": 0,
+        "initial_state_sha256": "7c7358a38e6fc56133866dd23f67640d000de848fb4d22638b545d81c042010b",
+        "initial_observation_sha256": "c3389fb74d763f0154e8bfa2b79cdae6b9c763de971499da7e7efe07de15d360",
+        "motion_object_name": "alphabet_soup_1",
+        "motion_object_mass_kg": 0.025851445888000014,
+        "motion_physics_timestep_s": 0.002,
+        "motion_object_initial_position_m": [
+          -0.11909425574469136,
+          -0.23978121735098318,
+          0.038392910369975934
+        ],
+        "motion_target_geom_names": [
+          "alphabet_soup_1_g0",
+          "alphabet_soup_1_g1",
+          "alphabet_soup_1_g2",
+          "alphabet_soup_1_g3",
+          "alphabet_soup_1_g4",
+          "alphabet_soup_1_g5",
+          "alphabet_soup_1_g6",
+          "alphabet_soup_1_g7",
+          "alphabet_soup_1_g8",
+          "alphabet_soup_1_g9",
+          "alphabet_soup_1_g10",
+          "alphabet_soup_1_g11",
+          "alphabet_soup_1_g12",
+          "alphabet_soup_1_g13",
+          "alphabet_soup_1_g14",
+          "alphabet_soup_1_g15",
+          "alphabet_soup_1_g16",
+          "alphabet_soup_1_g17",
+          "alphabet_soup_1_g18",
+          "alphabet_soup_1_g19",
+          "alphabet_soup_1_g20",
+          "alphabet_soup_1_g21"
+        ],
+        "motion_finger_geom_names": [
+          "gripper0_finger1_collision",
+          "gripper0_finger1_pad_collision",
+          "gripper0_finger2_collision",
+          "gripper0_finger2_pad_collision"
+        ]
+      },
+      "final": {
+        "condition": "static",
+        "elapsed_sim_time_s": 12.000000000000844,
+        "object_pos": [
+          -0.11909425574484636,
+          -0.2397812173510874,
+          0.03839291037244387
+        ],
+        "object_initial_pos": [
+          -0.11909425574469136,
+          -0.23978121735098318,
+          0.038392910369975934
+        ],
+        "target_pos": [
+          -0.11909425574469136,
+          -0.23978121735098318,
+          0.038392910369975934
+        ],
+        "object_velocity_x_m_s": 9.378882518922587e-19,
+        "reference_velocity_x_m_s": 0.0,
+        "motion_active": false,
+        "first_contact_sim_time": null,
+        "first_contact_step": null,
+        "tracking_error_m": 1.5500101202547967e-13,
+        "horizontal_force_n": 0.0,
+        "applied_torque_y_nm": -0.0,
+        "force_saturated": false,
+        "active_physics_samples": 0,
+        "active_sim_time_s": 0.0,
+        "tracking_mae_m": null,
+        "tracking_rmse_m": null,
+        "force_saturation_fraction": null,
+        "peak_force_n": 0.0,
+        "max_force_after_contact_n": 0.0,
+        "precontact_x_range_m": 1.5500101202547967e-13,
+        "precontact_y_range_m": 1.0422218643668657e-13,
+        "precontact_z_range_m": 2.467935578120972e-12,
+        "max_precontact_tilt_deg": 2.699869328381916e-06,
+        "contact_is_grasp": false
+      }
+    },
+    "slow": {
+      "reset": {
+        "instruction": "pick up the alphabet soup and place it in the basket",
+        "resolved_task_id": 0,
+        "initial_state_sha256": "7c7358a38e6fc56133866dd23f67640d000de848fb4d22638b545d81c042010b",
+        "initial_observation_sha256": "c3389fb74d763f0154e8bfa2b79cdae6b9c763de971499da7e7efe07de15d360",
+        "motion_object_name": "alphabet_soup_1",
+        "motion_object_mass_kg": 0.025851445888000014,
+        "motion_physics_timestep_s": 0.002,
+        "motion_object_initial_position_m": [
+          -0.11909425574469136,
+          -0.23978121735098318,
+          0.038392910369975934
+        ],
+        "motion_target_geom_names": [
+          "alphabet_soup_1_g0",
+          "alphabet_soup_1_g1",
+          "alphabet_soup_1_g2",
+          "alphabet_soup_1_g3",
+          "alphabet_soup_1_g4",
+          "alphabet_soup_1_g5",
+          "alphabet_soup_1_g6",
+          "alphabet_soup_1_g7",
+          "alphabet_soup_1_g8",
+          "alphabet_soup_1_g9",
+          "alphabet_soup_1_g10",
+          "alphabet_soup_1_g11",
+          "alphabet_soup_1_g12",
+          "alphabet_soup_1_g13",
+          "alphabet_soup_1_g14",
+          "alphabet_soup_1_g15",
+          "alphabet_soup_1_g16",
+          "alphabet_soup_1_g17",
+          "alphabet_soup_1_g18",
+          "alphabet_soup_1_g19",
+          "alphabet_soup_1_g20",
+          "alphabet_soup_1_g21"
+        ],
+        "motion_finger_geom_names": [
+          "gripper0_finger1_collision",
+          "gripper0_finger1_pad_collision",
+          "gripper0_finger2_collision",
+          "gripper0_finger2_pad_collision"
+        ]
+      },
+      "final": {
+        "condition": "slow",
+        "elapsed_sim_time_s": 12.000000000000844,
+        "object_pos": [
+          -0.10888991876560924,
+          -0.2377297193169551,
+          0.03840016469228692
+        ],
+        "object_initial_pos": [
+          -0.11909425574469136,
+          -0.23978121735098318,
+          0.038392910369975934
+        ],
+        "target_pos": [
+          -0.11144058709740179,
+          -0.23978121735098318,
+          0.038392910369975934
+        ],
+        "object_velocity_x_m_s": -0.007352046803857114,
+        "reference_velocity_x_m_s": -0.014512265760701134,
+        "motion_active": true,
+        "first_contact_sim_time": null,
+        "first_contact_step": null,
+        "tracking_error_m": 0.002550668331792544,
+        "horizontal_force_n": -0.2558918325131384,
+        "applied_torque_y_nm": 0.007676754975394152,
+        "force_saturated": false,
+        "active_physics_samples": 5750,
+        "active_sim_time_s": 11.5,
+        "tracking_mae_m": 0.0022086824664248263,
+        "tracking_rmse_m": 0.00230552239507366,
+        "force_saturation_fraction": 0.0,
+        "peak_force_n": 0.2745347507507999,
+        "max_force_after_contact_n": 0.0,
+        "precontact_x_range_m": 0.03505625152065164,
+        "precontact_y_range_m": 0.004368310966058192,
+        "precontact_z_range_m": 0.00024618383498941493,
+        "max_precontact_tilt_deg": 8.579937961724802,
+        "contact_is_grasp": false
+      }
+    },
+    "fast": {
+      "reset": {
+        "instruction": "pick up the alphabet soup and place it in the basket",
+        "resolved_task_id": 0,
+        "initial_state_sha256": "7c7358a38e6fc56133866dd23f67640d000de848fb4d22638b545d81c042010b",
+        "initial_observation_sha256": "c3389fb74d763f0154e8bfa2b79cdae6b9c763de971499da7e7efe07de15d360",
+        "motion_object_name": "alphabet_soup_1",
+        "motion_object_mass_kg": 0.025851445888000014,
+        "motion_physics_timestep_s": 0.002,
+        "motion_object_initial_position_m": [
+          -0.11909425574469136,
+          -0.23978121735098318,
+          0.038392910369975934
+        ],
+        "motion_target_geom_names": [
+          "alphabet_soup_1_g0",
+          "alphabet_soup_1_g1",
+          "alphabet_soup_1_g2",
+          "alphabet_soup_1_g3",
+          "alphabet_soup_1_g4",
+          "alphabet_soup_1_g5",
+          "alphabet_soup_1_g6",
+          "alphabet_soup_1_g7",
+          "alphabet_soup_1_g8",
+          "alphabet_soup_1_g9",
+          "alphabet_soup_1_g10",
+          "alphabet_soup_1_g11",
+          "alphabet_soup_1_g12",
+          "alphabet_soup_1_g13",
+          "alphabet_soup_1_g14",
+          "alphabet_soup_1_g15",
+          "alphabet_soup_1_g16",
+          "alphabet_soup_1_g17",
+          "alphabet_soup_1_g18",
+          "alphabet_soup_1_g19",
+          "alphabet_soup_1_g20",
+          "alphabet_soup_1_g21"
+        ],
+        "motion_finger_geom_names": [
+          "gripper0_finger1_collision",
+          "gripper0_finger1_pad_collision",
+          "gripper0_finger2_collision",
+          "gripper0_finger2_pad_collision"
+        ]
+      },
+      "final": {
+        "condition": "fast",
+        "elapsed_sim_time_s": 12.000000000000844,
+        "object_pos": [
+          -0.1360703533428356,
+          -0.2383956444379885,
+          0.038406200841227194
+        ],
+        "object_initial_pos": [
+          -0.11909425574469136,
+          -0.23978121735098318,
+          0.038392910369975934
+        ],
+        "target_pos": [
+          -0.1332363913684036,
+          -0.23978121735098318,
+          0.038392910369975934
+        ],
+        "object_velocity_x_m_s": 0.03948692262035013,
+        "reference_velocity_x_m_s": 0.02221441469082123,
+        "motion_active": true,
+        "first_contact_sim_time": null,
+        "first_contact_step": null,
+        "tracking_error_m": 0.0028339619744320033,
+        "horizontal_force_n": 0.2725292806309743,
+        "applied_torque_y_nm": -0.008175878418929229,
+        "force_saturated": false,
+        "active_physics_samples": 5750,
+        "active_sim_time_s": 11.5,
+        "tracking_mae_m": 0.0022272432946302176,
+        "tracking_rmse_m": 0.002319462855526823,
+        "force_saturation_fraction": 0.0,
+        "peak_force_n": 0.29143523514587594,
+        "max_force_after_contact_n": 0.0,
+        "precontact_x_range_m": 0.03513612711017439,
+        "precontact_y_range_m": 0.0027900515043418894,
+        "precontact_z_range_m": 0.00036939012640611196,
+        "max_precontact_tilt_deg": 11.48933718894857,
+        "contact_is_grasp": false
+      }
+    }
+  }
+}

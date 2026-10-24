@@ -1,4 +1,8 @@
-# Protocol specified before collecting the main results
+# Experimental method and metric definitions
+
+The study compares five replanning intervals using 150 unique episodes:
+**3 tasks × 10 initial states (0–9) × 1 policy seed (11) × 5 values of K**.
+All results describe the complete study; technical smoke episodes are excluded.
 
 ## Research question and hypotheses
 
@@ -10,15 +14,11 @@ of a single model?
 3. K=1 is not necessarily best: stochastic replanning may change direction, and the model
    was trained to generate sequences. This is a hypothesis rather than a predetermined conclusion.
 
-A null or non-monotonic result also answers the research question. Do not select only
-favorable tasks or episodes. Choose the main sample size after verifying the pipeline
-in a pilot, before inspecting the main results.
-
-On 17 October 2026, the compact design was selected: **3 tasks × 2 states (0 and 1) ×
-1 seed (11) × 5 values of K = 30 episodes**, in `configs/compact.json`. The five technical
-smoke episodes are excluded from this summary. The 150- and 900-episode configurations
-are not run. At this scale, the emphasis is on paired behavioral examples, descriptive
-outcome frequencies, and computational cost.
+A null or non-monotonic result also answers the research question. All completed
+episodes in the selected grid are included, rather than only favorable tasks or
+outcomes. The three tasks are placing the alphabet soup can in the basket, placing
+the black bowl between the plate and ramekin on the plate, and opening the middle
+drawer. Each task has ten matched initial situations, evaluated at K=1/5/10/25/50.
 
 ## Controlled conditions
 
@@ -80,20 +80,24 @@ The 95% percentile intervals are conditional on the selected tasks, seeds, and c
 They do not cover all possible tasks or randomness in model training. There is no
 adjustment for multiple comparisons; the conclusions are exploratory. Overlap between
 two separate intervals does not test the paired difference. An inconclusive difference
-does not establish equivalence. A small pilot and identical outcomes can produce narrow
+does not establish equivalence. Small samples and identical outcomes can produce narrow
 or zero-width bootstrap intervals without establishing error-free performance.
 
 Incomplete runs are not analyzed by default. `--allow-incomplete` includes only states
-with every K and seed present, and marks the report as provisional. Smoke, study, and
-full runs must not be pooled as independent observations because their states overlap.
+with every K and seed present, and marks the report as provisional. Source evidence
+uses two disjoint directories, `outputs/compact` and `outputs/validation`; their raw
+manifests remain unchanged. The unified analysis rejects overlapping episode identities
+and incompatible conditions. Alternative run configurations and smoke results must
+not be added as independent observations when their states overlap.
 
 ## Visual annotation
 
-Review all 30 videos in the selected experiment. If using a subset, select the same
-state and seed across all K values in advance and document the selection rule.
-Reviewing only unsuccessful episodes cannot estimate error frequency across all episodes.
+The visual review covers 60 episodes: states 0–3 for every task and every K, with
+seed 11. It is balanced across conditions and includes successful and unsuccessful
+episodes. All 150 episodes contribute to numerical success and timing results.
 
-- `reviewed`: yes after review; no indicates uncertainty, not an absence of errors.
+- `reviewed`: yes when both event counters are resolved; no indicates unresolved
+  counters or an uninspected episode, not an absence of errors.
 - `missed_grasps`: distinct attempts to close the fingers on the target object or handle
   without securing it. The absence of an attempt is not automatically a missed grasp.
 - `dropped_objects`: loss of a held object before placement. Intentional release is not an error.
@@ -102,17 +106,14 @@ Reviewing only unsuccessful episodes cannot estimate error frequency across all 
 - `failure_category`: none, missed_grasp, dropped_object, wrong_object, placement, collision,
   timeout, other, unclear. Success after an intermediate miss has category=none and missed_grasps>0.
 
-If the event count is ambiguous, retain reviewed=no and explain why in notes pending
-further review. Independent annotation of a subset by another person is useful.
-The program counts errors only for reviewed=yes and reports the denominator.
-
-Post-experiment note: the assistant reviewed all 30 episodes using frames from both cameras
-and the logs; there was no independent human review. `reviewed=no` was retained where
-both counters could not be determined after inspection. If an individual event was
-identifiable, its count was retained separately, such as a dropped can with an uncertain
-number of earlier misses. The PDF reports totals of known events with a separate
-denominator for each counter; these are not error-frequency estimates for the entire
-experiment. The original CLI statistical table still uses only fully determined labels.
+If an event count is ambiguous, retain reviewed=no and explain why in the notes.
+`inspection.json` separately records which episodes were actually inspected. The
+assistant reviewed the 60 selected episodes using both cameras and the logs; there
+was no independent human review. Known individual counters are retained even if the
+other counter is uncertain. The PDF reports known events with a separate denominator
+for each counter; these are not error-frequency estimates for the entire experiment.
+The original CLI statistical table uses only fully determined labels; the full-study
+analysis additionally reports per-counter coverage.
 
 Contact sheets include a frame every 5 steps, frames around changes in the sign of the
 gripper command, and the final frame; ambiguous moments were additionally inspected frame

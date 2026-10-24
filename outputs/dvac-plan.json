@@ -1,0 +1,491 @@
+{
+  "config_fingerprint": "3a5e998c6c9217ddb77d7300eb730fffc52da95f0ad9a153655d80bc18e769f1",
+  "budget": {
+    "episodes": 48,
+    "matched_blocks": 12,
+    "control_steps_upper_bound": 13760,
+    "model_calls_upper_bound": 4616
+  },
+  "episodes": [
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s16__r22__fixed_10",
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "state": 16,
+      "policy_seed": 22,
+      "method": "fixed_10",
+      "max_steps": 280,
+      "k": 10
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s16__r22__fixed_5",
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "state": 16,
+      "policy_seed": 22,
+      "method": "fixed_5",
+      "max_steps": 280,
+      "k": 5
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s16__r22__fixed_25",
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "state": 16,
+      "policy_seed": 22,
+      "method": "fixed_25",
+      "max_steps": 280,
+      "k": 25
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s16__r22__dvac",
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "state": 16,
+      "policy_seed": 22,
+      "method": "dvac",
+      "max_steps": 280,
+      "k": null
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s16__r11__fixed_5",
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "state": 16,
+      "policy_seed": 11,
+      "method": "fixed_5",
+      "max_steps": 300,
+      "k": 5
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s16__r11__fixed_25",
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "state": 16,
+      "policy_seed": 11,
+      "method": "fixed_25",
+      "max_steps": 300,
+      "k": 25
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s16__r11__dvac",
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "state": 16,
+      "policy_seed": 11,
+      "method": "dvac",
+      "max_steps": 300,
+      "k": null
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s16__r11__fixed_10",
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "state": 16,
+      "policy_seed": 11,
+      "method": "fixed_10",
+      "max_steps": 300,
+      "k": 10
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s16__r11__fixed_5",
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "state": 16,
+      "policy_seed": 11,
+      "method": "fixed_5",
+      "max_steps": 280,
+      "k": 5
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s16__r11__fixed_10",
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "state": 16,
+      "policy_seed": 11,
+      "method": "fixed_10",
+      "max_steps": 280,
+      "k": 10
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s16__r11__fixed_25",
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "state": 16,
+      "policy_seed": 11,
+      "method": "fixed_25",
+      "max_steps": 280,
+      "k": 25
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s16__r11__dvac",
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "state": 16,
+      "policy_seed": 11,
+      "method": "dvac",
+      "max_steps": 280,
+      "k": null
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s15__r22__fixed_5",
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "state": 15,
+      "policy_seed": 22,
+      "method": "fixed_5",
+      "max_steps": 280,
+      "k": 5
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s15__r22__dvac",
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "state": 15,
+      "policy_seed": 22,
+      "method": "dvac",
+      "max_steps": 280,
+      "k": null
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s15__r22__fixed_10",
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "state": 15,
+      "policy_seed": 22,
+      "method": "fixed_10",
+      "max_steps": 280,
+      "k": 10
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s15__r22__fixed_25",
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "state": 15,
+      "policy_seed": 22,
+      "method": "fixed_25",
+      "max_steps": 280,
+      "k": 25
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s16__r22__fixed_10",
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "state": 16,
+      "policy_seed": 22,
+      "method": "fixed_10",
+      "max_steps": 280,
+      "k": 10
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s16__r22__dvac",
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "state": 16,
+      "policy_seed": 22,
+      "method": "dvac",
+      "max_steps": 280,
+      "k": null
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s16__r22__fixed_5",
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "state": 16,
+      "policy_seed": 22,
+      "method": "fixed_5",
+      "max_steps": 280,
+      "k": 5
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s16__r22__fixed_25",
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "state": 16,
+      "policy_seed": 22,
+      "method": "fixed_25",
+      "max_steps": 280,
+      "k": 25
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s15__r11__fixed_10",
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "state": 15,
+      "policy_seed": 11,
+      "method": "fixed_10",
+      "max_steps": 300,
+      "k": 10
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s15__r11__fixed_25",
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "state": 15,
+      "policy_seed": 11,
+      "method": "fixed_25",
+      "max_steps": 300,
+      "k": 25
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s15__r11__fixed_5",
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "state": 15,
+      "policy_seed": 11,
+      "method": "fixed_5",
+      "max_steps": 300,
+      "k": 5
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s15__r11__dvac",
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "state": 15,
+      "policy_seed": 11,
+      "method": "dvac",
+      "max_steps": 300,
+      "k": null
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s16__r22__fixed_10",
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "state": 16,
+      "policy_seed": 22,
+      "method": "fixed_10",
+      "max_steps": 300,
+      "k": 10
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s16__r22__fixed_5",
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "state": 16,
+      "policy_seed": 22,
+      "method": "fixed_5",
+      "max_steps": 300,
+      "k": 5
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s16__r22__dvac",
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "state": 16,
+      "policy_seed": 22,
+      "method": "dvac",
+      "max_steps": 300,
+      "k": null
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s16__r22__fixed_25",
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "state": 16,
+      "policy_seed": 22,
+      "method": "fixed_25",
+      "max_steps": 300,
+      "k": 25
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s15__r11__fixed_25",
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "state": 15,
+      "policy_seed": 11,
+      "method": "fixed_25",
+      "max_steps": 280,
+      "k": 25
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s15__r11__fixed_5",
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "state": 15,
+      "policy_seed": 11,
+      "method": "fixed_5",
+      "max_steps": 280,
+      "k": 5
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s15__r11__dvac",
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "state": 15,
+      "policy_seed": 11,
+      "method": "dvac",
+      "max_steps": 280,
+      "k": null
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s15__r11__fixed_10",
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "state": 15,
+      "policy_seed": 11,
+      "method": "fixed_10",
+      "max_steps": 280,
+      "k": 10
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s15__r11__fixed_10",
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "state": 15,
+      "policy_seed": 11,
+      "method": "fixed_10",
+      "max_steps": 280,
+      "k": 10
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s15__r11__dvac",
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "state": 15,
+      "policy_seed": 11,
+      "method": "dvac",
+      "max_steps": 280,
+      "k": null
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s15__r11__fixed_5",
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "state": 15,
+      "policy_seed": 11,
+      "method": "fixed_5",
+      "max_steps": 280,
+      "k": 5
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s15__r11__fixed_25",
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "state": 15,
+      "policy_seed": 11,
+      "method": "fixed_25",
+      "max_steps": 280,
+      "k": 25
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s15__r22__fixed_5",
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "state": 15,
+      "policy_seed": 22,
+      "method": "fixed_5",
+      "max_steps": 280,
+      "k": 5
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s15__r22__dvac",
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "state": 15,
+      "policy_seed": 22,
+      "method": "dvac",
+      "max_steps": 280,
+      "k": null
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s15__r22__fixed_10",
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "state": 15,
+      "policy_seed": 22,
+      "method": "fixed_10",
+      "max_steps": 280,
+      "k": 10
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s15__r22__fixed_25",
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "state": 15,
+      "policy_seed": 22,
+      "method": "fixed_25",
+      "max_steps": 280,
+      "k": 25
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s16__r11__fixed_25",
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "state": 16,
+      "policy_seed": 11,
+      "method": "fixed_25",
+      "max_steps": 280,
+      "k": 25
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s16__r11__fixed_10",
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "state": 16,
+      "policy_seed": 11,
+      "method": "fixed_10",
+      "max_steps": 280,
+      "k": 10
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s16__r11__dvac",
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "state": 16,
+      "policy_seed": 11,
+      "method": "dvac",
+      "max_steps": 280,
+      "k": null
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s16__r11__fixed_5",
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "state": 16,
+      "policy_seed": 11,
+      "method": "fixed_5",
+      "max_steps": 280,
+      "k": 5
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s15__r22__fixed_25",
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "state": 15,
+      "policy_seed": 22,
+      "method": "fixed_25",
+      "max_steps": 300,
+      "k": 25
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s15__r22__dvac",
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "state": 15,
+      "policy_seed": 22,
+      "method": "dvac",
+      "max_steps": 300,
+      "k": null
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s15__r22__fixed_5",
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "state": 15,
+      "policy_seed": 22,
+      "method": "fixed_5",
+      "max_steps": 300,
+      "k": 5
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s15__r22__fixed_10",
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "state": 15,
+      "policy_seed": 22,
+      "method": "fixed_10",
+      "max_steps": 300,
+      "k": 10
+    }
+  ]
+}

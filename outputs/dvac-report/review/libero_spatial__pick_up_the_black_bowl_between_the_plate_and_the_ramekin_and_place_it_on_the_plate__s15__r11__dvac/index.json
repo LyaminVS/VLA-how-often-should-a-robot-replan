@@ -1,0 +1,242 @@
+{
+  "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s15__r11__dvac",
+  "method": "dvac",
+  "suite": "libero_spatial",
+  "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+  "state": 15,
+  "policy_seed": 11,
+  "pair_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/state15/seed11",
+  "review_roles": [
+    "prespecified"
+  ],
+  "source_directory": "/home/kaban/vla-replan/outputs/dvac/episodes/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s15__r11__dvac",
+  "source_video": "/home/kaban/vla-replan/outputs/dvac/episodes/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s15__r11__dvac/video.mp4",
+  "source_sha256": {
+    "steps.jsonl": "55973d9dfa5a88fc61d75d49dbeb774980a1da266ecf70e35b9ab6024497100e",
+    "chunks.jsonl": "7a4483e9b11b607c948a3cc8d8e6a6cf806445af83937a2c272e74c0231cd218",
+    "video.mp4": "5e6682a328b248a29432a5f24e949fa56305c5c655641704d59ad4c9b44ac2bd"
+  },
+  "summary_sha256": "6229b4768a8bb143425b0071f0068943ef46bd34f184ab7afca78cedfa294fb4",
+  "success": true,
+  "termination": "success",
+  "action_steps": 72,
+  "model_calls": 8,
+  "fps": 20,
+  "decoded_video_frames": 92,
+  "close_command_edge_steps": [
+    35
+  ],
+  "selected_frame_indices": [
+    0,
+    25,
+    32,
+    35,
+    38,
+    45,
+    50,
+    71,
+    72
+  ],
+  "pages": [
+    "sheet_001.png"
+  ],
+  "frames": [
+    {
+      "frame_index": 0,
+      "step": 0,
+      "sim_time_s": 0.0,
+      "selection_reasons": [
+        "initial",
+        "regular_25_actions"
+      ],
+      "is_final_frame": false,
+      "replanned": true,
+      "recorded_outcome": "SUCCESS",
+      "gripper_command": -1.0,
+      "chosen_k": 1,
+      "model_call": 1,
+      "chunk_start_step": 0,
+      "chunk_index": 0,
+      "threshold": null,
+      "first_crossing": null,
+      "page": "sheet_001.png",
+      "row": 0,
+      "column": 0,
+      "ordinal": 1
+    },
+    {
+      "frame_index": 25,
+      "step": 25,
+      "sim_time_s": 1.25,
+      "selection_reasons": [
+        "close_edge_35-10",
+        "regular_25_actions"
+      ],
+      "is_final_frame": false,
+      "replanned": false,
+      "recorded_outcome": "SUCCESS",
+      "gripper_command": -0.9967499375343323,
+      "chosen_k": 28,
+      "model_call": 6,
+      "chunk_start_step": 5,
+      "chunk_index": 20,
+      "threshold": 0.03161697053025616,
+      "first_crossing": 28,
+      "page": "sheet_001.png",
+      "row": 0,
+      "column": 1,
+      "ordinal": 2
+    },
+    {
+      "frame_index": 32,
+      "step": 32,
+      "sim_time_s": 1.6,
+      "selection_reasons": [
+        "close_edge_35-3"
+      ],
+      "is_final_frame": false,
+      "replanned": false,
+      "recorded_outcome": "SUCCESS",
+      "gripper_command": -1.0,
+      "chosen_k": 28,
+      "model_call": 6,
+      "chunk_start_step": 5,
+      "chunk_index": 27,
+      "threshold": 0.03161697053025616,
+      "first_crossing": 28,
+      "page": "sheet_001.png",
+      "row": 0,
+      "column": 2,
+      "ordinal": 3
+    },
+    {
+      "frame_index": 35,
+      "step": 35,
+      "sim_time_s": 1.75,
+      "selection_reasons": [
+        "close_edge_35+0"
+      ],
+      "is_final_frame": false,
+      "replanned": true,
+      "recorded_outcome": "SUCCESS",
+      "gripper_command": 0.9931475520133972,
+      "chosen_k": 45,
+      "model_call": 8,
+      "chunk_start_step": 35,
+      "chunk_index": 0,
+      "threshold": 0.042113206372546216,
+      "first_crossing": 45,
+      "page": "sheet_001.png",
+      "row": 1,
+      "column": 0,
+      "ordinal": 4
+    },
+    {
+      "frame_index": 38,
+      "step": 38,
+      "sim_time_s": 1.9,
+      "selection_reasons": [
+        "close_edge_35+3"
+      ],
+      "is_final_frame": false,
+      "replanned": false,
+      "recorded_outcome": "SUCCESS",
+      "gripper_command": 0.9898883700370789,
+      "chosen_k": 45,
+      "model_call": 8,
+      "chunk_start_step": 35,
+      "chunk_index": 3,
+      "threshold": 0.042113206372546216,
+      "first_crossing": 45,
+      "page": "sheet_001.png",
+      "row": 1,
+      "column": 1,
+      "ordinal": 5
+    },
+    {
+      "frame_index": 45,
+      "step": 45,
+      "sim_time_s": 2.25,
+      "selection_reasons": [
+        "close_edge_35+10"
+      ],
+      "is_final_frame": false,
+      "replanned": false,
+      "recorded_outcome": "SUCCESS",
+      "gripper_command": 0.9895656704902649,
+      "chosen_k": 45,
+      "model_call": 8,
+      "chunk_start_step": 35,
+      "chunk_index": 10,
+      "threshold": 0.042113206372546216,
+      "first_crossing": 45,
+      "page": "sheet_001.png",
+      "row": 1,
+      "column": 2,
+      "ordinal": 6
+    },
+    {
+      "frame_index": 50,
+      "step": 50,
+      "sim_time_s": 2.5,
+      "selection_reasons": [
+        "regular_25_actions"
+      ],
+      "is_final_frame": false,
+      "replanned": false,
+      "recorded_outcome": "SUCCESS",
+      "gripper_command": 0.9927334189414978,
+      "chosen_k": 45,
+      "model_call": 8,
+      "chunk_start_step": 35,
+      "chunk_index": 15,
+      "threshold": 0.042113206372546216,
+      "first_crossing": 45,
+      "page": "sheet_001.png",
+      "row": 2,
+      "column": 0,
+      "ordinal": 7
+    },
+    {
+      "frame_index": 71,
+      "step": 71,
+      "sim_time_s": 3.55,
+      "selection_reasons": [
+        "last_action"
+      ],
+      "is_final_frame": false,
+      "replanned": false,
+      "recorded_outcome": "SUCCESS",
+      "gripper_command": 1.0,
+      "chosen_k": 45,
+      "model_call": 8,
+      "chunk_start_step": 35,
+      "chunk_index": 36,
+      "threshold": 0.042113206372546216,
+      "first_crossing": 45,
+      "page": "sheet_001.png",
+      "row": 2,
+      "column": 1,
+      "ordinal": 8
+    },
+    {
+      "frame_index": 72,
+      "step": 72,
+      "sim_time_s": 3.6,
+      "selection_reasons": [
+        "final_post_action_outcome"
+      ],
+      "is_final_frame": true,
+      "replanned": false,
+      "recorded_outcome": "SUCCESS",
+      "page": "sheet_001.png",
+      "row": 2,
+      "column": 2,
+      "ordinal": 9
+    }
+  ],
+  "sheet_sha256": {
+    "sheet_001.png": "02f55dab8a98d3b8890c69b20dc190b17ae2bcfc89655f2a6a9c8d2c356870b2"
+  },
+  "note": "Action frames show the observation before the indexed action. The final frame follows all actions. Positive gripper-command edges are not proof of a grasp."
+}

@@ -1,0 +1,717 @@
+{
+  "status": "reviewed_sampled_frames",
+  "reviewer": "assistant",
+  "selection": {
+    "prespecified": {
+      "rule": "State15 and policy seed11 for every configured task; fixed_10 and DVAC. Outcomes never affect this group.",
+      "episode_ids": [
+        "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s15__r11__fixed_10",
+        "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s15__r11__dvac",
+        "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s15__r11__fixed_10",
+        "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s15__r11__dvac",
+        "libero_goal__open_the_middle_drawer_of_the_cabinet__s15__r11__fixed_10",
+        "libero_goal__open_the_middle_drawer_of_the_cabinet__s15__r11__dvac"
+      ]
+    },
+    "posthoc_discordant_failure": {
+      "requested": true,
+      "rule": "First DVAC failure in original manifest planned order whose matched fixed_10 episode succeeds; inspect both videos.",
+      "eligible_pair_found": true,
+      "pair_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket/state16/seed22",
+      "episode_ids": [
+        "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s16__r22__fixed_10",
+        "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s16__r22__dvac"
+      ],
+      "interpretation_limit": "Outcome-selected diagnostic example, not a representative error-rate estimate or evidence of causality. The prespecified demo is unchanged."
+    }
+  },
+  "instructions": "Enter only visually supported observations, link episode/frame references, and keep interpretations distinct from observed facts. Leave uncertain causes unresolved. A closing command does not establish a successful grasp.",
+  "episodes": [
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s15__r11__fixed_10",
+      "reviewed": true,
+      "reviewer": "assistant",
+      "review_roles": [
+        "prespecified"
+      ],
+      "review_method": "Assistant visual inspection of every listed contact sheet; not continuous full-resolution video inspection and not human annotation.",
+      "observed_facts": [
+        "At steps 25-55 the gripper approaches and stays around the soup can. At steps 57-75 the can is visibly raised with the gripper relative to its initial tabletop position.",
+        "At steps 100-125 the gripper and can move toward the basket; at steps 125-139 the can is at the basket opening. The final frame at step 139 reports SUCCESS, 6.95 simulated seconds and 14 model calls.",
+        "Displayed execution intervals remain K=10; the sampled replanning frames at steps 0,50 and 100 have yellow REPLAN markers."
+      ],
+      "interpretations": [
+        "The observed sequence is consistent with a successful pickup and transfer. The contact sheets do not identify a need for more frequent replanning in this episode."
+      ],
+      "uncertain_observations": [
+        "Sparse frames and gripper occlusion do not establish the exact grasp-contact onset, a release event, or the absence of brief slips between sampled frames. No grasp-error count is assigned."
+      ],
+      "frame_references": [
+        {
+          "frame_index": 0,
+          "step": 0,
+          "page": "sheet_001.png",
+          "row": 0,
+          "column": 0
+        },
+        {
+          "frame_index": 25,
+          "step": 25,
+          "page": "sheet_001.png",
+          "row": 0,
+          "column": 1
+        },
+        {
+          "frame_index": 45,
+          "step": 45,
+          "page": "sheet_001.png",
+          "row": 2,
+          "column": 0
+        },
+        {
+          "frame_index": 50,
+          "step": 50,
+          "page": "sheet_001.png",
+          "row": 3,
+          "column": 0
+        },
+        {
+          "frame_index": 55,
+          "step": 55,
+          "page": "sheet_001.png",
+          "row": 3,
+          "column": 2
+        },
+        {
+          "frame_index": 57,
+          "step": 57,
+          "page": "sheet_002.png",
+          "row": 0,
+          "column": 0
+        },
+        {
+          "frame_index": 75,
+          "step": 75,
+          "page": "sheet_002.png",
+          "row": 1,
+          "column": 2
+        },
+        {
+          "frame_index": 100,
+          "step": 100,
+          "page": "sheet_002.png",
+          "row": 2,
+          "column": 0
+        },
+        {
+          "frame_index": 125,
+          "step": 125,
+          "page": "sheet_002.png",
+          "row": 2,
+          "column": 2
+        },
+        {
+          "frame_index": 138,
+          "step": 138,
+          "page": "sheet_002.png",
+          "row": 3,
+          "column": 2
+        },
+        {
+          "frame_index": 139,
+          "step": 139,
+          "page": "sheet_003.png",
+          "row": 0,
+          "column": 0
+        }
+      ],
+      "inspected_sheets": [
+        "sheet_001.png",
+        "sheet_002.png",
+        "sheet_003.png"
+      ],
+      "inspected_sheet_sha256": {
+        "sheet_001.png": "33c14b833dc47a05aa1a0c00f8e61fd7d074f8bca4554e868e4007620931b05c",
+        "sheet_002.png": "d98c6252f5efb31ad3e57f7ece5f7b9fea9bd39461a5e3ea9dc021d9a31610f4",
+        "sheet_003.png": "061d049f97430488a20e0619a31345c3c0fba92d1e84deeb1daac9a5f12ca984"
+      },
+      "source_sha256_from_index": {
+        "steps.jsonl": "919bddef816d9e297c28059a3cb3db22956336fbb562992b5ff6b59587858c7c",
+        "chunks.jsonl": "4e4625a5036dce40403eba999cad2fede79b239e2467f7bb6a121403928806b7",
+        "video.mp4": "72306bfcfb44b3f1fa0dcdf426556edbc8be9e52e8b8b362c6bcb7c3270c1f0f"
+      },
+      "summary_sha256_from_index": "4d2d91465299ba48325a3d19ddf72a1b0d28f5dd9afc1cd26fceb58485f26545",
+      "overlay_quality": "Instruction, method, selected K, replanning status and outcome are visible without observed clipping or overlap. Original video text is small after thumbnail reduction; the added sheet captions remain legible."
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s15__r11__dvac",
+      "reviewed": true,
+      "reviewer": "assistant",
+      "review_roles": [
+        "prespecified"
+      ],
+      "review_method": "Assistant visual inspection of every listed contact sheet; not continuous full-resolution video inspection and not human annotation.",
+      "observed_facts": [
+        "At steps 25-45 the gripper approaches the soup can. The overlays show K=47 during this approach, K=1 at the sampled replanning frames 48 and 50, and K=50 at steps 55,75 and 100.",
+        "At steps 75 and 100 the can is visibly raised with the gripper, and its position shifts toward the basket. At steps 125-137 it is at the basket opening.",
+        "The final frame at step 137 reports SUCCESS, 6.85 simulated seconds and 11 model calls."
+      ],
+      "interpretations": [
+        "The short displayed horizons occur near the grasping portion of this sequence and long displayed horizons occur during the subsequent transfer. This temporal association does not show that the short horizons caused success."
+      ],
+      "uncertain_observations": [
+        "The frames do not establish exact contact onset, a release event, or whether a corrective movement occurred between the closely spaced replans. No grasp-error count is assigned."
+      ],
+      "frame_references": [
+        {
+          "frame_index": 0,
+          "step": 0,
+          "page": "sheet_001.png",
+          "row": 0,
+          "column": 0
+        },
+        {
+          "frame_index": 25,
+          "step": 25,
+          "page": "sheet_001.png",
+          "row": 0,
+          "column": 1
+        },
+        {
+          "frame_index": 35,
+          "step": 35,
+          "page": "sheet_001.png",
+          "row": 0,
+          "column": 2
+        },
+        {
+          "frame_index": 45,
+          "step": 45,
+          "page": "sheet_001.png",
+          "row": 1,
+          "column": 1
+        },
+        {
+          "frame_index": 48,
+          "step": 48,
+          "page": "sheet_001.png",
+          "row": 1,
+          "column": 2
+        },
+        {
+          "frame_index": 50,
+          "step": 50,
+          "page": "sheet_001.png",
+          "row": 2,
+          "column": 0
+        },
+        {
+          "frame_index": 55,
+          "step": 55,
+          "page": "sheet_001.png",
+          "row": 2,
+          "column": 1
+        },
+        {
+          "frame_index": 75,
+          "step": 75,
+          "page": "sheet_001.png",
+          "row": 2,
+          "column": 2
+        },
+        {
+          "frame_index": 100,
+          "step": 100,
+          "page": "sheet_001.png",
+          "row": 3,
+          "column": 0
+        },
+        {
+          "frame_index": 125,
+          "step": 125,
+          "page": "sheet_001.png",
+          "row": 3,
+          "column": 1
+        },
+        {
+          "frame_index": 136,
+          "step": 136,
+          "page": "sheet_001.png",
+          "row": 3,
+          "column": 2
+        },
+        {
+          "frame_index": 137,
+          "step": 137,
+          "page": "sheet_002.png",
+          "row": 0,
+          "column": 0
+        }
+      ],
+      "inspected_sheets": [
+        "sheet_001.png",
+        "sheet_002.png"
+      ],
+      "inspected_sheet_sha256": {
+        "sheet_001.png": "76f150de4afeba4b1ee90300ecb9658ca2fafa25cabb7c11129c82bc2162985c",
+        "sheet_002.png": "762edec43fa94faeaeaea9c5938f682dae08ed6304e05e5444b0f8914e4e0840"
+      },
+      "source_sha256_from_index": {
+        "steps.jsonl": "763c461bba14c3efdbe359eee24f93217070930fd131d2ade3aa637109b01dcb",
+        "chunks.jsonl": "b9c4556be70a11628b40f0e4c1376ea8e944eb12d4b05c5e400e5d2f125e6dda",
+        "video.mp4": "64991c49120a3a9c672f73b797601dbd63346769cfaa2cc219dba7023f845c6a"
+      },
+      "summary_sha256_from_index": "e5df71f6a9d1e7ab4aa8b0797bff3158d14f25effc0be65a8c0fc7d7a225f15c",
+      "overlay_quality": "Instruction, method, selected K, replanning status and outcome are visible without observed clipping or overlap. Original video text is small after thumbnail reduction; the added sheet captions remain legible."
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s15__r11__fixed_10",
+      "reviewed": true,
+      "reviewer": "assistant",
+      "review_roles": [
+        "prespecified"
+      ],
+      "review_method": "Assistant visual inspection of every listed contact sheet; not continuous full-resolution video inspection and not human annotation.",
+      "observed_facts": [
+        "At steps 25 and 32 the gripper moves down to the target bowl. In the frames 35-50 the bowl stays immediately below the gripper; by steps 71-72 it overlaps the red-rimmed plate in the external camera view.",
+        "The final frame at step 72 reports SUCCESS, 3.60 simulated seconds and 8 model calls. Displayed intervals remain K=10."
+      ],
+      "interpretations": [
+        "The visible trajectory is consistent with moving the bowl to the plate region."
+      ],
+      "uncertain_observations": [
+        "The gripper and bowl obscure their exact contact, and these sampled views do not establish a release or how fully the bowl is supported by the plate at the success boundary. No grasp-error count is assigned."
+      ],
+      "frame_references": [
+        {
+          "frame_index": 0,
+          "step": 0,
+          "page": "sheet_001.png",
+          "row": 0,
+          "column": 0
+        },
+        {
+          "frame_index": 25,
+          "step": 25,
+          "page": "sheet_001.png",
+          "row": 0,
+          "column": 1
+        },
+        {
+          "frame_index": 32,
+          "step": 32,
+          "page": "sheet_001.png",
+          "row": 0,
+          "column": 2
+        },
+        {
+          "frame_index": 35,
+          "step": 35,
+          "page": "sheet_001.png",
+          "row": 1,
+          "column": 0
+        },
+        {
+          "frame_index": 38,
+          "step": 38,
+          "page": "sheet_001.png",
+          "row": 1,
+          "column": 1
+        },
+        {
+          "frame_index": 45,
+          "step": 45,
+          "page": "sheet_001.png",
+          "row": 1,
+          "column": 2
+        },
+        {
+          "frame_index": 50,
+          "step": 50,
+          "page": "sheet_001.png",
+          "row": 2,
+          "column": 0
+        },
+        {
+          "frame_index": 71,
+          "step": 71,
+          "page": "sheet_001.png",
+          "row": 2,
+          "column": 1
+        },
+        {
+          "frame_index": 72,
+          "step": 72,
+          "page": "sheet_001.png",
+          "row": 2,
+          "column": 2
+        }
+      ],
+      "inspected_sheets": [
+        "sheet_001.png"
+      ],
+      "inspected_sheet_sha256": {
+        "sheet_001.png": "1de21149a091dff1940057a15fb125f80f4ba94aa8da2e572e6f2a9393e1a9a7"
+      },
+      "source_sha256_from_index": {
+        "steps.jsonl": "c165e1826d13b80aecbb066cc796a6f39092465abed9b813c420d3fde40e6b8a",
+        "chunks.jsonl": "d8819f0b7787314fae857aa84b23e1a563f0c391b6d1ca931aad2055d56fb18d",
+        "video.mp4": "9c5f640bce6953829f351d08ae82c7b3084fb8d248f269a107821927cbbc5685"
+      },
+      "summary_sha256_from_index": "d16de6616c681d1bd8b0d840a87ea776892ab7493c691020eaa917486bd433aa",
+      "overlay_quality": "Instruction, method, selected K, replanning status and outcome are visible without observed clipping or overlap. Original video text is small after thumbnail reduction; the added sheet captions remain legible."
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s15__r11__dvac",
+      "reviewed": true,
+      "reviewer": "assistant",
+      "review_roles": [
+        "prespecified"
+      ],
+      "review_method": "Assistant visual inspection of every listed contact sheet; not continuous full-resolution video inspection and not human annotation.",
+      "observed_facts": [
+        "At steps 25 and 32 the gripper approaches the bowl with displayed K=28. At step 35 a REPLAN marker reports K=45; that interval is still displayed at steps 38,45,50 and 71.",
+        "At steps 71-72 the bowl overlaps the red-rimmed plate in the external camera view. The final frame reports SUCCESS at step 72, 3.60 simulated seconds and 8 model calls."
+      ],
+      "interpretations": [
+        "For this paired episode, adaptive scheduling changes when the calls occur but the final displayed step count and call count equal those of fixed K=10. Long execution intervals can accompany success in this particular transfer."
+      ],
+      "uncertain_observations": [
+        "The sampled views do not resolve the exact grasp contact, release, or plate support condition. They do not show that the interval choice improved the manipulation. No grasp-error count is assigned."
+      ],
+      "frame_references": [
+        {
+          "frame_index": 0,
+          "step": 0,
+          "page": "sheet_001.png",
+          "row": 0,
+          "column": 0
+        },
+        {
+          "frame_index": 25,
+          "step": 25,
+          "page": "sheet_001.png",
+          "row": 0,
+          "column": 1
+        },
+        {
+          "frame_index": 32,
+          "step": 32,
+          "page": "sheet_001.png",
+          "row": 0,
+          "column": 2
+        },
+        {
+          "frame_index": 35,
+          "step": 35,
+          "page": "sheet_001.png",
+          "row": 1,
+          "column": 0
+        },
+        {
+          "frame_index": 38,
+          "step": 38,
+          "page": "sheet_001.png",
+          "row": 1,
+          "column": 1
+        },
+        {
+          "frame_index": 45,
+          "step": 45,
+          "page": "sheet_001.png",
+          "row": 1,
+          "column": 2
+        },
+        {
+          "frame_index": 50,
+          "step": 50,
+          "page": "sheet_001.png",
+          "row": 2,
+          "column": 0
+        },
+        {
+          "frame_index": 71,
+          "step": 71,
+          "page": "sheet_001.png",
+          "row": 2,
+          "column": 1
+        },
+        {
+          "frame_index": 72,
+          "step": 72,
+          "page": "sheet_001.png",
+          "row": 2,
+          "column": 2
+        }
+      ],
+      "inspected_sheets": [
+        "sheet_001.png"
+      ],
+      "inspected_sheet_sha256": {
+        "sheet_001.png": "02f55dab8a98d3b8890c69b20dc190b17ae2bcfc89655f2a6a9c8d2c356870b2"
+      },
+      "source_sha256_from_index": {
+        "steps.jsonl": "55973d9dfa5a88fc61d75d49dbeb774980a1da266ecf70e35b9ab6024497100e",
+        "chunks.jsonl": "7a4483e9b11b607c948a3cc8d8e6a6cf806445af83937a2c272e74c0231cd218",
+        "video.mp4": "5e6682a328b248a29432a5f24e949fa56305c5c655641704d59ad4c9b44ac2bd"
+      },
+      "summary_sha256_from_index": "6229b4768a8bb143425b0071f0068943ef46bd34f184ab7afca78cedfa294fb4",
+      "overlay_quality": "Instruction, method, selected K, replanning status and outcome are visible without observed clipping or overlap. Original video text is small after thumbnail reduction; the added sheet captions remain legible."
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s15__r11__fixed_10",
+      "reviewed": true,
+      "reviewer": "assistant",
+      "review_roles": [
+        "prespecified"
+      ],
+      "review_method": "Assistant visual inspection of every listed contact sheet; not continuous full-resolution video inspection and not human annotation.",
+      "observed_facts": [
+        "At steps 25-75 the gripper moves toward the cabinet front and its handle area. The middle drawer is visibly extended outward by steps 100-111.",
+        "The final frame at step 111 reports SUCCESS, 5.55 simulated seconds and 12 model calls. Displayed intervals remain K=10."
+      ],
+      "interpretations": [
+        "The visible drawer displacement agrees with the simulator-reported completion of the opening task."
+      ],
+      "uncertain_observations": [
+        "The handle is partly occluded by the hand; these sparse frames cannot identify the precise contact configuration, contact forces, or a missed-contact event."
+      ],
+      "frame_references": [
+        {
+          "frame_index": 0,
+          "step": 0,
+          "page": "sheet_001.png",
+          "row": 0,
+          "column": 0
+        },
+        {
+          "frame_index": 25,
+          "step": 25,
+          "page": "sheet_001.png",
+          "row": 0,
+          "column": 1
+        },
+        {
+          "frame_index": 50,
+          "step": 50,
+          "page": "sheet_001.png",
+          "row": 0,
+          "column": 2
+        },
+        {
+          "frame_index": 75,
+          "step": 75,
+          "page": "sheet_001.png",
+          "row": 1,
+          "column": 0
+        },
+        {
+          "frame_index": 100,
+          "step": 100,
+          "page": "sheet_001.png",
+          "row": 1,
+          "column": 1
+        },
+        {
+          "frame_index": 110,
+          "step": 110,
+          "page": "sheet_001.png",
+          "row": 1,
+          "column": 2
+        },
+        {
+          "frame_index": 111,
+          "step": 111,
+          "page": "sheet_001.png",
+          "row": 2,
+          "column": 0
+        }
+      ],
+      "inspected_sheets": [
+        "sheet_001.png"
+      ],
+      "inspected_sheet_sha256": {
+        "sheet_001.png": "114d38bcd6ac3216e8892c5f94804a02aeb14133e5cd3a6ce08d84659273a7ec"
+      },
+      "source_sha256_from_index": {
+        "steps.jsonl": "1e6db6989264b209f3e5a5c05329da46a036979091c91f2a49364c50fc8db0a8",
+        "chunks.jsonl": "24ebaf583c36668ef460dacc6bccfe61703f6dc6043f3bab3ca924647b458011",
+        "video.mp4": "9753a44318e7b09b372a432e22aaab87f5f0c463bf794d099e487404db12ef30"
+      },
+      "summary_sha256_from_index": "739291137b0b503b0cdedd87150e67e7093ade77604a9e908d6f4a911d04c4b4",
+      "overlay_quality": "Instruction, method, selected K, replanning status and outcome are visible without observed clipping or overlap. Original video text is small after thumbnail reduction; the added sheet captions remain legible."
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s15__r11__dvac",
+      "reviewed": true,
+      "reviewer": "assistant",
+      "review_roles": [
+        "prespecified"
+      ],
+      "review_method": "Assistant visual inspection of every listed contact sheet; not continuous full-resolution video inspection and not human annotation.",
+      "observed_facts": [
+        "The overlays show K=50 at steps 25,50,75 and 100 while the gripper approaches the cabinet and the drawer begins to extend. The sampled frame at step 115 displays K=17.",
+        "The middle drawer is visibly extended outward by steps 115-116. The final frame at step 116 reports SUCCESS, 5.80 simulated seconds and 7 model calls."
+      ],
+      "interpretations": [
+        "In this pair the adaptive run opens the drawer with fewer calls than fixed K=10 while reaching the success boundary five simulated actions later. The frames do not establish why the trajectories differ."
+      ],
+      "uncertain_observations": [
+        "The hand partly occludes the handle. The exact contact configuration, force, and any brief contact loss between sampled frames remain unresolved."
+      ],
+      "frame_references": [
+        {
+          "frame_index": 0,
+          "step": 0,
+          "page": "sheet_001.png",
+          "row": 0,
+          "column": 0
+        },
+        {
+          "frame_index": 25,
+          "step": 25,
+          "page": "sheet_001.png",
+          "row": 0,
+          "column": 1
+        },
+        {
+          "frame_index": 50,
+          "step": 50,
+          "page": "sheet_001.png",
+          "row": 0,
+          "column": 2
+        },
+        {
+          "frame_index": 75,
+          "step": 75,
+          "page": "sheet_001.png",
+          "row": 1,
+          "column": 0
+        },
+        {
+          "frame_index": 100,
+          "step": 100,
+          "page": "sheet_001.png",
+          "row": 1,
+          "column": 1
+        },
+        {
+          "frame_index": 115,
+          "step": 115,
+          "page": "sheet_001.png",
+          "row": 1,
+          "column": 2
+        },
+        {
+          "frame_index": 116,
+          "step": 116,
+          "page": "sheet_001.png",
+          "row": 2,
+          "column": 0
+        }
+      ],
+      "inspected_sheets": [
+        "sheet_001.png"
+      ],
+      "inspected_sheet_sha256": {
+        "sheet_001.png": "53266c9b0b2b74c4c155f52eee06d01a7bd8cbc8c2a5d0c23bdcf1edbb29cd42"
+      },
+      "source_sha256_from_index": {
+        "steps.jsonl": "d67710b8354762ffef9960d7cb3c9c3ed5b64715c9684eb74495ba35a9dcd8e4",
+        "chunks.jsonl": "003fd776155f42bd8a323ecdae6e413c1bfd43f89c898b02557c181d6bf9c21d",
+        "video.mp4": "a8b45d72a5d0e2c3ff0049a400a75dfaed1ce389342651a73656e45315c1cd1f"
+      },
+      "summary_sha256_from_index": "2c24856bbe9f9235aa521e85da0f49f74a969b3326046e7bd6831e51d7a66223",
+      "overlay_quality": "Instruction, method, selected K, replanning status and outcome are visible without observed clipping or overlap. Original video text is small after thumbnail reduction; the added sheet captions remain legible."
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s16__r22__fixed_10",
+      "video_sha256": "f1a5799415891eec46fd662cb8e33b7a6c779180458baf0dc2158d4e879fb27c",
+      "reviewed": true,
+      "review_roles": [
+        "posthoc_discordant_failure"
+      ],
+      "observed_facts": [
+        "The can is visibly beneath the gripper and elevated in frames 65, 75 and 100.",
+        "Frames 120 through 142 show the can at the basket; the final frame 143 displays SUCCESS.",
+        "The recorded run uses 15 model calls and 143 executed actions."
+      ],
+      "interpretations": [
+        "The sampled views support successful pickup and transport in this matched fixed-K run."
+      ],
+      "uncertain_observations": [
+        "Final success does not establish stable post-release placement because native success stops execution.",
+        "The successful fixed-K trajectory is not a controlled intervention on the DVAC trajectory after its initial divergence."
+      ],
+      "frame_references": [
+        55,
+        58,
+        65,
+        75,
+        100,
+        120,
+        125,
+        127,
+        130,
+        139,
+        142,
+        143
+      ],
+      "inspected_sheets": [
+        "sheet_001.png",
+        "sheet_002.png"
+      ]
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s16__r22__dvac",
+      "video_sha256": "ab63bde491b9d0c025f5699404d1dce5dfd8eb4cce45fbaf4c05ef1466b61aa7",
+      "reviewed": true,
+      "review_roles": [
+        "posthoc_discordant_failure"
+      ],
+      "observed_facts": [
+        "Frames 47, 50 and 57 show the gripper at the can. At frames 75 and 100 the arm has moved away while the can remains on the table.",
+        "Frames 119 through 152 show the gripper near the basket; the target can is still visible at its table location.",
+        "Later sampled frames through the final frame at step 280 continue to show the can outside the basket. The recorded outcome is TIME_LIMIT.",
+        "The logged calls at steps 3 and 53 both select K=50 with no strict variance crossing. At step 3 max V=0.03006962949948863 < threshold=0.04352006375213215; at step 53 max V=0.01395655442709705 < threshold=0.038826907417090384.",
+        "Logged calls at steps 125, 126 and 129 select K=1; the episode still ends unsuccessfully after 23 calls."
+      ],
+      "interpretations": [
+        "The sampled sequence is consistent with a missed initial grasp followed by motion toward the placement location without the target.",
+        "The variance rule did not shorten the two blocks spanning approach and attempted grasp in this run. Internal FM stability did not establish action correctness."
+      ],
+      "uncertain_observations": [
+        "Exact finger contact, transient contact between sampled frames, and the mechanical cause of the failed grasp remain unresolved.",
+        "This outcome-selected pair is not an estimate of error prevalence or a causal test of a different K on the same subsequent trajectory."
+      ],
+      "frame_references": [
+        47,
+        50,
+        57,
+        75,
+        100,
+        119,
+        125,
+        126,
+        129,
+        142,
+        152,
+        175,
+        225,
+        280
+      ],
+      "inspected_sheets": [
+        "sheet_001.png",
+        "sheet_002.png",
+        "sheet_003.png"
+      ]
+    }
+  ],
+  "independent_human_review": false,
+  "scope": "Eight outcome-preserving episode reviews from sampled contact sheets; not exhaustive video inspection or causal error attribution.",
+  "review_source_sha256": {
+    "prespecified-review.json": "9e031308cf5a17c98737e7c7ec4e8c3adda48af9fe3c9999442df5237bc92e9f",
+    "posthoc-review.json": "0adeb2c3789dd4665df3df2940e5245703d36d37eb13b15dc763c61a44702e56",
+    "index.json": "63c506bbde5a8adfdc27631c8235cb87783baaa99b6c510320f87ba033e66e12"
+  }
+}

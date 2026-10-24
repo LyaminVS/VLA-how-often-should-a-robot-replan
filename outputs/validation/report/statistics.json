@@ -1,0 +1,1491 @@
+{
+  "coverage": {
+    "completed_episodes": 120,
+    "planned_episodes": 120,
+    "analyzed_episodes": 120,
+    "omitted_incomplete_state_blocks": 0,
+    "provisional": false
+  },
+  "warnings": [
+    "Intervals describe variation across sampled initial states, conditional on chosen tasks and seeds.",
+    "Comparisons are exploratory; intervals are not adjusted for multiple comparisons.",
+    "Gripper-close commands and action changes are proxies, not grasp errors or proof of correction.",
+    "Few initial states: treat results as a pilot; small or degenerate intervals are not proof of equivalence."
+  ],
+  "estimates": [
+    {
+      "metric": "success",
+      "k": 1,
+      "mean": 0.875,
+      "ci_low": 0.75,
+      "ci_high": 1.0,
+      "reference_k": 10,
+      "paired_difference": 0.04166666666666663,
+      "difference_ci_low": -0.125,
+      "difference_ci_high": 0.16666666666666674
+    },
+    {
+      "metric": "success",
+      "k": 5,
+      "mean": 0.875,
+      "ci_low": 0.75,
+      "ci_high": 1.0,
+      "reference_k": 10,
+      "paired_difference": 0.04166666666666663,
+      "difference_ci_low": -0.125,
+      "difference_ci_high": 0.20833333333333337
+    },
+    {
+      "metric": "success",
+      "k": 10,
+      "mean": 0.8333333333333334,
+      "ci_low": 0.7083333333333334,
+      "ci_high": 0.9583333333333334,
+      "reference_k": 10,
+      "paired_difference": 0.0,
+      "difference_ci_low": 0.0,
+      "difference_ci_high": 0.0
+    },
+    {
+      "metric": "success",
+      "k": 25,
+      "mean": 0.375,
+      "ci_low": 0.20833333333333334,
+      "ci_high": 0.5416666666666666,
+      "reference_k": 10,
+      "paired_difference": -0.45833333333333337,
+      "difference_ci_low": -0.6666666666666666,
+      "difference_ci_high": -0.25000000000000006
+    },
+    {
+      "metric": "success",
+      "k": 50,
+      "mean": 0.2916666666666667,
+      "ci_low": 0.125,
+      "ci_high": 0.4583333333333333,
+      "reference_k": 10,
+      "paired_difference": -0.5416666666666667,
+      "difference_ci_low": -0.75,
+      "difference_ci_high": -0.3333333333333333
+    },
+    {
+      "metric": "compute_s",
+      "k": 1,
+      "mean": 115.78696728091786,
+      "ci_low": 101.05027424829142,
+      "ci_high": 135.05434584010015,
+      "reference_k": 10,
+      "paired_difference": 100.82976626658599,
+      "difference_ci_low": 86.4819936753863,
+      "difference_ci_high": 119.38341403701897
+    },
+    {
+      "metric": "compute_s",
+      "k": 5,
+      "mean": 27.08760704520868,
+      "ci_low": 22.7919751994949,
+      "ci_high": 31.792101814532497,
+      "reference_k": 10,
+      "paired_difference": 12.13040603087681,
+      "difference_ci_low": 7.4200067589083565,
+      "difference_ci_high": 17.032131476152117
+    },
+    {
+      "metric": "compute_s",
+      "k": 10,
+      "mean": 14.957201014331872,
+      "ci_low": 12.586977294578961,
+      "ci_high": 17.349377910479028,
+      "reference_k": 10,
+      "paired_difference": 0.0,
+      "difference_ci_low": 0.0,
+      "difference_ci_high": 0.0
+    },
+    {
+      "metric": "compute_s",
+      "k": 25,
+      "mean": 12.175763445539701,
+      "ci_low": 10.677219930207572,
+      "ci_high": 13.672287013386194,
+      "reference_k": 10,
+      "paired_difference": -2.781437568792171,
+      "difference_ci_low": -5.417814196354366,
+      "difference_ci_high": -0.10555693751800972
+    },
+    {
+      "metric": "compute_s",
+      "k": 50,
+      "mean": 9.222217094376598,
+      "ci_low": 8.02456542567079,
+      "ci_high": 10.292844166140394,
+      "reference_k": 10,
+      "paired_difference": -5.734983919955274,
+      "difference_ci_low": -8.211647928783076,
+      "difference_ci_high": -3.196126115605634
+    },
+    {
+      "metric": "model_calls",
+      "k": 1,
+      "mean": 145.5,
+      "ci_low": 127.0,
+      "ci_high": 169.62604166666665,
+      "reference_k": 10,
+      "paired_difference": 130.58333333333334,
+      "difference_ci_low": 112.70833333333334,
+      "difference_ci_high": 154.08333333333331
+    },
+    {
+      "metric": "model_calls",
+      "k": 5,
+      "mean": 30.625,
+      "ci_low": 25.833333333333332,
+      "ci_high": 35.875,
+      "reference_k": 10,
+      "paired_difference": 15.708333333333334,
+      "difference_ci_low": 10.500000000000002,
+      "difference_ci_high": 21.042708333333316
+    },
+    {
+      "metric": "model_calls",
+      "k": 10,
+      "mean": 14.916666666666666,
+      "ci_low": 12.666666666666666,
+      "ci_high": 17.208333333333332,
+      "reference_k": 10,
+      "paired_difference": 0.0,
+      "difference_ci_low": 0.0,
+      "difference_ci_high": 0.0
+    },
+    {
+      "metric": "model_calls",
+      "k": 25,
+      "mean": 9.375,
+      "ci_low": 8.248958333333334,
+      "ci_high": 10.501041666666652,
+      "reference_k": 10,
+      "paired_difference": -5.541666666666666,
+      "difference_ci_low": -7.916666666666666,
+      "difference_ci_high": -3.125
+    },
+    {
+      "metric": "model_calls",
+      "k": 50,
+      "mean": 5.083333333333333,
+      "ci_low": 4.498958333333333,
+      "ci_high": 5.625,
+      "reference_k": 10,
+      "paired_difference": -9.833333333333332,
+      "difference_ci_low": -12.0,
+      "difference_ci_high": -7.5822916666666815
+    },
+    {
+      "metric": "sim_time_s",
+      "k": 1,
+      "mean": 7.275000000000001,
+      "ci_low": 6.3500000000000005,
+      "ci_high": 8.481302083333334,
+      "reference_k": 10,
+      "paired_difference": -0.00833333333333286,
+      "difference_ci_low": -1.2646354166666658,
+      "difference_ci_high": 1.2354687500000001
+    },
+    {
+      "metric": "sim_time_s",
+      "k": 5,
+      "mean": 7.570833333333333,
+      "ci_low": 6.362447916666667,
+      "ci_high": 8.893749999999999,
+      "reference_k": 10,
+      "paired_difference": 0.28749999999999876,
+      "difference_ci_low": -1.2917187500000002,
+      "difference_ci_high": 1.8521354166666655
+    },
+    {
+      "metric": "sim_time_s",
+      "k": 10,
+      "mean": 7.283333333333334,
+      "ci_low": 6.118645833333335,
+      "ci_high": 8.4625,
+      "reference_k": 10,
+      "paired_difference": 0.0,
+      "difference_ci_low": 0.0,
+      "difference_ci_high": 0.0
+    },
+    {
+      "metric": "sim_time_s",
+      "k": 25,
+      "mean": 11.237500000000002,
+      "ci_low": 9.891354166666668,
+      "ci_high": 12.620833333333332,
+      "reference_k": 10,
+      "paired_difference": 3.9541666666666684,
+      "difference_ci_low": 2.281197916666665,
+      "difference_ci_high": 5.681302083333333
+    },
+    {
+      "metric": "sim_time_s",
+      "k": 50,
+      "mean": 11.90625,
+      "ci_low": 10.31453125,
+      "ci_high": 13.331249999999999,
+      "reference_k": 10,
+      "paired_difference": 4.622916666666666,
+      "difference_ci_low": 2.8125,
+      "difference_ci_high": 6.3917708333333305
+    },
+    {
+      "metric": "eef_path_m",
+      "k": 1,
+      "mean": 0.8752218226584406,
+      "ci_low": 0.7974206803357974,
+      "ci_high": 0.9806038239243023,
+      "reference_k": 10,
+      "paired_difference": -0.15635766357004488,
+      "difference_ci_low": -0.2654606850361962,
+      "difference_ci_high": -0.05602603825839357
+    },
+    {
+      "metric": "eef_path_m",
+      "k": 5,
+      "mean": 0.972690379335603,
+      "ci_low": 0.8772606695706485,
+      "ci_high": 1.0769873440086803,
+      "reference_k": 10,
+      "paired_difference": -0.058889106892882515,
+      "difference_ci_low": -0.1947206758569074,
+      "difference_ci_high": 0.07549067961828851
+    },
+    {
+      "metric": "eef_path_m",
+      "k": 10,
+      "mean": 1.0315794862284855,
+      "ci_low": 0.910936052539332,
+      "ci_high": 1.153234599196153,
+      "reference_k": 10,
+      "paired_difference": 0.0,
+      "difference_ci_low": 0.0,
+      "difference_ci_high": 0.0
+    },
+    {
+      "metric": "eef_path_m",
+      "k": 25,
+      "mean": 1.3688009554944065,
+      "ci_low": 1.211121100989903,
+      "ci_high": 1.5339091447901871,
+      "reference_k": 10,
+      "paired_difference": 0.337221469265921,
+      "difference_ci_low": 0.15336591331282795,
+      "difference_ci_high": 0.5338220177902101
+    },
+    {
+      "metric": "eef_path_m",
+      "k": 50,
+      "mean": 1.2768102502897125,
+      "ci_low": 1.151840981322662,
+      "ci_high": 1.386480688031723,
+      "reference_k": 10,
+      "paired_difference": 0.245230764061227,
+      "difference_ci_low": 0.09026594154598289,
+      "difference_ci_high": 0.4060081758131303
+    },
+    {
+      "metric": "gripper_close_commands",
+      "k": 1,
+      "mean": 6.583333333333333,
+      "ci_low": 3.0,
+      "ci_high": 11.291666666666666,
+      "reference_k": 10,
+      "paired_difference": 1.583333333333333,
+      "difference_ci_low": -2.625,
+      "difference_ci_high": 6.249999999999999
+    },
+    {
+      "metric": "gripper_close_commands",
+      "k": 5,
+      "mean": 3.9583333333333335,
+      "ci_low": 1.4583333333333333,
+      "ci_high": 6.875,
+      "reference_k": 10,
+      "paired_difference": -1.0416666666666665,
+      "difference_ci_low": -4.875,
+      "difference_ci_high": 3.041666666666666
+    },
+    {
+      "metric": "gripper_close_commands",
+      "k": 10,
+      "mean": 5.0,
+      "ci_low": 2.4583333333333335,
+      "ci_high": 7.458333333333333,
+      "reference_k": 10,
+      "paired_difference": 0.0,
+      "difference_ci_low": 0.0,
+      "difference_ci_high": 0.0
+    },
+    {
+      "metric": "gripper_close_commands",
+      "k": 25,
+      "mean": 4.375,
+      "ci_low": 2.7916666666666665,
+      "ci_high": 6.083333333333333,
+      "reference_k": 10,
+      "paired_difference": -0.625,
+      "difference_ci_low": -3.6666666666666665,
+      "difference_ci_high": 2.2916666666666665
+    },
+    {
+      "metric": "gripper_close_commands",
+      "k": 50,
+      "mean": 3.5416666666666665,
+      "ci_low": 2.5,
+      "ci_high": 4.75,
+      "reference_k": 10,
+      "paired_difference": -1.4583333333333335,
+      "difference_ci_low": -3.8749999999999996,
+      "difference_ci_high": 0.7083333333333335
+    },
+    {
+      "metric": "episode_wall_s",
+      "k": 1,
+      "mean": 119.45339706991679,
+      "ci_low": 104.54177589988953,
+      "ci_high": 138.89062811498033,
+      "reference_k": 10,
+      "paired_difference": 101.06506474254172,
+      "difference_ci_low": 86.55538209145959,
+      "difference_ci_high": 119.78614595920335
+    },
+    {
+      "metric": "episode_wall_s",
+      "k": 5,
+      "mean": 30.847058391500088,
+      "ci_low": 26.33936438365022,
+      "ci_high": 35.76421859350631,
+      "reference_k": 10,
+      "paired_difference": 12.458726064125017,
+      "difference_ci_low": 7.47754291949995,
+      "difference_ci_high": 17.65545269494385
+    },
+    {
+      "metric": "episode_wall_s",
+      "k": 10,
+      "mean": 18.38833232737507,
+      "ci_low": 15.790693304418822,
+      "ci_high": 21.025527970965616,
+      "reference_k": 10,
+      "paired_difference": 0.0,
+      "difference_ci_low": 0.0,
+      "difference_ci_high": 0.0
+    },
+    {
+      "metric": "episode_wall_s",
+      "k": 25,
+      "mean": 16.546329391999887,
+      "ci_low": 14.70803139923922,
+      "ci_high": 18.38754439182814,
+      "reference_k": 10,
+      "paired_difference": -1.8420029353751843,
+      "difference_ci_low": -4.845745746030599,
+      "difference_ci_high": 1.181477812526936
+    },
+    {
+      "metric": "episode_wall_s",
+      "k": 50,
+      "mean": 14.024790771625097,
+      "ci_low": 12.354122268417795,
+      "ci_high": 15.547433061764702,
+      "reference_k": 10,
+      "paired_difference": -4.363541555749974,
+      "difference_ci_low": -7.289076891081102,
+      "difference_ci_high": -1.4061444781105963
+    }
+  ],
+  "per_task": [
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "success",
+      "k": 1,
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "success",
+      "k": 5,
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "success",
+      "k": 10,
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "success",
+      "k": 25,
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "success",
+      "k": 50,
+      "mean": 0.375,
+      "ci_low": 0.0,
+      "ci_high": 0.75,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "success",
+      "k": 1,
+      "mean": 0.75,
+      "ci_low": 0.49687500000000107,
+      "ci_high": 1.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "success",
+      "k": 5,
+      "mean": 0.875,
+      "ci_low": 0.625,
+      "ci_high": 1.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "success",
+      "k": 10,
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "success",
+      "k": 25,
+      "mean": 0.625,
+      "ci_low": 0.25,
+      "ci_high": 0.875,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "success",
+      "k": 50,
+      "mean": 0.25,
+      "ci_low": 0.0,
+      "ci_high": 0.625,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "success",
+      "k": 1,
+      "mean": 0.875,
+      "ci_low": 0.625,
+      "ci_high": 1.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "success",
+      "k": 5,
+      "mean": 0.75,
+      "ci_low": 0.375,
+      "ci_high": 1.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "success",
+      "k": 10,
+      "mean": 0.5,
+      "ci_low": 0.125,
+      "ci_high": 0.875,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "success",
+      "k": 25,
+      "mean": 0.5,
+      "ci_low": 0.125,
+      "ci_high": 0.875,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "success",
+      "k": 50,
+      "mean": 0.25,
+      "ci_low": 0.0,
+      "ci_high": 0.625,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "compute_s",
+      "k": 1,
+      "mean": 118.37587600100392,
+      "ci_low": 109.62479477150407,
+      "ci_high": 128.85151225888046,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "compute_s",
+      "k": 5,
+      "mean": 28.604333151128003,
+      "ci_low": 22.393630863399,
+      "ci_high": 35.94842205883905,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "compute_s",
+      "k": 10,
+      "mean": 11.702890715876379,
+      "ci_low": 11.350772336364432,
+      "ci_high": 12.08142710050231,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "compute_s",
+      "k": 25,
+      "mean": 15.515624972999262,
+      "ci_low": 15.409044298712255,
+      "ci_high": 15.634160110300467,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "compute_s",
+      "k": 50,
+      "mean": 8.717116983626056,
+      "ci_low": 6.503245915927835,
+      "ci_high": 10.886611234563958,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "compute_s",
+      "k": 1,
+      "mean": 145.42163566762656,
+      "ci_low": 117.02238167356354,
+      "ci_high": 176.62291946722195,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "compute_s",
+      "k": 5,
+      "mean": 28.51586970450046,
+      "ci_low": 25.109178567079525,
+      "ci_high": 34.50169758955042,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "compute_s",
+      "k": 10,
+      "mean": 13.784869590998028,
+      "ci_low": 13.650489259592655,
+      "ci_high": 13.915314581939933,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "compute_s",
+      "k": 25,
+      "mean": 9.543261470121934,
+      "ci_low": 7.287388837994513,
+      "ci_high": 12.559239019499728,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "compute_s",
+      "k": 50,
+      "mean": 8.587397976128841,
+      "ci_low": 6.687299758158429,
+      "ci_high": 9.922241591754641,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "compute_s",
+      "k": 1,
+      "mean": 83.56339017412313,
+      "ci_low": 59.90562032411947,
+      "ci_high": 125.86807111242967,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "compute_s",
+      "k": 5,
+      "mean": 24.142618279997578,
+      "ci_low": 14.803941491322925,
+      "ci_high": 37.23338195682574,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "compute_s",
+      "k": 10,
+      "mean": 19.38384273612121,
+      "ci_low": 12.179128398833438,
+      "ci_high": 26.59871937597193,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "compute_s",
+      "k": 25,
+      "mean": 11.468403893497907,
+      "ci_low": 7.846790947526239,
+      "ci_high": 15.11794700924338,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "compute_s",
+      "k": 50,
+      "mean": 10.362136323374898,
+      "ci_low": 7.813292656000158,
+      "ci_high": 12.24539223499869,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "model_calls",
+      "k": 1,
+      "mean": 149.25,
+      "ci_low": 138.125,
+      "ci_high": 162.5,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "model_calls",
+      "k": 5,
+      "mean": 32.75,
+      "ci_low": 25.625,
+      "ci_high": 41.125,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "model_calls",
+      "k": 10,
+      "mean": 12.125,
+      "ci_low": 11.75,
+      "ci_high": 12.5,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "model_calls",
+      "k": 25,
+      "mean": 12.0,
+      "ci_low": 12.0,
+      "ci_high": 12.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "model_calls",
+      "k": 50,
+      "mean": 4.875,
+      "ci_low": 3.75,
+      "ci_high": 6.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "model_calls",
+      "k": 1,
+      "mean": 183.0,
+      "ci_low": 147.25,
+      "ci_high": 221.78749999999945,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "model_calls",
+      "k": 5,
+      "mean": 32.625,
+      "ci_low": 28.75,
+      "ci_high": 39.5,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "model_calls",
+      "k": 10,
+      "mean": 14.0,
+      "ci_low": 14.0,
+      "ci_high": 14.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "model_calls",
+      "k": 25,
+      "mean": 7.75,
+      "ci_low": 5.875,
+      "ci_high": 10.25,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "model_calls",
+      "k": 50,
+      "mean": 5.25,
+      "ci_low": 4.125,
+      "ci_high": 6.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "model_calls",
+      "k": 1,
+      "mean": 104.25,
+      "ci_low": 74.75,
+      "ci_high": 157.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "model_calls",
+      "k": 5,
+      "mean": 26.5,
+      "ci_low": 16.25,
+      "ci_high": 40.875,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "model_calls",
+      "k": 10,
+      "mean": 18.625,
+      "ci_low": 11.75,
+      "ci_high": 25.5,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "model_calls",
+      "k": 25,
+      "mean": 8.375,
+      "ci_low": 5.75,
+      "ci_high": 11.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "model_calls",
+      "k": 50,
+      "mean": 5.125,
+      "ci_low": 4.0,
+      "ci_high": 6.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "sim_time_s",
+      "k": 1,
+      "mean": 7.4624999999999995,
+      "ci_low": 6.90625,
+      "ci_high": 8.125,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "sim_time_s",
+      "k": 5,
+      "mean": 8.08125,
+      "ci_low": 6.33734375,
+      "ci_high": 10.15625,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "sim_time_s",
+      "k": 10,
+      "mean": 5.75,
+      "ci_low": 5.6187499999999995,
+      "ci_high": 5.9125,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "sim_time_s",
+      "k": 25,
+      "mean": 15.0,
+      "ci_low": 15.0,
+      "ci_high": 15.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "sim_time_s",
+      "k": 50,
+      "mean": 11.912500000000001,
+      "ci_low": 8.825000000000001,
+      "ci_high": 15.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "sim_time_s",
+      "k": 1,
+      "mean": 9.15,
+      "ci_low": 7.3625,
+      "ci_high": 11.089374999999974,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "sim_time_s",
+      "k": 5,
+      "mean": 8.087499999999999,
+      "ci_low": 7.125,
+      "ci_high": 9.82515625,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "sim_time_s",
+      "k": 10,
+      "mean": 6.943750000000001,
+      "ci_low": 6.925,
+      "ci_high": 6.962500000000001,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "sim_time_s",
+      "k": 25,
+      "mean": 9.137500000000001,
+      "ci_low": 7.15625,
+      "ci_high": 12.05,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "sim_time_s",
+      "k": 50,
+      "mean": 11.9625,
+      "ci_low": 8.9625,
+      "ci_high": 14.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "sim_time_s",
+      "k": 1,
+      "mean": 5.2125,
+      "ci_low": 3.7375,
+      "ci_high": 7.8500000000000005,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "sim_time_s",
+      "k": 5,
+      "mean": 6.543749999999999,
+      "ci_low": 3.96875,
+      "ci_high": 10.16875,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "sim_time_s",
+      "k": 10,
+      "mean": 9.15625,
+      "ci_low": 5.6000000000000005,
+      "ci_high": 12.7125,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "sim_time_s",
+      "k": 25,
+      "mean": 9.575000000000001,
+      "ci_low": 6.4125000000000005,
+      "ci_high": 12.775,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "sim_time_s",
+      "k": 50,
+      "mean": 11.84375,
+      "ci_low": 8.84375,
+      "ci_high": 14.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "eef_path_m",
+      "k": 1,
+      "mean": 0.578856755983479,
+      "ci_low": 0.5642187165443131,
+      "ci_high": 0.5923964960249224,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "eef_path_m",
+      "k": 5,
+      "mean": 0.5870137562339043,
+      "ci_low": 0.5621606631025203,
+      "ci_high": 0.6176624755977648,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "eef_path_m",
+      "k": 10,
+      "mean": 0.5704628077715731,
+      "ci_low": 0.5624398589711319,
+      "ci_high": 0.5784607005744008,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "eef_path_m",
+      "k": 25,
+      "mean": 1.1798635828344872,
+      "ci_low": 1.1051517253743206,
+      "ci_high": 1.253159212266262,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "eef_path_m",
+      "k": 50,
+      "mean": 1.0011075436852535,
+      "ci_low": 0.7814503585690777,
+      "ci_high": 1.2020492461360628,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "eef_path_m",
+      "k": 1,
+      "mean": 1.1920378077721425,
+      "ci_low": 1.052940874032314,
+      "ci_high": 1.2872211853933153,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "eef_path_m",
+      "k": 5,
+      "mean": 1.3361346965126715,
+      "ci_low": 1.2435111028625083,
+      "ci_high": 1.4931113352229433,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "eef_path_m",
+      "k": 10,
+      "mean": 1.2112526625457802,
+      "ci_low": 1.19943792371125,
+      "ci_high": 1.2227694856509257,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "eef_path_m",
+      "k": 25,
+      "mean": 1.4762852816788632,
+      "ci_low": 1.218196668209295,
+      "ci_high": 1.8293051514284402,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "eef_path_m",
+      "k": 50,
+      "mean": 1.2633521476646503,
+      "ci_low": 1.2087214215451032,
+      "ci_high": 1.3117132056616272,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "eef_path_m",
+      "k": 1,
+      "mean": 0.8547709042197003,
+      "ci_low": 0.6974232292971377,
+      "ci_high": 1.1329215383053426,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "eef_path_m",
+      "k": 5,
+      "mean": 0.9949226852602331,
+      "ci_low": 0.7690491937786733,
+      "ci_high": 1.3101150395483243,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "eef_path_m",
+      "k": 10,
+      "mean": 1.3130229883681035,
+      "ci_low": 0.9525962899836139,
+      "ci_high": 1.6750389982375493,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "eef_path_m",
+      "k": 25,
+      "mean": 1.4502540019698689,
+      "ci_low": 1.0603664463074576,
+      "ci_high": 1.850009952505278,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "eef_path_m",
+      "k": 50,
+      "mean": 1.5659710595192333,
+      "ci_low": 1.2564486892726923,
+      "ci_high": 1.8215742046890808,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "gripper_close_commands",
+      "k": 1,
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "gripper_close_commands",
+      "k": 5,
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "gripper_close_commands",
+      "k": 10,
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "gripper_close_commands",
+      "k": 25,
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "gripper_close_commands",
+      "k": 50,
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "gripper_close_commands",
+      "k": 1,
+      "mean": 11.875,
+      "ci_low": 5.25,
+      "ci_high": 21.375,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "gripper_close_commands",
+      "k": 5,
+      "mean": 3.875,
+      "ci_low": 2.0,
+      "ci_high": 6.875,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "gripper_close_commands",
+      "k": 10,
+      "mean": 2.875,
+      "ci_low": 2.375,
+      "ci_high": 3.375,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "gripper_close_commands",
+      "k": 25,
+      "mean": 4.25,
+      "ci_low": 1.875,
+      "ci_high": 7.25,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "gripper_close_commands",
+      "k": 50,
+      "mean": 1.75,
+      "ci_low": 1.25,
+      "ci_high": 2.25,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "gripper_close_commands",
+      "k": 1,
+      "mean": 7.875,
+      "ci_low": 2.375,
+      "ci_high": 18.0,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "gripper_close_commands",
+      "k": 5,
+      "mean": 8.0,
+      "ci_low": 1.625,
+      "ci_high": 16.253124999999955,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "gripper_close_commands",
+      "k": 10,
+      "mean": 12.125,
+      "ci_low": 4.5,
+      "ci_high": 19.5,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "gripper_close_commands",
+      "k": 25,
+      "mean": 8.875,
+      "ci_low": 4.75,
+      "ci_high": 13.25,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "gripper_close_commands",
+      "k": 50,
+      "mean": 8.875,
+      "ci_low": 5.75,
+      "ci_high": 12.5,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "episode_wall_s",
+      "k": 1,
+      "mean": 121.62871130137512,
+      "ci_low": 112.51468138037535,
+      "ci_high": 132.75936943575016,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "episode_wall_s",
+      "k": 5,
+      "mean": 32.06636985912485,
+      "ci_low": 25.246435665396703,
+      "ci_high": 40.266605804994164,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "episode_wall_s",
+      "k": 10,
+      "mean": 14.465576217249918,
+      "ci_low": 14.0768024314998,
+      "ci_high": 14.890579906696919,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "episode_wall_s",
+      "k": 25,
+      "mean": 20.18756438524997,
+      "ci_low": 20.07428449685606,
+      "ci_high": 20.323361696499887,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_goal",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "metric": "episode_wall_s",
+      "k": 50,
+      "mean": 12.985172063124992,
+      "ci_low": 10.000459583253107,
+      "ci_high": 15.766054926050009,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "episode_wall_s",
+      "k": 1,
+      "mean": 149.32693167875016,
+      "ci_low": 120.57897862150037,
+      "ci_high": 181.0389205762775,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "episode_wall_s",
+      "k": 5,
+      "mean": 32.16443305737505,
+      "ci_low": 28.453462519125083,
+      "ci_high": 38.47679142375,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "episode_wall_s",
+      "k": 10,
+      "mean": 17.218367357625084,
+      "ci_low": 16.83819827560034,
+      "ci_high": 17.81547314703772,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "episode_wall_s",
+      "k": 25,
+      "mean": 13.422260996499858,
+      "ci_low": 10.572645295865627,
+      "ci_high": 16.83167202803785,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_object",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "metric": "episode_wall_s",
+      "k": 50,
+      "mean": 13.311905031000379,
+      "ci_low": 10.75401321607848,
+      "ci_high": 15.369578182522336,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "episode_wall_s",
+      "k": 1,
+      "mean": 87.4045482296251,
+      "ci_low": 63.16163895528745,
+      "ci_high": 130.39312562799705,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "episode_wall_s",
+      "k": 5,
+      "mean": 28.31037225800037,
+      "ci_low": 18.692249230359465,
+      "ci_high": 41.801534949250026,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "episode_wall_s",
+      "k": 10,
+      "mean": 23.481053407250215,
+      "ci_low": 15.490978856668978,
+      "ci_high": 31.49034000553143,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "episode_wall_s",
+      "k": 25,
+      "mean": 16.029162794249828,
+      "ci_low": 11.369251836718343,
+      "ci_high": 20.715360618156335,
+      "initial_states": 8
+    },
+    {
+      "suite": "libero_spatial",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "metric": "episode_wall_s",
+      "k": 50,
+      "mean": 15.77729522074992,
+      "ci_low": 12.274293436862502,
+      "ci_high": 18.709420140999896,
+      "initial_states": 8
+    }
+  ],
+  "annotations": [
+    {
+      "k": 1,
+      "reviewed": 4,
+      "total_episodes": 24,
+      "missed_grasps_per_reviewed_episode": 0.0,
+      "drops_per_reviewed_episode": 0.0
+    },
+    {
+      "k": 5,
+      "reviewed": 5,
+      "total_episodes": 24,
+      "missed_grasps_per_reviewed_episode": 0.0,
+      "drops_per_reviewed_episode": 0.0
+    },
+    {
+      "k": 10,
+      "reviewed": 5,
+      "total_episodes": 24,
+      "missed_grasps_per_reviewed_episode": 0.0,
+      "drops_per_reviewed_episode": 0.0
+    },
+    {
+      "k": 25,
+      "reviewed": 5,
+      "total_episodes": 24,
+      "missed_grasps_per_reviewed_episode": 0.0,
+      "drops_per_reviewed_episode": 0.2
+    },
+    {
+      "k": 50,
+      "reviewed": 3,
+      "total_episodes": 24,
+      "missed_grasps_per_reviewed_episode": 0.3333333333333333,
+      "drops_per_reviewed_episode": 0.0
+    }
+  ]
+}

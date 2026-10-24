@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "primary_phase": "combined",
+  "pages": 8,
+  "pdf_sha256": "694e08619bbd91583fdeafc1a7a157354801d4bd115df9b7f29709a124fcd0b8",
+  "statistics_sha256": "1d3d77bdb4bb85fc5772bc7031fc601a7e432f43655ee612f4511d9be6f2e576",
+  "discussion_sha256": "0d93f0cd2163965ee495ec506c133395b44296729b5729a0c4a3f839981e3d5b",
+  "figures_record_sha256": "e00373f3cd2bf659d898892d97a6fe1fa38998d62c0cfd5f770abdd1ccfa6898",
+  "state_outcomes_record_sha256": "1dcd70746bb36bd921c54440d88ec983456e446bd41661dc608414ca44922017",
+  "generator_sha256": "cf74bb77ff0a2e7153829d1e59bd83adf4ebf37675415748fccb40475c44ecac"
+}

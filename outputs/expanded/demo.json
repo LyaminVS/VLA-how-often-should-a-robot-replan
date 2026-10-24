@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "combined_demo",
+  "primary_phase": "combined",
+  "statistics_sha256": "1d3d77bdb4bb85fc5772bc7031fc601a7e432f43655ee612f4511d9be6f2e576",
+  "discussion_sha256": "0d93f0cd2163965ee495ec506c133395b44296729b5729a0c4a3f839981e3d5b",
+  "build_script_sha256": "31c83cdbabc4609cfbc9ab64834eaa24d40c75ff17b76ee782caa87a886830fe",
+  "video_sha256": "90dbe495db7bee3b396f21dba3b7cf2097f6702eb01786c2253dd08aa9a81c7d",
+  "source_video_sha256": {
+    "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k10": "9761bc320aea2e088084ee75e6e13927b87d799557042f855e12b9c6ec01c963",
+    "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k25": "f0cb7870de7d78e7e7227362d82d64fb7842a76b926a61ae3d6fdfe2715f884b",
+    "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s3__r11__k1": "afcb5c0932b193c96fff68c3af6589be3815a9db6e61507e438296adbc8e4de0",
+    "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s3__r11__k50": "826af332daec2341b210ecbbe0830ca5a9b7dd370ae1af7e253e9c7a6aa7f4c6",
+    "libero_goal__open_the_middle_drawer_of_the_cabinet__s3__r11__k5": "53b001f7d58c0e1ece016a0c1177a242c86c7c2c617a49317458dc266cca6c81",
+    "libero_goal__open_the_middle_drawer_of_the_cabinet__s3__r11__k50": "3fac7c071b5c127f769f734461e0e0ebfd269ca77a65318e662042136878b214"
+  },
+  "case_episode_ids": [
+    [
+      "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k10",
+      "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k25"
+    ],
+    [
+      "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s3__r11__k1",
+      "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s3__r11__k50"
+    ],
+    [
+      "libero_goal__open_the_middle_drawer_of_the_cabinet__s3__r11__k5",
+      "libero_goal__open_the_middle_drawer_of_the_cabinet__s3__r11__k50"
+    ]
+  ],
+  "frames": 1132,
+  "fps": 20,
+  "size": [
+    1536,
+    608
+  ],
+  "note": "Rendered at simulation rate; model-inference pauses are omitted. Visual QA is separate."
+}

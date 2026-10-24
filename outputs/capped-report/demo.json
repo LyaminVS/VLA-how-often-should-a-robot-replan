@@ -1,0 +1,158 @@
+{
+  "selection_rule": "Predetermined state 0, policy seed 11, all three configured tasks, fixed_10 / dvac_cap_10 / dvac_cap_50 in that order; independent of outcomes.",
+  "all_270_verified_before_publish": true,
+  "config_fingerprint": "c1732b641bb9db359c8c780ade93ad001cf1b336a9454f2102f1e6d601eb1215",
+  "verification_manifest_sha256": "e3620ff2e58f6584e9a892971b25dbef42d3eb9d023ea8bb82e05e022ce1b333",
+  "fps": 20,
+  "frames": 901,
+  "duration_s": 45.05,
+  "width": 2304,
+  "height": 704,
+  "decoded_output_frames": 901,
+  "sha256": "a528ca21551f9e267dad72d4fcc57ebe5dd7871a1e219b3cea31e5a012cf45fa",
+  "sections": [
+    {
+      "pair_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket/state0/seed11",
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "title_start_frame": 0,
+      "comparison_start_frame": 40,
+      "end_frame_exclusive": 201,
+      "episodes": [
+        {
+          "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__k10",
+          "method": "fixed_10",
+          "success": true,
+          "steps": 137,
+          "model_calls": 14,
+          "decoded_source_frames": 157
+        },
+        {
+          "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__dvac_cap_10",
+          "method": "dvac_cap_10",
+          "success": true,
+          "steps": 141,
+          "model_calls": 21,
+          "decoded_source_frames": 161
+        },
+        {
+          "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__dvac_cap_50",
+          "method": "dvac_cap_50",
+          "success": true,
+          "steps": 129,
+          "model_calls": 8,
+          "decoded_source_frames": 149
+        }
+      ]
+    },
+    {
+      "pair_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/state0/seed11",
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "title_start_frame": 201,
+      "comparison_start_frame": 241,
+      "end_frame_exclusive": 541,
+      "episodes": [
+        {
+          "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__k10",
+          "method": "fixed_10",
+          "success": false,
+          "steps": 280,
+          "model_calls": 28,
+          "decoded_source_frames": 300
+        },
+        {
+          "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__dvac_cap_10",
+          "method": "dvac_cap_10",
+          "success": false,
+          "steps": 280,
+          "model_calls": 48,
+          "decoded_source_frames": 300
+        },
+        {
+          "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__dvac_cap_50",
+          "method": "dvac_cap_50",
+          "success": true,
+          "steps": 81,
+          "model_calls": 12,
+          "decoded_source_frames": 101
+        }
+      ]
+    },
+    {
+      "pair_id": "libero_goal/open_the_middle_drawer_of_the_cabinet/state0/seed11",
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "title_start_frame": 541,
+      "comparison_start_frame": 581,
+      "end_frame_exclusive": 901,
+      "episodes": [
+        {
+          "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__k10",
+          "method": "fixed_10",
+          "success": true,
+          "steps": 113,
+          "model_calls": 12,
+          "decoded_source_frames": 133
+        },
+        {
+          "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__dvac_cap_10",
+          "method": "dvac_cap_10",
+          "success": false,
+          "steps": 300,
+          "model_calls": 66,
+          "decoded_source_frames": 320
+        },
+        {
+          "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__dvac_cap_50",
+          "method": "dvac_cap_50",
+          "success": true,
+          "steps": 116,
+          "model_calls": 7,
+          "decoded_source_frames": 136
+        }
+      ]
+    }
+  ],
+  "input_sha256": {
+    "/home/kaban/vla-replan/outputs/capped/manifest.json": "e3620ff2e58f6584e9a892971b25dbef42d3eb9d023ea8bb82e05e022ce1b333",
+    "/home/kaban/vla-replan/outputs/capped-report/analysis.json": "eb164137a9efdaa89e1e8fcca4ae86ae2f37a6ba97b5a5b2c223f84cb9101a6a",
+    "/home/kaban/vla-replan/outputs/capped-report/verification.json": "e28d2fe53e7d629d26d9ce5e9730e8170ec202ec11d837f7f6e6de5adb07bfc6",
+    "/home/kaban/vla-replan/outputs/capped-report/artifacts.json": "b297b96c11aef0719640355c40b76ad8d5a3f72b10bb221cdd2c19eb8724f434",
+    "/home/kaban/vla-replan/outputs/compact/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__k10/summary.json": "fe3eabae1ca6cab31d21dd16a4172c70adf5c8de12192140d215f900af38db76",
+    "/home/kaban/vla-replan/outputs/compact/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__k10/steps.jsonl": "9f7f790bb2bd7f5caaa3d08e232ad373ca8a5bb0b44bdc5f83c7e2af1e373d6d",
+    "/home/kaban/vla-replan/outputs/compact/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__k10/chunks.jsonl": "a821177cc2347e4e7cf95157ecc27b0163ba7fc9758c5420c97b34a12c356404",
+    "/home/kaban/vla-replan/outputs/compact/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__k10/video.mp4": "d0d3569fcdc0fe538242b04a3805a6336eb1664848086bcb9447e0041da4b2a8",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__dvac_cap_10/summary.json": "4d61e48276d44d6cf80f0d7ed82d452c09369061fe2cdfbc0be50eb1dea92d77",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__dvac_cap_10/steps.jsonl": "ba3b789891a6ec319d562ff8b618f11853c18a9b87a11badc028caf485c36c54",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__dvac_cap_10/chunks.jsonl": "71d6e9df3591286e4aa21d81522ec8bb3cdf4b511cee4e3192d2c552da4d0649",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__dvac_cap_10/video.mp4": "faa3d49f83c4f29ff0329fd70e49220d852b7bbbbf0afeca3613a173fc6eab77",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__dvac_cap_50/summary.json": "cf3da24ba3f96ee67b4faf7c62f1ef2481d30703527170bffb12734837b95043",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__dvac_cap_50/steps.jsonl": "31f1d9f8c7480ab82f2202ee7cb76eb42c500b3286a4b55b19a002bb0a6fa124",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__dvac_cap_50/chunks.jsonl": "f39cb31a24a7233c763271d591acb5e40b2efafaec21dd2343f03d63d597e3b1",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__dvac_cap_50/video.mp4": "c54e835d2bfda0586274822f5dd66785cce7347fd8c5a5dda44b9d9a5c7a1a26",
+    "/home/kaban/vla-replan/outputs/compact/episodes/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__k10/summary.json": "ac809c2fdf0f0f8785d3aa6bf30cc24338507a1d7e9779e723a8ee44b9e8a0fd",
+    "/home/kaban/vla-replan/outputs/compact/episodes/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__k10/steps.jsonl": "db62b4c1e1131bd073270a71755f369b24585e9831839bd7fb235fcc7e4ab37b",
+    "/home/kaban/vla-replan/outputs/compact/episodes/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__k10/chunks.jsonl": "1077d179fd176d22de7d3acdb50989aeff42f684c76e1f266c63e35e277f1e32",
+    "/home/kaban/vla-replan/outputs/compact/episodes/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__k10/video.mp4": "7662e55f28f6d85ca95c0de8be36dbfbd7c0d49030ed750cd766a7787cd84529",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__dvac_cap_10/summary.json": "6124d141c18b5ae604d75e9c425d750c9bb919c96ed4729b02d5ad69f103a1df",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__dvac_cap_10/steps.jsonl": "ac61a630035585e4a1320e18ac65bd8caaa654df1b2566d26acea4dcb9f819e4",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__dvac_cap_10/chunks.jsonl": "c1b9a4650c98739b44ecff27d3f28e6c2d441ea4a9c4070c9b5215b54b9978b6",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__dvac_cap_10/video.mp4": "c1f56f47d93405fd52edf1dd6c4cec88397b195ab89654a963cb0b3184b91024",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__dvac_cap_50/summary.json": "9cf24b509c09ebeb7dcb0f548518bbd7c49d21da7ee2e833bbc52e8a7c6ba9fd",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__dvac_cap_50/steps.jsonl": "78245d7dd78f35f7077db0f52db19db3582ea43f3634f87a66482fc4951b0037",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__dvac_cap_50/chunks.jsonl": "45bdb1bf07ffa318c649067f0ba003138c4faac972daa9184ce769067b810a89",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__dvac_cap_50/video.mp4": "e4fd7fb96bdd817633b69089210a721588b3b71c33b245eea37108561ba3ad43",
+    "/home/kaban/vla-replan/outputs/compact/episodes/libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__k10/summary.json": "333c15d0c1b0d2d16d0118552be499c5885dfc8e2021a393e3f00bfdd7a70ea8",
+    "/home/kaban/vla-replan/outputs/compact/episodes/libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__k10/steps.jsonl": "e5396161364c8694f1947c825c9371391f8c2b0bfb47874fb0c1c0c8e926fa4a",
+    "/home/kaban/vla-replan/outputs/compact/episodes/libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__k10/chunks.jsonl": "b77bf3e742f37d42a6f036aed9c5dc4f1c834445f6b9f80fdb99bfc2946a0cda",
+    "/home/kaban/vla-replan/outputs/compact/episodes/libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__k10/video.mp4": "3547bfb18b223d8891b1b596a7e9528dd0ad528bee8a5ecbf893c23efa267885",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__dvac_cap_10/summary.json": "676d1dc8ee5b40e6e6dfdb8faa11a42cdb854fdff5ff98e2413e71d138393b42",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__dvac_cap_10/steps.jsonl": "fa9babd5fdc33a8d648bc6433807589f41944e1f2177d2c8cad92e769c2a887d",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__dvac_cap_10/chunks.jsonl": "e547cce87f543b319213dbf8a0310db799d8b0aa705e410b256077c7af9995b3",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__dvac_cap_10/video.mp4": "8a11ed12297381598de82929cc7464daf0a10a98716d7226ed141fa6fd651bb0",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__dvac_cap_50/summary.json": "30a84da815a6d268a2dde685fb697252a7856b00d516a3a5866eb188fdefb4a1",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__dvac_cap_50/steps.jsonl": "d00714d3ab1c05c2e9c11b59075ccaaf20ad0fad4e5d29a964b859b222636db8",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__dvac_cap_50/chunks.jsonl": "28c9b2647ba4af9c4041e178474e97ffe106384dc5b24e893e8a4318ee0df1ea",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__dvac_cap_50/video.mp4": "5fa8e4ec9c97338c84c3e517787db6190522619c4c8408d8cb46f71404156b05",
+    "/home/kaban/vla-replan/scripts/build_capped_demo.py": "a04264371fc566ca316b70922104c626fd651658d6cfbcaf61507d8a71d3dd18"
+  },
+  "timing_note": "Panels align by simulation step. Final observations are held after termination. This is not a wall-clock latency comparison."
+}

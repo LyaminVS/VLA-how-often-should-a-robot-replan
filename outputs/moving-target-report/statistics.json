@@ -1,0 +1,2701 @@
+{
+  "schema_version": 1,
+  "data_kind": "moving_target_stress_test",
+  "complete": true,
+  "episodes": 135,
+  "config": {
+    "base_config": {
+      "name": "moving-target",
+      "model_id": "HuggingFaceVLA/smolvla_libero",
+      "model_revision": "6721902bc4d61e50a3bfdb11dfb4cb626f05d102",
+      "backbone_id": "HuggingFaceTB/SmolVLM2-500M-Instruct",
+      "backbone_revision": "7b375e1b73b11138ff12fe22c8f2822d8fe03467",
+      "tasks": [
+        {
+          "suite": "libero_object",
+          "name": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+          "max_steps": 280
+        }
+      ],
+      "intervals": [
+        5,
+        10,
+        50
+      ],
+      "initial_states": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "policy_seeds": [
+        11,
+        22,
+        33
+      ],
+      "order_seed": 20261024,
+      "chunk_size": 50,
+      "num_denoising_steps": 10,
+      "control_hz": 20,
+      "settle_steps": 10,
+      "precision": "fp32",
+      "record_video": true,
+      "warmup_calls": 2
+    },
+    "motion": {
+      "amplitude_m": 0.02,
+      "periods_s": {
+        "static": null,
+        "slow": 8,
+        "fast": 4
+      },
+      "start_delay_s": 0.5,
+      "ramp_s": 1,
+      "kp_n_per_m": 100,
+      "kd_ns_per_m": 0.5,
+      "max_force_n": 1,
+      "force_application_offset_z_m": -0.03,
+      "force_axis": "x",
+      "stop_on_contact": true
+    }
+  },
+  "intervals": [
+    5,
+    10,
+    50
+  ],
+  "bootstrap": {
+    "draws": 5000,
+    "seed": 20261024,
+    "unit": "initial_state",
+    "policy_seeds_retained_in_cluster": true
+  },
+  "estimates": [
+    {
+      "metric": "success",
+      "condition": "static",
+      "k": 5,
+      "mean": 0.7999999999999999,
+      "ci_low": 0.6666666666666666,
+      "ci_high": 0.9333333333333333,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "success",
+      "condition": "static",
+      "k": 10,
+      "mean": 0.8666666666666666,
+      "ci_low": 0.7333333333333332,
+      "ci_high": 1.0,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "success",
+      "condition": "static",
+      "k": 50,
+      "mean": 0.4,
+      "ci_low": 0.3333333333333333,
+      "ci_high": 0.5333333333333333,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "success",
+      "condition": "slow",
+      "k": 5,
+      "mean": 0.5333333333333333,
+      "ci_low": 0.3333333333333333,
+      "ci_high": 0.8,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "success",
+      "condition": "slow",
+      "k": 10,
+      "mean": 0.8666666666666666,
+      "ci_low": 0.7333333333333332,
+      "ci_high": 1.0,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "success",
+      "condition": "slow",
+      "k": 50,
+      "mean": 0.3333333333333333,
+      "ci_low": 0.13333333333333333,
+      "ci_high": 0.5333333333333333,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "success",
+      "condition": "fast",
+      "k": 5,
+      "mean": 0.8666666666666666,
+      "ci_low": 0.7333333333333332,
+      "ci_high": 1.0,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "success",
+      "condition": "fast",
+      "k": 10,
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "success",
+      "condition": "fast",
+      "k": 50,
+      "mean": 0.4,
+      "ci_low": 0.3333333333333333,
+      "ci_high": 0.5333333333333333,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "model_calls",
+      "condition": "static",
+      "k": 5,
+      "mean": 35.8,
+      "ci_low": 31.4,
+      "ci_high": 40.199999999999996,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "model_calls",
+      "condition": "static",
+      "k": 10,
+      "mean": 17.333333333333332,
+      "ci_low": 15.333333333333332,
+      "ci_high": 19.333333333333332,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "model_calls",
+      "condition": "static",
+      "k": 50,
+      "mean": 4.8,
+      "ci_low": 4.4,
+      "ci_high": 5.0,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "model_calls",
+      "condition": "slow",
+      "k": 5,
+      "mean": 42.13333333333333,
+      "ci_low": 35.06666666666666,
+      "ci_high": 47.666666666666664,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "model_calls",
+      "condition": "slow",
+      "k": 10,
+      "mean": 17.4,
+      "ci_low": 15.73333333333333,
+      "ci_high": 19.000000000000004,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "model_calls",
+      "condition": "slow",
+      "k": 50,
+      "mean": 5.066666666666666,
+      "ci_low": 4.466666666666667,
+      "ci_high": 5.6,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "model_calls",
+      "condition": "fast",
+      "k": 5,
+      "mean": 32.86666666666666,
+      "ci_low": 28.666666666666664,
+      "ci_high": 37.06666666666666,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "model_calls",
+      "condition": "fast",
+      "k": 10,
+      "mean": 14.6,
+      "ci_low": 14.2,
+      "ci_high": 15.001666666666642,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "model_calls",
+      "condition": "fast",
+      "k": 50,
+      "mean": 4.8,
+      "ci_low": 4.4,
+      "ci_high": 5.0,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "compute_s",
+      "condition": "static",
+      "k": 5,
+      "mean": 31.97579496553147,
+      "ci_low": 28.024435915400982,
+      "ci_high": 35.927154015661955,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "compute_s",
+      "condition": "static",
+      "k": 10,
+      "mean": 17.184776385865007,
+      "ci_low": 15.289081648866278,
+      "ci_high": 19.080471122863734,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "compute_s",
+      "condition": "static",
+      "k": 50,
+      "mean": 8.168504820331993,
+      "ci_low": 7.406795975401169,
+      "ci_high": 8.72035011773108,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "compute_s",
+      "condition": "slow",
+      "k": 5,
+      "mean": 37.57464690873316,
+      "ci_low": 31.355947190267916,
+      "ci_high": 42.46099783473346,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "compute_s",
+      "condition": "slow",
+      "k": 10,
+      "mean": 17.415245161067073,
+      "ci_low": 15.805248366866454,
+      "ci_high": 18.93277404473459,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "compute_s",
+      "condition": "slow",
+      "k": 50,
+      "mean": 8.687257508933211,
+      "ci_low": 7.651047581600747,
+      "ci_high": 9.550096138400294,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "compute_s",
+      "condition": "fast",
+      "k": 5,
+      "mean": 29.475498950867348,
+      "ci_low": 25.707036906264932,
+      "ci_high": 33.24396099546975,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "compute_s",
+      "condition": "fast",
+      "k": 10,
+      "mean": 14.687289494733282,
+      "ci_low": 14.392618306399527,
+      "ci_high": 14.985853640000702,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "compute_s",
+      "condition": "fast",
+      "k": 50,
+      "mean": 8.179816538800878,
+      "ci_low": 7.467921713865569,
+      "ci_high": 8.56412996993125,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "inference_s",
+      "condition": "static",
+      "k": 5,
+      "mean": 28.404271051599515,
+      "ci_low": 24.86357340026607,
+      "ci_high": 31.944968702932965,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "inference_s",
+      "condition": "static",
+      "k": 10,
+      "mean": 13.770461106200065,
+      "ci_low": 12.182167811066574,
+      "ci_high": 15.35875440133356,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "inference_s",
+      "condition": "static",
+      "k": 50,
+      "mean": 4.004984371466587,
+      "ci_low": 3.6164601917330104,
+      "ci_high": 4.285832138000054,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "inference_s",
+      "condition": "slow",
+      "k": 5,
+      "mean": 33.346197599999044,
+      "ci_low": 27.757502511865823,
+      "ci_high": 37.72412461379926,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "inference_s",
+      "condition": "slow",
+      "k": 10,
+      "mean": 13.816685121933398,
+      "ci_low": 12.504865227600233,
+      "ci_high": 15.108717394666687,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "inference_s",
+      "condition": "slow",
+      "k": 50,
+      "mean": 4.178080680266582,
+      "ci_low": 3.681879306533392,
+      "ci_high": 4.61632838919977,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "inference_s",
+      "condition": "fast",
+      "k": 5,
+      "mean": 26.04425031773323,
+      "ci_low": 22.70397656386552,
+      "ci_high": 29.384524071600936,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "inference_s",
+      "condition": "fast",
+      "k": 10,
+      "mean": 11.612287993600269,
+      "ci_low": 11.315076765400832,
+      "ci_high": 11.91317712922767,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "inference_s",
+      "condition": "fast",
+      "k": 50,
+      "mean": 3.945064079133348,
+      "ci_low": 3.6149791343334075,
+      "ci_high": 4.1129940541335,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "episode_wall_s",
+      "condition": "static",
+      "k": 5,
+      "mean": 36.6989613156665,
+      "ci_low": 32.44291607379994,
+      "ci_high": 40.95500655753307,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "episode_wall_s",
+      "condition": "static",
+      "k": 10,
+      "mean": 21.790082372066657,
+      "ci_low": 19.608924446799996,
+      "ci_high": 23.971240297333317,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "episode_wall_s",
+      "condition": "static",
+      "k": 50,
+      "mean": 13.591016179133414,
+      "ci_low": 12.52700856433324,
+      "ci_high": 14.356007243133595,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "episode_wall_s",
+      "condition": "slow",
+      "k": 5,
+      "mean": 42.74290438833335,
+      "ci_low": 36.010784911133186,
+      "ci_high": 48.01374563866672,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "episode_wall_s",
+      "condition": "slow",
+      "k": 10,
+      "mean": 22.038335431200053,
+      "ci_low": 20.191160293666872,
+      "ci_high": 23.787583509533153,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "episode_wall_s",
+      "condition": "slow",
+      "k": 50,
+      "mean": 14.192608463133336,
+      "ci_low": 12.716955530799986,
+      "ci_high": 15.450250001466765,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "episode_wall_s",
+      "condition": "fast",
+      "k": 5,
+      "mean": 33.999489033200014,
+      "ci_low": 29.9394793163999,
+      "ci_high": 38.05949875000012,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "episode_wall_s",
+      "condition": "fast",
+      "k": 10,
+      "mean": 18.933841057266456,
+      "ci_low": 18.596172064799823,
+      "ci_high": 19.27152177980475,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "episode_wall_s",
+      "condition": "fast",
+      "k": 50,
+      "mean": 13.552516809066706,
+      "ci_low": 12.534195284933292,
+      "ci_high": 14.093076609133522,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "sim_time_s",
+      "condition": "static",
+      "k": 5,
+      "mean": 8.870000000000001,
+      "ci_low": 7.746666666666667,
+      "ci_high": 9.993333333333334,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "sim_time_s",
+      "condition": "static",
+      "k": 10,
+      "mean": 8.436666666666666,
+      "ci_low": 7.383333333333335,
+      "ci_high": 9.49,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "sim_time_s",
+      "condition": "static",
+      "k": 50,
+      "mean": 11.213333333333331,
+      "ci_low": 10.223333333333333,
+      "ci_high": 11.73333333333333,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "sim_time_s",
+      "condition": "slow",
+      "k": 5,
+      "mean": 10.506666666666666,
+      "ci_low": 8.726666666666668,
+      "ci_high": 11.896666666666665,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "sim_time_s",
+      "condition": "slow",
+      "k": 10,
+      "mean": 8.543333333333333,
+      "ci_low": 7.693333333333333,
+      "ci_high": 9.323333333333334,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "sim_time_s",
+      "condition": "slow",
+      "k": 50,
+      "mean": 11.693333333333333,
+      "ci_low": 10.113333333333333,
+      "ci_high": 13.116666666666669,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "sim_time_s",
+      "condition": "fast",
+      "k": 5,
+      "mean": 8.120000000000001,
+      "ci_low": 7.046666666666667,
+      "ci_high": 9.193333333333332,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "sim_time_s",
+      "condition": "fast",
+      "k": 10,
+      "mean": 7.113333333333334,
+      "ci_low": 6.9833333333333325,
+      "ci_high": 7.243333333333334,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    },
+    {
+      "metric": "sim_time_s",
+      "condition": "fast",
+      "k": 50,
+      "mean": 11.180000000000001,
+      "ci_low": 10.076666666666668,
+      "ci_high": 11.743333333333334,
+      "episodes": 15,
+      "initial_states": 5,
+      "policy_seeds": 3
+    }
+  ],
+  "paired_vs_static": [
+    {
+      "metric": "success",
+      "condition": "slow",
+      "k": 5,
+      "reference_condition": "static",
+      "paired_difference": -0.2666666666666666,
+      "ci_low": -0.4666666666666667,
+      "ci_high": -0.06666666666666654,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "success",
+      "condition": "slow",
+      "k": 10,
+      "reference_condition": "static",
+      "paired_difference": 0.0,
+      "ci_low": -0.20000000000000007,
+      "ci_high": 0.20000000000000007,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "success",
+      "condition": "slow",
+      "k": 50,
+      "reference_condition": "static",
+      "paired_difference": -0.06666666666666671,
+      "ci_low": -0.19999999999999998,
+      "ci_high": 0.0,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "success",
+      "condition": "fast",
+      "k": 5,
+      "reference_condition": "static",
+      "paired_difference": 0.06666666666666665,
+      "ci_low": 0.0,
+      "ci_high": 0.20000000000000007,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "success",
+      "condition": "fast",
+      "k": 10,
+      "reference_condition": "static",
+      "paired_difference": 0.13333333333333341,
+      "ci_low": 0.0,
+      "ci_high": 0.26666666666666683,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "success",
+      "condition": "fast",
+      "k": 50,
+      "reference_condition": "static",
+      "paired_difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "model_calls",
+      "condition": "slow",
+      "k": 5,
+      "reference_condition": "static",
+      "paired_difference": 6.333333333333336,
+      "ci_low": 1.1333333333333329,
+      "ci_high": 12.399999999999988,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "model_calls",
+      "condition": "slow",
+      "k": 10,
+      "reference_condition": "static",
+      "paired_difference": 0.06666666666666643,
+      "ci_low": -2.8666666666666636,
+      "ci_high": 3.0000000000000036,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "model_calls",
+      "condition": "slow",
+      "k": 50,
+      "reference_condition": "static",
+      "paired_difference": 0.2666666666666666,
+      "ci_low": 0.0,
+      "ci_high": 0.6666666666666661,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "model_calls",
+      "condition": "fast",
+      "k": 5,
+      "reference_condition": "static",
+      "paired_difference": -2.933333333333337,
+      "ci_low": -6.266666666666662,
+      "ci_high": -0.3333333333333357,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "model_calls",
+      "condition": "fast",
+      "k": 10,
+      "reference_condition": "static",
+      "paired_difference": -2.7333333333333325,
+      "ci_low": -4.599999999999998,
+      "ci_high": -0.8666666666666636,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "model_calls",
+      "condition": "fast",
+      "k": 50,
+      "reference_condition": "static",
+      "paired_difference": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "compute_s",
+      "condition": "slow",
+      "k": 5,
+      "reference_condition": "static",
+      "paired_difference": 5.598851943201687,
+      "ci_low": 1.0526657813365112,
+      "ci_high": 11.060882492595951,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "compute_s",
+      "condition": "slow",
+      "k": 10,
+      "reference_condition": "static",
+      "paired_difference": 0.2304687752020662,
+      "ci_low": -2.6470230751969837,
+      "ci_high": 3.107960625601118,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "compute_s",
+      "condition": "slow",
+      "k": 50,
+      "reference_condition": "static",
+      "paired_difference": 0.5187526886012179,
+      "ci_low": 0.11869703199972914,
+      "ci_high": 1.165372276000289,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "compute_s",
+      "condition": "fast",
+      "k": 5,
+      "reference_condition": "static",
+      "paired_difference": -2.500296014664123,
+      "ci_low": -5.549481816202686,
+      "ci_high": -0.1313848050620443,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "compute_s",
+      "condition": "fast",
+      "k": 10,
+      "reference_condition": "static",
+      "paired_difference": -2.497486891131725,
+      "ci_low": -4.333333935929719,
+      "ci_high": -0.661639846333733,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "compute_s",
+      "condition": "fast",
+      "k": 50,
+      "reference_condition": "static",
+      "paired_difference": 0.011311718468885346,
+      "ci_low": -0.17604372926537692,
+      "ci_high": 0.12917727386993683,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "inference_s",
+      "condition": "slow",
+      "k": 5,
+      "reference_condition": "static",
+      "paired_difference": 4.941926548399529,
+      "ci_low": 0.8823014696673752,
+      "ci_high": 9.756823560732052,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "inference_s",
+      "condition": "slow",
+      "k": 10,
+      "reference_condition": "static",
+      "paired_difference": 0.046224015733333346,
+      "ci_low": -2.248128838866249,
+      "ci_high": 2.3405768703329155,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "inference_s",
+      "condition": "slow",
+      "k": 50,
+      "reference_condition": "static",
+      "paired_difference": 0.1730963087999955,
+      "ci_low": 0.00429811680005443,
+      "ci_high": 0.5066546092663593,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "inference_s",
+      "condition": "fast",
+      "k": 5,
+      "reference_condition": "static",
+      "paired_difference": -2.3600207338662855,
+      "ci_low": -5.019392541399672,
+      "ci_high": -0.27615796666614045,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "inference_s",
+      "condition": "fast",
+      "k": 10,
+      "reference_condition": "static",
+      "paired_difference": -2.158173112599796,
+      "ci_low": -3.6515456454671344,
+      "ci_high": -0.6648005797324608,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "inference_s",
+      "condition": "fast",
+      "k": 50,
+      "reference_condition": "static",
+      "paired_difference": -0.05992029233323892,
+      "ci_low": -0.17926133533340582,
+      "ci_high": 0.004562605537045641,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "episode_wall_s",
+      "condition": "slow",
+      "k": 5,
+      "reference_condition": "static",
+      "paired_difference": 6.043943072666849,
+      "ci_low": 1.1349274462001588,
+      "ci_high": 11.926830590733388,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "episode_wall_s",
+      "condition": "slow",
+      "k": 10,
+      "reference_condition": "static",
+      "paired_difference": 0.2482530591333969,
+      "ci_low": -3.04156791533309,
+      "ci_high": 3.53807403359988,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "episode_wall_s",
+      "condition": "slow",
+      "k": 50,
+      "reference_condition": "static",
+      "paired_difference": 0.6015922839999224,
+      "ci_low": 0.020858763533153635,
+      "ci_high": 1.5013580787332401,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "episode_wall_s",
+      "condition": "fast",
+      "k": 5,
+      "reference_condition": "static",
+      "paired_difference": -2.6994722824664876,
+      "ci_low": -6.0047373115333045,
+      "ci_high": -0.15325717973325936,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "episode_wall_s",
+      "condition": "fast",
+      "k": 10,
+      "reference_condition": "static",
+      "paired_difference": -2.856241314800201,
+      "ci_low": -4.959878246333513,
+      "ci_high": -0.7526043832668918,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "episode_wall_s",
+      "condition": "fast",
+      "k": 50,
+      "reference_condition": "static",
+      "paired_difference": -0.03849937006670778,
+      "ci_low": -0.30258377813346016,
+      "ci_high": 0.15094773713323661,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "sim_time_s",
+      "condition": "slow",
+      "k": 5,
+      "reference_condition": "static",
+      "paired_difference": 1.636666666666665,
+      "ci_low": 0.3533333333333335,
+      "ci_high": 3.1499999999999995,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "sim_time_s",
+      "condition": "slow",
+      "k": 10,
+      "reference_condition": "static",
+      "paired_difference": 0.10666666666666735,
+      "ci_low": -1.406666666666668,
+      "ci_high": 1.62,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "sim_time_s",
+      "condition": "slow",
+      "k": 50,
+      "reference_condition": "static",
+      "paired_difference": 0.4800000000000022,
+      "ci_low": -0.10999999999999943,
+      "ci_high": 1.4333333333333336,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "sim_time_s",
+      "condition": "fast",
+      "k": 5,
+      "reference_condition": "static",
+      "paired_difference": -0.75,
+      "ci_low": -1.6533333333333342,
+      "ci_high": -0.07000000000000028,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "sim_time_s",
+      "condition": "fast",
+      "k": 10,
+      "reference_condition": "static",
+      "paired_difference": -1.3233333333333315,
+      "ci_low": -2.326666666666666,
+      "ci_high": -0.32000000000000206,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    },
+    {
+      "metric": "sim_time_s",
+      "condition": "fast",
+      "k": 50,
+      "reference_condition": "static",
+      "paired_difference": -0.03333333333332966,
+      "ci_low": -0.15333333333333066,
+      "ci_high": 0.03666666666667062,
+      "paired_episodes": 15,
+      "initial_state_clusters": 5
+    }
+  ],
+  "condition_by_k_interactions": [
+    {
+      "metric": "success",
+      "condition": "slow",
+      "k": 5,
+      "reference_k": 10,
+      "interaction": -0.2666666666666666,
+      "ci_low": -0.4666666666666668,
+      "ci_high": -0.06666666666666654,
+      "initial_state_clusters": 5,
+      "policy_seeds": 3,
+      "episodes_per_cell": 15,
+      "moving_successes_at_k": 8,
+      "static_successes_at_k": 12,
+      "moving_successes_at_reference_k": 13,
+      "static_successes_at_reference_k": 13
+    },
+    {
+      "metric": "success",
+      "condition": "slow",
+      "k": 50,
+      "reference_k": 10,
+      "interaction": -0.06666666666666671,
+      "ci_low": -0.2666666666666668,
+      "ci_high": 0.13333333333333341,
+      "initial_state_clusters": 5,
+      "policy_seeds": 3,
+      "episodes_per_cell": 15,
+      "moving_successes_at_k": 5,
+      "static_successes_at_k": 6,
+      "moving_successes_at_reference_k": 13,
+      "static_successes_at_reference_k": 13
+    },
+    {
+      "metric": "success",
+      "condition": "fast",
+      "k": 5,
+      "reference_k": 10,
+      "interaction": -0.06666666666666676,
+      "ci_low": -0.26666666666666683,
+      "ci_high": 0.13333333333333341,
+      "initial_state_clusters": 5,
+      "policy_seeds": 3,
+      "episodes_per_cell": 15,
+      "moving_successes_at_k": 13,
+      "static_successes_at_k": 12,
+      "moving_successes_at_reference_k": 15,
+      "static_successes_at_reference_k": 13
+    },
+    {
+      "metric": "success",
+      "condition": "fast",
+      "k": 50,
+      "reference_k": 10,
+      "interaction": -0.13333333333333341,
+      "ci_low": -0.26666666666666683,
+      "ci_high": 0.0,
+      "initial_state_clusters": 5,
+      "policy_seeds": 3,
+      "episodes_per_cell": 15,
+      "moving_successes_at_k": 6,
+      "static_successes_at_k": 6,
+      "moving_successes_at_reference_k": 15,
+      "static_successes_at_reference_k": 13
+    }
+  ],
+  "contact_and_motion": [
+    {
+      "condition": "static",
+      "k": 5,
+      "episodes": 15,
+      "successes": 12,
+      "contacts": 15,
+      "no_contact_episodes": 0,
+      "contact_fraction": 1.0,
+      "mean_contact_time_s_among_contacts": 2.5663999999998834,
+      "motion_exposed_episodes": 0,
+      "mean_active_duration_s_all_episodes": 0.0,
+      "mean_precontact_x_range_m": 0.001295653634372094,
+      "mean_precontact_horizontal_speed_m_s": 0.000453791162996046,
+      "mean_active_tracking_error_m_among_exposed": null,
+      "mean_active_saturation_fraction_among_exposed": null,
+      "mean_max_precontact_tilt_deg": 0.9180939150167197,
+      "max_precontact_tilt_deg": 3.072228623237941
+    },
+    {
+      "condition": "static",
+      "k": 10,
+      "episodes": 15,
+      "successes": 13,
+      "contacts": 15,
+      "no_contact_episodes": 0,
+      "contact_fraction": 1.0,
+      "mean_contact_time_s_among_contacts": 2.6203999999998775,
+      "motion_exposed_episodes": 0,
+      "mean_active_duration_s_all_episodes": 0.0,
+      "mean_precontact_x_range_m": 0.0009624258869500006,
+      "mean_precontact_horizontal_speed_m_s": 0.0004919633175247039,
+      "mean_active_tracking_error_m_among_exposed": null,
+      "mean_active_saturation_fraction_among_exposed": null,
+      "mean_max_precontact_tilt_deg": 1.034490072212279,
+      "max_precontact_tilt_deg": 2.45445410063762
+    },
+    {
+      "condition": "static",
+      "k": 50,
+      "episodes": 15,
+      "successes": 6,
+      "contacts": 15,
+      "no_contact_episodes": 0,
+      "contact_fraction": 1.0,
+      "mean_contact_time_s_among_contacts": 2.457333333333229,
+      "motion_exposed_episodes": 0,
+      "mean_active_duration_s_all_episodes": 0.0,
+      "mean_precontact_x_range_m": 0.00017409506986202454,
+      "mean_precontact_horizontal_speed_m_s": 8.657370127590796e-05,
+      "mean_active_tracking_error_m_among_exposed": null,
+      "mean_active_saturation_fraction_among_exposed": null,
+      "mean_max_precontact_tilt_deg": 0.21345879338342263,
+      "max_precontact_tilt_deg": 1.604468759698402
+    },
+    {
+      "condition": "slow",
+      "k": 5,
+      "episodes": 15,
+      "successes": 8,
+      "contacts": 15,
+      "no_contact_episodes": 0,
+      "contact_fraction": 1.0,
+      "mean_contact_time_s_among_contacts": 2.564533333333217,
+      "motion_exposed_episodes": 15,
+      "mean_active_duration_s_all_episodes": 2.0645333333333333,
+      "mean_precontact_x_range_m": 0.01744135968174292,
+      "mean_precontact_horizontal_speed_m_s": 0.007709245094663641,
+      "mean_active_tracking_error_m_among_exposed": 0.002220060473791439,
+      "mean_active_saturation_fraction_among_exposed": 0.0,
+      "mean_max_precontact_tilt_deg": 2.3337082588252254,
+      "max_precontact_tilt_deg": 5.235790244910238
+    },
+    {
+      "condition": "slow",
+      "k": 10,
+      "episodes": 15,
+      "successes": 13,
+      "contacts": 15,
+      "no_contact_episodes": 0,
+      "contact_fraction": 1.0,
+      "mean_contact_time_s_among_contacts": 2.547866666666552,
+      "motion_exposed_episodes": 15,
+      "mean_active_duration_s_all_episodes": 2.0478666666666667,
+      "mean_precontact_x_range_m": 0.01733829554382122,
+      "mean_precontact_horizontal_speed_m_s": 0.007401372083844166,
+      "mean_active_tracking_error_m_among_exposed": 0.0021397665220816114,
+      "mean_active_saturation_fraction_among_exposed": 0.0,
+      "mean_max_precontact_tilt_deg": 1.8202200583906747,
+      "max_precontact_tilt_deg": 2.8411339775854274
+    },
+    {
+      "condition": "slow",
+      "k": 50,
+      "episodes": 15,
+      "successes": 5,
+      "contacts": 15,
+      "no_contact_episodes": 0,
+      "contact_fraction": 1.0,
+      "mean_contact_time_s_among_contacts": 2.831466666666521,
+      "motion_exposed_episodes": 15,
+      "mean_active_duration_s_all_episodes": 2.3314666666666666,
+      "mean_precontact_x_range_m": 0.019378567502121854,
+      "mean_precontact_horizontal_speed_m_s": 0.0076000562197577285,
+      "mean_active_tracking_error_m_among_exposed": 0.002098128598754854,
+      "mean_active_saturation_fraction_among_exposed": 0.0,
+      "mean_max_precontact_tilt_deg": 2.0212753575121565,
+      "max_precontact_tilt_deg": 5.64376463091298
+    },
+    {
+      "condition": "fast",
+      "k": 5,
+      "episodes": 15,
+      "successes": 13,
+      "contacts": 15,
+      "no_contact_episodes": 0,
+      "contact_fraction": 1.0,
+      "mean_contact_time_s_among_contacts": 2.6061333333332124,
+      "motion_exposed_episodes": 15,
+      "mean_active_duration_s_all_episodes": 2.106133333333333,
+      "mean_precontact_x_range_m": 0.020075624011971237,
+      "mean_precontact_horizontal_speed_m_s": 0.013425197700874006,
+      "mean_active_tracking_error_m_among_exposed": 0.002022257449975293,
+      "mean_active_saturation_fraction_among_exposed": 0.0,
+      "mean_max_precontact_tilt_deg": 3.5051085362159267,
+      "max_precontact_tilt_deg": 4.334569931029264
+    },
+    {
+      "condition": "fast",
+      "k": 10,
+      "episodes": 15,
+      "successes": 15,
+      "contacts": 15,
+      "no_contact_episodes": 0,
+      "contact_fraction": 1.0,
+      "mean_contact_time_s_among_contacts": 2.5694666666665498,
+      "motion_exposed_episodes": 15,
+      "mean_active_duration_s_all_episodes": 2.0694666666666666,
+      "mean_precontact_x_range_m": 0.021456271576182,
+      "mean_precontact_horizontal_speed_m_s": 0.013009121323805514,
+      "mean_active_tracking_error_m_among_exposed": 0.00205012941889963,
+      "mean_active_saturation_fraction_among_exposed": 0.00026581605528973947,
+      "mean_max_precontact_tilt_deg": 3.535339414671022,
+      "max_precontact_tilt_deg": 7.394439390059799
+    },
+    {
+      "condition": "fast",
+      "k": 50,
+      "episodes": 15,
+      "successes": 6,
+      "contacts": 15,
+      "no_contact_episodes": 0,
+      "contact_fraction": 1.0,
+      "mean_contact_time_s_among_contacts": 2.4227999999998997,
+      "motion_exposed_episodes": 15,
+      "mean_active_duration_s_all_episodes": 1.9228,
+      "mean_precontact_x_range_m": 0.01914810225915072,
+      "mean_precontact_horizontal_speed_m_s": 0.012213597078987098,
+      "mean_active_tracking_error_m_among_exposed": 0.0019976374267050897,
+      "mean_active_saturation_fraction_among_exposed": 0.0,
+      "mean_max_precontact_tilt_deg": 2.9146044542996394,
+      "max_precontact_tilt_deg": 3.8316276304457655
+    }
+  ],
+  "provenance": {
+    "root": "/home/kaban/vla-replan/outputs/moving-target",
+    "manifest_sha256": "6cf87e33c05220542f46f6d65690421051b86934934dc7bde028eaefe947a118",
+    "config_fingerprint": "ac5a6c8af0fb65b513a00de6099a050a368a4dee7a252a8adaafad0c29bcc859",
+    "runtime": {
+      "python": "3.12.3",
+      "system": "Linux",
+      "machine": "x86_64",
+      "packages": {
+        "lerobot": "0.6.1",
+        "hf-libero": "0.1.4",
+        "mujoco": "3.3.2",
+        "robosuite": "1.4.0",
+        "torch": "2.7.1",
+        "torchvision": "0.22.1",
+        "transformers": "5.5.4",
+        "numpy": "2.2.6",
+        "Pillow": "11.3.0",
+        "imageio": "2.37.0",
+        "imageio-ffmpeg": "0.6.0",
+        "huggingface-hub": "1.33.0"
+      },
+      "code_sha256": "d96cfeded0dc6e1ca630d2fbdc9f23e1cdf51806bfbe14211327200da412902e",
+      "dependency_lock_sha256": "8574b51f0fad0b6ec40c02b3c6192da4606e30a94fd8dc1e18068b461d81212a",
+      "simulator_assets": {
+        "repo_id": "lerobot/libero-assets",
+        "revision": "0b3ea86be5fe169d0fd036ae63d1070ec09e90f6"
+      },
+      "render_backend": "egl",
+      "cpu_count": 12
+    },
+    "hardware": {
+      "device": "NVIDIA GeForce RTX 2060",
+      "vram_bytes": 6014369792,
+      "cuda": "12.6",
+      "precision": "fp32",
+      "deterministic_algorithms": true,
+      "torch_cpu_threads": 1
+    },
+    "sources": {
+      "files": {
+        "moving_target/__init__.py": "9038d1c393e94eabe1149a9c39ba6f5c4b38b7a98adda31564afdcf11e5d3b26",
+        "moving_target/config.py": "55272a34d600d18758bfe45f9dc359e20d6965d98524a01e3f1acb876dc243a2",
+        "moving_target/environment.py": "3372a91204e9347650b12e18a6b0ff561ad442e7f3094575d25ed910cceca1eb",
+        "moving_target/runner.py": "3108f7aec4d1147f22f4b318b71551a15667dad69c725d1dd0a0be3d31c6131c",
+        "scripts/run_moving_target.py": "cd6cfc21f6eab7a1f4920d2d2890dc577d6ba09f5f5c2e94d5cf43e157e323ff"
+      },
+      "sha256": "5206bab130e97e924a4af41c2a33732b05a5e0aa60d022d5f1cdc568a1d56e42"
+    },
+    "episodes": [
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k10__motion_fast",
+        "files": {
+          "summary.json": "02db6ba47c8215983cbb6e09a6a67dbd1cd578f1843c69548e92f01cc8b596a6",
+          "steps.jsonl": "06bb98b58c3779d3f94e2b3d3e0c73aa24a0006136afb298a2725120ee219dcd",
+          "chunks.jsonl": "3e163443bf15546ef062a8104d271aaf7b112fa66e8bb345050fba6f80b135c8",
+          "video.mp4": "4b8043eb3cf26aaf7579a71f7ef002014d38e9c264ba8df9ede34696693a90b4"
+        },
+        "evidence_sha256": "48a9f2b2e34543a93893d02483087635b04e551b8063d644a221e76bd8e41f80"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k10__motion_slow",
+        "files": {
+          "summary.json": "960bc8b58dfd72d03aaa81a2a0e79ad736dfdd76ed9c0d0554b9cfd11122cf9f",
+          "steps.jsonl": "ca6add83cf6b468624bd11a188af80daaccf787865a9eb4be637a27292a3a28e",
+          "chunks.jsonl": "16858b9357fc88706dff4c1efbca0dad8230f800b4a58dcaa54574b5ea1ec647",
+          "video.mp4": "de0f0b0a9dbd516349f2da4614a194aa4ee87932c278d5c9197b54172982fa8b"
+        },
+        "evidence_sha256": "5eb93f5eb4f9dd1e30a37c5f8874e21ad8b736c977b1f3b7ec10750d7e74b44e"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k10__motion_static",
+        "files": {
+          "summary.json": "b5f623e022ba1f0c152cc47cb93b328ba855c169ffa0ecd45294ae7d5f08fc2e",
+          "steps.jsonl": "25f1daa447ac54b28201194745df2e38c61091795be7ff7fd964e1aa63b22f67",
+          "chunks.jsonl": "7025310dd1cf897dd49bb06d75f0d551f37abda9563b179cf9fe47227a616a84",
+          "video.mp4": "0748031ae7eeb0dee9f3881b8e6d826687c4484f1db5ab3b6a4952fe8656a8e8"
+        },
+        "evidence_sha256": "f392c2bbf747dfad648c9c50ebdc90f8b10181647823d64bba8961d595c2bbbc"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k50__motion_fast",
+        "files": {
+          "summary.json": "2df8f3fb4b42cc7829635da335fddf37863b5e3c381e333a87cecc22e5e2cf48",
+          "steps.jsonl": "7dd6074cc7cebb99fbb385389dd79c4166807ac031022a691b4b2aca727b5649",
+          "chunks.jsonl": "92eb16d5fab5ef8efc7f1632df3dcd828195bfc4e55661487d18fcc05ca8143d",
+          "video.mp4": "bf2e59c0dbacd4d0431c33447abb4506222b71edec28504b7423a8cbef001bac"
+        },
+        "evidence_sha256": "c044d0519e141dc74450d465d9e30cd7cefd76d4f4de48e23afd3e6ee3226178"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k50__motion_slow",
+        "files": {
+          "summary.json": "1a6020e0dfe0bf2d7c25ff3da04641d948ff3b3048ee1dc64c8da49aede8d0d9",
+          "steps.jsonl": "2f05cccf5243cdbea610d6262247981def2849f1db031f6b8a53d90286c02e82",
+          "chunks.jsonl": "8a80ca10fc6a63d050ce0ab8090bb47958bd2105c3300dea89124f133f7ae7ed",
+          "video.mp4": "fe44ffebe0537a5fda09e1c9b27b87dc1dc579d471233429c85b62de27fb9005"
+        },
+        "evidence_sha256": "79f853bae47f434b32a964d5afca27199918bc1ae5ae91ec27e02f96a4ae8764"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k50__motion_static",
+        "files": {
+          "summary.json": "ff46a27c2b2ce85df0883a5acc6d520cb8a840d9c17a358708e6fdf5d18ceaaa",
+          "steps.jsonl": "fed23847ccf48064f603454814d5647c87296f2691f0a045b695520c1b66083b",
+          "chunks.jsonl": "057aa59f859e6863f5be7284ea1f1fa5c644088d73737e245ea7454ec4976a46",
+          "video.mp4": "7c549eeda07dccfed62ad1e1667d3df1a711fa3fd2692ca5e5e3b698521ff97a"
+        },
+        "evidence_sha256": "9a6e7acf4a7bf3a0b13e6e6c698d059030f4ca5e94ee432680b8ea5b0c9c2e51"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k5__motion_fast",
+        "files": {
+          "summary.json": "c180cd80e1ae9687d0a79b2514af9b26ab296850d281ad5a101f1b38ca19d524",
+          "steps.jsonl": "6988882534fe13beb301a211236b8b15ea8799aeee559359f13bee524e748d8e",
+          "chunks.jsonl": "5533ae83c35d31f2bbce4d6e07dbefaad7722674482b69d1c1a3462af73d4d31",
+          "video.mp4": "0e8c3e77506f86d4735b159d45548be9b5396f93098882eb3138b77dc518dfee"
+        },
+        "evidence_sha256": "b4b33384780ceab0bccde7fd683944a5e5ad3f0f640ed19d97ce94587c1c41ec"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k5__motion_slow",
+        "files": {
+          "summary.json": "7606692658f824790a60203648296a0a6e948e0898dc2223b0da1757863f6356",
+          "steps.jsonl": "1cc818b899cbf40bad44bc68d8416ea9c946db8c6977f55e9921f8414faf1eef",
+          "chunks.jsonl": "62f54daa0fcfb31fb96f9a93e5cb4e272e147d1e7049048f0534dd502c0c31a5",
+          "video.mp4": "05ffafd7fefcb5cc2c9492868fc05f8b27be08d109999804c9dfce0e239fd64e"
+        },
+        "evidence_sha256": "e4dcd6298bbf633fc7e6034ede7b83bbb2d2df82576a822eb88b55c7587fbe92"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k5__motion_static",
+        "files": {
+          "summary.json": "a8cdeccc330e0fd73d824750045e5bc8a2292403fd050b763c0a7c4fa72940d3",
+          "steps.jsonl": "e3197a52b0fdda8e7ab390d19bfc39fb449731d8f56323c8000a9be520920ab0",
+          "chunks.jsonl": "be6cb28c0394563628183fc2c3c6bca232e7a5e19a285dbe557893e9bc2c0a3a",
+          "video.mp4": "4582199fdca81362f217cd2eaaef7258c7eb0aaa818e286d61105868f7d0ff67"
+        },
+        "evidence_sha256": "09c89095479db4d96645cd70f79d0037c56a9eea6b5180d3036e5217927ebfc1"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r22__k10__motion_fast",
+        "files": {
+          "summary.json": "fa69f7c9ea3991abf36b2448b1574194c338995b80c3ca3916f2461939103715",
+          "steps.jsonl": "6bf0fc41bf3b76300cd985a51f9f7010a6179e0e21828bd911aeecc19b490b27",
+          "chunks.jsonl": "d24b278385e46b1d034b7914ba9f444a2f0819410efbf2412bad28710a6ffc69",
+          "video.mp4": "1adb9f9816e3e617c9862ba6cd16ea28b9947e3361df0b4a5f369c64ce690dbb"
+        },
+        "evidence_sha256": "499063b1540f32465c9e9e1dad67e9b391bdb7560d19c7d63bc76cc6954335e8"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r22__k10__motion_slow",
+        "files": {
+          "summary.json": "02f2773a7f12428b1bd46419931844f146666452f6831720bcd3979c4c520a5a",
+          "steps.jsonl": "66f376cb40a2bb5da0bd14168a1029d86a8791f99a7070bd520f2d2f673c5e08",
+          "chunks.jsonl": "2a7653b13d70dc8367e1b10cade7eb8d7ef0f3a3fe9e9e0638af1e9b1be89b51",
+          "video.mp4": "98d58e864e952e6429a9b279b414fa63ecaf5b7799b67ea95bc525e80add5c1c"
+        },
+        "evidence_sha256": "dc7c680b6891cfee9b2515a3ad4fe18ad20afabd43da74685661fd01f091f612"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r22__k10__motion_static",
+        "files": {
+          "summary.json": "4aa7299c9ed2a4d888031b9069b789f84263b3c6f777f403ba171866e33c7624",
+          "steps.jsonl": "e2f1bb313cdebf7a4723a19c177fc393af0fed59cc66450c821a8e9527cf9971",
+          "chunks.jsonl": "0bed750132aaf70dde2e5203092058870627848e90b7ac31ecdc001a561465d5",
+          "video.mp4": "16a05493ec61502cf71cc15dc8b7cb0d2a92353b006e40651dc784ae31cbcf81"
+        },
+        "evidence_sha256": "35b860156b2ce5a333e8a999f9a2868f8bf9cde4641c797ba849bc51c916629b"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r22__k50__motion_fast",
+        "files": {
+          "summary.json": "62df459bc83d586a9a19893190bef0e4b41544ee70a19b7680a83eb0af71e698",
+          "steps.jsonl": "129d08aac7a80c26c95554a04beaf74e5ec46c802e4af07bf0b2f518a31a7a5d",
+          "chunks.jsonl": "e654d388805eeda101c92306e16cb9e8247020c43ae9dbc2e0d13d04141ea3c9",
+          "video.mp4": "3643b3a68e6d45634df6e65238fb2f2a5884e6606e61855eac0306a83457073a"
+        },
+        "evidence_sha256": "f9c28e12950f2a1e1e67d9e6fe4fb605a98756476276c25eff07cf72c2e18887"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r22__k50__motion_slow",
+        "files": {
+          "summary.json": "7e8b7ae42fabbb57638b7e052c502e4aaa1abef995394cd1ba1a94f54f1e4ddb",
+          "steps.jsonl": "8dbd6b476bfb0eb945b5e83149e4a5fb42b5dd3bff9e263b26c753644679052f",
+          "chunks.jsonl": "806ddc5635e0542af60443ffd05c9a3d47171e8aa7a4da8bf224a3ee513c8893",
+          "video.mp4": "0d65df56ffc86e6eff538adb3e277a82d998096a3d14e267dd26a3bc16f1497d"
+        },
+        "evidence_sha256": "873e93e0671fbcb6d50b3d0827d46e66b1fa12e97b0b8f7030904a2e830bd65a"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r22__k50__motion_static",
+        "files": {
+          "summary.json": "78e44097a19f4adbeb922f7ae41f8dc0e051e7cc39086f9a643a2dd1e76a01b5",
+          "steps.jsonl": "a2329a5eae6b4dfcbafd9d6577e31be63686df82dd5f0d793f5d779a4839da9f",
+          "chunks.jsonl": "9b3e4071f7c7d6acd3ee83e949a656c22505fd54e8ced862da4e39f83e3feaeb",
+          "video.mp4": "4472b3d4cb16d018a5af4008163a7ba69a8dc7aa58a1e29349abde66e0f29a13"
+        },
+        "evidence_sha256": "546f8ac596d6e92b9f87b0e16b1e3883c24e24af1c7a5181868720e13bc0abe8"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r22__k5__motion_fast",
+        "files": {
+          "summary.json": "7bd40b7ee91e6f33973ce189e97777e0365ef151d9a22950b81684b7022659b9",
+          "steps.jsonl": "be39d33d0918e739445d632195bcc488f0d22be693af7c736d85024cc9a7d0b5",
+          "chunks.jsonl": "7d1f2435f87f58f3bf5b16e78d30cdb66f2af16bb8d7ef0899ca191261709948",
+          "video.mp4": "cdd263774f6994317cb6f367211258715d7ed7703bb626e7c75f419e37f33765"
+        },
+        "evidence_sha256": "ef42c4427588fbd65eeab88749d760a581460e696c7fda83691449e08fb89b85"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r22__k5__motion_slow",
+        "files": {
+          "summary.json": "f03b18227677bd1452cde7560f0dc0993507d73c77122e3d6f1d031fd367a907",
+          "steps.jsonl": "221612a130e8ae1bf181940e7a91d11629ee7386b554ccf3ea8836e05c8b753e",
+          "chunks.jsonl": "37de1b0a2d6b1af6b478b6628c6d5f8492b18277cc56327ae57f969828682098",
+          "video.mp4": "6601c75e1579fe348844e1f43d112610532ea903ff3d9eb5988a7e39965cf498"
+        },
+        "evidence_sha256": "1c188cc107a26d49894d10d6260f86c9ebde86c85359d4e1624aa80b8903625c"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r22__k5__motion_static",
+        "files": {
+          "summary.json": "6e35c56068dfeb347d8af8e3bb782b856c9d47eb9a9639f7318c53425e0ab5c2",
+          "steps.jsonl": "20f1a98ba14338b116635213fd737234152f1cc18dd6a2a54e84fe0ab1323fce",
+          "chunks.jsonl": "ed7fe6cf225450214493495212a7da5c5b7933406340cba6ee0d12d016a377da",
+          "video.mp4": "baee788e923a8344af76977f9fda0bcb006dc2c46f436d4b019044a5f00e8f6e"
+        },
+        "evidence_sha256": "c17e6928af7f92e0b83fa12ecd56882cee9b0be1566a34f0fdc0ac91c97d85b8"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r33__k10__motion_fast",
+        "files": {
+          "summary.json": "2d2da2d49e21c34c981cb0881d2c5bc501ad0b6393338bb75f7dafb210eace11",
+          "steps.jsonl": "ae73526ec60f7c2b959d2517bf76adadacda0d7334b7a74e3c3b9b33ee0199f7",
+          "chunks.jsonl": "21fc2600f59be70f89b8d133d9d3816f1923cd3d6d080092340e000d99f9e9d4",
+          "video.mp4": "63bb8a7476bfa1889e42622f5209037cf8e08e09ed93a174ab89f09c08a77620"
+        },
+        "evidence_sha256": "27a048bd79ec616c954e28d26d5b9514d0bfa10e38a369a33e64a55834b6dfa9"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r33__k10__motion_slow",
+        "files": {
+          "summary.json": "f35252b5f62071c1f24b2648c1994152c5bf0355bb14917e3e4eea9f472a6f1f",
+          "steps.jsonl": "cc6843a3d820a5cf63ffaa5aa0d8f10a4ecaad0b4f6dafbf049463be15b13088",
+          "chunks.jsonl": "38d22b6de16595aa02db661d873198422189b2bfefb4cfb40174193fe4207971",
+          "video.mp4": "b3f68d8b3b2e889ecc031c312b654c6a6db151cedd2a2ba9e6f3c222dfec05cc"
+        },
+        "evidence_sha256": "da86b098464a1aa5c3d7d1981700df4224b54ca25468ffc04e1848617ec3b02c"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r33__k10__motion_static",
+        "files": {
+          "summary.json": "a0cd4b96ef43b13f23fb6dd559658062f5117b206c530df23840f5222d161094",
+          "steps.jsonl": "8b932871e1cd6346d0c909045f2cb2aba2c9485b08d6e828ef2eda1de2b7ce0f",
+          "chunks.jsonl": "85294e8db3e19d414ad10c101c6649828d26479840c554d3f18b4d2719451ed3",
+          "video.mp4": "e8b72de6a5f5d179f2312472ffea6b5ec4d61bf992bc3b476fc95e9d295a4262"
+        },
+        "evidence_sha256": "48570e54d837af8ce86f8a0165f563980992d221ef937eb26adf45ef097b873f"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r33__k50__motion_fast",
+        "files": {
+          "summary.json": "fd824d280ad01c8f45e6a1137168db1743ea2dc93c363881affeb74602a21da3",
+          "steps.jsonl": "61d28fcdf417db7f66732e0a859d44f9834a6680733a4103ad3ce323bd924c80",
+          "chunks.jsonl": "bc48dd96f02a72e356160d1f1b8edbd3ec21efb50ee66bf4c16909eaa07fbf0b",
+          "video.mp4": "4f09b318b29f69a4106b1a9637a398aa2032afe4fba027776ce11cec5007a9ec"
+        },
+        "evidence_sha256": "22b59c0a9fc9b211985ad1edb1444c59005784c417ec5ba7a69962bd5324c691"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r33__k50__motion_slow",
+        "files": {
+          "summary.json": "6aeee226b5912038974895a7f0bd8830ae0854424a44507a223ec5a6eabd503b",
+          "steps.jsonl": "295a16d22fa8f9f817183c528d6debdcfe6651b37f9a073ec2cb644ea21b0749",
+          "chunks.jsonl": "b4a8437b8b75de1fddc15defc7a12da84b5ce370b60e417a3e8fa0da3885f2dd",
+          "video.mp4": "3c89da44359b7fc0d930166f4ff0cff3046d2a4085a67b6981b4ed3b282a51bb"
+        },
+        "evidence_sha256": "10a7f65897bc64dc14c81ac185bc35b9a01ec2cdf535e129b0720d5fabcb8086"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r33__k50__motion_static",
+        "files": {
+          "summary.json": "2a5416f3e2f424ac40cfcf3ad59f85620c0d6653003e658863cb95d091319a87",
+          "steps.jsonl": "527c480704cde2f65659fa3cd493a5df01b58b690f423c33eb99117e16e2dfd0",
+          "chunks.jsonl": "49fcc65a0655c694a0d8e3ab2988acd354e04ff821c97b740b49b7c4b04b537c",
+          "video.mp4": "e16fd7073041ce16c91108e5b471beb874b340037ef7dcaf422bdf826108862e"
+        },
+        "evidence_sha256": "11ff4fe5a1eebb2c11fa51868403cca3747185238e80648aa45987558c2a3675"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r33__k5__motion_fast",
+        "files": {
+          "summary.json": "82b19125b05524d399cfee06fb2fdfafe474b5d1da2596e37fc564ddc0e22024",
+          "steps.jsonl": "b75189ec04de2cfef66ca963f94787629901559bd39a26b50ac7d69d6219c223",
+          "chunks.jsonl": "18b333b2f33b36cedc08282c747a406d9c318b6764976e176078fd5a0af00198",
+          "video.mp4": "3effb0e58a7499f3bbed21a018e88036369ba119b943462d4ffdfa06d7134326"
+        },
+        "evidence_sha256": "9a9e508342b62e58312937875c76757771f4cf6944f43e582e61f146bb96e668"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r33__k5__motion_slow",
+        "files": {
+          "summary.json": "713cd445608d1bdb54962b6dc25298f74e80380bbdfc622132361e5b96bbc4d7",
+          "steps.jsonl": "6f36de365a2c9ea56eb64b0a69ada897106c2fa8f98af29c89a0b311fb356149",
+          "chunks.jsonl": "7c71c40a941c1a5c58e2989916f15b46df5af9b8578588f6331706c9105d95f1",
+          "video.mp4": "82a545150b48efe708de84166c46f6ff3be394b180a4645ba099809f92cbb9b1"
+        },
+        "evidence_sha256": "ef0fb55c66fdef7ae407733ff429d06248c7dc116916972814b09d32c8bc1f6d"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r33__k5__motion_static",
+        "files": {
+          "summary.json": "b94e96acc84b1d71950feffe7ab8a643e383fafbd418b24b47e3ef4e7f145f83",
+          "steps.jsonl": "ff6ab986571b31d2fdc3913ce5a360ab65c8662c4c0e9f260cb017506a2e790b",
+          "chunks.jsonl": "98fc83d0dfb5ae11305098ea85a8ba6135164f97286b8971b530f924d5c02f0a",
+          "video.mp4": "3fe677980a838d406ba587da8632728a080b49c2647b3d1bbefd3c0eb2b90ca1"
+        },
+        "evidence_sha256": "c1857768018c8c415b4b27cd1e41617d07d707da789b857ac7caba69abc928f7"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r11__k10__motion_fast",
+        "files": {
+          "summary.json": "cb26d407e394fb2f0766529a6e72ecbdf8349a1b36ebd7a2c040d024e51df0f0",
+          "steps.jsonl": "54d0a94c0599d8579f24facdd422ede6f3223a7ace6067379b338c9cfc81ac66",
+          "chunks.jsonl": "b423379c9d39e9bb6ad8b7ab85010516e47c4a5ef30847c2dad5216b1a7f0798",
+          "video.mp4": "f710c62779f6b04d47b9f933e69ae5ce11cbc20959d1e297759230a4a92de553"
+        },
+        "evidence_sha256": "44ee3b2b924997120e0eb14fa2030df7d0f56dbff422f22166c4a8fa79b79964"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r11__k10__motion_slow",
+        "files": {
+          "summary.json": "dee157827b52baa4d0520530a0f1ae079f9c8051eed470a5f6d69f4924c3960e",
+          "steps.jsonl": "496df4349f91a1234c146150a1ed2e2e92f4b9a6fabdab04319c2fe4f4d68a5c",
+          "chunks.jsonl": "6b580cb53879e8aea7a26594b618bd57a81bc603c05da2d7411d60a83e30562c",
+          "video.mp4": "4994386142c19867510ee7e5d9d77dc811a1b285f9fe0282559fee14f9cbc900"
+        },
+        "evidence_sha256": "2c06d6035dc99e3443a66e504df4cf6ef92e7f9f88709997bdad5c8d11ce7f47"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r11__k10__motion_static",
+        "files": {
+          "summary.json": "9db3858cc1f619c994bf9518ddd59af5d08c5d536d6a7b321c5490c33d80778c",
+          "steps.jsonl": "128ed8f922f0c3e6286f927ec768bc4ce450d1cc36e20b6507a81c402d0d4677",
+          "chunks.jsonl": "e9af10c930b8ecf270f1170a423b1bbe9e79beb424d64fe3bc6fbead6261dd19",
+          "video.mp4": "67b519986312757f6bd0fe2f544a43d7e97a9fddb563649d87200d4ff24a658f"
+        },
+        "evidence_sha256": "9f0e722674d494af2ede3e776cee0f9288bb6d51d64c663aaa15bdd4be2ddcf3"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r11__k50__motion_fast",
+        "files": {
+          "summary.json": "7b02e916c9ca0343b201e470f645341c2258009b8309bb7c2e5201f2cdbeb31f",
+          "steps.jsonl": "abb93162220ec27573f5b15348ab5933b16ec1e3a54c3b38979e6bea294f84ad",
+          "chunks.jsonl": "8f26128cbbd6e6dfb4c6ddb39b83cf9fb72a960ff755e118ceeae9f1f4420579",
+          "video.mp4": "005dca31098aa4a815afc2961a384b2f6a1ca9f4aade93390b2afe3f541cd298"
+        },
+        "evidence_sha256": "f474920fa6262f88d077d76ff62b420283fa0db9aa097c84241af6f2f272b701"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r11__k50__motion_slow",
+        "files": {
+          "summary.json": "c592cca5fb3be50fec2dcc8445303e1f87ccd0975cf09674f0780fdc59fd0c74",
+          "steps.jsonl": "ac5086c8a30d41a91de52a334c31e18be80e3bc8e468ef327713337d966642b7",
+          "chunks.jsonl": "35959670b5a3fe1528d5ad04f615b88c484386cb10850ac10af63fdae33c0abb",
+          "video.mp4": "2740a0d64fe6bb6800138240ddc4c0f21f88269032325004caadcc65f2292b19"
+        },
+        "evidence_sha256": "e61eb35a5535b5a6e1e5378cda5b73955b446c401e3fa7e2b1fee26320b72625"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r11__k50__motion_static",
+        "files": {
+          "summary.json": "1dcc2cf48f727702e6ffcdd45be00ed5c2def8ce234593ccf26d22483be7476d",
+          "steps.jsonl": "e5ee1a848f74617358667cc6a4c0d1a1fede388c1fba3eea68ae1c5e86e9037f",
+          "chunks.jsonl": "d1b30816ccf434802c1798993c99fccc3460025f664eb036ec7a24594cec9304",
+          "video.mp4": "9681c278ee9d4a8aa9ce24cdfd308710165c878d3834c2182843dc8a8ee4cb86"
+        },
+        "evidence_sha256": "5110f718cef4cdee5d703962f66add8478e2eff659ff352ed219b2c4ef09d919"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r11__k5__motion_fast",
+        "files": {
+          "summary.json": "61d9c0259f51b390118f8a5a236426ffc007e47ff528d63277fa472f8ecc494b",
+          "steps.jsonl": "18c2dcf60310b1893c14a7c5e4148046e6a27140434ef1c0e19d64c56aca8a2a",
+          "chunks.jsonl": "67da7395a8306cd37ea9bf7c40defc0e5ea6f2e775ef8d1634dedeac7e2cc0e5",
+          "video.mp4": "d3eff8bd57624b321c650a9889f3af2724a32c517cee5aa9dda61c681b0550d9"
+        },
+        "evidence_sha256": "98c860053b8010b5ffe6b608a338e4d3e0c152c348453b278ca9000ff4cb4a01"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r11__k5__motion_slow",
+        "files": {
+          "summary.json": "79f4d79ecdcd36c30da50e70300c0fce9af9054c6f9f4d57e88152fcb500771f",
+          "steps.jsonl": "69ec4fc5a0d3d4da5d2a26078f16d40e0a7efc61446876df077c9ada70637034",
+          "chunks.jsonl": "fb15e434ad5fad70b49bb8f5cef4e1e0fed63cf90cf3e22f1c3bbef1b12a7442",
+          "video.mp4": "5dbec1b64374dc6f87190eec8c18ca73744ebb57b3414c383ebd9ea4492ed6ca"
+        },
+        "evidence_sha256": "736b28e7982a074efc72220f776aaaf0cee3a8e191f1b9931aef3e5bf1b5778e"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r11__k5__motion_static",
+        "files": {
+          "summary.json": "71c19237e95b0a92be0dda03327e585bd7af98b60658fed1614e9187a28c9535",
+          "steps.jsonl": "c4e1c5a9afa79172a1e80d91f1398c05d167be13169b2c5eb9228272962d5134",
+          "chunks.jsonl": "f217c99baa583d7664c28a2534c1ad3ebd98672a348db91b79a3abeef75a7c42",
+          "video.mp4": "f420cc8f968b390555fdf5712077d498beb40fb91b4a63588bdcb79649284758"
+        },
+        "evidence_sha256": "16bdc7dd0a7cc0103383db57783ca02b4cb1e794fe5356b9f3540e50671cbf4e"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r22__k10__motion_fast",
+        "files": {
+          "summary.json": "f8e5c64911b86cd2ea70a38295d98087c6ea16b76f2d30e3c81e717281b63e46",
+          "steps.jsonl": "26274c37c932a38c7004dfcfe880ba7180c5bfa59612af8b08072d122abbbf31",
+          "chunks.jsonl": "4f07e2b5c70166f60162a9f37bed97f76c8156670e2d23be11cc4f7dc3a9bd9c",
+          "video.mp4": "76e108a05cf05de3d203fb5e332d331f1727cb6ae4349c19956671872eb0e1fe"
+        },
+        "evidence_sha256": "9a2f74275b7c1b61c1baea4dce5a40e4bc12a855314946cc44f855b4e722e18b"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r22__k10__motion_slow",
+        "files": {
+          "summary.json": "b1114ca45fafebd1e5a4f0b407652ee5d49fe17db793fed57a227f4279090f8e",
+          "steps.jsonl": "43942be548383b35f3acb48115026217bac28e6cd6d58d8ff46057515609d95e",
+          "chunks.jsonl": "5e3cbf00fef8859d0ae8cd69bc02bad570ffcc47eab253202fb34e2ad7923f32",
+          "video.mp4": "8ccd3477b8993ff02220fe2e422e18d6d6233db4ccd00396edbd3499125acaab"
+        },
+        "evidence_sha256": "32c85e74708e8bc669b58a70429344b28eb42e183a0c2915704f180397dbcc8e"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r22__k10__motion_static",
+        "files": {
+          "summary.json": "7d1ff4bbce3f8db83ddadb3ab01e0fd4e7b73fabecd1aa23da3649d20d886fa4",
+          "steps.jsonl": "d403ba5f643b468f13491e081d9c661481aab81e67489237be9eb492ec828b9a",
+          "chunks.jsonl": "58b4b70e551a9818e141485abb86b83372bd3c29965889484a672557a3ba69d8",
+          "video.mp4": "fdf7ea690f1d6f88eb92031944e8a0c5070fc9b1c7bb81c51c2febf971cf27d2"
+        },
+        "evidence_sha256": "f947b4a41f564cb15b77a7d474672c58ce08eb4c46ea3f98cb1cc8c433f2d25e"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r22__k50__motion_fast",
+        "files": {
+          "summary.json": "5f7414048aa8493d69f2fc5893bbbffc7eba6da440de65b95e5eb160242e3906",
+          "steps.jsonl": "dbf6b75328b31b2e8f474d1b80e2a140e9d0cbe6c7a3b11ad8ce7785a741cdbb",
+          "chunks.jsonl": "22320e43ad41fc389e38881b5b021facec24794911b25184d93ce0c0b05013e6",
+          "video.mp4": "15ffa434f913dfbc3f7b86b1a372def346be63aa570e80aa8e845451ab7fed27"
+        },
+        "evidence_sha256": "f423cee3d0b56c2b92b69bc80e37df81091de8226d23849e4b99280d9e9382da"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r22__k50__motion_slow",
+        "files": {
+          "summary.json": "4da3e51fd4c77fce83dd4bd72b6628d0baac10b6a914ea9f5d35eddb8942fda0",
+          "steps.jsonl": "18342d22e99443f18ef3a62d786544be50d4c4d6bfe24c9e9af9cb20315bb512",
+          "chunks.jsonl": "03c08f183d22d399e6eabe52eb05193db0458fe704dab84c5637c7f848561a0c",
+          "video.mp4": "e835bbcb7fb48971a4b0dad2c215a7130f9f56ffc6eacecedc7826143fa6eb78"
+        },
+        "evidence_sha256": "13c99265e0b644f81c86dd25178de778eb3df2895c580f965ba5953ea752a7cf"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r22__k50__motion_static",
+        "files": {
+          "summary.json": "19222c9f9bf0e44b0c27072781758cf5e0e65ab89143d33140ddf8908ea760e6",
+          "steps.jsonl": "1abcf2061083529b85ff5ed9d90d70f060a66e000304f0706033b3b499caee79",
+          "chunks.jsonl": "65b8fb0f3cb36677c2b96b43be718523ff41a782d900d2ff8708558b9ed746dd",
+          "video.mp4": "b178585e6dbdb4672190885a275ff7f3113ee8fe4e30f42e2d239a8c9dc1f2d5"
+        },
+        "evidence_sha256": "1a23cd5023a7d806758e1cc2dc9a05e54fc331ecef7f83eabd8f20d7e1d9fdc7"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r22__k5__motion_fast",
+        "files": {
+          "summary.json": "396d462d1f36e1472157b86e2121d923b3676d1e26e996f7369b32bfc3693837",
+          "steps.jsonl": "d3bbeee52eec9b3ca8f7d2215c7317addf8de86f3a3c93a55062a5b2d971a71f",
+          "chunks.jsonl": "4c57d2fa90382e111115095b68e20c9cad22e787c0ad4fb707ba4f19af0e2259",
+          "video.mp4": "a650dedea4774aa8b749e967f0e0dcbe7c3df81db9192d2b434615a777a5efc6"
+        },
+        "evidence_sha256": "c2b115a03c9db5f13b89598c8f84a8ba6cab76da187bd90da3ee77778cb702fb"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r22__k5__motion_slow",
+        "files": {
+          "summary.json": "30ba4e2e051fe16a58e801b5afc29066575d5481e10fd763d15abebcea888137",
+          "steps.jsonl": "e4bf3e270acf5d977e5318deb9ea8c9cbc0bce3f94a8eb253216995a09d64138",
+          "chunks.jsonl": "276a3e9b4f2290936f80837c8eadc1f1de8720ffa9cc716604b8d2dde813709d",
+          "video.mp4": "26122f3e4626a944b21a5ae205aa4611dbf23af4c924e7488ce11abbadafd994"
+        },
+        "evidence_sha256": "2a02499cd6daebe232fa1f336e7f143bcf0ae497190667ef7ffda3dca1466e7e"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r22__k5__motion_static",
+        "files": {
+          "summary.json": "b3bcbfa0c81e50622f51918dd9dddf94924ec80a9510ff6bc627cfcccdb2e339",
+          "steps.jsonl": "2beb7dce538c3b0198f664482dffa96fa4af0861fbc15ed495bd7335ef671242",
+          "chunks.jsonl": "836de0db4ce51ee1290547462870906b26f4fdf8019076d9cfc8c4a2a1082078",
+          "video.mp4": "c051f0015547bbdd742713b3ba30121e5a5f7a16269d9d529bc232575d8ba37b"
+        },
+        "evidence_sha256": "df19a1e39de39f3213bf182b8a1f0832f1d4bd57f5fef7b0985c3edf23094aff"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r33__k10__motion_fast",
+        "files": {
+          "summary.json": "aea938cd1d4ba2d0cf42e07ba5eafa530ce6957c665f9b8cd126a4f8a7e13b9c",
+          "steps.jsonl": "14b274518b3cd20defe3465ee957975e019833dbd75e6d354f0441af71fd2f10",
+          "chunks.jsonl": "4ae2868a3f3ac1dbcda001450c6b2f0450d2dcd01fd022272d7607e33dfbae1f",
+          "video.mp4": "2a7d9fa662c6851f1783c8c5076747f84e0d24c7609faad33618de024880b499"
+        },
+        "evidence_sha256": "3aeea3cea37ba8daea4c29a7f9e95da7ab65aac87a08213597b29517909f671e"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r33__k10__motion_slow",
+        "files": {
+          "summary.json": "29af81962bacf9ecd1304a5dc2876153ce7e6857fdaacddf0435382841854281",
+          "steps.jsonl": "1ac593f978050279c143348ed0cda154aae31def0fc0cb4fbc25b43a8949b71c",
+          "chunks.jsonl": "17b2a2750a7463cb5669bf18789faa95451aaf963d7342e87246341585391c91",
+          "video.mp4": "96a12a502947d110b9c03617f5e9e5f28a9e2ff4bc35dd68baa95c8fd875b674"
+        },
+        "evidence_sha256": "253ab27c3c86fc1dd92c13e76e3a48969b49aca23324da4eb401ac041259d280"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r33__k10__motion_static",
+        "files": {
+          "summary.json": "dbab45a32a0ca3bd8e4ebf901fbc67fed919419324e609243ff4fc4cd4bbddd3",
+          "steps.jsonl": "fe0a29154cd8534278b010edaa27eb41016a6eb6e61f7d6c0161d3c74084a014",
+          "chunks.jsonl": "23f1910675979541bcd27dfc4a5bb3dc647e724de8e3aafbc946c7f755d3bc2a",
+          "video.mp4": "cac55c54522b2d49997f3a7371008fe34ac7eaf0ffb4e4f740f70c28aed11cfa"
+        },
+        "evidence_sha256": "7b6a1ef59f68991a88c494fa53e63091f1666a44daef8ba0e969572960e2925b"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r33__k50__motion_fast",
+        "files": {
+          "summary.json": "ebb0a8fa6d2c843ba2355b10cf175fb744830324ff95249375e1df0bb1d8173f",
+          "steps.jsonl": "35c46d23b3ed0386e0b73dbb51f40a19217b7412934d7901656cdec3d23391a2",
+          "chunks.jsonl": "06d0cb0ee72cfd08c5637268a73fbf656540468fafc626bd7c0fa5057e05bd31",
+          "video.mp4": "c9e38f28598e5513e434f568def56f278f83ea0d8083b9afac43dda855cbdf76"
+        },
+        "evidence_sha256": "664c280cfca2c1425771e13abc53b13a8561ed6f62cc128ac961b25417386898"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r33__k50__motion_slow",
+        "files": {
+          "summary.json": "48f63a8745365721e5302a3e401e68575c4f809430b7728e744f4599c80b1449",
+          "steps.jsonl": "110d75be5f5864a1b1f2f65c972ea6b21649005a92da1c5446f4f14628ccdc4e",
+          "chunks.jsonl": "5504dc2f78e12ac22103a4bc57143410b0086b00fc034b0020e095591f8033fb",
+          "video.mp4": "1106a47155e9e01aeec4ea12ee80f4e6db5f002b18c9d05f88d1f73e868a9a9a"
+        },
+        "evidence_sha256": "6e2e87e467ee96b00e2f5a666f00ad97ffdc97c7b7b1801c6a43f86bd1acf3b9"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r33__k50__motion_static",
+        "files": {
+          "summary.json": "87241cf511804664e4663835f764d71072f43bce3180254ac78e84c297ab853d",
+          "steps.jsonl": "1a76f1ac43ba74cff6aefed301f2fd8bed721995b6f7ed78b080bbb7cb71a90b",
+          "chunks.jsonl": "27a48f4af964c93b8a0908edaf85d14006af630f8107b380ae7ac594d52af681",
+          "video.mp4": "b8788444e905e19c054954af1a792004c6160869cb427d436eb625fbcdd9902e"
+        },
+        "evidence_sha256": "406833ba693ee120cc486a0b12fc44076293a18d2a4a5a0dc3d5a2f1aa34b855"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r33__k5__motion_fast",
+        "files": {
+          "summary.json": "a79649aa90d975899fbb602b4d730ffdc82f895e04f43df146ae7f2a27c3013e",
+          "steps.jsonl": "35faac65a239399a501af1c7087d78f3e9cefb78b63f6834386178dce9979023",
+          "chunks.jsonl": "96fbdb3b7aa47f1a24e59579e7b04b0a6ccad2cf08e599d72188c2b9b96b399f",
+          "video.mp4": "115cab0775d6d6ce945bcbaf108017e91ec015e14d9a36a0ed29bd7f7cdb1d61"
+        },
+        "evidence_sha256": "11525c3dc61805aeee2f45efb7ec351aaa267958383857c442c8031f254a0d2e"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r33__k5__motion_slow",
+        "files": {
+          "summary.json": "cdf758720e803976d528a0f5b8a68f6027704dd1f43f4205470331a1f4f47c6f",
+          "steps.jsonl": "f20b1be8e053cc62eda7fd67a9f725d0dd8d8d9a65ab8a18b04b84e5d4371e3a",
+          "chunks.jsonl": "88de10bf2f9b5bf6b9d6c0883450330bd16744882f1ef1a431f9aba4f190d975",
+          "video.mp4": "a3da4ec995b40df8df5d02e9644273f166b430123b29722a71c4da89f6b0934b"
+        },
+        "evidence_sha256": "587a548f480363ee83645fb491f3ddcddb3822dafd0a8a1bf6d0f5bf107b537f"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s11__r33__k5__motion_static",
+        "files": {
+          "summary.json": "cd480385ffa9f596c1c9b43e0d263b3005493a813d28a4844c3025aaf7f66bab",
+          "steps.jsonl": "affd2204cbd65712e48c71395827aaf59f736fcb2770df7a1286ac6511f555fc",
+          "chunks.jsonl": "41fd0ddf2a1759797216aa5a65d18a3877b630ff555d90af4331fd9cfc5d5d06",
+          "video.mp4": "ff2bdbc5a37b8d3555d9ef4429fc544bef89a2eda4a6bca58e82f5aa5867ee95"
+        },
+        "evidence_sha256": "dc2cc726071d6f5c0ef607cc15993dad35c1b1b13721102879f73d919380a9ec"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r11__k10__motion_fast",
+        "files": {
+          "summary.json": "eb5aa4bfd01343272f7ac1a38a76e872d0d2a9192cd2b6e314502546c35f6c03",
+          "steps.jsonl": "787a52f26f346c0b26e4ea3ee56c1242ed1b8d1b2b5631330db2471e08e36e52",
+          "chunks.jsonl": "8eabf5826816f4810d17b022683079f0da8603243fdf582dffd7e5b448ba0031",
+          "video.mp4": "c7b83ac5381f91a040dc508284a329a45d644d8ece9922c5feecc27479b0d9a6"
+        },
+        "evidence_sha256": "b83210cbeea593b7b1f99c65c47fd1027bc94c0642ee8d64884e8cb97f6f9fd6"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r11__k10__motion_slow",
+        "files": {
+          "summary.json": "e1d2f19a744e77c06d85344d9fd399ac413b4f99ae9d537a1bbc514b696a94f6",
+          "steps.jsonl": "af1aca51e9680dd93380a71e5af8b28ba8f2d33e3dbabfb2db5d92a1b0e33f05",
+          "chunks.jsonl": "823da80c2682f713ae99bce336aee9b1d94f3fb7ed3109745817d68f9ffefc98",
+          "video.mp4": "8246193874f0cbe4915f434e37fea93b998b0c73a1587f14fa28184ab22d6e69"
+        },
+        "evidence_sha256": "d73be138a3d929430dce9ccd1af455fb3516d6ba907bd71dad90be190df910dd"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r11__k10__motion_static",
+        "files": {
+          "summary.json": "74b76474b0d418a198eb762f4fb90d28abce110b86dbfe5465b51e20bc09cf32",
+          "steps.jsonl": "df3c5ea1fc0b4af46086b4858eebcabc79f6bfecaf706baf1cff7b8f650a68b9",
+          "chunks.jsonl": "679903c821a2fe6be7e90d65c40bc1551bc0737fa637d2cba144b2ac538d62f5",
+          "video.mp4": "d6b3179662e5837580de9a7b93d908c31935fe60327e165a28c3fc8cbc8fdd0c"
+        },
+        "evidence_sha256": "08955ab365d7b44053149762274762aaea39bd0eef52ab4a82583f735bc3bb1e"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r11__k50__motion_fast",
+        "files": {
+          "summary.json": "ee6e5733fb203f001c096f55cbeedc347c4cffe74c59d74c19fa7697e4c358ec",
+          "steps.jsonl": "526ea818d649ff85ef1fbaf68b7a5f57e008f1c75f467475c92f4467e8b66894",
+          "chunks.jsonl": "e5bb2c00359050e0db9e6c0c739bc0a328212a1d8647afa26242b388023b979c",
+          "video.mp4": "f2e19447e6e657d2e6c286ba1471e1f291e58c02bcd63d20d513f3b3b943f565"
+        },
+        "evidence_sha256": "28a3c152cd46a9ef7f49d6810c8f807cbe6e7db4598fce70735b8ec223a0b1f4"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r11__k50__motion_slow",
+        "files": {
+          "summary.json": "7b3a731de40757290cfa8ef9ac7137b69042ef33f49e37b3a5d3cafd11272bfe",
+          "steps.jsonl": "7883826f7bae485055ce063a7cc52d3f17f6e531cc9d123f40ed3fb5a433b456",
+          "chunks.jsonl": "16902e172d9cd50a7a9f078915bbf8172c72d07b1b66d91f5ac41b8db161403f",
+          "video.mp4": "eeeff62c996494a4b8dca1968c5106c8a45be35b8288aa3280f42142575b15d1"
+        },
+        "evidence_sha256": "8f588e50ead28df1f55efb1f50622270cfb9a1a6fdfd64388e4f1478b133f12a"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r11__k50__motion_static",
+        "files": {
+          "summary.json": "373bfdf5b81fb79b833e84fb936136c2c26d3706135ed9db19dd2f6debfa7d9a",
+          "steps.jsonl": "1e4758062fe39efcade6a0a4c48458b33d4400987c3209d38b038271b9ab8712",
+          "chunks.jsonl": "b3a42862a2c93e8521b0d66408021fbe9aa17696413f5920759d53a5e7f8931a",
+          "video.mp4": "5925fc8f7cc65289b96bd15aa93fc721d47613cb2a911cdfcc4ebcdc9f2dcbf1"
+        },
+        "evidence_sha256": "b54e9294a70325ab6b72805d4dd7b3ffa6bbeb851fdc8bfc6a65df74659dcfda"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r11__k5__motion_fast",
+        "files": {
+          "summary.json": "bb92268e79638c274fdf0f35eb65a58506609e1c3ab4c4f7a9dac14935b5f4d8",
+          "steps.jsonl": "a90436e322ddcb413bf1767b7022e4980afe9b77d28aeaa45620b260b1c4bbfc",
+          "chunks.jsonl": "fdb7a337070bfb487789ec5b077c7b071163a9a8f39cd39a5761d4ba4ca843eb",
+          "video.mp4": "ea69b00793267f50ac47bf1cfda349a0c1113ae379352d20b8cc258db3419744"
+        },
+        "evidence_sha256": "14c30e8f775d7f809596fc11f109d0ba646eb8215125f79d6d332e9897b89b19"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r11__k5__motion_slow",
+        "files": {
+          "summary.json": "6b4f934cef55629cae7e0e808fb2e1f753f054e0ee4d6f76cdf12aa0da3b3976",
+          "steps.jsonl": "2b18762e7cd09cecc6b98659a4198a87e05cd4e0d4ea5d6b4403dfe84472a80e",
+          "chunks.jsonl": "fbe6081a50b4ed6a01490c1160ecfa1c272f5b5a47be63cf5c691060c371e3b0",
+          "video.mp4": "483fecca165a6ee3c545f03f3dd1bbaade8ff46555c34dec289cafb9412b403f"
+        },
+        "evidence_sha256": "3623acbdfda46c4f1372fff6cfc036536c07de9715bb10b2024062409087d6ad"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r11__k5__motion_static",
+        "files": {
+          "summary.json": "e5a215e6d2695413c9dd1cc3533ef8b2cc44ab26a7b5b145145f70cf6611399e",
+          "steps.jsonl": "9ef0a38df2966ede81e3b2690bb0e30dd7e812cbb7d4a826524235a1f3da3b07",
+          "chunks.jsonl": "e362254a7a5890e1193c47bf4fd1902e0c9eb12a74507264ec86a8c08f123392",
+          "video.mp4": "bfa4f9f1aff0bfb03c9493e401541ad0f09b85c356cb412cf426cfbc7bb0d4ea"
+        },
+        "evidence_sha256": "63598cb849fff94f2f68db059b67e8d3884d14a712233aeacd966aa9c28e06cc"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r22__k10__motion_fast",
+        "files": {
+          "summary.json": "9b5fb3eed2613a5e12d6d3b30c7c7db33a1f40ce8bf970537e1316e1cc8b964f",
+          "steps.jsonl": "036e3a0f6d1542171c5a56269c230bcca38d4c050f88bf1b0c68f800fd5b2613",
+          "chunks.jsonl": "88479747f57f2f2bdb12e2a074dd8a09a9c862be4a172655384eb152186a169f",
+          "video.mp4": "d4f6a530fd534c25d9aa6c2fdf46b3eb02fc0b82d4d2d5e7a8c8dc5b6e40fd3d"
+        },
+        "evidence_sha256": "4bfc377fafa2942997dbcc1cdc1beadcb0c8aec698bd7b40c5c049d1e2048e9a"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r22__k10__motion_slow",
+        "files": {
+          "summary.json": "c26f3f8fa3942254cc482a90f9dbdc7ddec48ac460d1b11c0d6a7d9ae468d143",
+          "steps.jsonl": "142a101953420a60ed5025e6b715e924af6188a764a40e1b6c8f676b36597aa1",
+          "chunks.jsonl": "e5526093070a6ba2bf9cce6a8722a97787c8196dd5b29b689e52e7b59f3cba17",
+          "video.mp4": "f5c1e6571d4c2d3ce5cab35c2af0a9ee0ddc9274a62f492bb96616ee7d34926d"
+        },
+        "evidence_sha256": "f1aa455f0eb5b2f6d9b66dc1c03aeeb144f0e2d811384f20187eb0d525776a0e"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r22__k10__motion_static",
+        "files": {
+          "summary.json": "b8d3f70bd0b9a6fe53b99d911bebf9a6b67ab2a0a9f8bfc8a4391352456e9469",
+          "steps.jsonl": "dc13965af54f7db837afa16fe9ab74ce4ccccd9d51661d7f66a86a75716efab6",
+          "chunks.jsonl": "5f7936e5e2e241675b058412bcf5755e6fc7e8fd6a2b7a1f18b7c9126ae25412",
+          "video.mp4": "33d8d5ff98414fb2465b7bf2e6ec1348da73abf219febe87f8c48b4595b3b7f1"
+        },
+        "evidence_sha256": "c9d331b76a46f6aff649630ab6491a3868a4cc8f4cdb92f95402f6912c29f00c"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r22__k50__motion_fast",
+        "files": {
+          "summary.json": "600169413705c1fcae350c7a36d3e54890deff5d5ac7f8fde9f7dec1413bead3",
+          "steps.jsonl": "d21d3367231660726adffc1145f070e197a67a2e50488647e5533b9b1290b807",
+          "chunks.jsonl": "828c220ee74a08064e8d965f328113ab2d88dc5143d3a910ed48c0bd088b7ede",
+          "video.mp4": "af11faa6f20815cb2a95e27514835ab2fd660a6255f16184b73a64247187dcbb"
+        },
+        "evidence_sha256": "26efa5884ea9fe2a05e4feeeab861401ea89af852201ac627ffca5973543ba50"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r22__k50__motion_slow",
+        "files": {
+          "summary.json": "9c8dbf2a04f5b7e74bf21b15f3211de7ea001942cc018a7685c4687fffb2e155",
+          "steps.jsonl": "bd8a03d00c7cfbea7b79550a5b9b24437b629fad0ff17c6f45af2190b3356c52",
+          "chunks.jsonl": "e135256b0c7023c4fcf89ccd5135979b15fb85b2906155eabb48b33981d4bc36",
+          "video.mp4": "d03386784a3114c2d6f53a753cbb1e168afccb5d1a1fef38c95a69719f0a14bd"
+        },
+        "evidence_sha256": "f7bf6a0be9d30d6284a392aa4065dd9af32e8ccfe25a95b13a94683d96e6c485"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r22__k50__motion_static",
+        "files": {
+          "summary.json": "793378fb005a4b00ca74d0ba5dd4a3d1e163c477e8e9adf907b9f4591ff5f711",
+          "steps.jsonl": "3174615f27cbfea0532939b8015402c3d939967fa066be2807b3a8c5995f6117",
+          "chunks.jsonl": "554f18ecbd923bef9f1aa83354579ef4a4a27494c0c0d738ced09f7165bc79e9",
+          "video.mp4": "331e242649f90612c257c30dd7d36f15f45053816d77127fa98d15b738e0677c"
+        },
+        "evidence_sha256": "94d42c3996e783b4db74e37b67da503287615c192e8f843e082b8410336092db"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r22__k5__motion_fast",
+        "files": {
+          "summary.json": "adb02a8ddf7cd70dd7f61a43a9e7b945c4d18c23a47307b0bb78b9d0dace79e0",
+          "steps.jsonl": "fe87a48577c3e242fc9a5f31c84f790a57c4a2b43697ba5639976ade7ae42f57",
+          "chunks.jsonl": "31444b53f18aa119f5f00774a6878180fa2681e2c56a5ee1ead13793f071e132",
+          "video.mp4": "4471ecde4b269592c84db771af74504fe09b45abc03356ae91554f0e247f6899"
+        },
+        "evidence_sha256": "060509ac8e2ed8c91803587e8f930afeb2af2a7ba112561e89a18e3377292001"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r22__k5__motion_slow",
+        "files": {
+          "summary.json": "55b45fd840f07ef42a580dd53678ea8bf5def39815640fa49ff62bb7ca5f71cd",
+          "steps.jsonl": "68ac25674611baeb25fc532dcbe84199d83edfb8a4d346c002d3c824339c4269",
+          "chunks.jsonl": "3b49effc70deb5da395de0c5c4463db2c139d709bd502456369e399e6204db4b",
+          "video.mp4": "e97e74459ccc4418d764e8d0d9a29a5acdba37f18461310612dcd4348fa71b4b"
+        },
+        "evidence_sha256": "afeba3bea1597771b438185902daa8ba23606cdfabd369ecfe8ef62595079112"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r22__k5__motion_static",
+        "files": {
+          "summary.json": "6bc49f467ab2e2b09b9503c3838f7ca4b576e752621ce41556cbe86aca02bb26",
+          "steps.jsonl": "4e70ac81da8b10487e68f803932d471d4a272976282fabc6a3811bf256283fe2",
+          "chunks.jsonl": "66530f7572d0e8651de00f52c48de7f00ab9f3a3f3a1b28caa86422deb4e60da",
+          "video.mp4": "d8cae632b2d4c96e11ae0f402d0496762760dda2e8cfabd9bba4b7885d68e40c"
+        },
+        "evidence_sha256": "e9537b2956845f8d837bce438d3a7caf5d023442b731e35b959ace47a1219c83"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r33__k10__motion_fast",
+        "files": {
+          "summary.json": "b814d2b69ef0c1ede8e4118a669ea27807039fc51e8b789f91cb998d494dd45c",
+          "steps.jsonl": "ce82bd1364376f6f859874f6cc607de60ab40c7cf85f3a271ee4104d82237232",
+          "chunks.jsonl": "d350591fcd03f93fcf9c66ebbda708898e1fa5ab1cfcc98133db1b8003ee8268",
+          "video.mp4": "600ceb74d26810db7b0efd5d94471b0af61253c189bca62a83950ddaa9270a40"
+        },
+        "evidence_sha256": "db94ab3d4afac60e1a43850d8952dd22711988ce62a251a509ec26050fcc57ae"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r33__k10__motion_slow",
+        "files": {
+          "summary.json": "e80920334eec03b2da0cf380ed4d5725f4ebfe61a53c302844a804fe0f293d95",
+          "steps.jsonl": "ebd521b309370609d197e872e57658384b6e8b0a84b4da1d0deb3755edd49ddb",
+          "chunks.jsonl": "207064196af968455efb2d3774f258e9c2afa95f67f5a5b7fb6f1e341b37d8fe",
+          "video.mp4": "3b77ec64a61f9bc933ab5697656d2c4b91e024e83399cce2ebcfcc61da06da5c"
+        },
+        "evidence_sha256": "2661fae7bea7ccd2330af284c6047c945502b27bdb9ce814dce77f7ba464f035"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r33__k10__motion_static",
+        "files": {
+          "summary.json": "e3666d95ded3bf36c1fd5c6f0f61e151dcb4b39084eb74d1443bebdd1be494ee",
+          "steps.jsonl": "1c252a9ad9acb54b406137cafaf69d93049b9a6ce8969a52437a867db3e505e8",
+          "chunks.jsonl": "2c488acc70ae32d1ea7649f504393b61c34f7b2d5d1f63ef119e9eb86d33e53a",
+          "video.mp4": "5a9ea71f6fff7933d207796b542c8e0fe042790c1b98a2f6cb246ee982ce5b65"
+        },
+        "evidence_sha256": "324c71968f91baef6efd423e1204a4fa8c29bfe5dcead9e9213a16774caf1c1f"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r33__k50__motion_fast",
+        "files": {
+          "summary.json": "ff35663dbb97d848e54fa1fea3a7a178ce3639737c4ca978c2388d77fb25d6a9",
+          "steps.jsonl": "539bf9829501f97b4e45a67af35989d6f03f8895b149b2d35c4dbcf6450f03d7",
+          "chunks.jsonl": "bdb37f0c00dbe330c2a6932aab43ed9c582b4c2539beb87dd288fe0db01bd8d6",
+          "video.mp4": "a0e81bf391f5404664e3f10d4a8db8d414e3c4799adfca4cff04566ee39da818"
+        },
+        "evidence_sha256": "f8dbd1f1f44401f908ee1a7ff3496db42816222d986b76a8465f75b4188f54d1"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r33__k50__motion_slow",
+        "files": {
+          "summary.json": "0e662f07544bcf07bbdedf2efd99a6e92e2119d74330e9ede04c046df0427d50",
+          "steps.jsonl": "4fab583edc594a1086fe648ad7be5b03e48a6cb8b385bd75df5d5b961adfd463",
+          "chunks.jsonl": "ef759a0769f1b84c981e919461d3a8c2da1bf6e851eea06472b790da16acbb6e",
+          "video.mp4": "21e49e09e3daf47861b81a2bcdc15c0bc66299d903b686d5d067ae9b81d620ee"
+        },
+        "evidence_sha256": "bc58e80cbb36f766e9c68ae5f80316c078c8a051626b01feb1004d68441b19e6"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r33__k50__motion_static",
+        "files": {
+          "summary.json": "a297a3c29cf68199810370e8f170d1fe5c657eb8503cca80cf38a8123e3cf9e7",
+          "steps.jsonl": "f4ddafd74bd9b05680ad704dd169e74ed8609207510c61ba358aa53bfc0054fb",
+          "chunks.jsonl": "a3d47589240c2ccb19051b9377fc08a995edfc87d6b34d2e7845f28cd20c3de5",
+          "video.mp4": "37875d8a0f077dd97e3d732ecb53415e4659f342488c61dac42742943523e1de"
+        },
+        "evidence_sha256": "b92d4846e9c22a7c1d6a950a36886e30eaaffc7629930c8dc8236d7bd7a1a98c"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r33__k5__motion_fast",
+        "files": {
+          "summary.json": "5c73d5a04029bd263ce40cedf6f3152d4044b7f7647ddb91612805aacebc07bd",
+          "steps.jsonl": "1f60d5e99e3a8ff3d5fbc1a54e1d290175502eacdb58e4695ff6959a3c65d932",
+          "chunks.jsonl": "af9dcb0b4543b1ce828583764909121397f0cc693579f9188d0b7305ad233291",
+          "video.mp4": "ee97cf53912a03caa3cc34a70b501835c7e246b993a4421d0ac9d4f04c552bc6"
+        },
+        "evidence_sha256": "4f2955b550ae2f75f865d919f799152de4de04269fdc36f41351fe304282bb69"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r33__k5__motion_slow",
+        "files": {
+          "summary.json": "e2ef1b90245ccda8393f6bf315b639532f1d679f3ea22da0be521f120db1a011",
+          "steps.jsonl": "0199760a1b92c3f462d6d7970164ca97dcfc19c57380e69a8ca8f5001ea9ed28",
+          "chunks.jsonl": "4885088d9a42818b83d0f07874c3291f0d76729d2a4b3f1a436958bc191a1754",
+          "video.mp4": "5d271d3775b67231cf56e83dfe5a66f991120e14e8c700f02d6eefceed299566"
+        },
+        "evidence_sha256": "60fb1a96d6855571948e457004ac60ef956479d8be27ddf6c747d5847ae94c57"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s12__r33__k5__motion_static",
+        "files": {
+          "summary.json": "641b0cb62675d52572d065fbdbd5639132b1557928076ce02cdd0f9bcbddaa1b",
+          "steps.jsonl": "45ba05c682985e763a1854e2723299fbd99f7e9ca6ece3aba4e18b1d6a0715f4",
+          "chunks.jsonl": "5da06b113067199aefb62d32436d0d2e82abd53015d216cc3cd49ed255675963",
+          "video.mp4": "0647493d74208ce027b4d687b8d63c9b8ac745ad8aefdaf4c28c7278d7441a80"
+        },
+        "evidence_sha256": "b744bad4887b981e3c434d20103a4889409bd20c7a85b1b83ec0a7862e9ff786"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r11__k10__motion_fast",
+        "files": {
+          "summary.json": "4a5e45743542718a6b87c348bfcde732b22f1bf9f75f059e24cfe85104c8b4ec",
+          "steps.jsonl": "4738c98fefddccaf5a36562978f64b8f984784d23e7dedd9e0f98afad33be07a",
+          "chunks.jsonl": "5edfe7bbabdaa865c8bd24d8d136a4f785d1091d003b000b6f25e27bbb6cb8d8",
+          "video.mp4": "21bbc0c131220f079edd2e2957cd564b4ca8cc41efde9ff66845b6309fc1a9c4"
+        },
+        "evidence_sha256": "b2f42d91e85972ae520aa353319d96d7bf398816078f5447168c849f77d9e15c"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r11__k10__motion_slow",
+        "files": {
+          "summary.json": "6c8afa6c2798c2ad86d325bcc1d278c03dd8f8fe53f50211437b2aa00430fbde",
+          "steps.jsonl": "e541c7fa71f880903d6fd52ed02e826b3630e8d1b6f31198d0866dff55ade57b",
+          "chunks.jsonl": "5d234fb3f7eb584e48af3a717c91fd3b57aceba78e9b17c0c61a7036203081a8",
+          "video.mp4": "7e4287bad21f4dc6936a7844cc82b0145c15883a349f65763e50a55729fc518d"
+        },
+        "evidence_sha256": "cc7f73a76738ef05ccf8e9a0212b2120deb4f6af17f2162d6bf3b8431730e41a"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r11__k10__motion_static",
+        "files": {
+          "summary.json": "38feb75427d27b5fce2c413fad9833b523bbf78c1c77a0df70b7183f962f79f8",
+          "steps.jsonl": "4c5895dd5c131a9c30003a75ea84ff24be74b615d6ab6cb42179e6d4e91b6f1d",
+          "chunks.jsonl": "373ec317a50e29f75bb74da78dbb9585ace1dbfe84ea5d87f4c0134b95f62cdd",
+          "video.mp4": "a4a654096b4d1007457bf54901b7398ba59b2ed8137054cab98d4a86fa9e5d11"
+        },
+        "evidence_sha256": "01385c35e0481f4477145401798b41ce2fb713396329b3c16f3aaf353f2921d8"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r11__k50__motion_fast",
+        "files": {
+          "summary.json": "908bbd87236bd856d79a649b103496f68a47fc26d31b0d88766a72eb25e20243",
+          "steps.jsonl": "02a12a09c594df216ecd932094f52cc73ce96b0de121e8f97e0112fe65f321c2",
+          "chunks.jsonl": "4030c205a0c8100c576bd3f63879f07f3eedb6f51945c1702895355fa9cbd4d4",
+          "video.mp4": "915f5aaa48e4c64b333bb02b28a9be9b5d2319d3229f074e9e9c67d3b6a820e6"
+        },
+        "evidence_sha256": "329107531255e90686c92a817aaa512f861630a180cf6d0c843ebd07b9cade40"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r11__k50__motion_slow",
+        "files": {
+          "summary.json": "3c9da5d66d80921226bde21944562145190c795d8cad668f9a0ebf6a98d21844",
+          "steps.jsonl": "ac7651b909ea72ab835f3ae55a342efee0ba2e2982d33127776a9b51f4ad21e4",
+          "chunks.jsonl": "d5aeaccabb2a9c8a2bbd0aa4f0852fc8aca97d71a611c9ea5b00508df2918097",
+          "video.mp4": "98728966629e0c28a0bfa55de231923088dda29c7f298fdc3779cbe5fa26ae9e"
+        },
+        "evidence_sha256": "dbc763ebc958bf9eb7603b963948e7c1d14cfa7048d753376ae6a2d485d75b82"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r11__k50__motion_static",
+        "files": {
+          "summary.json": "2f7bddb8623c69dbdccee9cf2a5c1a77203ccf76b9aa01fea6e1309ccd757151",
+          "steps.jsonl": "63d77681daa49d7975e7b3f212b774b0d15209dd85fcab53dc58b5c7f4b11cc0",
+          "chunks.jsonl": "6e0ced4fa1278e4ad1dd2e08b20ccaa80833950d140be7a9d7b0f56b33a8dc34",
+          "video.mp4": "cfe7253a935d3280a5739b657aae5ef89e557cfc645c8afe235ae6a90e47ca4a"
+        },
+        "evidence_sha256": "9b52a5df15ec58d74d39a1098a7d6b166c31e135b0a14bef40b6b21b79115b6e"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r11__k5__motion_fast",
+        "files": {
+          "summary.json": "56ee08063245bdba436b575f1d8f382e2a6e2447a9e07f977d8afe57b0b94bcc",
+          "steps.jsonl": "c7b84cd86207e425b93a34a683eb68dd0c8a09ca53c44b6d97ff949afffe7c65",
+          "chunks.jsonl": "c994b85d6117f0f18b48ac90d4d8d1399f326526f0ff1a0c744eed72b9205300",
+          "video.mp4": "f23025ec35f2d10fa3c42a26a50509b4f861f15381fe40dfb0a8430fe24eae23"
+        },
+        "evidence_sha256": "b882f634803b2fe8707c781230e8c734d630a055fc9fff81d2193ba63d09c184"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r11__k5__motion_slow",
+        "files": {
+          "summary.json": "ad2abaf66005c20252ddacc03bef80a9acb524d1a80257fdd29c4a08c74b3d7b",
+          "steps.jsonl": "7a037f76bcb70e225f10daa793786ae979293ffb1ded49bfccb70bd46a2a9873",
+          "chunks.jsonl": "e78de9e52f2192e944e43a37724df4ee2d2a245708561c3f9b8aa8ac979fcb0b",
+          "video.mp4": "928d20d2f2bf7f1555d6aaf5b0774a53adfd008d18d7f25f136af116d0b43908"
+        },
+        "evidence_sha256": "dec9f1f24f91f396265e142981d87f939416ca5db1f1d82041f6d16c7d9d3b61"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r11__k5__motion_static",
+        "files": {
+          "summary.json": "9699b6ca5dc6ac88ecc3b328eb9c63df21ff70d63e222be3b491658f13a246f0",
+          "steps.jsonl": "145c3927da37959ebc9f1ce84197ce2c33fba875fe05338515b9f2ca7d811d88",
+          "chunks.jsonl": "507a254aeaac898b5caad6287e01d1fe64690f13d41d805e7f48f59cda8cff9e",
+          "video.mp4": "776515fed7aadc7ef9bda6c6330e6b01553fe3d49f70ca5141589514d169e975"
+        },
+        "evidence_sha256": "29fc1a2ed77f204a5d924483d34d401329e3a3d60eb4affdc2e8fc07fc70eeac"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r22__k10__motion_fast",
+        "files": {
+          "summary.json": "5e73024b098b1c3e4ca4c091d70ef94260bfbc2c437eafa57be91fd2e39d245f",
+          "steps.jsonl": "6753cbefa64915c4ffd60232b0c109091f389518cc2c973d27e05691e8e03079",
+          "chunks.jsonl": "7cc7c46e2dbc1fa57d11d1cfea74f7690830573dafea07671311c8aa919ca3b4",
+          "video.mp4": "0a31dce9f37190068fb198489574d094607f8c57cae92b55d0e38a21747e1ded"
+        },
+        "evidence_sha256": "7ed3a60e8045939396d04d360607c8b13da1ff6f9343c751bb59c637aa259763"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r22__k10__motion_slow",
+        "files": {
+          "summary.json": "63aadcb0d93a6cb064777224834e7431db4d6ecdb70e29d2006ce2bf297e73cd",
+          "steps.jsonl": "0d4b56f9b4e2c3ee67a06a0878a0903b97e0220dab0c22485909da2d837e3c00",
+          "chunks.jsonl": "729b7aa0f8b831d7fa4b446fee079dcebdd00a2c80c0832d385298ea1fa13cf8",
+          "video.mp4": "731f8ab99d6588800900ea79cc7010d47f1af612061853172445e16d4badb03d"
+        },
+        "evidence_sha256": "1073cea3d8506730179a878d505d0b783136980721d2b834214ba42266be60ee"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r22__k10__motion_static",
+        "files": {
+          "summary.json": "f749c175d4e19a5a190d62d7fd21a6bf0b7cc89f95022afb2f307cc1ff570d25",
+          "steps.jsonl": "68c611c99610b04a5421e43936c8b80173ee29a172ab27211e2d55cc59c97016",
+          "chunks.jsonl": "227cc7fc97f9d3f64f793f809d141fdf016f8e7d50d900ec9258f4752d87eebf",
+          "video.mp4": "240dcbf77d3a44d7a3e932cd69a2238b0d0e8dfe8dd3eede9ed393528c5a42d2"
+        },
+        "evidence_sha256": "7e2f03c75d4e02b94132f64d4b4c2eebdf4efe80cbc49493e10192910c8c3a2a"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r22__k50__motion_fast",
+        "files": {
+          "summary.json": "5d2758ce60b9ebe05a70de9bb7d66d1b03963d59bd1def79b5783ae961643c70",
+          "steps.jsonl": "71f52996025c44bc30be0ea773147c5407e8e767fa81abf8137581bbeb4444e0",
+          "chunks.jsonl": "2263815abb6ec0e4618fb49b7058f3cc5af3079285f437e0b2d4152860561d06",
+          "video.mp4": "db027e45074381ab28781a81a803bee3e9d948ae5da1dbc83775d1f3adf9d4bb"
+        },
+        "evidence_sha256": "c286e6a71dcab6c9de3a11ffc5bdbbf5254f3d783a00a72eaa5d8bce8c0d4538"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r22__k50__motion_slow",
+        "files": {
+          "summary.json": "0302d325a86b2429af17513ae9a250d31c6db8bd5f749a1ba59bfdd919edb0cd",
+          "steps.jsonl": "c4755c9bb8b18e648909cd725d56e8498dca622c1cba222f76e5281baf000202",
+          "chunks.jsonl": "ae1146212a9a4c352857da410409de8d70458edc95243ff55db310aa082ee658",
+          "video.mp4": "2871f13e7c43f079ea7a4a1873192f7e5fa1f97ec51c5a47e7f4c3c336caa0ba"
+        },
+        "evidence_sha256": "47a9ff0eec7c450c9778a9b890f0e1d4eaf6ce05437755804f7d2f39d7e09dde"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r22__k50__motion_static",
+        "files": {
+          "summary.json": "b2d33d734333b83bb0129a90e0cd082ff26088b87594f1521a448a9f1c9e444f",
+          "steps.jsonl": "6da747adad3379cb3da29b6213c25ca7584d08b95b48284e470ef50e170d9374",
+          "chunks.jsonl": "35917e3dded7eb3df3bb03b06853d22359646ee13a39fa3e291f63bc65845c60",
+          "video.mp4": "9dde446777b00dc3a73181c726a88d4a0ca8bf3e5bfcab5c1e28f8552dfbead0"
+        },
+        "evidence_sha256": "79426c5a2c0974757f3e1878653f8adfabdb87aa612422099b6eb3f7d8b0e047"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r22__k5__motion_fast",
+        "files": {
+          "summary.json": "1966e643834b6bac77ec775e4bfb42d69e9beb0c1578badb8236883c030a56a6",
+          "steps.jsonl": "7c145a10e146c323745ea4a0c76001d748d048f235fbb2a27f7afb5803861101",
+          "chunks.jsonl": "00d31241d317872b89187ab8505b16447a5fbab1021d21600caeccfd67858615",
+          "video.mp4": "f185604946c055cbb52de5ffcaec47ee9d17d59d21af3b26daf0238fb28f28aa"
+        },
+        "evidence_sha256": "54411094aae6b6ba8afa4c4f55fc2ed889b50007361da2447e65bcb8d5f0612c"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r22__k5__motion_slow",
+        "files": {
+          "summary.json": "930ccbcaed9c44e24ef2905007c64a09c29a1b6914e8f7f622bdf48f2f7b9093",
+          "steps.jsonl": "d198c7fd30ed2c82f4394d9fb92ece8365ef286394a8fd867f8be747d4018bb1",
+          "chunks.jsonl": "8329e5c08b85aa5f0438e7a0e23468260f224f53de70201115b94f95478239d8",
+          "video.mp4": "15fcbc6df3cf53f2dbbddb77ba9c35a0b2f9f8a0c6ba2d59ce6c8b41e8ba6cfa"
+        },
+        "evidence_sha256": "e3fbb82835e3654a543c97fabf0eed48f657c22156d758564b8983dfb85815ff"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r22__k5__motion_static",
+        "files": {
+          "summary.json": "e6661d43567edbc221b7dbcda433e63b6c4da15b8bb6054aabcc8050f82395b0",
+          "steps.jsonl": "35300e5b6bba84a8834d3c4031060f8e5f1d3492119fb8d63ae275bef7f57d70",
+          "chunks.jsonl": "7b100039c4fff49a5344b85c8d46f75adce44670fb3b54e19541fad64ea1ad8c",
+          "video.mp4": "20ae98d9ebc707e132275eab8d09ce1f4218b7fe8aa897f7aaec1db4a7681b68"
+        },
+        "evidence_sha256": "83459683ea3fe57cb7e1e2df324a19ce947125b2b3c3eb53d748d58ed0b97d8d"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r33__k10__motion_fast",
+        "files": {
+          "summary.json": "417cc8ea82f387636245ee7bb8f0bd4ae5e753d6a6565f9b85a64aa97edd2b9e",
+          "steps.jsonl": "94e43a538614cd62af54bfc75ef010b3059d5386c550171f20d53e86e4890186",
+          "chunks.jsonl": "e2b62db38f0135a8ab2c827dbd8af8963e69df9466528b89e1fdc2021b3653c6",
+          "video.mp4": "4d43ad01aaf0953ac11997bd7f7d2d7e2b9c8263f842845bbf975133887398f9"
+        },
+        "evidence_sha256": "2fa97359f1d16a7428f427fc82d215eee597ab6c01e70408696a499a7821aa57"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r33__k10__motion_slow",
+        "files": {
+          "summary.json": "5e7eda76284af78980101af36cbf1c0bfa2826c25390fd4cef3c251e15abd9b7",
+          "steps.jsonl": "d869ccc7bb6d971d80582a2ff03c54bc69d0433a69e739fe9dcf1bcbb821109a",
+          "chunks.jsonl": "34522d742da44f9bef6e2b9aa226251c6aacac7fc807392279ccb755cba54495",
+          "video.mp4": "d3eadcf7e3bf8dee70fc15b09099ce450224f1d4dec803ae5185b9c8b9c9fb63"
+        },
+        "evidence_sha256": "ac708a972bd9830493aa2a8aed49be5294dba2b94bd407927d05d28c0465bd24"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r33__k10__motion_static",
+        "files": {
+          "summary.json": "c8cbfd879c83d5f0949f945ab6740c36ed69e2370de633a5b4e0d2bbfdf52329",
+          "steps.jsonl": "db7466184c315ab32e62a0d634fc1236a68edd54dcb29d7fab2ecf9af612d1e2",
+          "chunks.jsonl": "54269edd0d2d34f9d8f2e9e56af6193bb6e7bbea565c2c771bebe8c0040e2925",
+          "video.mp4": "d75dc90097157504f9e481d594dd45bc75627d47ee29caf68c65cb10f0407667"
+        },
+        "evidence_sha256": "fb3eee1bcf40182ed4bc048ec282fc4ca2f886a1a256630d814ceaeb8a4e7288"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r33__k50__motion_fast",
+        "files": {
+          "summary.json": "5a89937d192a31f1c7e569bce109881598a4fef09ec649da3a7b7270b1b84cbd",
+          "steps.jsonl": "b3d77028a8b87bebb681ff9755fe99338b412c557b4b627cdab8b465e570e4e1",
+          "chunks.jsonl": "a6b16f39adfab3f8f0085ce8cd13f101ddd2852a96b6153e5eb0b225ef1e4966",
+          "video.mp4": "32934feb51ad7f5fff6e2d6f22bbc8fad9f4e7939c8cce007141c050b02fe50b"
+        },
+        "evidence_sha256": "80586e9e77505d3788016cc95d5d6842b7d94470321ff7a50475888226464cad"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r33__k50__motion_slow",
+        "files": {
+          "summary.json": "12713d293cfc2e1d846eedbbb61bd4b98e820f558ad06c5083f21781d73efcc2",
+          "steps.jsonl": "33230de66d396aa5e35446453af0084e41da19be3040111aae8c7617800fdb6f",
+          "chunks.jsonl": "c8e1501ce042565f4174b8f0010a6b919c77e591807d184ac6f0b4334818af8c",
+          "video.mp4": "24d0139cf94a2900ee449538771a518c8172c5800c3710c74d829d41ccfb9a9e"
+        },
+        "evidence_sha256": "2b4e472a1f264c7579d495db39e4c4839c0034c2e5f38d337ad3f245b318cb03"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r33__k50__motion_static",
+        "files": {
+          "summary.json": "6be2c45647612666f78e11d4faef43b8bc22c7514fecb2fbe3c24c4f08e2b19e",
+          "steps.jsonl": "8e53c8244c6c89f010982b3efa331b6668b3deab55f3926994676308acd42a91",
+          "chunks.jsonl": "43ae80fdae2fe29f373150ba5aea2013a8bf938e48b3f47cf2e3204e6a6fae2e",
+          "video.mp4": "c7497a94175a8243986812fde7138c65a8352094dc40c9f3c36e8a82556a30c4"
+        },
+        "evidence_sha256": "8ef6e92da9f05c68dc6d47925fa03c3ab53a04678900e9b6fce511785f611911"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r33__k5__motion_fast",
+        "files": {
+          "summary.json": "dd3d106fae3e8987f2ff3d3aedf3939d959eb99e7d51a062c679b3cbbc44e60e",
+          "steps.jsonl": "7a1f12bac6ce4f892d107219accb3aee71bdd8377f069b774a444daa8b95cd16",
+          "chunks.jsonl": "965e62763c1a936b2e96282f0abb5479c8d075e431a1638d82631977036e2560",
+          "video.mp4": "ad16f0beb7025893678704e01286c5ab7e67f20d166dbb920318535ab7543541"
+        },
+        "evidence_sha256": "e202c1e6fa5ac0eacb9902681a5ee0b78ae9b1af214bc0646c5fd527b6b84e27"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r33__k5__motion_slow",
+        "files": {
+          "summary.json": "a341bc8a8522d78f4b82946352beb016357a21f9c5bb479ea82d80ef7fd31a50",
+          "steps.jsonl": "7e846d4c5387f26605d1186cd9d6f0d67e87a2dbcb5d051c393ad88d38d66c64",
+          "chunks.jsonl": "f5103915696230eb273b020e1e7de293cfdbeb45acb007c1525d4747aee98a3a",
+          "video.mp4": "0992a0f1667e093d0260b960ed8d90a979a66e74e226a2f2aafe9ec394eed7a2"
+        },
+        "evidence_sha256": "dbc7bcbdba6468d2d321344e05e4ca6133e4a8c26d0b5df1f2d696d3a81bf53a"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s13__r33__k5__motion_static",
+        "files": {
+          "summary.json": "8b4fdb4203a4cccdc9d7b352285a6b5755b6c41f47ab2138534f1900d3995f5f",
+          "steps.jsonl": "b35101ecf84125fe57c524ef40df1be1d81a16c6f4362033ed109ed87cd7d772",
+          "chunks.jsonl": "d5cbbb14184000b7d20cf3fb3ad163170d7cf6887587c8339cc12f6cfadbe03c",
+          "video.mp4": "0eb82a9c80729d29912e53f130f54e731b0d7490c504884745c7b28b96bbee53"
+        },
+        "evidence_sha256": "c009caa0f2d89212441a3bef6568c3a85e67a19efea79d5aaceb19a8b6f8ad56"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r11__k10__motion_fast",
+        "files": {
+          "summary.json": "3f5e53a1820a7e0bb2dc8b42f1279789c6192437f33256f4700ae90f5ff62730",
+          "steps.jsonl": "825b19229b39b172df17a94b21d36297a310957d5c3fa436ee469941be572d9b",
+          "chunks.jsonl": "e5c9e1845854951f8794772fc258bb03f154a10611b54e820b9f8a2ff146fd42",
+          "video.mp4": "2877d0ac70603c79682fc2686ce44677184812272fb511670aa8d219b2bcc5da"
+        },
+        "evidence_sha256": "bfe2a2a00debc1ba2908805a0ca813796c857c7f78eb8349f4b20fc07c4db583"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r11__k10__motion_slow",
+        "files": {
+          "summary.json": "3bdf47f2c07d39dd9a23275b8bae7cda91ca4072ff1deb36cc9bb1bd7198fb05",
+          "steps.jsonl": "89fe2366c48c995711f34c6c1a20e053b7c9a320af33706af05602b3fb42208a",
+          "chunks.jsonl": "fde8968b4d4e565b7c277be1622dfd0ca737544b3bccea7155e6ee0943149fb6",
+          "video.mp4": "720cd9b69cae9190961ca5137479a7d8fd98ceacb5870a4f9ae7331412cf59dd"
+        },
+        "evidence_sha256": "187fe6199e4bae585caf6b4079a2db211dd17b468b6c30666c0f1980ede5d645"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r11__k10__motion_static",
+        "files": {
+          "summary.json": "4d5b3203f1fb83a31e9c900034168a867bc0060aafdfc1ff3ddd86f8e3ab5e37",
+          "steps.jsonl": "4268a9c3a5c881061f5aa0c2d0f0a961e0298abe47ce2352af8932e43bdd5f9c",
+          "chunks.jsonl": "718c01df7a0ea697ae734c0babf040c3cf737e3cef233217ee580626ad4f5ebf",
+          "video.mp4": "2c49d26464f1856db22ccc407a66d0daf02c62626e7f5b03b4dd2b5faf6a4cf2"
+        },
+        "evidence_sha256": "73e40c6c90787db605268eba286eeb8368fe5e3fef5e7d58a568f2812584b00b"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r11__k50__motion_fast",
+        "files": {
+          "summary.json": "e01a2560ccc0c17e386ed8c0887a838da3553317d41f4ea937c3a9fdda8c770b",
+          "steps.jsonl": "0c88b73261baf891417a67df1dc3f5fd4c75379d846bffb4a1cede7b35cdc9b3",
+          "chunks.jsonl": "96c4984dee12008a4346ecfd46898ee78cc551484710d79fed728ea1148acad5",
+          "video.mp4": "8eb626714ff9ede9a5a783b44ceef0c7508ea714a4a660c89841815a97f150ed"
+        },
+        "evidence_sha256": "c9023ad5a66afff1993a1ae41b6bf4fe080bd6b276158d5baf09df16d537aa5e"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r11__k50__motion_slow",
+        "files": {
+          "summary.json": "4026ed58f90dcafd5a79161c4674cc473c5ccceff3a8f6698e7413b876bb02b7",
+          "steps.jsonl": "6f4af458f99bfb097769c7e4b584bbb226422a2eb927c6397153754d8c2828a5",
+          "chunks.jsonl": "640214caeca5303e14ac4b9af132c3ad45930620b8ed3319ed6497a73c41c568",
+          "video.mp4": "72314053aa3358f571679e6d2cd62228250d5e0df1d3ee145fc3ac2774274bf4"
+        },
+        "evidence_sha256": "e459209a3570ffca130013a4e3500697a1142723b157426f83bd67df2f3d7322"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r11__k50__motion_static",
+        "files": {
+          "summary.json": "456de39f0b7bc3a1fc4c55c4b13fec57a915ba329b91c7449ed2d7ca552b2f05",
+          "steps.jsonl": "f75bea5d5faf4844b3366609c2f81ba27223417ee07e3a69d033930d08ce4f18",
+          "chunks.jsonl": "80d5db3a089f7c9b0a5e8ff1dc9c55dadc97dc9128bcae83d90204f8efb18f5f",
+          "video.mp4": "d4f92c211183a3fe06462a2e05b7819b658ca7ce846d288e6bc6c59bb0382cb0"
+        },
+        "evidence_sha256": "8e9f36c4f39d8310428221d2b93ec6e5f1799889f421031133176a0703f17851"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r11__k5__motion_fast",
+        "files": {
+          "summary.json": "e631c55d53b7c74d64aec2175aa96a93bd6422d209f9bf0ed36f8dfe27af8497",
+          "steps.jsonl": "6e1fc384ba49d798127fa57b725e613c7631ce698931203b9c89603bb240a19d",
+          "chunks.jsonl": "8d75897ff5040ad1b33338a850019d4d4b44811bd446e8884d2838b5a5da6256",
+          "video.mp4": "63c949e1d05a8f10832caf666025aa71bdfb35c0e11a658bea6c8fb56bbd90d8"
+        },
+        "evidence_sha256": "b0d2370c3d37e9cafa4d581034fc74946959a85aa4c6d1263fd12d86836fbef2"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r11__k5__motion_slow",
+        "files": {
+          "summary.json": "7d023a1e4239910b175833118b892eadd05645b4a9e340aca2c206ca19dec22b",
+          "steps.jsonl": "dc0841694a44f5beec48228422e2e2f65d72b6e98030d78fd45eee95c0ccc58d",
+          "chunks.jsonl": "9d76f3842e9f59e3b0ae3a6dcdddee9f2f3f336e087e20adca6e7f85d8b4e7e9",
+          "video.mp4": "c25e887992a3f5fc7725e4397c5dd6a4049fff3a953cd0206a2a034217e172f8"
+        },
+        "evidence_sha256": "fe57fb6e3acd54463ac084e797fc79234c6924452aef0740684c2ece178becf3"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r11__k5__motion_static",
+        "files": {
+          "summary.json": "da65b89cf0fc9c05b8cbff453a193b7ac578ec40fe97e9e67929a238d772e054",
+          "steps.jsonl": "835c5e89c04e16be59e114a277a94aaaed06230ed0f4889acba1e0f221ca6df5",
+          "chunks.jsonl": "a7b2a5a459a8680cecfbf729a168ce58b46ec8cf2019563d9819290ac4ce7a6a",
+          "video.mp4": "bf23b38314db5d0a016a508aabc1f0f1dd909821f451be07b3ae522e0e37947a"
+        },
+        "evidence_sha256": "e7073258087bdafaeb7ee90eb0e6f7399a00b63118f2754193aee8add595ec54"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r22__k10__motion_fast",
+        "files": {
+          "summary.json": "b57580483fdae92028376ce26e8bb06e90721e9e8a8308b029d71f370f9c5fa5",
+          "steps.jsonl": "fc5a22313036bac8b9a5854b8b80156dc30b69cb5a3748fa9a89e02e1c837f3c",
+          "chunks.jsonl": "cd78d4344deff3f6436fb7f88e20d9e25f076150e95dc75234c56bad598feae8",
+          "video.mp4": "d29dbc0cbad31acb1a892f9095a4b43ea931e6f7bb4a9433eba998cd15bb6159"
+        },
+        "evidence_sha256": "962d48d737d4cfffae6ba5072d15df133440d1f10fab87aa93e444331c61feab"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r22__k10__motion_slow",
+        "files": {
+          "summary.json": "e5b6545a220d51c054ea423b42bf63e5609d92b8ef847f3c19a406d30e54d5a6",
+          "steps.jsonl": "70d431f9230e7174bc78cb8441e7bed2caada9b9d04eb44e0e0c37b16b29cf69",
+          "chunks.jsonl": "79dc54611260d58baca3e6475a78daf8a739c322be73ebb222b451011c4609e9",
+          "video.mp4": "18d2a93d89a1f6a759fe5189f18faa13059d9bf1f0041f3871da6c963a862af2"
+        },
+        "evidence_sha256": "c3b63e6785be17e3e94b91d6667af25d795c63c4cff7248528404a99d6776306"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r22__k10__motion_static",
+        "files": {
+          "summary.json": "092d055bded022bd10df68f9ff4e5726f108d7f2e1d8f885642f85d13dc58c31",
+          "steps.jsonl": "68518f2486f73eee7b366f65eb0228e68af783a5c6fe33a2e1bedd4c2d0b176d",
+          "chunks.jsonl": "38092006ab348afb005b829055b3e62ea44c7edc3689059da6731d54f3ccf11b",
+          "video.mp4": "322e4abe97b9d581d755cac0f9e403e35ad8c15ea0336e51964d7c17e70ab279"
+        },
+        "evidence_sha256": "261621fd7f6fb8e6ced2b2fe2914ceb46c7f62600d05b5d70799fe88e36d0b7a"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r22__k50__motion_fast",
+        "files": {
+          "summary.json": "469c982d669b0dde8ab8b19de04c3b77436b91cd28ac05e82845cd37bc5f3ad5",
+          "steps.jsonl": "47303a89968d11d389f7a129c4a410cf872545394c0238689918962bdf0ef2e3",
+          "chunks.jsonl": "8ec6d6f596a258d73cc4fe3a2f67d6b6af8f667ce7de677e477560c4cdd1fee8",
+          "video.mp4": "de9b6d09def73b32e1397af66493a201aef04eca31c2c5e14abb60d6a89e8af8"
+        },
+        "evidence_sha256": "4b219ad5ca995633311e4574c2b0029414b9b4deeeaef8657ecfcc3eb6e207e5"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r22__k50__motion_slow",
+        "files": {
+          "summary.json": "59960b3c106f39ec96579f0e894af54bd2d62f7307f2421bb3d0441e3845e66e",
+          "steps.jsonl": "cbd1812d3caff24544b63b71f69a94daf06e7c1ba1b848991ddca419998bf23a",
+          "chunks.jsonl": "701d78edecf372f53e407bf881638348d9c10377d3f9250f87b31d370b5a71a1",
+          "video.mp4": "ac71509dc6e9fe36a1873827051048b0953b57546fd79f1b1e23c39290ec4f4c"
+        },
+        "evidence_sha256": "96c5b85e3947cb7d165b490957c24c4b6dc06a046e14ac1b43fc712234172d9b"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r22__k50__motion_static",
+        "files": {
+          "summary.json": "0ee715a11c212a28a2dbd5203d926f9ce64f5942c03fe34966a0358a900ad11e",
+          "steps.jsonl": "a0f89693aab2602242c4edc656f8dca2010b99acb34eccc01605bda2f8f6b295",
+          "chunks.jsonl": "becbaf7c1cf4d31ae842280374bf693b0072d96cdd83571ae7af591e58ba675e",
+          "video.mp4": "c561e9d43630146a9399c1207fbdcd9f2be98a0ffd02520bdb3bfc60797b950b"
+        },
+        "evidence_sha256": "8d976585c26659fafbe039285ac6d43347183828b41a49630bb8b15830316ee1"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r22__k5__motion_fast",
+        "files": {
+          "summary.json": "833db85226929e940c8350258779fd8a3a2244bf60df7dcd2ceb277b3fecb041",
+          "steps.jsonl": "38eb9f203a6496e9ea439ade4d16ea24a8fb4b0ff5c10888adadee06f6a6ae5d",
+          "chunks.jsonl": "f561ba3c96d24eaef5a6913d7f6e2b240412c78df1e7213717e2a3bce35adc7d",
+          "video.mp4": "5b4ec5cd0854cc185d8b193ace76dbe75e6ca9b9f748d90a12558f3f9c116a1e"
+        },
+        "evidence_sha256": "aab1367ad7d2098f6b443c9faabcd8c4f0ff117a83f7120eddca731fee72f5c1"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r22__k5__motion_slow",
+        "files": {
+          "summary.json": "64b38c8e6dce46e431f44e043fa14fee9b78ba841089385d4a94de6c9f01df15",
+          "steps.jsonl": "9259a689955a03aae8d16436ab56dabe7032c70fd07851b0e2a1673ddd8ced20",
+          "chunks.jsonl": "ae7d2516a3ae396bc0b6919e4808e285c81840fa3fcddac6bd5ea36d456a0296",
+          "video.mp4": "0e1135e500cf84e1b981eb1098706830a472ebaae49e30a4a6a934e0b331aaca"
+        },
+        "evidence_sha256": "7ebf3a3bd8e64fcfc4e1f4ccb4b68bb8e3cea51c646bd8a143d2fa3e6b9ef498"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r22__k5__motion_static",
+        "files": {
+          "summary.json": "d9368b219589588aad056cd9bfd0696383279d0499871d4b9c11f040b240195e",
+          "steps.jsonl": "4a82c89bc9aeb45db43f595747a23817f4ed72c89bfbd50319ae6ba1aac52d83",
+          "chunks.jsonl": "3835aad9a04002069ca85cf9994e991ccef714b81a2962f92250735497ec3bce",
+          "video.mp4": "eb80bc7787660f4df3d6863931f94d2dea39d4164049763e9de18a6afc6dc623"
+        },
+        "evidence_sha256": "3999189e0fd2b42ed615b0acdd83b1a4a20d394568d6217cd6abfacdf5672f0b"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r33__k10__motion_fast",
+        "files": {
+          "summary.json": "8f7b6cb5ad54b60d677c566b209d6050965d38f137ebec14b77d7b939df02f9e",
+          "steps.jsonl": "5dea37e2cdaf75b81605fbd6aed5a5e769e9e8f7c9d86d69f25990fc46447338",
+          "chunks.jsonl": "bb55f607e62f1b706b1e385dcbb4cd86078cc2ecd97f45389e5c8a6a8116399d",
+          "video.mp4": "387f9c788f6866ba02f32b2b1380cdc459ebec39cbdced09fc9dd4ce219005fb"
+        },
+        "evidence_sha256": "4f9843670ebe1d664879d3d2b8c122c0b855f20ff6c8405e0f9c14eb8b985d34"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r33__k10__motion_slow",
+        "files": {
+          "summary.json": "7a757a07d973c5c74910031939885c2fedb60b6fd73267f680d8d05c45314eca",
+          "steps.jsonl": "1836853d9924367aee9f3ab463a2ffb2c7f1317addb544cfd004961fa6695b00",
+          "chunks.jsonl": "de10ed79712d8a1489f2547ea6d62ae277678de1d82ac7d1b7917408271144c1",
+          "video.mp4": "23091d6a5be6511bdc7c8a5299032145eaec68cccf6021e5fe8b527509d9a260"
+        },
+        "evidence_sha256": "9fc34a9b068e382db251e8f0f96fe75373c95e23f3f6fdf5bc118df82fa7862d"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r33__k10__motion_static",
+        "files": {
+          "summary.json": "24311b925324036408659063389cefa4be1f63b00872ba79ebd225f502825054",
+          "steps.jsonl": "4c2f0b5d40d7a409ed6326499e11e1f54e2457e2e2bb8559879fd72528d1e165",
+          "chunks.jsonl": "57e3d7ce56f556c15f7ade312367265b96fe80d017408b77b17ff16101304896",
+          "video.mp4": "4273e98bcbfcd431cde4d889a765dad8dbe7dac7d539a75143e32f28467510ad"
+        },
+        "evidence_sha256": "7e1eefde827fb61a55f9a39271e48bcca053e2c9cecb163d17639d3d400e64f5"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r33__k50__motion_fast",
+        "files": {
+          "summary.json": "c18e1670c0c87335281a48c2ae8cc47e3308c7fca7d9f940be96804aea82194f",
+          "steps.jsonl": "4454cfea9ceb5958ff6bf81b34bf8565a3ca6ea9c10e01d170d1344e6e660d67",
+          "chunks.jsonl": "ec3aca9d9fa5e91915646ebe8301d009fe14f4be461083f84605b3263376aeb7",
+          "video.mp4": "a4e5c2139c6d49732023ac3d1ad3bec157b190b04517ebda9a25525b0db87896"
+        },
+        "evidence_sha256": "2e0b092f0e3bfdc8c2629f7fb85a68a3a3883ec67d625ddb025300a80773f4b3"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r33__k50__motion_slow",
+        "files": {
+          "summary.json": "e335e1e6335626ea364f074873b65efcbcacb1ac8ccabaa1df8ebb2f8a2633a6",
+          "steps.jsonl": "527ef516bcfb2fb50db81056620cf3aaeb70cb72ed9bbb20c699cd924b09b473",
+          "chunks.jsonl": "5b7523b80a271a8632fca86b2c48bcbe3aa5d3170e66edc90983b6df4ba4cca6",
+          "video.mp4": "e7d0ddfafa5e9f0d6dd09180df95e76e92918151630bc14e53d8b7e138a260f9"
+        },
+        "evidence_sha256": "eca46c3afeb3217de5cfd3075e11666d19774e3347e9277aeb46a43099396ca7"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r33__k50__motion_static",
+        "files": {
+          "summary.json": "d33c6c72b36777ca3e9f6941794cb4e1ef694b866d2ea77e247d9b874efe6df7",
+          "steps.jsonl": "6ef5aba4f0332c6d903d4dbfd17ab57316e3ee7dd69066d2d8c8543808276dc5",
+          "chunks.jsonl": "8c5708355f2b0b868893c01d0c789c4cdf0f4b10e35691d6329b1e061b4fa209",
+          "video.mp4": "b7bd2ed7b8f5abd957774c95f3cd857f716622623dad9a68458219b8aeed6cf6"
+        },
+        "evidence_sha256": "f16b0bf439b982191ba5f57998dd49897838663583d6905528b212c6fdf32926"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r33__k5__motion_fast",
+        "files": {
+          "summary.json": "0e30879099533091ec1c7a87cdd2fd21803a14f169e77a10845dd5684dd4ea24",
+          "steps.jsonl": "b529f82819db1e40bbd73fb6ad2c55b370b22050baa8065838a1e214cc3998c2",
+          "chunks.jsonl": "4741cd8e09d0957789cfe4525d9f3e117d1017ffe24eaee4abbbb6b688ac4a0e",
+          "video.mp4": "dd011c93200d7e1452fa5a824e6c11c1116345da172bd9d7849f5c8a65ca4ba8"
+        },
+        "evidence_sha256": "f371970349c5bb3650eba22d8d5fdf0a639a2976b46d8af58183f24fb47e83a6"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r33__k5__motion_slow",
+        "files": {
+          "summary.json": "5c04f0581bc305700c6304989128fc09583c26a031e778fb5777edf2619c98f9",
+          "steps.jsonl": "198ddef58ae6feb392761299f649d22a43f098868b4faef6c372d86e8afd371c",
+          "chunks.jsonl": "2a7b51c90e3594a2320c7ea7878561e92518cb0aa9fa255cbfa7419b36e702d6",
+          "video.mp4": "98d08d8af15d3580cc7f11cfaae39d9f4a516333efbed246261be82ad00b112f"
+        },
+        "evidence_sha256": "e7f01a1bc35ea7b15650be883c3b02acb587b53b5e45daa3956f9e5c91ab2b53"
+      },
+      {
+        "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s14__r33__k5__motion_static",
+        "files": {
+          "summary.json": "c34dc904bc852c1711b0f66d563f2e03cd3066861315c8e80652f573e0d6da31",
+          "steps.jsonl": "0c8703ef5cb0056be0a9c039b4e39e57584f68fdf80f187510a9668f0fc77c11",
+          "chunks.jsonl": "61beb0653818757e032ea9acfe06eb54ce2747948d7549c7eefffd94a26ded40",
+          "video.mp4": "d7c179a117daa97b6f6b7f3e984f443b233597998d17778e1c38b30a6e06592d"
+        },
+        "evidence_sha256": "299f15fb98feba0af98c51c132bdfc5e99f5f833c3f9603ff01deffa866d4bdc"
+      }
+    ]
+  },
+  "analysis_source_sha256": "d7597ae3b8e2605dab4f3c79122e234c729cdcc832b496846d66b1ac7bf9df9c"
+}

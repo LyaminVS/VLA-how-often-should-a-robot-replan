@@ -1,0 +1,643 @@
+{
+  "schema_version": 1,
+  "role": "manual_assistant_visual_review",
+  "reviewer": "assistant",
+  "independent_human_review": false,
+  "state": 10,
+  "policy_seed": 11,
+  "selection_fixed_before_selected_outcomes": true,
+  "selection_rule": "Exactly the preselected demonstration cases: static/slow/fast at K=10, and fast at K=5/K=50; state 10 and policy seed 11 were fixed before their outcomes were collected.",
+  "cameras": [
+    "agentview",
+    "eye_in_hand"
+  ],
+  "frame_indexing": "Raw video frame 0 shows the initial pre-action observation. Frame i corresponds to the logged pre-action observation at i/20 simulated seconds; the first terminal frame is at index steps. Post-termination holding frames are not additional robot actions.",
+  "review_method": "Both cameras were inspected in downsampled contact sheets: a whole-trajectory frame every 20 actions plus first-contact and terminal frames; first-contact neighborhoods every two actions; additional retry windows every four actions for static K=10 and fast K=10. Raw action, object-position and contact logs were cross-checked. This is sampled visual inspection, not independent human annotation or continuous-frame event coding.",
+  "episodes": [
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k10__motion_static",
+      "condition": "static",
+      "k": 10,
+      "state": 10,
+      "policy_seed": 11,
+      "steps": 239,
+      "model_calls": 24,
+      "success": true,
+      "raw_files": {
+        "summary.json": "b5f623e022ba1f0c152cc47cb93b328ba855c169ffa0ecd45294ae7d5f08fc2e",
+        "steps.jsonl": "25f1daa447ac54b28201194745df2e38c61091795be7ff7fd964e1aa63b22f67",
+        "chunks.jsonl": "7025310dd1cf897dd49bb06d75f0d551f37abda9563b179cf9fe47227a616a84",
+        "video.mp4": "0748031ae7eeb0dee9f3881b8e6d826687c4484f1db5ab3b6a4952fe8656a8e8"
+      },
+      "evidence_sha256": "f392c2bbf747dfad648c9c50ebdc90f8b10181647823d64bba8961d595c2bbbc",
+      "first_contact_step": 42,
+      "first_contact_sim_time_s": 2.089999999999936,
+      "inspected_windows": [
+        {
+          "kind": "whole_trajectory_coarse",
+          "start_frame": 0,
+          "end_frame": 239,
+          "stride": 20,
+          "additional_frames": [
+            239,
+            42
+          ]
+        },
+        {
+          "kind": "first_contact_neighborhood",
+          "start_frame": 32,
+          "end_frame": 58,
+          "stride": 2
+        },
+        {
+          "kind": "repeated_approaches_and_pickup",
+          "start_frame": 100,
+          "end_frame": 164,
+          "stride": 4
+        }
+      ],
+      "inspected_frame_indices": [
+        0,
+        20,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        80,
+        100,
+        104,
+        108,
+        112,
+        116,
+        120,
+        124,
+        128,
+        132,
+        136,
+        140,
+        144,
+        148,
+        152,
+        156,
+        160,
+        164,
+        180,
+        200,
+        220,
+        239
+      ],
+      "observations": [
+        {
+          "frames": [
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60
+          ],
+          "sim_time_s": [
+            2.4,
+            3
+          ],
+          "text": "After the initial approach and finger closure, the gripper rises while the can remains on the table."
+        },
+        {
+          "frames": [
+            100,
+            104,
+            108,
+            112,
+            116,
+            120,
+            124,
+            128,
+            132,
+            136,
+            140,
+            144,
+            148,
+            152,
+            156,
+            160,
+            164
+          ],
+          "sim_time_s": [
+            5,
+            8.2
+          ],
+          "text": "The gripper makes repeated downward approaches and withdrawals near the can. The can is visibly carried above the table by frames 160–164."
+        },
+        {
+          "frames": [
+            180,
+            200,
+            220,
+            239
+          ],
+          "sim_time_s": [
+            9,
+            11.95
+          ],
+          "text": "The robot carries the can toward the basket and lowers it into the basket region. Native success is recorded after 239 actions, using 24 model calls."
+        }
+      ],
+      "uncertainties": [
+        "Brief partial lifts or contacts during repeated approaches are not resolved well enough to assign a missed-grasp or drop count.",
+        "The longer completion time in this single static episode does not show that imposed motion generally improves performance."
+      ],
+      "missed_grasps": null,
+      "dropped_objects": null
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k10__motion_slow",
+      "condition": "slow",
+      "k": 10,
+      "state": 10,
+      "policy_seed": 11,
+      "steps": 168,
+      "model_calls": 17,
+      "success": true,
+      "raw_files": {
+        "summary.json": "960bc8b58dfd72d03aaa81a2a0e79ad736dfdd76ed9c0d0554b9cfd11122cf9f",
+        "steps.jsonl": "ca6add83cf6b468624bd11a188af80daaccf787865a9eb4be637a27292a3a28e",
+        "chunks.jsonl": "16858b9357fc88706dff4c1efbca0dad8230f800b4a58dcaa54574b5ea1ec647",
+        "video.mp4": "de0f0b0a9dbd516349f2da4614a194aa4ee87932c278d5c9197b54172982fa8b"
+      },
+      "evidence_sha256": "5eb93f5eb4f9dd1e30a37c5f8874e21ad8b736c977b1f3b7ec10750d7e74b44e",
+      "first_contact_step": 42,
+      "first_contact_sim_time_s": 2.0779999999999372,
+      "inspected_windows": [
+        {
+          "kind": "whole_trajectory_coarse",
+          "start_frame": 0,
+          "end_frame": 168,
+          "stride": 20,
+          "additional_frames": [
+            168,
+            42
+          ]
+        },
+        {
+          "kind": "first_contact_neighborhood",
+          "start_frame": 32,
+          "end_frame": 58,
+          "stride": 2
+        }
+      ],
+      "inspected_frame_indices": [
+        0,
+        20,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        80,
+        100,
+        120,
+        140,
+        160,
+        168
+      ],
+      "observations": [
+        {
+          "frames": [
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60
+          ],
+          "sim_time_s": [
+            2.4,
+            3
+          ],
+          "text": "The first closure and withdrawal leave the can on the table. The first finger contact at 2.078 simulated seconds permanently disables the external force."
+        },
+        {
+          "frames": [
+            80,
+            100,
+            120,
+            140
+          ],
+          "sim_time_s": [
+            4,
+            7
+          ],
+          "text": "The gripper returns toward the can, then visibly carries it above the table by frame 100 and transports it toward the basket."
+        },
+        {
+          "frames": [
+            160,
+            168
+          ],
+          "sim_time_s": [
+            8,
+            8.4
+          ],
+          "text": "The can is lowered into the basket region. Native success occurs after 168 actions with 17 model calls."
+        }
+      ],
+      "uncertainties": [
+        "The successful acquisition occurs between the coarse frames at 80 and 100; its exact onset is not assigned.",
+        "Contact release ends forcing before the later acquisition, so the later transfer is not continuous tracking of a forced moving object."
+      ],
+      "missed_grasps": null,
+      "dropped_objects": null
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k10__motion_fast",
+      "condition": "fast",
+      "k": 10,
+      "state": 10,
+      "policy_seed": 11,
+      "steps": 153,
+      "model_calls": 16,
+      "success": true,
+      "raw_files": {
+        "summary.json": "02db6ba47c8215983cbb6e09a6a67dbd1cd578f1843c69548e92f01cc8b596a6",
+        "steps.jsonl": "06bb98b58c3779d3f94e2b3d3e0c73aa24a0006136afb298a2725120ee219dcd",
+        "chunks.jsonl": "3e163443bf15546ef062a8104d271aaf7b112fa66e8bb345050fba6f80b135c8",
+        "video.mp4": "4b8043eb3cf26aaf7579a71f7ef002014d38e9c264ba8df9ede34696693a90b4"
+      },
+      "evidence_sha256": "48a9f2b2e34543a93893d02483087635b04e551b8063d644a221e76bd8e41f80",
+      "first_contact_step": 42,
+      "first_contact_sim_time_s": 2.0919999999999357,
+      "inspected_windows": [
+        {
+          "kind": "whole_trajectory_coarse",
+          "start_frame": 0,
+          "end_frame": 153,
+          "stride": 20,
+          "additional_frames": [
+            153,
+            42
+          ]
+        },
+        {
+          "kind": "first_contact_neighborhood",
+          "start_frame": 32,
+          "end_frame": 58,
+          "stride": 2
+        },
+        {
+          "kind": "return_and_pickup",
+          "start_frame": 60,
+          "end_frame": 100,
+          "stride": 4
+        }
+      ],
+      "inspected_frame_indices": [
+        0,
+        20,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        64,
+        68,
+        72,
+        76,
+        80,
+        84,
+        88,
+        92,
+        96,
+        100,
+        120,
+        140,
+        153
+      ],
+      "observations": [
+        {
+          "frames": [
+            48,
+            50,
+            52,
+            54,
+            56,
+            58,
+            60
+          ],
+          "sim_time_s": [
+            2.4,
+            3
+          ],
+          "text": "After the first contact and closure, the hand withdraws while the can remains on the table; an initial contact does not establish a retained grasp."
+        },
+        {
+          "frames": [
+            60,
+            64,
+            68,
+            72,
+            76,
+            80,
+            84,
+            88,
+            92,
+            96,
+            100
+          ],
+          "sim_time_s": [
+            3,
+            5
+          ],
+          "text": "The hand descends toward the can again during frames 60–76, with ordinary replans at 60 and 70. The gripper command closes at step 76. By frames 92–100, the can is visibly lifted and carried with the hand. Temporal alignment does not prove that a particular replan caused recovery."
+        },
+        {
+          "frames": [
+            120,
+            140,
+            153
+          ],
+          "sim_time_s": [
+            6,
+            7.65
+          ],
+          "text": "The can is transported to the basket region and native success occurs after 153 actions with 16 model calls. The terminal frame appears to show the can between the fingers, so released-placement stability is not established."
+        }
+      ],
+      "uncertainties": [
+        "The sequence shows a return and later pickup, but does not isolate fresh feedback from stochastic regeneration as its cause.",
+        "No precise missed-grasp or drop count is assigned from the sampled views."
+      ],
+      "missed_grasps": null,
+      "dropped_objects": null
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k5__motion_fast",
+      "condition": "fast",
+      "k": 5,
+      "state": 10,
+      "policy_seed": 11,
+      "steps": 141,
+      "model_calls": 29,
+      "success": true,
+      "raw_files": {
+        "summary.json": "c180cd80e1ae9687d0a79b2514af9b26ab296850d281ad5a101f1b38ca19d524",
+        "steps.jsonl": "6988882534fe13beb301a211236b8b15ea8799aeee559359f13bee524e748d8e",
+        "chunks.jsonl": "5533ae83c35d31f2bbce4d6e07dbefaad7722674482b69d1c1a3462af73d4d31",
+        "video.mp4": "0e8c3e77506f86d4735b159d45548be9b5396f93098882eb3138b77dc518dfee"
+      },
+      "evidence_sha256": "b4b33384780ceab0bccde7fd683944a5e5ad3f0f640ed19d97ce94587c1c41ec",
+      "first_contact_step": 54,
+      "first_contact_sim_time_s": 2.6659999999998725,
+      "inspected_windows": [
+        {
+          "kind": "whole_trajectory_coarse",
+          "start_frame": 0,
+          "end_frame": 141,
+          "stride": 20,
+          "additional_frames": [
+            141,
+            54
+          ]
+        },
+        {
+          "kind": "first_contact_neighborhood",
+          "start_frame": 44,
+          "end_frame": 70,
+          "stride": 2
+        }
+      ],
+      "inspected_frame_indices": [
+        0,
+        20,
+        40,
+        44,
+        46,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        62,
+        64,
+        66,
+        68,
+        70,
+        80,
+        100,
+        120,
+        140,
+        141
+      ],
+      "observations": [
+        {
+          "frames": [
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62,
+            64,
+            66,
+            68,
+            70
+          ],
+          "sim_time_s": [
+            2.5,
+            3.5
+          ],
+          "text": "The gripper closes during the approach. First finger contact is logged at 2.666 simulated seconds; by frame 60 the can is visibly above the table and remains with the hand through frame 70."
+        },
+        {
+          "frames": [
+            80,
+            100,
+            120,
+            140,
+            141
+          ],
+          "sim_time_s": [
+            4,
+            7.05
+          ],
+          "text": "The robot carries the can to the basket and reaches native success after 141 actions with 29 model calls. This case finishes sooner in simulated steps than fast K=10, but uses more model calls."
+        }
+      ],
+      "uncertainties": [
+        "This individual success does not establish a reliable advantage of K=5 over K=10.",
+        "Sampled frames cannot exclude brief occluded contacts; no event-count label is inferred."
+      ],
+      "missed_grasps": null,
+      "dropped_objects": null
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s10__r11__k50__motion_fast",
+      "condition": "fast",
+      "k": 50,
+      "state": 10,
+      "policy_seed": 11,
+      "steps": 280,
+      "model_calls": 6,
+      "success": false,
+      "raw_files": {
+        "summary.json": "2df8f3fb4b42cc7829635da335fddf37863b5e3c381e333a87cecc22e5e2cf48",
+        "steps.jsonl": "7dd6074cc7cebb99fbb385389dd79c4166807ac031022a691b4b2aca727b5649",
+        "chunks.jsonl": "92eb16d5fab5ef8efc7f1632df3dcd828195bfc4e55661487d18fcc05ca8143d",
+        "video.mp4": "bf2e59c0dbacd4d0431c33447abb4506222b71edec28504b7423a8cbef001bac"
+      },
+      "evidence_sha256": "c044d0519e141dc74450d465d9e30cd7cefd76d4f4de48e23afd3e6ee3226178",
+      "first_contact_step": 43,
+      "first_contact_sim_time_s": 2.1119999999999335,
+      "inspected_windows": [
+        {
+          "kind": "whole_trajectory_coarse",
+          "start_frame": 0,
+          "end_frame": 280,
+          "stride": 20,
+          "additional_frames": [
+            280,
+            43
+          ]
+        },
+        {
+          "kind": "first_contact_neighborhood",
+          "start_frame": 33,
+          "end_frame": 59,
+          "stride": 2
+        }
+      ],
+      "inspected_frame_indices": [
+        0,
+        20,
+        33,
+        35,
+        37,
+        39,
+        40,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        60,
+        80,
+        100,
+        120,
+        140,
+        160,
+        180,
+        200,
+        220,
+        240,
+        260,
+        280
+      ],
+      "observations": [
+        {
+          "frames": [
+            41,
+            43,
+            45,
+            47,
+            49,
+            51,
+            53,
+            55,
+            57,
+            59,
+            60
+          ],
+          "sim_time_s": [
+            2.05,
+            3
+          ],
+          "text": "First finger contact is logged at 2.112 simulated seconds, and the gripper command closes at step 45. The subsequent withdrawal leaves the can on the table; no secure carried grasp is visible in this window."
+        },
+        {
+          "frames": [
+            80,
+            100,
+            120
+          ],
+          "sim_time_s": [
+            4,
+            6
+          ],
+          "text": "The hand travels toward the basket without the can and opens near it at step 120. The target can remains on the table."
+        },
+        {
+          "frames": [
+            140,
+            160,
+            180,
+            200,
+            220,
+            240,
+            260,
+            280
+          ],
+          "sim_time_s": [
+            7,
+            14
+          ],
+          "text": "The hand stays near the basket without returning to retrieve the can in the inspected frames. The logged can position is essentially unchanged from step 60 onward. The episode reaches the 280-action time limit with six model calls and no native success, despite later scheduled replans at 100, 150, 200 and 250."
+        }
+      ],
+      "uncertainties": [
+        "The views do not establish why the model continues the empty transport sequence or whether the failure arose from perception, action generation or contact mechanics.",
+        "The contact latch stops forcing early; the later failure cannot be described as the can continuously escaping a grasp."
+      ],
+      "missed_grasps": null,
+      "dropped_objects": null
+    }
+  ],
+  "overall_conclusion": "In the preselected fast-condition example, K=50 leaves the can on the table and carries an empty gripper toward the basket, while K=10 visibly returns after an unsuccessful initial closure and subsequently transports the can. K=5 also succeeds with more model calls than K=10. All three K=10 conditions succeed; the static case takes more approaches and actions in this particular state. These cases illustrate behavior rather than estimate error frequencies or establish which K is generally best.",
+  "limitations": [
+    "Finger contact is a simulator event, not proof of a grasp. The external force is permanently disabled after first finger contact.",
+    "Missed-grasp and drop counts are left null because sampling and occlusion do not support consistent event counts.",
+    "Temporal proximity to a replan does not establish that new visual feedback caused the observed correction.",
+    "Native task success may precede release. Post-release stability is not measured.",
+    "Only the five prespecified cases were visually inspected here; conclusions about aggregate success use the complete numerical study."
+  ]
+}
+

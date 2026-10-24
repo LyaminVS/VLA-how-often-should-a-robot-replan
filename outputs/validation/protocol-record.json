@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-10-17T18:21:33.200362+00:00",
+  "run_created_utc": "2026-10-17T18:09:58.408567+00:00",
+  "files": {
+    "configs/validation.json": {
+      "sha256": "89d1baaebebb294e72110adb85560fb2b52d3d654bcadd6af99ab5fcfa6e0e5f",
+      "file_mtime_utc": "2026-10-17T18:08:11+00:00"
+    },
+    "docs/extension-protocol.md": {
+      "sha256": "d210ba116b2eb0ab89345600af58034314c54eaf6b5c0c30752b65f59b7c60ce",
+      "file_mtime_utc": "2026-10-17T18:08:47+00:00"
+    }
+  },
+  "note": "Local file timestamps and content hashes document the saved protocol; this is not an external preregistration."
+}

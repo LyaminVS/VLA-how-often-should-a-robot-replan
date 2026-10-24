@@ -1,0 +1,15 @@
+# Preserve generated evidence byte-for-byte for SHA-256 verification after cloning.
+*.csv -text whitespace=cr-at-eol
+*.pdf binary
+*.png binary
+*.jpg binary
+*.mp4 binary
+
+# Keep the frozen source and raw log hashes portable across operating systems.
+*.py text eol=lf
+*.sh text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.toml text eol=lf

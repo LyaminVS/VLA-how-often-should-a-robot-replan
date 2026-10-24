@@ -1,0 +1,1465 @@
+{
+  "run": "outputs/validation",
+  "coverage": {
+    "completed_episodes": 120,
+    "planned_episodes": 120,
+    "analyzed_episodes": 120,
+    "omitted_incomplete_state_blocks": 0,
+    "provisional": false
+  },
+  "passed": true,
+  "checks": [
+    "paired initial states and observations",
+    "all H=50 predictions",
+    "exact clipped K-prefix actions",
+    "simulation-step sampling seeds",
+    "replan and model call counters",
+    "timing sums",
+    "outcomes",
+    "action clipping counts",
+    "command revision and jump metrics"
+  ],
+  "video_decode_checked": true,
+  "episodes": [
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s2__r11__k1",
+      "steps": 141,
+      "chunks": 141,
+      "decoded_frames": 161,
+      "sha256": {
+        "summary.json": "6701f7c2c3be4d6355a06743ac85417ca1f23099e2f3ca0cca2597542bcf3215",
+        "steps.jsonl": "34651bef4ae7fa25d2575acb329a58cbbdc6ba9f3a234dbbb359a36a5083ef17",
+        "chunks.jsonl": "ebea8bdeac934347c81e0e394657d36eef5ea30861ee1c0506083d2aa08551ca",
+        "video.mp4": "1c3dcaea797d19f4f4e0cadc0a9ce6f4355bc4a1915ad0807a0c9dbee29231cf"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s2__r11__k10",
+      "steps": 112,
+      "chunks": 12,
+      "decoded_frames": 132,
+      "sha256": {
+        "summary.json": "32119faf5eaf445405795bfded5fa35371bed3488b780e3db97140dee8b3038b",
+        "steps.jsonl": "cb2710fd4d9c167192ce4fafd466331dcf6fb27375aa4f83f1ce3775a54c2e1f",
+        "chunks.jsonl": "1d1136983a4ffd4e98db512eefba71a688c1672d94045e1b688bfc02c173fc2c",
+        "video.mp4": "cf9defb23c3084b967ea9721f125ab4fe2467e7aad489289f7d202e4baf101ec"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s2__r11__k25",
+      "steps": 300,
+      "chunks": 12,
+      "decoded_frames": 320,
+      "sha256": {
+        "summary.json": "e6c1048a741ab3b55c39858cde5decdf57c5fd247155e7b6d4417eb48ef09eb1",
+        "steps.jsonl": "aa8b05291cf2649bbb99046d97b2e7849e896c6165ea21af0e52431e8f42f781",
+        "chunks.jsonl": "bd4da06416a36d79a4a16f91655f4671ff4a09b32990ddcebd08d81982a12414",
+        "video.mp4": "225a0b1d8aaa14d9f764808ce6f1e0a6e3b48d7ed403b68f273f5b96d2ea4878"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s2__r11__k5",
+      "steps": 114,
+      "chunks": 23,
+      "decoded_frames": 134,
+      "sha256": {
+        "summary.json": "32a3fb48ba6ffe2d33988207b4e8d21a1513e2bb2aa4d4a4424d30279ad72aba",
+        "steps.jsonl": "b570a088e11982020d7e83b12bfac81342a8df9ff994cd2049073fccd9ff8007",
+        "chunks.jsonl": "ecf12cac12fc8ce1d4316f4a97147604ccea817d9d3421a17d58d341332c33ed",
+        "video.mp4": "6c257d9b2bcd82ea951333991986a335c0544087ec225d043d4b212e8ebfe68d"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s2__r11__k50",
+      "steps": 300,
+      "chunks": 6,
+      "decoded_frames": 320,
+      "sha256": {
+        "summary.json": "4177162ae0a106d9f1ca3c04dc19f790f5f17d2967e0070e9696c8ee4e22c4d5",
+        "steps.jsonl": "8a902a8547c29dd16922002cc4d4bd5e1e94834a78fc73f8deb1d6959caf622a",
+        "chunks.jsonl": "b867522ca0e6087a16510992c0f077a4129e9c6f8b929061022475c427960ee0",
+        "video.mp4": "e9d11b5afb1d5623e086a93162ac6eec52b94106049287c6f79024e6e7ef8ac8"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s3__r11__k1",
+      "steps": 153,
+      "chunks": 153,
+      "decoded_frames": 173,
+      "sha256": {
+        "summary.json": "8b67ff0e3fb044626cce050e9d60be10faa59b732ad6b951ffba6779688242fe",
+        "steps.jsonl": "0bca6518e8281813ef27be774176c8b698d569a24acd6b021a5b0954a8a98258",
+        "chunks.jsonl": "15b3feef825c463247efccab87662a0fa7da721674bb0b389714a874b32779ad",
+        "video.mp4": "38c3f94367a90ec137cd588d2d25901d865abf03355e386d724dd1b8d0437c4b"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s3__r11__k10",
+      "steps": 115,
+      "chunks": 12,
+      "decoded_frames": 135,
+      "sha256": {
+        "summary.json": "f648747d2962acff620bfad535abb651ff208db89971665fe3fc05c9958071db",
+        "steps.jsonl": "5a9fdd2407df06cea3b0de25c7cd5ec89e0aecef064f1a8034bdecda5d6c8721",
+        "chunks.jsonl": "9844e9507ab2e6872d086d8690bdbed37f964c2dd33d350a8483912e5bc86c2d",
+        "video.mp4": "335b31b09f7b019ef006726e3805aa1aca7e71b92e33f699eb4aee4c34109d83"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s3__r11__k25",
+      "steps": 300,
+      "chunks": 12,
+      "decoded_frames": 320,
+      "sha256": {
+        "summary.json": "b8ece6853dd7a91cdb54f39106ceb79c72e24071afb0068585e1c57c8c571ccc",
+        "steps.jsonl": "fe8c18f1900a039baac82507261f7f59e4b6990985276e3d5609ef78c41f071e",
+        "chunks.jsonl": "4c603fa934370abdbd01db66fe2e1bb9b75584793783614500eaaf3db9f4d4f4",
+        "video.mp4": "8b0a70c61de367685a30a3c4ce37c694cffd600e1ad1454722b01a9d82b576d7"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s3__r11__k5",
+      "steps": 252,
+      "chunks": 51,
+      "decoded_frames": 272,
+      "sha256": {
+        "summary.json": "23008974c7d900f401326101530c3d237d30a454bb91d1acf11eb179f9dad0b2",
+        "steps.jsonl": "856e4ec8676eb66ad0a1e3bd26cddf914429844c3054b4c41337db49284c11cf",
+        "chunks.jsonl": "06e472b2a3a25ddda6990cf31601116ecfe34fa32606ff6c8288d00a00630021",
+        "video.mp4": "53b001f7d58c0e1ece016a0c1177a242c86c7c2c617a49317458dc266cca6c81"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s3__r11__k50",
+      "steps": 127,
+      "chunks": 3,
+      "decoded_frames": 147,
+      "sha256": {
+        "summary.json": "f0251f57af950637a4a936d3c402a0e4ae598dd91b06c9281c9c36eb75582bd4",
+        "steps.jsonl": "501931cdfe89fb76cf08a84be525c8d2848d4fb4ce7ea759e7f3558141f5548e",
+        "chunks.jsonl": "d615ca9362826dcdbe705299e96a2b8d31d48575ca7ba33d6fac278977780ed9",
+        "video.mp4": "3fac7c071b5c127f769f734461e0e0ebfd269ca77a65318e662042136878b214"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s4__r11__k1",
+      "steps": 188,
+      "chunks": 188,
+      "decoded_frames": 208,
+      "sha256": {
+        "summary.json": "cd476779d7097b8a985ce34158b257f523c166987efdeb2405551b11bb6404ed",
+        "steps.jsonl": "bff0bb8705b5e3a1a710f3cd84eaf6dbc9df8f12ef94cc32e2730caa0df876e6",
+        "chunks.jsonl": "c03a11e370f9e46ac2c1245641866389e9d65de475e9abaee69e42bab8ec9c0c",
+        "video.mp4": "e78a77db8c1e5e1201b14594d8ee06f9783ed03e92049888f6f46000812449aa"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s4__r11__k10",
+      "steps": 122,
+      "chunks": 13,
+      "decoded_frames": 142,
+      "sha256": {
+        "summary.json": "da335da7e1363911daed6eed10d0e07230ea54bb93465cd1f8dcd5a2e276a398",
+        "steps.jsonl": "932ed89489d73af2f44ff3d1f98ad9d4aa2c9c2affbe7e186307306e9f00bf56",
+        "chunks.jsonl": "048b278ed58005360cb349df58e7e06ee04a32984248dd5ca00e8844c4e6eb40",
+        "video.mp4": "276c3dceb73131e8976b298bae8c52f638baff5ba9391416c8e9e93d66b360e5"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s4__r11__k25",
+      "steps": 300,
+      "chunks": 12,
+      "decoded_frames": 320,
+      "sha256": {
+        "summary.json": "03e92ff3d9c6ecbaba6fd927ad2deb10918e893bc02f5536dc4e545408e75f08",
+        "steps.jsonl": "336445ae6cd6bc8ff5de5492d6c7033c5c17c6ad1b87fff70f93a5a014dbe32a",
+        "chunks.jsonl": "b37241553f7097089baeb02fd998199836db612c50f07071085ce96f03a138e3",
+        "video.mp4": "e98a6fa6282280febc6033442086c66fa1721a389ffc98a85e06349ff7b7cbd5"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s4__r11__k5",
+      "steps": 123,
+      "chunks": 25,
+      "decoded_frames": 143,
+      "sha256": {
+        "summary.json": "9f9597b3c6841430c86cfc43abcbc31cebfb597d2d98ef0e390148cca2076009",
+        "steps.jsonl": "1562179fa97192bd278bc59c4cfe0477d39774bed41990b27a022f0b66f459fa",
+        "chunks.jsonl": "99eff4f7ab4201966fbf3cb1a3994c9a848f6372f4d2ca2a9e936027e6c4078e",
+        "video.mp4": "cc0a4230fafb9c35410637b590e9bbbe3aa0673d48a2f701fbb06d53ad52b972"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s4__r11__k50",
+      "steps": 300,
+      "chunks": 6,
+      "decoded_frames": 320,
+      "sha256": {
+        "summary.json": "1aadbe26d91194444ee120d2fdf0346db4e7f0a8c61f73865684a8c9373d6202",
+        "steps.jsonl": "7ef32e7a7509b67103781f7723c7dd8b41975226f1433e731ae548225897d149",
+        "chunks.jsonl": "143ab55da96fcfd3477fb83d6b770d25ad6c1a94e2c02379d33602b97ed9f5c4",
+        "video.mp4": "510e05af223b8fe6ef80a65ae3f9951c0833b53a274e3dc11eb45d2ce1c01c79"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s5__r11__k1",
+      "steps": 138,
+      "chunks": 138,
+      "decoded_frames": 158,
+      "sha256": {
+        "summary.json": "6b5bcfe181380c75d7e99ebf70ec19cc72af853ef6af84bd6b2b7a46c374e540",
+        "steps.jsonl": "2f32eb200eeb90bf2e0f2e81114eab310304b5c6fbec7f3d4a0839b77a2f0e1e",
+        "chunks.jsonl": "cbb6d785361cca380dc101193b0590c578cd6835947c12ab1cf01decf3f809de",
+        "video.mp4": "f1d4ba826d9e30b0c2b788e457f8072d777c423160068efde1c1e16c7c0454e0"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s5__r11__k10",
+      "steps": 113,
+      "chunks": 12,
+      "decoded_frames": 133,
+      "sha256": {
+        "summary.json": "b7e23f636c713285d32a14785ddaa523089877e5db7bf7dcd26659668e2fc7a4",
+        "steps.jsonl": "9de66b9509a4fdd89dd92622bf63cb9653ed0d540442d1ea55e95c8b51e7f3ec",
+        "chunks.jsonl": "711911753a4884bcc2420971647398e0321ff3d124b05f94d1a2e0e19d4177c3",
+        "video.mp4": "4dad3ea48afcac64c16198b354f466dae56c210737fc07b26f28fd30c02abfd7"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s5__r11__k25",
+      "steps": 300,
+      "chunks": 12,
+      "decoded_frames": 320,
+      "sha256": {
+        "summary.json": "0ff952982c533332e672d85a114e2ce741a297ac553345812dff9608d95ae3f3",
+        "steps.jsonl": "bcdd207bf864bea75b2d42ccf48ef10733f0ca88b931e3810ba2e5a40ae1bde4",
+        "chunks.jsonl": "1f5e96973ede414b3ee060742706d4a71476a418a40aa418b43526d8a88f1507",
+        "video.mp4": "ac819d8da095d77f1a0be91445bd7dc4f8d4993e6187d782938605baefb3cd52"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s5__r11__k5",
+      "steps": 162,
+      "chunks": 33,
+      "decoded_frames": 182,
+      "sha256": {
+        "summary.json": "8e0eea3cf6deed354918189f5b8a6f73cba2fb71206433e7baf6436d5bc630c3",
+        "steps.jsonl": "de15884450001ace61fc7546b6ec7e7b1a4a9de46f2e1f8302b872d112084626",
+        "chunks.jsonl": "535f88d8dbe9ca2f7de4f8d3c8fb3c88a1c36b04841509dfefa2b75ec77125fd",
+        "video.mp4": "94dbec1737ce54fd555565c3c88bb26d48314946bae4b314ee8c1dea5f569e6d"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s5__r11__k50",
+      "steps": 139,
+      "chunks": 3,
+      "decoded_frames": 159,
+      "sha256": {
+        "summary.json": "65e4f9198671379ce0ec94ec29ea64cd48682ab7d53ceff73f0a1de9f616ce98",
+        "steps.jsonl": "0f4749a849873f1d6d4162abb7839da313fe98e7d3480a243cb727407342c04a",
+        "chunks.jsonl": "ca782a77a7c5207d3ac43bca160ad4462df38881296cbfe855c59502cfba687b",
+        "video.mp4": "9ff9c8902dcc96985c71bcd1c86947d8e3369ac898a268aa489617531b30034e"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s6__r11__k1",
+      "steps": 161,
+      "chunks": 161,
+      "decoded_frames": 181,
+      "sha256": {
+        "summary.json": "b5aca766745d16c54c89aa425a3c280416a2ceccc0680b20fcaa7cc8a691887d",
+        "steps.jsonl": "2bb939a66ee7df35d785c321d1f07b3a9911babcedb408e8a18b2ef32f4ea281",
+        "chunks.jsonl": "c84690d02a15a7607ae0d1427f5c85ff10c37c2d64f037cf0bc856e943e95bca",
+        "video.mp4": "b2926ac16a33e5ccf99102241658b412f3c4f972b6708a11c2f0f0ef842d00c6"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s6__r11__k10",
+      "steps": 122,
+      "chunks": 13,
+      "decoded_frames": 142,
+      "sha256": {
+        "summary.json": "3c130e242ba4ac7b97d7d9fad2e0770b2451b94d36263fe649d3510a50cae75c",
+        "steps.jsonl": "85af881f6fe8363110342842e2b87adb1b790b8d26390c3e0cf14b95927032e7",
+        "chunks.jsonl": "06b99f9b60ca39228dcb206f24c7346e236d0305988796ac6a2bb4f98c99ebd0",
+        "video.mp4": "3b54cfaa32b24813f1886c310ade15a30ce1a7848bb08b02a8f62bd2a8d46b1e"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s6__r11__k25",
+      "steps": 300,
+      "chunks": 12,
+      "decoded_frames": 320,
+      "sha256": {
+        "summary.json": "b79a485da1cee175ecf0df66ff2daf7cb46d6f4997db7885af6bebe659edcf42",
+        "steps.jsonl": "4e6e492552be7419751431b54e513fac0059335488e5406ef821a8cf971e262d",
+        "chunks.jsonl": "43a3948a702298583730b76dead9ba819525512f05664c9cde44cdf223deddc3",
+        "video.mp4": "147d7ecab2437a847536937e0da5ce1b905d8a5d45a028eaf575d23bdeeab204"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s6__r11__k5",
+      "steps": 252,
+      "chunks": 51,
+      "decoded_frames": 272,
+      "sha256": {
+        "summary.json": "bf84e5d44482942362697dacb94d133cc693e24f150c83be1a3c3fe2ff1001eb",
+        "steps.jsonl": "b28ee3c7b123015a997ccf13ddaa9759e5e6cfe3a8d119032f592881c1f1c4f6",
+        "chunks.jsonl": "a2ac79ef6477d075e483044bab15ea782552e9d8f628f74362e35b6d42eea58b",
+        "video.mp4": "c9cdbf0083c1e1ef48589d2bf5b2876e77a8081463ae97133f425c2b9d1166db"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s6__r11__k50",
+      "steps": 300,
+      "chunks": 6,
+      "decoded_frames": 320,
+      "sha256": {
+        "summary.json": "7e4c51790550c7f0dfd22cceb9fd1902350cc5450355928ddcb9abc7daafb433",
+        "steps.jsonl": "2ce71efb6f9e4b22ef768841f033e27a55f97e08cbfceb9fb698479c77e77efa",
+        "chunks.jsonl": "8b31589836e20175f3c53cb18a8449c501f443f85288dc17711bb0fb92a99c23",
+        "video.mp4": "171ceba7829669e160e132378b756499f3ddaba9211a5fbe1d47c0d304dc46be"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s7__r11__k1",
+      "steps": 146,
+      "chunks": 146,
+      "decoded_frames": 166,
+      "sha256": {
+        "summary.json": "11c3940b49503788f97ae7b8b3c2c08a89bce2c8874fe681124b26003523c1f6",
+        "steps.jsonl": "37c42f35108ae5bcc96dabe8d2a73af9d9e9df894de353c8c26f1ccc20e5765a",
+        "chunks.jsonl": "a8ad6af9849f7b747b4ce5d84e34ae390cb21ad79c3b50ae91891b295a802c3a",
+        "video.mp4": "0a2615b7c7fe14f0c15ef1ded153edff973cbcb7a9b412dc5e7beff4238914eb"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s7__r11__k10",
+      "steps": 113,
+      "chunks": 12,
+      "decoded_frames": 133,
+      "sha256": {
+        "summary.json": "ac81efccefdbe6b0309ecad4d61a2ca34d00987d018393952f9534bb8c873bb4",
+        "steps.jsonl": "80ea78c42d2c8d38e3958026088707e1fc96fe89d79b2c514f3a1c6cec0a5770",
+        "chunks.jsonl": "25393bf8e9a6fbc835248b45ab6385802ef6ee5291e5974d97d0ba8764dbcfac",
+        "video.mp4": "4b1329193fd4d1c2380a9a915c1eb9eb44a5b3ac0851db92af253c7f95fd915e"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s7__r11__k25",
+      "steps": 300,
+      "chunks": 12,
+      "decoded_frames": 320,
+      "sha256": {
+        "summary.json": "168a5c02e0aa51473c05e2142ea1af6bb1b1ae0f894f0057f5a298aa6f32dbc1",
+        "steps.jsonl": "d3ea37c772f49de77e4bf06cbd440e37f69b8442d5caf8a28f479464d2ccc444",
+        "chunks.jsonl": "873a9e295148e62ea46f63ce9e4a69cf51fe3da6947d3e50d3bcd9b6f7199aaf",
+        "video.mp4": "dd5f92c7a4356e5bcdb56db9db04b6223a0611e0422ceb3694ad226cbfd70056"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s7__r11__k5",
+      "steps": 139,
+      "chunks": 28,
+      "decoded_frames": 159,
+      "sha256": {
+        "summary.json": "fadbd1742b5ddda2cfdd96c4fe9d09d8f0a827c5b13ed8406a6b39612c145fb6",
+        "steps.jsonl": "0e0ced9cd229e09d93099db82fe1da68d73768e9abcff81fe61ed8b10c204fef",
+        "chunks.jsonl": "a179a73aaf4df56f5d4d33dad6ea4f2041892e51464640e81b321a46c26a21ec",
+        "video.mp4": "8f97273e80f9e2259e1dc4577fc989daaae6374da6da3d1942d742b7c621c222"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s7__r11__k50",
+      "steps": 140,
+      "chunks": 3,
+      "decoded_frames": 160,
+      "sha256": {
+        "summary.json": "b9c84cfb44cff9b7511630f0007129a47cdd3fec578c1ba2ccd97661caecabb0",
+        "steps.jsonl": "e6532772e5df6ffe2426b7f56e5eeaec776b3a134f31c70f085f7578301c230f",
+        "chunks.jsonl": "520da77a1cd44ae5c3387e3232702a09d19098af0f0280b39306f56dfee0c9be",
+        "video.mp4": "2b912f25e666d8c97b758d15cfe843d49c8661c4a6f7de53dbfe34da1f873286"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s8__r11__k1",
+      "steps": 143,
+      "chunks": 143,
+      "decoded_frames": 163,
+      "sha256": {
+        "summary.json": "d4070befa681c5ecf354ac77672ae69a729fdbfc4ef4b6c87c1012f68fa6f03b",
+        "steps.jsonl": "001f210e2141edb3a7476e05a602045837ff9a51ed67f563b8969cce755fa553",
+        "chunks.jsonl": "91be8762a8b90b28b158ce60f7dca0ce46d55b7b1bfb1308f2505ab9c9b6adea",
+        "video.mp4": "345b56427827cedeaacd959b5bbb1bdce130ee0c70e09353030cafa17ce44fab"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s8__r11__k10",
+      "steps": 113,
+      "chunks": 12,
+      "decoded_frames": 133,
+      "sha256": {
+        "summary.json": "d51abc4301fd1ab253532b4823d7de61947e25957090c6b812391ff40116fd63",
+        "steps.jsonl": "cfcdeae7b1f2a96dcd09de30fe33e456bb75afa71ed1347bd3cba4afcdc9aad1",
+        "chunks.jsonl": "efd49c46df97680ce2cb87edbd1181bc878fc276ab232f11b41c8cd01f740ae1",
+        "video.mp4": "3e32a70cb9c972598105ca992c835f4c9f5c3356deb15c67cb81037c8d9e2207"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s8__r11__k25",
+      "steps": 300,
+      "chunks": 12,
+      "decoded_frames": 320,
+      "sha256": {
+        "summary.json": "73a43823c58fcda46f2f4ea2725b714e5fcacc994fcac31db7db1ef4517c6c7f",
+        "steps.jsonl": "4b8fc172e960b7c1eefc4fe20feacf0a0b5bca08253b5de9927a409ba1a5d493",
+        "chunks.jsonl": "15493531eebe2ec4bdfff3089e5cbe4351c401ac93a20af2862ac7a5a3783e50",
+        "video.mp4": "0543ad364b9d8393a7d5b334864408035334727fbe63247ffd67cd04168442d0"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s8__r11__k5",
+      "steps": 138,
+      "chunks": 28,
+      "decoded_frames": 158,
+      "sha256": {
+        "summary.json": "c43863e15faa7dfe079ce44ded50a87c2d4568b1f7393b018ac803ffdd7be5c1",
+        "steps.jsonl": "e83677236d4b82d70137187aaa7b7f4073f51d82e4acf091b25cd4f005b41c70",
+        "chunks.jsonl": "c5e5c89fc676227b26c0d1d44c4bab5220600091501d5536dfe7fc1f5d98c2b9",
+        "video.mp4": "edcd6fb85a5bbf83577d572f2dae2723aed441d9ec4badff0f0d14bce17d16b3"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s8__r11__k50",
+      "steps": 300,
+      "chunks": 6,
+      "decoded_frames": 320,
+      "sha256": {
+        "summary.json": "86ea60dc7d89efcac8053487ea505362fbf39474c628f236e4a67dfe6bc47a9f",
+        "steps.jsonl": "0d5bc09f863e881e797a1797a9a558371fcfeac2bebb7119e2ad9973683345c6",
+        "chunks.jsonl": "e579ee0b37d6929efe2eb80dc3ec0f96207bf0b533f460ce47ae0aea41aae5ec",
+        "video.mp4": "929898d62718d7f383b350e5e2ec4f951da519c34dee6fa4dce93ec2617736ea"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s9__r11__k1",
+      "steps": 124,
+      "chunks": 124,
+      "decoded_frames": 144,
+      "sha256": {
+        "summary.json": "d4290d9b9b88486429f4676559a9987688f9047348755eedd19a62722aeb644b",
+        "steps.jsonl": "94af5c0f6fcb8552a4fb76fa353751a9c29d50df2c1d149fe61e0ff1dd5faae6",
+        "chunks.jsonl": "111f8cc79ac2bcddbbb67710ae02b3e94e8d57813a08567076b23c06e1b19a6e",
+        "video.mp4": "6c21c8616371d5cd185e15f6445652e1178f13e5f7f4a0a1db4eb0963559897f"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s9__r11__k10",
+      "steps": 110,
+      "chunks": 11,
+      "decoded_frames": 130,
+      "sha256": {
+        "summary.json": "15e6145c3232100363d8ee42a5fec2338b2533bd337655958fcde67ed429d3c8",
+        "steps.jsonl": "d7d36c4e608ee9a50f149b73a78f4cc8b437480efc440751387152e39eb4aaad",
+        "chunks.jsonl": "8f105a2a9645de91e2caf024a376b4c1d116ad8750897dafe4bbfa01e16ec66c",
+        "video.mp4": "26e20bb8c10547511caf79c854b824049479296a647db37dfdfdb86be67ed376"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s9__r11__k25",
+      "steps": 300,
+      "chunks": 12,
+      "decoded_frames": 320,
+      "sha256": {
+        "summary.json": "f6d67d9cc73ba67606a7c88cc6b8e08cd2ffce694555ebfbeb2b138c33512074",
+        "steps.jsonl": "3abef172c40e7e8a228108b635ab2ff796ed24d87bef930572575842e5a1f741",
+        "chunks.jsonl": "56cbc0d553066dd8bf5e4dfac19cde923ad6bdc134b5a9027d074c16315538b9",
+        "video.mp4": "11f5b3f0fbed91cf6e032f9fa89c2fd8c4f405b8431fc832fb07d0bb9d490aae"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s9__r11__k5",
+      "steps": 113,
+      "chunks": 23,
+      "decoded_frames": 133,
+      "sha256": {
+        "summary.json": "5802d62f80e18fea297141eeb95e4f3b70c64f09fe89f791e84755c073812f31",
+        "steps.jsonl": "f10f4349ac9baa4045d03768ae9fbd497dc6803c32e240346030425235042a9d",
+        "chunks.jsonl": "b415ee1622a0cd817992399a7245dac3e2fffa80be3e2936836475f6829f3bec",
+        "video.mp4": "d62cc8bebd0842605a24acb026adefba014c1613aea7846c22b64466bc3ed533"
+      }
+    },
+    {
+      "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s9__r11__k50",
+      "steps": 300,
+      "chunks": 6,
+      "decoded_frames": 320,
+      "sha256": {
+        "summary.json": "e79a8dd78608a8f0a47546a9c7d2b71ced034622bd676997942b2ed5c76e25b8",
+        "steps.jsonl": "9a8031898864978f4b7cfbe1dcd3ad052a449d4096d60b16f1c09aff5bd2d644",
+        "chunks.jsonl": "49435b0b097fd3c1f5a2711831b06887cf99b8977b49fd83340992ca5e13afb2",
+        "video.mp4": "a249d946809f9917332a949cd0dbaa7af770cea31fab73add4b40488f2032da2"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s2__r11__k1",
+      "steps": 162,
+      "chunks": 162,
+      "decoded_frames": 182,
+      "sha256": {
+        "summary.json": "a4a4c36ac343d9930eb44c1b64bc2665e49b76703d1db7e53b15175bd687f8b6",
+        "steps.jsonl": "fbaf29ca79133c5562cb39539c93d0a2ec6f13d142a7f7571406ab0c9bb36cf1",
+        "chunks.jsonl": "c5595e69d86c79df8b959f3b324fbca5a01a7eece9d0b69e13e614c6577180ca",
+        "video.mp4": "d479c76615d6c2462ecc23b73416615bc63507336048d7d0e433159a382417d8"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s2__r11__k10",
+      "steps": 139,
+      "chunks": 14,
+      "decoded_frames": 159,
+      "sha256": {
+        "summary.json": "43d2b99d908c6018c5a27146424647aa3e7d046177f2819cf4e240c221e7bbd0",
+        "steps.jsonl": "3a6abfcc51f13013285eff7a4079c586a8640cc6027859c69001863ca6d524f8",
+        "chunks.jsonl": "0f84029485f0d400ea2f962d9dab27cb69f40b1f1e9d1e9510ea7883dcb26781",
+        "video.mp4": "fa7c91bf72faa9749506adefcbfbfe33d1fae7d94b405df92cd63f4cea85b32e"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s2__r11__k25",
+      "steps": 126,
+      "chunks": 6,
+      "decoded_frames": 146,
+      "sha256": {
+        "summary.json": "beb6565a83214ac05c87a680c2f9461ca9da7e872ca1c4120ce216d79c7dab64",
+        "steps.jsonl": "7af3358cfbcd36ae8adbb82a579a9d0cdca3ec80c2c177f47843ab5eab35df3c",
+        "chunks.jsonl": "b8856f4ed60c67a96c3cb76aa92904017eaaab406a3c848b530947d98d33edd0",
+        "video.mp4": "d7ec25001f527408f6dcfd6c8f35a193b9a6560f55de0b7582c29a92f85caeb2"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s2__r11__k5",
+      "steps": 144,
+      "chunks": 29,
+      "decoded_frames": 164,
+      "sha256": {
+        "summary.json": "5a5425bb06f4098facd2c8feef0c760f4d207b7e6838db113db9f11fa9d1f2ac",
+        "steps.jsonl": "af425d32ae9951ab5e3eef17b39f98f2205c157fc08948dbac8373f7840a00dd",
+        "chunks.jsonl": "8d64bca0d87ecbe178eeac16fb0c2b19a040a60d9b88f03080e620124b83acd6",
+        "video.mp4": "e0e809c550ae80e25ece354f94fb9e83bcda1ebf93f9d30525bd198228440b3f"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s2__r11__k50",
+      "steps": 280,
+      "chunks": 6,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "68931b678cdcd1e0af97d9058d12bd3cceffa3089781af6b518133639ba54a28",
+        "steps.jsonl": "e3d07c6c1060ac729a703cdcf7c103a4f69d0347615ead995c78c9e6d2de5875",
+        "chunks.jsonl": "76ad72fb2f9a71b5a7d4f5219029a2f9027e6c3f014d03d3d24ecfd27273033c",
+        "video.mp4": "112928a103b95469545f31bdf0222069c12447c07231bb1dea642ced062c600d"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k1",
+      "steps": 280,
+      "chunks": 280,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "d826ae4e82323c1e8e31dc2a5a5d029e9301ed098441217845ce0012fb429b14",
+        "steps.jsonl": "84736b7ec2cbb6d46653926b65c7ba712e90c92fbfb6b2c54708ef3b37180df5",
+        "chunks.jsonl": "a2d73e33463e007658dc86fabfc6f8659eceaac4364d0adc710cd533ff6ab365",
+        "video.mp4": "4bf9a1ec138ce29d56400db6992f86ed1695d607cccdd6dfc36406c22ed44c64"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k10",
+      "steps": 139,
+      "chunks": 14,
+      "decoded_frames": 159,
+      "sha256": {
+        "summary.json": "eeff086a1a555fb6943454388355521ab946d513ab85744e4ed8cbd112a4e8c3",
+        "steps.jsonl": "5da37914550d1693fab7724cf5d7fce639bc01ffb126a035920b94b4dac742fd",
+        "chunks.jsonl": "eb62ec405d11d9569be43471632283089f5ddf02484d84b5b9743c33358d21ba",
+        "video.mp4": "9761bc320aea2e088084ee75e6e13927b87d799557042f855e12b9c6ec01c963"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k25",
+      "steps": 280,
+      "chunks": 12,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "af415807d87ebe6a38ecb4978074a98269116ecd1ac9ce4eac5aae08a7961e53",
+        "steps.jsonl": "7a2300960a2dc3a0e3674b88b008317e3dbd292f7878df51f62c7bf1cff99e53",
+        "chunks.jsonl": "6a2010791c710f2e4b167ce615f319b3a256027e14a73287c08b3aa8b41fa5dd",
+        "video.mp4": "f0cb7870de7d78e7e7227362d82d64fb7842a76b926a61ae3d6fdfe2715f884b"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k5",
+      "steps": 150,
+      "chunks": 30,
+      "decoded_frames": 170,
+      "sha256": {
+        "summary.json": "4637875abf6391b2fb8312b8da9139ed9ec4d789c46ddc38cdf289e820420038",
+        "steps.jsonl": "f129b0e59bd9c27ba40385c2957fb3827657908d847b30d4cb50fc91cff8bab9",
+        "chunks.jsonl": "d264382c02e1874f66ae2a5b51f722cf96b439a96f2a068d17c66bf8351b9ad7",
+        "video.mp4": "c3c532b99c285823e733362a38d72b1365993571a38a66dfcbee0a52611c5923"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k50",
+      "steps": 280,
+      "chunks": 6,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "cc415eb96d48bf1fbcc94cd553754a36261fb2e01a174c69bc6a97bc8b22d477",
+        "steps.jsonl": "1c0f56f19c9e7ad45308c3afcb5bce01f70956260c4413714640d1e3f9d6466f",
+        "chunks.jsonl": "0f126e2787bdb84049548b2eae76b94bc761a804a08586079799694a4dad4881",
+        "video.mp4": "021b25117338a3749b16632b5aa735568b19dc6f6028c3afd1d21fc41f43e673"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s4__r11__k1",
+      "steps": 164,
+      "chunks": 164,
+      "decoded_frames": 184,
+      "sha256": {
+        "summary.json": "7a9e2d8175fdc5b1e7f27998e528c847a8eb2acc5d13f1bc05865af9bb31f534",
+        "steps.jsonl": "7f22b2c854cd375dc8f2493be55be3900749531698fb8e5f900ad10dae1b6e76",
+        "chunks.jsonl": "d18c636fc29f202f81b19be0d9cf4c12531a04e47e41a4c6a2de585475abf8e8",
+        "video.mp4": "e2692984f95bd5707b8ac2cedad09b0c5c5402ac5aaabc97aa0be9b08cc8df59"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s4__r11__k10",
+      "steps": 138,
+      "chunks": 14,
+      "decoded_frames": 158,
+      "sha256": {
+        "summary.json": "69d8de7ee11ec179996914541a14fa48a055e497f992d80a3af14c1e23c45d37",
+        "steps.jsonl": "00237cc41b93fbcb36f7887c6ca9fd7e66c95250f8f1df1594f1caa62709cc47",
+        "chunks.jsonl": "5d1dd517ba1c2e182e6146e9c442b9ab324b83019717fbf1d5ae176d75106c36",
+        "video.mp4": "80464ea837e3eaa0c274444bac662ae02262b36b4b8d7eba671f82dd2b0b8b8c"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s4__r11__k25",
+      "steps": 280,
+      "chunks": 12,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "101a3b82c4774b21bc8529471e4b45bd3d9c52d07b5b51ada66ddab14cb816c7",
+        "steps.jsonl": "482a3b00a048da620fc85e8ddeb88cfc3ae205261a5672ffc40fb2b16206548b",
+        "chunks.jsonl": "14e2c44a0e36209e6da3f00a3e5ab99fb85a31492e10a68e04330861639c4dc5",
+        "video.mp4": "2dd5e87455ada9ebc8e35df88e399641f0715cc2dc732f4d5a44241dcc2291c3"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s4__r11__k5",
+      "steps": 147,
+      "chunks": 30,
+      "decoded_frames": 167,
+      "sha256": {
+        "summary.json": "a60d9aaad598faa58b74a16b49a2b9bfdf741f7b9914f111ace98b41f90c0980",
+        "steps.jsonl": "2a3ce6fc4d43439ea50c627bad2c3f158563c97ed36713ce7632e2989b363c0d",
+        "chunks.jsonl": "ee469764281e736e15357c25e3d163e88f5d2e498a2078148f438e5f2f9a3413",
+        "video.mp4": "41dc62df4cb848108d35a49cbe163f9d55ecd0f49f6118bc4270d1c498c6e77f"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s4__r11__k50",
+      "steps": 114,
+      "chunks": 3,
+      "decoded_frames": 134,
+      "sha256": {
+        "summary.json": "b4e362c7793bd4c08c5ffab47a36a908c6bfcc47ec4a3d85430d03b4ed6a31e1",
+        "steps.jsonl": "59de5f25d68bec28b4a304c390cc42972627adb5600a3729f04ee41575108c6c",
+        "chunks.jsonl": "9cb936f3c15a653e3fa5b369366d443469fdba9f413ace139838eda72640dc62",
+        "video.mp4": "afdee1076cc1ca227a1c07deca7e7019fc26fda7b29dce5f953fb681ae499d49"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s5__r11__k1",
+      "steps": 280,
+      "chunks": 280,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "699b518510bdf76505e5b17bdf258329d311129ebf7b627d978c3426cde9b5a1",
+        "steps.jsonl": "217a5e39675d270a228b8e8dddb0e831057f672f711f810397bfb56654d0a86e",
+        "chunks.jsonl": "09532ae3213c8ddb0880f06727480c5c0a43ee9b1b2139e77644e28262724e95",
+        "video.mp4": "3349dc1a8ff35f4fe90ed8e0e579f2c6380018fcf1db0a048817c75a936603fe"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s5__r11__k10",
+      "steps": 138,
+      "chunks": 14,
+      "decoded_frames": 158,
+      "sha256": {
+        "summary.json": "39367736793fd57492fab4c47d435b29e630b447932fdfc1d76e1f4a0eeb9d9a",
+        "steps.jsonl": "c3ccc12b90f9231d669c197801c110aa20cbef3e4a2a2045f9609c7bf5aaf741",
+        "chunks.jsonl": "e9518f778b7e378d5c19cb7674353eb1820784e7cf70ec481803872431ea49a4",
+        "video.mp4": "582bc4c3ba598c1fa1f26bda9776bd54357a632fc063fb9c328a320495282684"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s5__r11__k25",
+      "steps": 124,
+      "chunks": 5,
+      "decoded_frames": 144,
+      "sha256": {
+        "summary.json": "3613ecfb878153292fe5c067c1e420d422616173051223f38fa4fbbba97fa830",
+        "steps.jsonl": "5280b7240d570fd10f41e68994645cc4d19d72c0c17ee6d6744b98fbc6bff41d",
+        "chunks.jsonl": "b98700e450de13a3ea25e5fec6f2aa748acde807eb094f6450d1591306cafd50",
+        "video.mp4": "22da555e8fb3c10f83a70f32999921230635888f024521f1f403d3a12fef38e7"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s5__r11__k5",
+      "steps": 146,
+      "chunks": 30,
+      "decoded_frames": 166,
+      "sha256": {
+        "summary.json": "ec45d6bf67fce5756c44b65587a0da5204d4b73133c08f004288ccfa3548599e",
+        "steps.jsonl": "74e620f4c57ea3bf6c44fc44e09ce21b640edba544a862f33d96ae23c502a2e8",
+        "chunks.jsonl": "f24ce4c901d3f55def134e53df9ca41f8323418a77c4335a3190263f858f02e5",
+        "video.mp4": "ec54aefc460fed5c9cd810b2a77784f1b9cfce8c7a6c66528b5738b5c4da62b5"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s5__r11__k50",
+      "steps": 280,
+      "chunks": 6,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "df0d82cf84e1404b599e76d78fb3cbc54060b5ca8c7b8d2bb5fb5e2e4ed47a0c",
+        "steps.jsonl": "54d07bb21b59eb9a6890db59b8d3b38c10019de3cddd774a2e66a257d90d6759",
+        "chunks.jsonl": "b2e84668c94dfb495faae30dfa6fd49d5d790ff26e24455aad34307ecf390f50",
+        "video.mp4": "3da1c560678feacc19d070baba49769f0200af651f08f05d678b1c0dfc47b378"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s6__r11__k1",
+      "steps": 162,
+      "chunks": 162,
+      "decoded_frames": 182,
+      "sha256": {
+        "summary.json": "a18602d11d06a3b9c41c355b3736e5ff10cabd10827e64d9ec3bb2b290009dd5",
+        "steps.jsonl": "c74fcd160c535fbece8c40789392f661dd160e84e8d98ac47b7b75a350ae5692",
+        "chunks.jsonl": "07e8114668f173c0e19d2237198de86d9422ee872e07070b5f85dfc87e778800",
+        "video.mp4": "4cde8a586e5afc18d7de44cf701c414ed853bac387aeac6cdef74697a8ac3e2d"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s6__r11__k10",
+      "steps": 139,
+      "chunks": 14,
+      "decoded_frames": 159,
+      "sha256": {
+        "summary.json": "bb19f7458f58adca95514ac43856371b7f470400a6ef876c63b66e8394921eaf",
+        "steps.jsonl": "4fff434caf4b67d0131a64d6a52cc5e40a63bdfc5c47839377b9d9284917abc3",
+        "chunks.jsonl": "4a3578ba94e5c365e983a911293de7543e754089a6d8a3a358cf66f57a1b1f1a",
+        "video.mp4": "ce51b97d08c129051304a4cb09cc37e7185bffe5102ea4c90093ba1abb9e832b"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s6__r11__k25",
+      "steps": 123,
+      "chunks": 5,
+      "decoded_frames": 143,
+      "sha256": {
+        "summary.json": "ee1e2799357b98ded7f23ffdebb82a48cb1a6080e34afdfedd87603fd5d9a23c",
+        "steps.jsonl": "04263f3fc0bc2f86dadeb86e710888820324f4b373ffb77e691f4b095ccabe22",
+        "chunks.jsonl": "80815b4db6192be4a43a2fc85541262b61f6a980004378d9bc1ed0f6e4ef5613",
+        "video.mp4": "6dffd9197b25ed226368cd8bb9f9d27380cd9488620a6f97e0bdb9edba96b39c"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s6__r11__k5",
+      "steps": 145,
+      "chunks": 29,
+      "decoded_frames": 165,
+      "sha256": {
+        "summary.json": "bfe4bda414c8c2d7e993da0fddd41ce63c5cf1dbdf271f37822af6d8e190d77e",
+        "steps.jsonl": "3aa441df7f55f68e1db8412c190f7f1d6fc28398cbbf0a871fb97301c668b0c6",
+        "chunks.jsonl": "dfd2121c7e848aa5c5682988ee0d9613b57ec628f32efe897c75ce574dba251d",
+        "video.mp4": "981f62de137b20ac066ae59b62ce0e6638699ebaa3011fa53cba3dadf72b26c2"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s6__r11__k50",
+      "steps": 280,
+      "chunks": 6,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "d456563b37839699827779ae30e265ebe29b3c2f6dcda17aeeab6dd5d10029a8",
+        "steps.jsonl": "0137a9c28413694789204e0baf29bff925aad51e9737c00f3b9f12d9851997fa",
+        "chunks.jsonl": "60d3a68cb82ed15a22b179213d00f2de9b45d86fe16e8117e3ea25d316fe6d8a",
+        "video.mp4": "f8b418d51ab0a1f44408fe27337323620b86a6216d4d57c64960b39b41a5b06f"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s7__r11__k1",
+      "steps": 120,
+      "chunks": 120,
+      "decoded_frames": 140,
+      "sha256": {
+        "summary.json": "dcba1682f2ecec208e680a9fdf17caa38d942225a077ba341e27ed26df97e3ca",
+        "steps.jsonl": "fde518b1436c2439e3dee26f6fff071f186b0b5b2214c774d1d75de63f6d3d16",
+        "chunks.jsonl": "16267a1b8bf3f686aff1c6bb2733f221269c77756c8e8ba5c5bce8156dfdf939",
+        "video.mp4": "3678d08c050d56ef0f201747a523b9572482aa509aecad517159932e4708a6c3"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s7__r11__k10",
+      "steps": 139,
+      "chunks": 14,
+      "decoded_frames": 159,
+      "sha256": {
+        "summary.json": "56d60c4e49b188be3832a618dab64b9cda3dc04008e6e6374716d5ec407ccdaa",
+        "steps.jsonl": "ebd33359b58c3dbdeb090a4153677a7ca83c19f90102b9a62ddd75a5f90fdd87",
+        "chunks.jsonl": "0b0669043b5d655e60c15f899b51ca7902d6822e14fbe13ad9142f16150e568e",
+        "video.mp4": "e0edfb5763cd3add7db2047394667ac3170ce0384475573e64b85ece8cc0c3d1"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s7__r11__k25",
+      "steps": 280,
+      "chunks": 12,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "53f3c2721e8c597da38ab7d067d239b55d31abd95871e815900159d61be9091d",
+        "steps.jsonl": "8a65081d2f4d6e3f2fc0ab02fc1cc7fd3771e13d58443d5881d7a10291997d86",
+        "chunks.jsonl": "c3ba5f5985ed77c0adb4b771d0d1f4114f3392e7a5a48530e89fe92ec0397c86",
+        "video.mp4": "7837a0ef5d66b7459cd0e83bfa8dae6f164091884702d2c251e2f574ed8ab537"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s7__r11__k5",
+      "steps": 280,
+      "chunks": 56,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "94528fdf4977ba4496bd9997201bfd92ec6e89d1fd282c084a51df76efa41087",
+        "steps.jsonl": "ee3cc9f4fdea99fb4c1ee0756b908c36e4029bc1105f4d4540c9cec3a89869b3",
+        "chunks.jsonl": "e0ba5befccfbd5cc55919ec99ee6b889133b056baa85363796dedfec0b763426",
+        "video.mp4": "7cd14b6c8edf2c7d7b0449ea0441831b8bb877ba59a9ec5e99f400a09639c31e"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s7__r11__k50",
+      "steps": 280,
+      "chunks": 6,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "e2e920f06c97fb9c464209e1c34e8aecb758a7a03305b8b23f892a5a24825c36",
+        "steps.jsonl": "b76df024de630b84d5598f4599290262cbea1654df0d737786f2647f7a84a25e",
+        "chunks.jsonl": "c948238411a149da2790ee32d5065eed966141f31cb4cfad922e5a3ddf6c6b26",
+        "video.mp4": "a8bddc05e10965dc4bd55c0ce3eb9e629134b7e97ddb0c56e4d019cc33733f86"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s8__r11__k1",
+      "steps": 150,
+      "chunks": 150,
+      "decoded_frames": 170,
+      "sha256": {
+        "summary.json": "cf96c30510eddcef0ccf4bc9727891095bfd7a13237c6614a16acb01f53e16be",
+        "steps.jsonl": "055b0567d144faeaa9d24ae2a3a99a3163b81a45d193e2101b9c98de47f70e39",
+        "chunks.jsonl": "f7a7d04de0d55e02185e7ab395f74606766282ca728a948b92f5fb3d02925802",
+        "video.mp4": "d0be276e26dd5ec43c17bae90899ef8d2a6928d63d92d99b994ef956d26b7f6a"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s8__r11__k10",
+      "steps": 140,
+      "chunks": 14,
+      "decoded_frames": 160,
+      "sha256": {
+        "summary.json": "f1c7329c45c089fb6b18735078aefe357dcb5ca3e5777d4eb2190cd376309911",
+        "steps.jsonl": "bc1ae84625f31f951ae62d295b3fd7db0dd0d0d325fe464c47b47cbacda40eee",
+        "chunks.jsonl": "0ffd73e867d6e33dd4c27b3910cb56ad3ce510b4c4b0f464fb799de8df357b36",
+        "video.mp4": "17405071bb1c027568de1548731478d16b223fe985b692d71122a666fa0e116c"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s8__r11__k25",
+      "steps": 125,
+      "chunks": 5,
+      "decoded_frames": 145,
+      "sha256": {
+        "summary.json": "7f9e9e2bac3aa1a760be6e37ea42fa0e32e33b5ff3eb0c835483eebac5c3dac1",
+        "steps.jsonl": "dedc2956bf39820d108c23c124bbb69504778855865035089492821d6ee0e0df",
+        "chunks.jsonl": "d7054f7d155ba69e21eae2ff5c2f54f94d93b9a8dadb29cff34181bfcdbe5f54",
+        "video.mp4": "1a84969d01d76eef9314561f001d5635cac5118e5c6b6f50064ae75f4ea006c9"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s8__r11__k5",
+      "steps": 135,
+      "chunks": 27,
+      "decoded_frames": 155,
+      "sha256": {
+        "summary.json": "faae7936bb0d97447a840de99ebde87bd3809545dfc5fbca109af334214f66ca",
+        "steps.jsonl": "7823a41d817fbcbb37918c956220760493f41d1293d5ce1e03f456b49c6afb08",
+        "chunks.jsonl": "8288f4a76a2870a358866d606100dd2c03482e40bd92fa7391a553db26af761c",
+        "video.mp4": "2fa4814ce7ef3b342880448baf7d899d2be2dc5ec420982626feae478055c294"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s8__r11__k50",
+      "steps": 120,
+      "chunks": 3,
+      "decoded_frames": 140,
+      "sha256": {
+        "summary.json": "da73a70362f4f105163f9e537c00f17b5ad4b7e7740b4a9e50a62aa53472b6bf",
+        "steps.jsonl": "0423a39c167a64dfcb0774e0102b2dce3a2bb5204ad237622f302216943b66ac",
+        "chunks.jsonl": "39464b62fbff451edc7628b7dfeb4a407d95e74345e9f0623206a6994b1a32a9",
+        "video.mp4": "a4c2b4a49dc22d59761d22ff3bd80c334ba64fb27b0193968b82a912906d6f2b"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s9__r11__k1",
+      "steps": 146,
+      "chunks": 146,
+      "decoded_frames": 166,
+      "sha256": {
+        "summary.json": "9974890efb2d32065dfd7f7709c0c5fdfe92f610139846c2201d4acb6cefa587",
+        "steps.jsonl": "ac59ae337f6e6c87ae7990ac6a7c7639967654554b64eec2ded0d113ed13f8c4",
+        "chunks.jsonl": "458835910359f8834378d47567d00c186817180476697411cc770adfdf263d70",
+        "video.mp4": "4a72f420f06f63b1aa6e15fb7eadb429e9711b3ec4388ce677e292103af596a5"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s9__r11__k10",
+      "steps": 139,
+      "chunks": 14,
+      "decoded_frames": 159,
+      "sha256": {
+        "summary.json": "35b5e298c17deff4441354843a16b99101ab62d79b7eb15c4a9b878ba7737d05",
+        "steps.jsonl": "4107fd9becdcab1f5521ed7077e4df1133eb3e19a05b4e495e2eb7f89e43aadc",
+        "chunks.jsonl": "b44cfa1f2350a27c4a0a3bd82099179232b278cf32309a315231d0072e62b64b",
+        "video.mp4": "b41108af635c843ef6af4539320af4675d46f2bd20b152116cd8acf2402ec3d5"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s9__r11__k25",
+      "steps": 124,
+      "chunks": 5,
+      "decoded_frames": 144,
+      "sha256": {
+        "summary.json": "2bf075c9f4e00a39da06568efd870c68492aa6475824aea9d00789317edb1d84",
+        "steps.jsonl": "e63b5a3c884317b0120fab16c42eb88e7d2ebacda4d36dd37e190db04358ce00",
+        "chunks.jsonl": "8f01f36f34c1300e0126484a70d5422c09188257e34cc255a0ae910a72fc725b",
+        "video.mp4": "6ecb9cace219d53e02f3d569cbad0237f2e3c49009691e8a7c34c387c04b627a"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s9__r11__k5",
+      "steps": 147,
+      "chunks": 30,
+      "decoded_frames": 167,
+      "sha256": {
+        "summary.json": "e4dbc7c54c3642d82be0d46c4603419533645469208d289b4653afac1e267482",
+        "steps.jsonl": "85befcf1425d5445ab0b40ccce49209f2d23f8ce395d223e3bbe206397640028",
+        "chunks.jsonl": "f509af6e7b04d3c61918f5c55762a7f2cc33ccc0c6dcd2bf6b12073a79252bdc",
+        "video.mp4": "14b43c464646941b7c8993d6cbc238dc222a5f8a6f0be4adceb9b0b1a7c7ab25"
+      }
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s9__r11__k50",
+      "steps": 280,
+      "chunks": 6,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "1804a94ed3875754d7bcab9ea161a248b00ded96798bfeb19bc51bb7903b63a0",
+        "steps.jsonl": "0b468a2f9e2329421f5c556c624bf12080c4c143978197ce09171e1c576929e4",
+        "chunks.jsonl": "d98d598437d1e6e61bdd06252e6d70eb74d77831b7e3b51d20467c8e57b45fc6",
+        "video.mp4": "b395649fba60135b48228badaa237759b0bfd6c8caeabfac429c60d7fcf2366b"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s2__r11__k1",
+      "steps": 280,
+      "chunks": 280,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "3e1367a029afd4ca98dcf45bd166c1396e93bbe917479dd6ae61d3d6e9c09553",
+        "steps.jsonl": "6c979c27718b97070b74aafa1748f36544abf91009e9cdaf10017bc8ccf0c005",
+        "chunks.jsonl": "a0314f2983552d3222363edd2c5254f78c252be44efaa42d55b8540504163ad4",
+        "video.mp4": "0061b39bc5cfeeeba6dc9862d9075ad2fb70e8af92b5f689bb1fea92003262d2"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s2__r11__k10",
+      "steps": 280,
+      "chunks": 28,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "f35145784ac3fbc339f985ad85549b57be2c3ca553d3fca7823d80bbc5922c98",
+        "steps.jsonl": "347b5dfa38242f600bf5642c986e4d84ab10a5056a42349858874b54c9647012",
+        "chunks.jsonl": "bd1f14451d9d92480bad3229d8ffbf6f64be1f9488961c58dcc5c049d2a01c90",
+        "video.mp4": "6635faf6b0fa7f5f2c0648e79ab19599df59d3722d1b4faa511aabc2e0a48072"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s2__r11__k25",
+      "steps": 280,
+      "chunks": 12,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "82e738f31024ada65542f15801b335f3103da7e8aa3bb599a6849cb4af4f85e1",
+        "steps.jsonl": "181c966302780be6cda26296f94d2aa147d97c460a725b0c2376f4b3a81e73d7",
+        "chunks.jsonl": "55e06edca438aa9dbeb36033e68de5156e8e16841e81bfc4ade0504ba84910fe",
+        "video.mp4": "34a6176547257e7d042f158f27354ccaeebe9ec5b0b46428e0db421c00c62db1"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s2__r11__k5",
+      "steps": 280,
+      "chunks": 56,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "f91d3e8cae3abfb2551dcfcc45522cce683e8c87496b84a5f61c841094bb61c9",
+        "steps.jsonl": "9f7930e32ff0c9d8588feb341a10ffea13aa869e83d42da842e6c54ae43131f2",
+        "chunks.jsonl": "c955d311e4bf51e35f69bd13f687c6f64a467a4f534f05aa7779dbb82c14ccf5",
+        "video.mp4": "deb76eb5b97e29e1322033b8067c1233588faceae60e6b868af424bd4b9f1936"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s2__r11__k50",
+      "steps": 280,
+      "chunks": 6,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "8ed8961f1f356b09b32532e1f1ea18c7a3600c7ae92d9e7e84b07a13f4e8fa57",
+        "steps.jsonl": "c02169bd0af8aa54f5f9b906f5438ed12bc8a597b6c47d52b30023631a218bf7",
+        "chunks.jsonl": "f3a610ade0d909fcf7b60954dd615c5f7735f0ee3bce1b8c5a00cfd636e4612c",
+        "video.mp4": "007aacfb409cbd64096ea1c07afbdb0fd92d7d92d64e958ba80c34aec0c363f1"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s3__r11__k1",
+      "steps": 80,
+      "chunks": 80,
+      "decoded_frames": 100,
+      "sha256": {
+        "summary.json": "3878ec9dab1371c894b3a34cff3c7498c329fec03cf79abd8a258c9adc1b5e54",
+        "steps.jsonl": "c479b6fb6e3b291db743be2e401998cc2dd7b2bdd6d46927e34b9356e3043916",
+        "chunks.jsonl": "7f2884cd066c6cf4988db9ca6a007c067d1282bce1d0eb0bfd43d7c3e39c3342",
+        "video.mp4": "afcb5c0932b193c96fff68c3af6589be3815a9db6e61507e438296adbc8e4de0"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s3__r11__k10",
+      "steps": 75,
+      "chunks": 8,
+      "decoded_frames": 95,
+      "sha256": {
+        "summary.json": "68df3a2287372e991796e1a21ba9a0d5f35712a9285b6b77e48d162c496b0dd0",
+        "steps.jsonl": "9faf66fdb24ac8260e5fa5616001322922907d8b5d5a35752a9ddfffb23951cb",
+        "chunks.jsonl": "a7d69b3e6504a0f2d136578d61fc6935125ff136c4251c983d3f12e7e3ff2eed",
+        "video.mp4": "8a8a330fb2baa113c41a7197dd92979e1b3971d0d54de3fd7594f4f6d0ecca6c"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s3__r11__k25",
+      "steps": 89,
+      "chunks": 4,
+      "decoded_frames": 109,
+      "sha256": {
+        "summary.json": "34e9b28697d744afdcd2e6bbedc58300c3059ed0bfdee0499f0a68c74b3288d0",
+        "steps.jsonl": "efc3b67c152f318b190ca63639d3c7222340a5b0369c7891b0b2831fb744d48c",
+        "chunks.jsonl": "d07912f61ac2a973a602ef12c470cbfb072a555032c00eb694f9da5cf9e000cf",
+        "video.mp4": "948ada4e42e1031f281a7d6348ce2979b5537b2f3589f2ae5dd51a67ba457035"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s3__r11__k5",
+      "steps": 94,
+      "chunks": 19,
+      "decoded_frames": 114,
+      "sha256": {
+        "summary.json": "37451b8362a7beb3bf959eabbdf0223ea94abfb3a04db5ef2c7608294f27748e",
+        "steps.jsonl": "a01401fec29ddc47272545b27c0e2036f449915851e06cde7c82e41e05926224",
+        "chunks.jsonl": "2dcefeeb40dbccedabd5a0b2af1616adc7a29a8cf079793748d82bb8865cc29f",
+        "video.mp4": "23155c9bd4b78499355a970ae1f967eb58788511aff962c85b06718a50b479e2"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s3__r11__k50",
+      "steps": 280,
+      "chunks": 6,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "6f72650f8ab22ec85cc473abe0ad3d1b7f117f00ee14d3a09b6f8777174fb2b7",
+        "steps.jsonl": "99a71267f9a28019abe06660e588c2daac58fb9df988c7a92c7674b5222865e3",
+        "chunks.jsonl": "d86e5765b17d9d6d3fc4776a487886f3ea3a442bfb451cbdcc659d5c837b7094",
+        "video.mp4": "826af332daec2341b210ecbbe0830ca5a9b7dd370ae1af7e253e9c7a6aa7f4c6"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s4__r11__k1",
+      "steps": 70,
+      "chunks": 70,
+      "decoded_frames": 90,
+      "sha256": {
+        "summary.json": "4b994fe0130cee9d366edd3b55537c396f7b399d93c249cc6d582b14cf704200",
+        "steps.jsonl": "a658064256bae76b4682388fee6778b288a821c44e88ebda8c4e6052fe1e73c3",
+        "chunks.jsonl": "40c0f6594cf01ef9e331c5d354b738eb87ff16f3aff372049d8c74854f92f141",
+        "video.mp4": "4458d25b25cf861405ca131d3f291e4d0510714c23eefd8119bf92f7bb783c2b"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s4__r11__k10",
+      "steps": 74,
+      "chunks": 8,
+      "decoded_frames": 94,
+      "sha256": {
+        "summary.json": "bea2feeae01bc983c5680c1966ceee43cf437fe44bb6050203e21a3272d22c63",
+        "steps.jsonl": "51ddefddd51f659152060185c52f45aab2106d5616107c7b96154d086a470a1e",
+        "chunks.jsonl": "7c0098d8335cf5624d18b018fda5a644c48e057052597aecd23dd298f7cf8cd1",
+        "video.mp4": "3537aecaab882f2c1127723f1650107964f96f430f9f16ceb407af09e9774d2b"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s4__r11__k25",
+      "steps": 280,
+      "chunks": 12,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "8663388daf7f05e5654d6930b2fc2d02985157db646fdfbe30339a2c6cf1c8c2",
+        "steps.jsonl": "81420d18a0d5338700356872abcee12b936ae9443a2dcf46b316ca320a1ede8c",
+        "chunks.jsonl": "61e74c54ffeca1a7685134ffc65782004e501675afbb5bd065e643a57e369261",
+        "video.mp4": "252fb5af642745b802d1c1d37c3ebb9fbf49238696c9e8ffdbf4fe6c5c851ed5"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s4__r11__k5",
+      "steps": 74,
+      "chunks": 15,
+      "decoded_frames": 94,
+      "sha256": {
+        "summary.json": "5960ef9826c3f406a104964e29c08f9fa56b09ea34df5b64a67cd9eaee94f8d7",
+        "steps.jsonl": "b3c8ed64d3f0a6cc6bc3ed656ac972da3ca16c6c52274d21151f3126655f8a4d",
+        "chunks.jsonl": "48310577bc889309d34cbaf66a34021ae3e2030b0203f25681e7143f20914a4e",
+        "video.mp4": "16ac2f73672749f15978133f1b86152d2449ebca075451a1e3cc650600c8ea9c"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s4__r11__k50",
+      "steps": 280,
+      "chunks": 6,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "f3d6d6523b8f2dbc681c7f44acb62cb3de903c693eb724bf6b862fa5f8c3f863",
+        "steps.jsonl": "b0a36e116d37a53dc84827215169f32bd3b8a8e8116e7884990286ded422f012",
+        "chunks.jsonl": "9f6748cdb2424f4e3d85ce85aa1e76eff2bfc598d50fda6f45fde5b29d91de14",
+        "video.mp4": "e52735c0d69071ccfda6a1a9570a5af141fb39e554fa1a338b320e0f1d3148e3"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s5__r11__k1",
+      "steps": 99,
+      "chunks": 99,
+      "decoded_frames": 119,
+      "sha256": {
+        "summary.json": "bc7b6c50821f5d6516cdca8e302194ad8fab35c4627bc4cab85f664d05aea3c2",
+        "steps.jsonl": "85de10438e3f8fc2a6ff15bd1dfa2a2d4b0976adfe4ba3680056ddf8932741e9",
+        "chunks.jsonl": "7d858cba1a99a4a7728bb64eb3a5def10d48437794e262a06626c6ce8ec0c518",
+        "video.mp4": "27689650a95a058450d666fb1c86188f32ab03903f5d72df06f72317fe9a3714"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s5__r11__k10",
+      "steps": 280,
+      "chunks": 28,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "f4f627e6e86158702947c5f60d72ce39e376ca50b0b6a48b8dcc894b5e5b1814",
+        "steps.jsonl": "248241a9642694351532d76415c2905409db5fdd07afd598f8a9a1eb4836b9df",
+        "chunks.jsonl": "8cfa8cd5c19e58f3e5093bb795724e621cb82c8e5fe4b76d2fe02ddd1887cf1f",
+        "video.mp4": "024813d9e1d6b9af0ec83ed0c63ce6f06e6d985169c93bb6f761165142ff4ecc"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s5__r11__k25",
+      "steps": 158,
+      "chunks": 7,
+      "decoded_frames": 178,
+      "sha256": {
+        "summary.json": "3fe83e088797d4d896410462df81a7f9cf650068b6f34fd0ca22063ceb1804d7",
+        "steps.jsonl": "45af5729d1699aa8e6e7df0f3ff068806dda29b116f156acfff8cc7bbbaaccbc",
+        "chunks.jsonl": "cbac69c4c227a632b1520e77682a3400853f0e37d654598cbf5b89968bdca30d",
+        "video.mp4": "4c16b5797e9ce1d293f27971c4a35fd494943bdb9df2412964e4f0f708b3494f"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s5__r11__k5",
+      "steps": 83,
+      "chunks": 17,
+      "decoded_frames": 103,
+      "sha256": {
+        "summary.json": "ca5716ec39817451614eb87b647af5d0e5817fe78b72d715297e2567afa140e7",
+        "steps.jsonl": "07ac1e6daec5ce043311ac09165dc23ad74ffb674363603e1f29b7809fab324a",
+        "chunks.jsonl": "d622b8e386585a9f268c6d0dd0acb82ddfe9d9ddceb7fde49fc5fc774832d90f",
+        "video.mp4": "e24e5256bf4cea2cc9c58b5dae1343742397cfb8dcc1f8caf8f735d7e9a5442f"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s5__r11__k50",
+      "steps": 145,
+      "chunks": 3,
+      "decoded_frames": 165,
+      "sha256": {
+        "summary.json": "47714d8805fe8dfc7dd52c5ffb0e53f81b609d1f263b9ef6d33768f3b1cae1f3",
+        "steps.jsonl": "97ec101f7c630c25f5864ead3839896c1dd6db4cfc5437d0056b58c95ae4e70b",
+        "chunks.jsonl": "5dc1789ced37b7c044e8f1397ddd7c91380725314cfc511e189eb852245f0fe2",
+        "video.mp4": "bc466b2df5cef36c4065f0fb6bf738b545494944ff813c61e3b6be09ddded146"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s6__r11__k1",
+      "steps": 70,
+      "chunks": 70,
+      "decoded_frames": 90,
+      "sha256": {
+        "summary.json": "58c50f891ae987e7451333671e3e6dc6279ff847fcf9dfa7c67b2043ea412947",
+        "steps.jsonl": "956120706c5e3293d0dca0e7432f3ea110b3e5e17e5f379e8d3a40b9b406a703",
+        "chunks.jsonl": "db5845388d7d8f38d2f343045e428d3c593d47ef37e5b78dcba4cc51a7a1e168",
+        "video.mp4": "7d92ab48849e81852794846b01eeab2a24edde23aa5cab5764af88da6143e6bd"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s6__r11__k10",
+      "steps": 74,
+      "chunks": 8,
+      "decoded_frames": 94,
+      "sha256": {
+        "summary.json": "8b13e235de8b4f9d25035f41a6cb54fe0b7d1c3add1997b6ba5966ffc8072a2e",
+        "steps.jsonl": "22e0994919126c98c1531cbb2d6d5e3e522d5e5f975ae281fed927a5f3d39c32",
+        "chunks.jsonl": "7d78e28d20d570a8565a0460fe43c9846a8ccf476237143d81c9a640b2fa04ea",
+        "video.mp4": "00f99dfc279b42936bb2eafbea53d0658d2ab70a4d3c479ea022ab5f29844ac4"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s6__r11__k25",
+      "steps": 280,
+      "chunks": 12,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "a6276ca72723df7b581d9157b76ed2058c5036486c4b50dfcf5dfe71b9b9b33a",
+        "steps.jsonl": "5366891e80ba0b0b8e9285eca29b0b8688ba494408a56290d1021d5a725bda9e",
+        "chunks.jsonl": "41ec7915067a5b33d822843d429afdc5acee4b20f5b2731fe119f3e5bb24c997",
+        "video.mp4": "3b90a76de038596b4bee29a397c475bf5ad49ad3f268f7eeb39593abbd46d408"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s6__r11__k5",
+      "steps": 72,
+      "chunks": 15,
+      "decoded_frames": 92,
+      "sha256": {
+        "summary.json": "cd06bb2e5d58c0baaf7fc08944e1ea5c7dd1cb1134274ba829eb1e186b4d7309",
+        "steps.jsonl": "ddfad6d1376836b28bd7ab2cc1bf3f83f48564233cfe77f3632a3f7da641abb2",
+        "chunks.jsonl": "6a52ea71eb0a0a0b9f31f6ce312f69253fbaad677174f0ea67f88c2b1f4526b8",
+        "video.mp4": "27d2dcad594b94b7c4f7a05e12aada393dc709bc81a8c69f75e382dd659e0820"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s6__r11__k50",
+      "steps": 70,
+      "chunks": 2,
+      "decoded_frames": 90,
+      "sha256": {
+        "summary.json": "4025b3af221b3ae484fae184e0fc8b1a17bd6435c0462023e0cbb5c034f0b280",
+        "steps.jsonl": "2939e938304f18ac10f45637f5a56b5694c49d61d1e508ebab39a7305fff03b5",
+        "chunks.jsonl": "bbb16edddadad7a08b9cc315e4c545ffaaeb5b4d6a3e7757bffc1523faecdcfe",
+        "video.mp4": "ce3c6de1a9fdc223f8aa65e49b8fd0db3a55ddc59d18dcb7359f07c777c31ccb"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s7__r11__k1",
+      "steps": 78,
+      "chunks": 78,
+      "decoded_frames": 98,
+      "sha256": {
+        "summary.json": "116c751117fd033b44092d014ed4468a9eeae0d1b9a1a4c26636b09cde144b6f",
+        "steps.jsonl": "94235fc2fb7a7cab2fa70c090a808e8a210bbdacd947fdf7190ed41a17b38b83",
+        "chunks.jsonl": "c63c2a0276f0b366053ebcafe8f14ba79feb2ebccf02b57613ee00722b03cb95",
+        "video.mp4": "f147252f6b2b1e71d672553d5686aaf12c26d09cb3e0fe53fa78441c1990988b"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s7__r11__k10",
+      "steps": 122,
+      "chunks": 13,
+      "decoded_frames": 142,
+      "sha256": {
+        "summary.json": "db7aa49b16942c85d8b3f14b4705ffd46681ff6a5c2f97a5f0cbb4f24347145d",
+        "steps.jsonl": "44d21458533716942dcc61fa8d4ff2bdb229b0ed20b94ad360343830f17b87bb",
+        "chunks.jsonl": "0d03c740e93b040d2c5eac4f98f6f3a086cb6c00716fb7664b8c94cc37d143ca",
+        "video.mp4": "479686ee78d6e56f65e826f62a483d6141ac5d9cfa9376f62e93858c510d17f6"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s7__r11__k25",
+      "steps": 81,
+      "chunks": 4,
+      "decoded_frames": 101,
+      "sha256": {
+        "summary.json": "5cc60648ebd69b6ed164f77293ab9a77d8a6ebace2b4a41618a5c4ac8fc05e2a",
+        "steps.jsonl": "9f40cec7deeaa376248bfdba5882bac98205c3ba4be878265983446aca3f8abd",
+        "chunks.jsonl": "35eabed12533a1cac55912e636703aa158b4474800d7d77a6fb387eec8efb47a",
+        "video.mp4": "f7bf266527a98aa8788f5b9f544018ad43dc5a4042531bd559bf31af5dce92a4"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s7__r11__k5",
+      "steps": 280,
+      "chunks": 56,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "2adf0d47b330e063b74a212792011e5ee858e6dafef7ed7b4065fce78bd838ad",
+        "steps.jsonl": "2b0473a88dfaf6d8c0d72ac05d98254ba61886e4fbdf9e9d31625c3e5c2ae6df",
+        "chunks.jsonl": "8dfbf75088b8b59d8b0ad8fa7351c82bddfa6de941b242d540f003f93830ef49",
+        "video.mp4": "b5e62c9e1eae17688c9f3607615f711bd4daff2f8a08d7d9b7328ac111601cf3"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s7__r11__k50",
+      "steps": 280,
+      "chunks": 6,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "922cacac9af7f94c4bbb2a8b62db74097ebb62be65cbb81fb6977741f43468ab",
+        "steps.jsonl": "685c2432613d5f6c9dc1cf9932993a8503b399e4b806d6bdac126ab51d1dbd12",
+        "chunks.jsonl": "23dcbf42baa0e5d17271ae3dd27c62c9a9cf32265e58b94385a613c3bec903a8",
+        "video.mp4": "d0b60a2393204f2dedf4676409e978af6568d54ab9bea3a2ab2cf2f0b4a2e66e"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s8__r11__k1",
+      "steps": 80,
+      "chunks": 80,
+      "decoded_frames": 100,
+      "sha256": {
+        "summary.json": "85a555b2e4ce7aca7ab199772567d176f43343843e5428e221a14fda3bd0f88b",
+        "steps.jsonl": "3b214574db0cfc3a763f71a51a82f1fe31c0dd7bea4090483ce5cf7ff862c6d5",
+        "chunks.jsonl": "802828fad4363522307034163a370f844fe12eafc4e638b5a394e119735d2f0a",
+        "video.mp4": "651f49b023d10c42c77ab40ce5b10ab3783db784bcd41f1411ba2f0da6374b85"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s8__r11__k10",
+      "steps": 280,
+      "chunks": 28,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "6099c32f13016d629fd6e56b08b025c161dd904275dacf4b9754c97d1c782c6b",
+        "steps.jsonl": "77c564730c88d18d145fc9b9b770b8afcceacde45a2ab3d9ba2bb8f8436703e1",
+        "chunks.jsonl": "829494115a6d636e07dba45a0f3c4c0afd6f331d2b76808bc9ffc410fa1b9c10",
+        "video.mp4": "d24972e280ac36c896040fa9352d4584478fa6ea01aa56d97baa5a77aa764464"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s8__r11__k25",
+      "steps": 280,
+      "chunks": 12,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "5a307652782ed2c38859d7c49de1dfa6f4447f8a7a7f8446c420c80f27877294",
+        "steps.jsonl": "a62a8d9261fe53d0078972c6ac48b0517712908d4640f1a53d98620527aee4a3",
+        "chunks.jsonl": "a28d5e3210097af4394da9ea567f2475301fd108a58adfb1e646d3edddbb3d83",
+        "video.mp4": "e5b74c360118be68ad4568887ef87e791fb4e88697a03488df4d98b1f6e0eece"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s8__r11__k5",
+      "steps": 81,
+      "chunks": 17,
+      "decoded_frames": 101,
+      "sha256": {
+        "summary.json": "927b8ec73b728c9a154a0fe0639f6e0fef3671bee9452422ebb5f4847a35a204",
+        "steps.jsonl": "de6e3de65a9409f34ae4a9f0467c33933e5ba1dfb08f58168038b7d44f483919",
+        "chunks.jsonl": "29954c6d083b63a0cbe9ddf4c4245ea2888c6f9bc5a0b6d0f9623910b8945be7",
+        "video.mp4": "e766bdae912c1a44937104e09ed7bb03ea3beef5221e63b4b902d82f8fc71aa7"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s8__r11__k50",
+      "steps": 280,
+      "chunks": 6,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "97cfdc88a6fa44314b4716f2b0efb347a17735ea6e58c085294d2639da91b026",
+        "steps.jsonl": "2c42d90c30f1c7913e62316c915dcddaa4a03401f72fade23c94a3ec3ddf71e8",
+        "chunks.jsonl": "c6858fd7844633520939f45edc1c30aef17da6d863037092a0f4349ee219bf4b",
+        "video.mp4": "e7868174717d5b3b8c564b6316d55120f09f7fca6fecf7f4c936d1a8f8c6234e"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s9__r11__k1",
+      "steps": 77,
+      "chunks": 77,
+      "decoded_frames": 97,
+      "sha256": {
+        "summary.json": "abaca60abe64277573be76dbaf865513a0c3db82eba3971361d43458f21c2959",
+        "steps.jsonl": "081bbef7188648187da9d9d97b1410e234ec3b226d0fa0a76cd2c7fe2fbe5354",
+        "chunks.jsonl": "89e93cfae8da3ec80d45f216cfba8e11a1593467c5e8b172c6457228d41cd895",
+        "video.mp4": "867b2350e1b5aae7f3ea59a94e774826afe93e44a2b7dca18b818362fd738fd4"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s9__r11__k10",
+      "steps": 280,
+      "chunks": 28,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "419f6de07c63882ad063885a7379d6d4235d765999d13561a059e4c056dbe79c",
+        "steps.jsonl": "947518c0655dc4f4184fd46e7a71838d59e353b4a01c25a8982d06acd22908e3",
+        "chunks.jsonl": "9c34cd7a0f4c8179305224663bfb9efff7cfc2f9759288ba02362acaa13a253a",
+        "video.mp4": "311d20ad3c9b4cc52c55a997b63df2f2f73296d10304e4e4cb41946eae339496"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s9__r11__k25",
+      "steps": 84,
+      "chunks": 4,
+      "decoded_frames": 104,
+      "sha256": {
+        "summary.json": "680e9e0b7d6a74e56740518de9540d84e0d0dc6ff441a90f2bdef8a347408adb",
+        "steps.jsonl": "4eae3dd9ee666816f6f8fc62ea108c35c26cbe2b9bed8b1653bdc2275290e75d",
+        "chunks.jsonl": "0cedc4224f4ab3b3dfca5d3e3c29425f308c6816dcea2ff64949b771fc660daf",
+        "video.mp4": "40069fee4dc7c7a0529716b71a650dd333408e8a045962bd6e800715f88baaf2"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s9__r11__k5",
+      "steps": 83,
+      "chunks": 17,
+      "decoded_frames": 103,
+      "sha256": {
+        "summary.json": "2f8a303017aac1e222a9cffff8001d355c14ce62b69664d9c20ba5f5773c67f7",
+        "steps.jsonl": "4ca3aa3bb5f2137c9c1ffa657941ec8b63b6e1abc01d498f8ffcc7c8f10cc766",
+        "chunks.jsonl": "ad102f01157a516407559a22d29b37671619f8ae520696ae1f37869548b11e18",
+        "video.mp4": "03ff9150e104b92b154f66b79cfb49c73413064c9935aa7f9acf27bf5eb35bde"
+      }
+    },
+    {
+      "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s9__r11__k50",
+      "steps": 280,
+      "chunks": 6,
+      "decoded_frames": 300,
+      "sha256": {
+        "summary.json": "066849f3af9d7dd360b5d345776aaecc3ecc1030be9175e499af3faeeafe5d9e",
+        "steps.jsonl": "ec5c12c7a0767eeec28c214c940c4547466093c4448fa5d3ddd244b87d89234c",
+        "chunks.jsonl": "98b0f2bea4edc3e88cff899bb254245cfca3cdd60f6b7f616b0e9c7ce7e71db3",
+        "video.mp4": "30edf3ebcf2c5b5702f15c86ff913042bfd907ee07fe648b936066dcb5a174dd"
+      }
+    }
+  ]
+}

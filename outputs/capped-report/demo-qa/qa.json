@@ -1,0 +1,932 @@
+{
+  "artifact": "outputs/capped-report/demo.mp4",
+  "sha256": "a528ca21551f9e267dad72d4fcc57ebe5dd7871a1e219b3cea31e5a012cf45fa",
+  "sidecar_sha256": "70c6551f347f20169918748e78037188c3dc59fce9d029292e038f58e026404f",
+  "checker_sha256": "3460101467d40dd248af71e6c6eadaaa60a34173b9466435537abc694c8c4e57",
+  "resource_limits": {
+    "host": "home",
+    "cpu_affinity": [
+      2
+    ],
+    "cpu_quota_percent": 100,
+    "memory_max_bytes": 2147483648,
+    "memory_swap_max_bytes": 0,
+    "decoder_threads": 1
+  },
+  "metadata": {
+    "frames": 901,
+    "fps": 20.0,
+    "width": 2304,
+    "height": 704,
+    "duration_s": 45.05
+  },
+  "checks": {
+    "all_bound_inputs_unchanged": true,
+    "all_three_predetermined_tasks_present": true,
+    "panel_order_correct": true,
+    "timeline_contiguous": true,
+    "all_source_videos_fully_decoded": true,
+    "source_panels_match_expected_frames_with_lossy_tolerance": true,
+    "footer_markers_counters_outcomes_match_logs_with_lossy_tolerance": true,
+    "terminal_hold_uses_correct_source_frame": true
+  },
+  "pixel_comparison": {
+    "decoded_frames": 901,
+    "compared_panel_frames": 2343,
+    "compared_footer_frames": 2343,
+    "source_panel_max_mean_absolute_error": 1.5483072996139526,
+    "source_panel_max_root_mean_square_error": 2.1139702796936035,
+    "footer_max_mean_absolute_error": 2.2302699089050293,
+    "held_panel_frames_compared": 766,
+    "channel_scale": "0 to 255",
+    "source_mae_limit": 5,
+    "source_rmse_limit": 18,
+    "footer_mae_limit": 4,
+    "note": "MP4 re-encoding is lossy; panel comparisons sample every other pixel and exclude separator columns. Footer text is independently rendered from original logs and checked on every comparison frame."
+  },
+  "sections": [
+    {
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "instruction": "pick up the alphabet soup and place it in the basket",
+      "sample_frames": {
+        "title": 0,
+        "first_motion": 41,
+        "fixed_replan": 50,
+        "adaptive_replan": 51,
+        "first_terminal": 169,
+        "terminal": 200
+      },
+      "episodes": [
+        {
+          "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__k10",
+          "method": "fixed_10",
+          "success": true,
+          "steps": 137,
+          "model_calls": 14,
+          "decoded_source_frames": 157
+        },
+        {
+          "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__dvac_cap_10",
+          "method": "dvac_cap_10",
+          "success": true,
+          "steps": 141,
+          "model_calls": 21,
+          "decoded_source_frames": 161
+        },
+        {
+          "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s0__r11__dvac_cap_50",
+          "method": "dvac_cap_50",
+          "success": true,
+          "steps": 129,
+          "model_calls": 8,
+          "decoded_source_frames": 149
+        }
+      ],
+      "max_panel_mean_absolute_error": 1.5053727626800537,
+      "max_footer_mean_absolute_error": 2.191556930541992,
+      "independently_decoded_source_frames": [
+        157,
+        161,
+        149
+      ]
+    },
+    {
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "instruction": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+      "sample_frames": {
+        "title": 201,
+        "first_motion": 242,
+        "fixed_replan": 251,
+        "adaptive_replan": 243,
+        "first_terminal": 322,
+        "terminal": 540
+      },
+      "episodes": [
+        {
+          "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__k10",
+          "method": "fixed_10",
+          "success": false,
+          "steps": 280,
+          "model_calls": 28,
+          "decoded_source_frames": 300
+        },
+        {
+          "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__dvac_cap_10",
+          "method": "dvac_cap_10",
+          "success": false,
+          "steps": 280,
+          "model_calls": 48,
+          "decoded_source_frames": 300
+        },
+        {
+          "episode_id": "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s0__r11__dvac_cap_50",
+          "method": "dvac_cap_50",
+          "success": true,
+          "steps": 81,
+          "model_calls": 12,
+          "decoded_source_frames": 101
+        }
+      ],
+      "max_panel_mean_absolute_error": 1.5483072996139526,
+      "max_footer_mean_absolute_error": 2.2267613410949707,
+      "independently_decoded_source_frames": [
+        300,
+        300,
+        101
+      ]
+    },
+    {
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "instruction": "open the middle drawer of the cabinet",
+      "sample_frames": {
+        "title": 541,
+        "first_motion": 582,
+        "fixed_replan": 591,
+        "adaptive_replan": 592,
+        "first_terminal": 694,
+        "terminal": 900
+      },
+      "episodes": [
+        {
+          "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__k10",
+          "method": "fixed_10",
+          "success": true,
+          "steps": 113,
+          "model_calls": 12,
+          "decoded_source_frames": 133
+        },
+        {
+          "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__dvac_cap_10",
+          "method": "dvac_cap_10",
+          "success": false,
+          "steps": 300,
+          "model_calls": 66,
+          "decoded_source_frames": 320
+        },
+        {
+          "episode_id": "libero_goal__open_the_middle_drawer_of_the_cabinet__s0__r11__dvac_cap_50",
+          "method": "dvac_cap_50",
+          "success": true,
+          "steps": 116,
+          "model_calls": 7,
+          "decoded_source_frames": 136
+        }
+      ],
+      "max_panel_mean_absolute_error": 1.4326171875,
+      "max_footer_mean_absolute_error": 2.2302699089050293,
+      "independently_decoded_source_frames": [
+        133,
+        320,
+        136
+      ]
+    }
+  ],
+  "selected_frames": [
+    {
+      "frame_index": 0,
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "panels": [],
+      "files": [
+        {
+          "kind": "title",
+          "file": "section-1-title-frame-0000.png",
+          "sha256": "a5039853113f090feea86917fa6047749e85518a229413848eca2a7e62a5fa74"
+        }
+      ]
+    },
+    {
+      "frame_index": 41,
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "panels": [
+        {
+          "method": "fixed_10",
+          "source_frame_index": 1,
+          "status_text": "Executing | step 1 | K=10 | calls=1",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 10,
+          "model_calls": 1,
+          "source_panel_mae": 1.3391309976577759,
+          "footer_mae": 1.125431776046753
+        },
+        {
+          "method": "dvac_cap_10",
+          "source_frame_index": 1,
+          "status_text": "REPLAN | step 1 | K=10 | calls=2",
+          "terminal": false,
+          "replanned": true,
+          "chosen_k": 10,
+          "model_calls": 2,
+          "source_panel_mae": 1.3895593881607056,
+          "footer_mae": 1.9001919031143188
+        },
+        {
+          "method": "dvac_cap_50",
+          "source_frame_index": 1,
+          "status_text": "REPLAN | step 1 | K=43 | calls=2",
+          "terminal": false,
+          "replanned": true,
+          "chosen_k": 43,
+          "model_calls": 2,
+          "source_panel_mae": 1.3841865062713623,
+          "footer_mae": 1.9056469202041626
+        }
+      ],
+      "simulation_step": 1,
+      "files": [
+        {
+          "kind": "first_motion",
+          "file": "section-1-first_motion-frame-0041.png",
+          "sha256": "78ecc5c78a8da96559c0fca88338d3aba8747b5ee669cd28a73a546f3db0bae8"
+        }
+      ]
+    },
+    {
+      "frame_index": 50,
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "panels": [
+        {
+          "method": "fixed_10",
+          "source_frame_index": 10,
+          "status_text": "REPLAN | step 10 | K=10 | calls=2",
+          "terminal": false,
+          "replanned": true,
+          "chosen_k": 10,
+          "model_calls": 2,
+          "source_panel_mae": 1.3810615539550781,
+          "footer_mae": 2.0894463062286377
+        },
+        {
+          "method": "dvac_cap_10",
+          "source_frame_index": 10,
+          "status_text": "Executing | step 10 | K=10 | calls=2",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 10,
+          "model_calls": 2,
+          "source_panel_mae": 1.3241982460021973,
+          "footer_mae": 1.1377536058425903
+        },
+        {
+          "method": "dvac_cap_50",
+          "source_frame_index": 10,
+          "status_text": "Executing | step 10 | K=43 | calls=2",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 43,
+          "model_calls": 2,
+          "source_panel_mae": 1.3235094547271729,
+          "footer_mae": 1.1278713941574097
+        }
+      ],
+      "simulation_step": 10,
+      "files": [
+        {
+          "kind": "fixed_replan",
+          "file": "section-1-fixed_replan-frame-0050.png",
+          "sha256": "3f4f80f3a11be392cacc1a05443728b40205bb86e36fed9b3bda3710a2eaa058"
+        }
+      ]
+    },
+    {
+      "frame_index": 51,
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "panels": [
+        {
+          "method": "fixed_10",
+          "source_frame_index": 11,
+          "status_text": "Executing | step 11 | K=10 | calls=2",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 10,
+          "model_calls": 2,
+          "source_panel_mae": 1.3375376462936401,
+          "footer_mae": 1.1354235410690308
+        },
+        {
+          "method": "dvac_cap_10",
+          "source_frame_index": 11,
+          "status_text": "REPLAN | step 11 | K=10 | calls=3",
+          "terminal": false,
+          "replanned": true,
+          "chosen_k": 10,
+          "model_calls": 3,
+          "source_panel_mae": 1.383405327796936,
+          "footer_mae": 2.0674891471862793
+        },
+        {
+          "method": "dvac_cap_50",
+          "source_frame_index": 11,
+          "status_text": "Executing | step 11 | K=43 | calls=2",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 43,
+          "model_calls": 2,
+          "source_panel_mae": 1.3309073448181152,
+          "footer_mae": 1.1225465536117554
+        }
+      ],
+      "simulation_step": 11,
+      "files": [
+        {
+          "kind": "adaptive_replan",
+          "file": "section-1-adaptive_replan-frame-0051.png",
+          "sha256": "3163587b02537d97c4262adcb18a56be360bcc167be7215a52e618cb99532130"
+        }
+      ]
+    },
+    {
+      "frame_index": 169,
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "panels": [
+        {
+          "method": "fixed_10",
+          "source_frame_index": 129,
+          "status_text": "Executing | step 129 | K=10 | calls=13",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 10,
+          "model_calls": 13,
+          "source_panel_mae": 1.3506956100463867,
+          "footer_mae": 1.159806728363037
+        },
+        {
+          "method": "dvac_cap_10",
+          "source_frame_index": 129,
+          "status_text": "Executing | step 129 | K=10 | calls=20",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 10,
+          "model_calls": 20,
+          "source_panel_mae": 1.3659265041351318,
+          "footer_mae": 1.148951530456543
+        },
+        {
+          "method": "dvac_cap_50",
+          "source_frame_index": 129,
+          "status_text": "SUCCESS | 8 calls | final frame held",
+          "terminal": true,
+          "success": true,
+          "model_calls": 8,
+          "source_panel_mae": 1.2448362112045288,
+          "footer_mae": 1.6963130235671997
+        }
+      ],
+      "simulation_step": 129,
+      "files": [
+        {
+          "kind": "first_terminal",
+          "file": "section-1-first_terminal-frame-0169.png",
+          "sha256": "bd774bdc8e40a7b5660b008548667b925f471f1ac7d62269130caf78972b906e"
+        }
+      ]
+    },
+    {
+      "frame_index": 200,
+      "task": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "panels": [
+        {
+          "method": "fixed_10",
+          "source_frame_index": 137,
+          "status_text": "SUCCESS | 14 calls | final frame held",
+          "terminal": true,
+          "success": true,
+          "model_calls": 14,
+          "source_panel_mae": 1.2882846593856812,
+          "footer_mae": 1.7263842821121216
+        },
+        {
+          "method": "dvac_cap_10",
+          "source_frame_index": 141,
+          "status_text": "SUCCESS | 21 calls | final frame held",
+          "terminal": true,
+          "success": true,
+          "model_calls": 21,
+          "source_panel_mae": 1.2902514934539795,
+          "footer_mae": 1.7361705303192139
+        },
+        {
+          "method": "dvac_cap_50",
+          "source_frame_index": 129,
+          "status_text": "SUCCESS | 8 calls | final frame held",
+          "terminal": true,
+          "success": true,
+          "model_calls": 8,
+          "source_panel_mae": 1.244065284729004,
+          "footer_mae": 1.696292519569397
+        }
+      ],
+      "simulation_step": 160,
+      "files": [
+        {
+          "kind": "terminal",
+          "file": "section-1-terminal-frame-0200.png",
+          "sha256": "9b7332b4de8a471944af254a8c75ad2f4383eefc75031cce7a2ee01934cbbdac"
+        }
+      ]
+    },
+    {
+      "frame_index": 201,
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "panels": [],
+      "files": [
+        {
+          "kind": "title",
+          "file": "section-2-title-frame-0201.png",
+          "sha256": "14b983d5884896ee69275f7817bf74365a2a1511c5b04db1276059795583b994"
+        }
+      ]
+    },
+    {
+      "frame_index": 242,
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "panels": [
+        {
+          "method": "fixed_10",
+          "source_frame_index": 1,
+          "status_text": "Executing | step 1 | K=10 | calls=1",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 10,
+          "model_calls": 1,
+          "source_panel_mae": 1.1810991764068604,
+          "footer_mae": 1.1253221035003662
+        },
+        {
+          "method": "dvac_cap_10",
+          "source_frame_index": 1,
+          "status_text": "REPLAN | step 1 | K=1 | calls=2",
+          "terminal": false,
+          "replanned": true,
+          "chosen_k": 1,
+          "model_calls": 2,
+          "source_panel_mae": 1.2302082777023315,
+          "footer_mae": 1.8419544696807861
+        },
+        {
+          "method": "dvac_cap_50",
+          "source_frame_index": 1,
+          "status_text": "REPLAN | step 1 | K=1 | calls=2",
+          "terminal": false,
+          "replanned": true,
+          "chosen_k": 1,
+          "model_calls": 2,
+          "source_panel_mae": 1.223005771636963,
+          "footer_mae": 1.8430441617965698
+        }
+      ],
+      "simulation_step": 1,
+      "files": [
+        {
+          "kind": "first_motion",
+          "file": "section-2-first_motion-frame-0242.png",
+          "sha256": "8404fe0b084849961f3927eefd605cd7550b3b45a5f82310175fa0f9a5d5ff5c"
+        }
+      ]
+    },
+    {
+      "frame_index": 243,
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "panels": [
+        {
+          "method": "fixed_10",
+          "source_frame_index": 2,
+          "status_text": "Executing | step 2 | K=10 | calls=1",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 10,
+          "model_calls": 1,
+          "source_panel_mae": 1.1917351484298706,
+          "footer_mae": 1.1251027584075928
+        },
+        {
+          "method": "dvac_cap_10",
+          "source_frame_index": 2,
+          "status_text": "REPLAN | step 2 | K=1 | calls=3",
+          "terminal": false,
+          "replanned": true,
+          "chosen_k": 1,
+          "model_calls": 3,
+          "source_panel_mae": 1.2244722843170166,
+          "footer_mae": 1.8516789674758911
+        },
+        {
+          "method": "dvac_cap_50",
+          "source_frame_index": 2,
+          "status_text": "REPLAN | step 2 | K=1 | calls=3",
+          "terminal": false,
+          "replanned": true,
+          "chosen_k": 1,
+          "model_calls": 3,
+          "source_panel_mae": 1.2200143337249756,
+          "footer_mae": 1.8527480363845825
+        }
+      ],
+      "simulation_step": 2,
+      "files": [
+        {
+          "kind": "adaptive_replan",
+          "file": "section-2-adaptive_replan-frame-0243.png",
+          "sha256": "791d1fd3beb88719f77b3b50faa403f76d6fbca4b18329c14f9528c3ae0048b7"
+        }
+      ]
+    },
+    {
+      "frame_index": 251,
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "panels": [
+        {
+          "method": "fixed_10",
+          "source_frame_index": 10,
+          "status_text": "REPLAN | step 10 | K=10 | calls=2",
+          "terminal": false,
+          "replanned": true,
+          "chosen_k": 10,
+          "model_calls": 2,
+          "source_panel_mae": 1.3481942415237427,
+          "footer_mae": 2.10376238822937
+        },
+        {
+          "method": "dvac_cap_10",
+          "source_frame_index": 10,
+          "status_text": "Executing | step 10 | K=10 | calls=6",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 10,
+          "model_calls": 6,
+          "source_panel_mae": 1.273351788520813,
+          "footer_mae": 1.1938802003860474
+        },
+        {
+          "method": "dvac_cap_50",
+          "source_frame_index": 10,
+          "status_text": "Executing | step 10 | K=30 | calls=6",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 30,
+          "model_calls": 6,
+          "source_panel_mae": 1.2618626356124878,
+          "footer_mae": 1.1444284915924072
+        }
+      ],
+      "simulation_step": 10,
+      "files": [
+        {
+          "kind": "fixed_replan",
+          "file": "section-2-fixed_replan-frame-0251.png",
+          "sha256": "551a242a2e68b8fca80b8dc8241ba12a86a4075404a1d5ee0167dd624361d718"
+        }
+      ]
+    },
+    {
+      "frame_index": 322,
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "panels": [
+        {
+          "method": "fixed_10",
+          "source_frame_index": 81,
+          "status_text": "Executing | step 81 | K=10 | calls=9",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 10,
+          "model_calls": 9,
+          "source_panel_mae": 1.2960662841796875,
+          "footer_mae": 1.1308661699295044
+        },
+        {
+          "method": "dvac_cap_10",
+          "source_frame_index": 81,
+          "status_text": "Executing | step 81 | K=10 | calls=20",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 10,
+          "model_calls": 20,
+          "source_panel_mae": 1.331092357635498,
+          "footer_mae": 1.1648917198181152
+        },
+        {
+          "method": "dvac_cap_50",
+          "source_frame_index": 81,
+          "status_text": "SUCCESS | 12 calls | final frame held",
+          "terminal": true,
+          "success": true,
+          "model_calls": 12,
+          "source_panel_mae": 1.232843279838562,
+          "footer_mae": 1.7320175170898438
+        }
+      ],
+      "simulation_step": 81,
+      "files": [
+        {
+          "kind": "first_terminal",
+          "file": "section-2-first_terminal-frame-0322.png",
+          "sha256": "c52e91a601bb3b067d64ae0934ce44cf35a419d8a395b4cad79c263a73ba2417"
+        }
+      ]
+    },
+    {
+      "frame_index": 540,
+      "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "panels": [
+        {
+          "method": "fixed_10",
+          "source_frame_index": 280,
+          "status_text": "FAILURE | 28 calls | final frame held",
+          "terminal": true,
+          "success": false,
+          "model_calls": 28,
+          "source_panel_mae": 1.3013877868652344,
+          "footer_mae": 1.953083872795105
+        },
+        {
+          "method": "dvac_cap_10",
+          "source_frame_index": 280,
+          "status_text": "FAILURE | 48 calls | final frame held",
+          "terminal": true,
+          "success": false,
+          "model_calls": 48,
+          "source_panel_mae": 1.3018879890441895,
+          "footer_mae": 1.9494997262954712
+        },
+        {
+          "method": "dvac_cap_50",
+          "source_frame_index": 81,
+          "status_text": "SUCCESS | 12 calls | final frame held",
+          "terminal": true,
+          "success": true,
+          "model_calls": 12,
+          "source_panel_mae": 1.198081135749817,
+          "footer_mae": 1.7190309762954712
+        }
+      ],
+      "simulation_step": 299,
+      "files": [
+        {
+          "kind": "terminal",
+          "file": "section-2-terminal-frame-0540.png",
+          "sha256": "573cc36b26fc7a3181621ffec81c4c376dbafccfa5898404a7680a04f4aa7694"
+        }
+      ]
+    },
+    {
+      "frame_index": 541,
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "panels": [],
+      "files": [
+        {
+          "kind": "title",
+          "file": "section-3-title-frame-0541.png",
+          "sha256": "43cd7902d57b3dbddb139873ddeefb9ca21dba01e581b7d8ceb8fb86d48c92c0"
+        }
+      ]
+    },
+    {
+      "frame_index": 582,
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "panels": [
+        {
+          "method": "fixed_10",
+          "source_frame_index": 1,
+          "status_text": "Executing | step 1 | K=10 | calls=1",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 10,
+          "model_calls": 1,
+          "source_panel_mae": 1.1823464632034302,
+          "footer_mae": 1.137061357498169
+        },
+        {
+          "method": "dvac_cap_10",
+          "source_frame_index": 1,
+          "status_text": "REPLAN | step 1 | K=10 | calls=2",
+          "terminal": false,
+          "replanned": true,
+          "chosen_k": 10,
+          "model_calls": 2,
+          "source_panel_mae": 1.2220840454101562,
+          "footer_mae": 1.9068530797958374
+        },
+        {
+          "method": "dvac_cap_50",
+          "source_frame_index": 1,
+          "status_text": "REPLAN | step 1 | K=50 | calls=2",
+          "terminal": false,
+          "replanned": true,
+          "chosen_k": 50,
+          "model_calls": 2,
+          "source_panel_mae": 1.2215769290924072,
+          "footer_mae": 1.9359512329101562
+        }
+      ],
+      "simulation_step": 1,
+      "files": [
+        {
+          "kind": "first_motion",
+          "file": "section-3-first_motion-frame-0582.png",
+          "sha256": "24665c5e084b74de16a2f1eb5e1436f9463856efc0be0d5720ae694ac077ceef"
+        }
+      ]
+    },
+    {
+      "frame_index": 591,
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "panels": [
+        {
+          "method": "fixed_10",
+          "source_frame_index": 10,
+          "status_text": "REPLAN | step 10 | K=10 | calls=2",
+          "terminal": false,
+          "replanned": true,
+          "chosen_k": 10,
+          "model_calls": 2,
+          "source_panel_mae": 1.2938767671585083,
+          "footer_mae": 2.096909284591675
+        },
+        {
+          "method": "dvac_cap_10",
+          "source_frame_index": 10,
+          "status_text": "Executing | step 10 | K=10 | calls=2",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 10,
+          "model_calls": 2,
+          "source_panel_mae": 1.251487135887146,
+          "footer_mae": 1.164651870727539
+        },
+        {
+          "method": "dvac_cap_50",
+          "source_frame_index": 10,
+          "status_text": "Executing | step 10 | K=50 | calls=2",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 50,
+          "model_calls": 2,
+          "source_panel_mae": 1.259213924407959,
+          "footer_mae": 1.139144778251648
+        }
+      ],
+      "simulation_step": 10,
+      "files": [
+        {
+          "kind": "fixed_replan",
+          "file": "section-3-fixed_replan-frame-0591.png",
+          "sha256": "3f8928677f422e03a22a5c43adb5ace2d0055b81a8bb90366ef24fa7677279fc"
+        }
+      ]
+    },
+    {
+      "frame_index": 592,
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "panels": [
+        {
+          "method": "fixed_10",
+          "source_frame_index": 11,
+          "status_text": "Executing | step 11 | K=10 | calls=2",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 10,
+          "model_calls": 2,
+          "source_panel_mae": 1.2591557502746582,
+          "footer_mae": 1.1436129808425903
+        },
+        {
+          "method": "dvac_cap_10",
+          "source_frame_index": 11,
+          "status_text": "REPLAN | step 11 | K=10 | calls=3",
+          "terminal": false,
+          "replanned": true,
+          "chosen_k": 10,
+          "model_calls": 3,
+          "source_panel_mae": 1.304988980293274,
+          "footer_mae": 2.065062999725342
+        },
+        {
+          "method": "dvac_cap_50",
+          "source_frame_index": 11,
+          "status_text": "Executing | step 11 | K=50 | calls=2",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 50,
+          "model_calls": 2,
+          "source_panel_mae": 1.2643674612045288,
+          "footer_mae": 1.136047124862671
+        }
+      ],
+      "simulation_step": 11,
+      "files": [
+        {
+          "kind": "adaptive_replan",
+          "file": "section-3-adaptive_replan-frame-0592.png",
+          "sha256": "c14c933a72ce283361d1ed5234de634b54cb45dbab298a433f4313dfc63beb54"
+        }
+      ]
+    },
+    {
+      "frame_index": 694,
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "panels": [
+        {
+          "method": "fixed_10",
+          "source_frame_index": 113,
+          "status_text": "SUCCESS | 12 calls | final frame held",
+          "terminal": true,
+          "success": true,
+          "model_calls": 12,
+          "source_panel_mae": 1.2140761613845825,
+          "footer_mae": 1.726212978363037
+        },
+        {
+          "method": "dvac_cap_10",
+          "source_frame_index": 113,
+          "status_text": "Executing | step 113 | K=10 | calls=29",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 10,
+          "model_calls": 29,
+          "source_panel_mae": 1.242650032043457,
+          "footer_mae": 1.169366717338562
+        },
+        {
+          "method": "dvac_cap_50",
+          "source_frame_index": 113,
+          "status_text": "Executing | step 113 | K=17 | calls=7",
+          "terminal": false,
+          "replanned": false,
+          "chosen_k": 17,
+          "model_calls": 7,
+          "source_panel_mae": 1.2302049398422241,
+          "footer_mae": 1.1580523252487183
+        }
+      ],
+      "simulation_step": 113,
+      "files": [
+        {
+          "kind": "first_terminal",
+          "file": "section-3-first_terminal-frame-0694.png",
+          "sha256": "30cd4146e731a246303df155e3e558bcf163779ca7858eaf7d74b7d03da9698f"
+        }
+      ]
+    },
+    {
+      "frame_index": 900,
+      "task": "open_the_middle_drawer_of_the_cabinet",
+      "panels": [
+        {
+          "method": "fixed_10",
+          "source_frame_index": 113,
+          "status_text": "SUCCESS | 12 calls | final frame held",
+          "terminal": true,
+          "success": true,
+          "model_calls": 12,
+          "source_panel_mae": 1.1701412200927734,
+          "footer_mae": 1.7126164436340332
+        },
+        {
+          "method": "dvac_cap_10",
+          "source_frame_index": 300,
+          "status_text": "FAILURE | 66 calls | final frame held",
+          "terminal": true,
+          "success": false,
+          "model_calls": 66,
+          "source_panel_mae": 1.2276315689086914,
+          "footer_mae": 1.9546326398849487
+        },
+        {
+          "method": "dvac_cap_50",
+          "source_frame_index": 116,
+          "status_text": "SUCCESS | 7 calls | final frame held",
+          "terminal": true,
+          "success": true,
+          "model_calls": 7,
+          "source_panel_mae": 1.160276174545288,
+          "footer_mae": 1.675315260887146
+        }
+      ],
+      "simulation_step": 319,
+      "files": [
+        {
+          "kind": "terminal",
+          "file": "section-3-terminal-frame-0900.png",
+          "sha256": "80500bd56860fbcc1ae7e9e16cd01ce0ef10510d00a1bf728234d44fe2b4ef14"
+        }
+      ]
+    }
+  ],
+  "visual_review": {
+    "complete": true,
+    "reviewed_frame_indices": [0, 41, 50, 51, 169, 200, 201, 242, 243, 251, 322, 540, 541, 582, 591, 592, 694, 900],
+    "inspection": "All 18 exported frames were inspected individually at the native 2304 x 704 resolution after remote decoding. No local decoding or model inference was performed.",
+    "findings": [
+      "All three title cards display the complete instruction without clipping. The longer bowl instruction also fits in the comparison header and inside each source panel.",
+      "Every comparison has three correctly ordered panels: Fixed K=10, DVAC cap 10, DVAC cap 50. Each panel preserves both the external and wrist camera views, with method labels, selected K and call counters readable.",
+      "Yellow REPLAN labels and divider bars are visible at the selected fixed and adaptive replanning moments. The displayed steps, K values and counters agree with the original logs; the full-frame automated footer check also passed for every comparison frame.",
+      "The soup final frame reports SUCCESS with 14, 21 and 8 calls for fixed 10, cap 10 and cap 50 respectively. All labels agree with the saved summaries.",
+      "The bowl final frame reports FAILURE / 28 calls, FAILURE / 48 calls and SUCCESS / 12 calls. The cap-50 panel remains on its terminal observation while the other panels continue, with final-frame holding stated explicitly.",
+      "The drawer final frame reports SUCCESS / 12 calls, FAILURE / 66 calls and SUCCESS / 7 calls. Earlier successful panels retain their terminal observations while cap 10 continues. The held source frame indices match the episode lengths.",
+      "The title cards and comparison header explicitly state that inference pauses are omitted. The demo compares simulation-time trajectories and does not present a wall-clock speed comparison.",
+      "No clipped text, missing glyphs, swapped panels, incorrect terminal labels or visible corruption were found in the selected frames. Outcome labels represent the simulator's recorded success condition; this review does not infer grasp/contact causes from the images."
+    ],
+    "blocking_issues": []
+  },
+  "passed": true
+}

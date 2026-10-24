@@ -1,0 +1,42 @@
+{
+  "findings": [
+    "Across all 150 episodes, K=1, 5, 10, 25 and 50 succeed in 23/30, 26/30, 24/30, 11/30 and 9/30 matched situations. K=5 has the highest observed success count, while its 27.7 s mean compute is 4.7 times lower than the 128.8 s at K=1.",
+    "Relative to K=10, paired success differences are -3.3 percentage points for K=1 and +6.7 for K=5, with exploratory 95% intervals [-20.0, 13.3] and [-10.0, 20.0]. These intervals include zero: the shorter intervals cannot be reliably ranked or declared equivalent. K=10 uses 15.5 s mean compute.",
+    "K=25 and K=50 have lower aggregate success. Their paired differences from K=10 are -43.3 and -50.0 percentage points, with exploratory 95% intervals [-60.0, -26.7] and [-70.0, -30.0]. Individual outcomes remain task- and state-dependent, so longer intervals can still succeed where another setting fails.",
+    "Reviewed videos show an unrecovered can drop, a repeated bowl approach that misses placement, and a successful drawer pull with fewer calls at K=50. Two state-2 drawer failures open the upper drawer instead of the middle one. Visible redirection after replanning does not guarantee recovery; contact-mechanism explanations remain hypotheses."
+  ],
+  "cases": [
+    {
+      "title": "A lost can is not recovered",
+      "episode_ids": [
+        "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k10",
+        "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k25"
+      ],
+      "observation": "K=10 retains the can during transport and reaches native success at step 139. K=25 lifts it, then loses it around steps 82-86 outside the basket. The hand continues toward the basket after replans at 100 and 125; it does not retrieve the can before the step-280 timeout.",
+      "hypothesis": "Slippage or contact geometry may explain the loss. A longer interval may leave fewer opportunities to adjust the grasp, but the recordings do not isolate the cause of the drop.",
+      "evidence": "Object/state3/seed11; both videos and review-object.json. Dense frames 76-94; gripper commands stay positive (0.987-1.000), so the loss is not a commanded release."
+    },
+    {
+      "title": "A second approach still misses placement",
+      "episode_ids": [
+        "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s3__r11__k1",
+        "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s3__r11__k50",
+        "libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__s3__r11__k10"
+      ],
+      "observation": "K=50 withdraws at steps 80-100, returns at 105-125 after replan 100, transports the bowl at 130-160 and opens near the plate rim around 160. Placement remains incomplete at 280. K=1 succeeds at 80 using 80 calls; K=10 also succeeds at 75 using only 8 calls.",
+      "hypothesis": "A new plan can redirect an approach without ensuring accurate placement. The K=1 versus K=10 contrast shows that extra updates did not improve this binary outcome; it does not establish general equivalence.",
+      "evidence": "Spatial/state3/seed11; videos, steps/chunks and review-bowl.json. Replan 100 command jump 0.742472. Initial K=50 contact counts remain unknown."
+    },
+    {
+      "title": "A longer plan opens the drawer sooner",
+      "episode_ids": [
+        "libero_goal__open_the_middle_drawer_of_the_cabinet__s3__r11__k5",
+        "libero_goal__open_the_middle_drawer_of_the_cabinet__s3__r11__k50"
+      ],
+      "observation": "Both episodes succeed. At K=5, the hand remains near the handle around steps 90-215 with little opening, then finishes at 252 after 51 calls. K=50 visibly pulls around 100-127 and succeeds at 127 after 3 calls. Measured compute time is 44.7 versus 4.9 seconds.",
+      "hypothesis": "A longer action sequence may sustain an effective pull in this state. Contact forces are not logged, so the delay at K=5 cannot be attributed uniquely to replanning.",
+      "evidence": "Goal/state3/seed11; matched initial-state and observation hashes; both videos, summary logs and review-drawer.json. Open-finger hooking is not a missed closing grasp."
+    }
+  ],
+  "conclusion": "Replanning frequency changes computational cost and task behavior. K=5 and K=10 offer useful observed cost-success compromises in this setup. Updating after every action increases compute without exceeding the success count at K=5. Longer intervals reduce model calls but lose aggregate success, with exceptions in individual situations. No universal optimum follows from three tasks, ten initial states per task and one policy seed. Native success, assistant-only event annotation and synchronous simulation limit claims about stable placement, causal correction and real-time robots."
+}

@@ -1,0 +1,10 @@
+method,observed_nondominated,dominated_by_observed_means
+fixed_1,False,"fixed_5,fixed_10,dvac_cap_5,dvac_cap_10,dvac_cap_25,dvac_cap_50"
+fixed_5,True,
+fixed_10,False,"dvac_cap_25,dvac_cap_50"
+fixed_25,False,dvac_cap_50
+fixed_50,True,
+dvac_cap_5,True,
+dvac_cap_10,False,"dvac_cap_25,dvac_cap_50"
+dvac_cap_25,False,dvac_cap_50
+dvac_cap_50,True,

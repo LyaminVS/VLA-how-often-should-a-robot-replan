@@ -1,0 +1,17 @@
+{
+  "statistics_sha256": "1d3d77bdb4bb85fc5772bc7031fc601a7e432f43655ee612f4511d9be6f2e576",
+  "generator_sha256": "2c8e801a62caf9dbae3463f17e17558b9e580b243a9372c986d08c0bee873a23",
+  "files": {
+    "study-by-task.png": "1f2419ce91255d9cfb91850d0e7264e852e1f7c5dc32ba3af1a00afb77edfda4",
+    "study-by-task.pdf": "d1def32cf2f1933b6fd59939fcc8e9a338a12c4a947336b64f191dd92216d918",
+    "study-cost.png": "ced224c188b0f36820c787e3faf959df23c9ac5da30b4489de58d712f3ba2fa6",
+    "study-cost.pdf": "ea0f2f62c1b7db39c969421c8b6d5b2ef97f171faf2ccffd723bc468b77a2914"
+  },
+  "primary_phase": "combined",
+  "combined_analysis_role": "main_descriptive",
+  "episodes": {
+    "pilot": 30,
+    "validation": 120,
+    "combined": 150
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s20__r101__k10__motion_slow",
+  "config_fingerprint": "d28a5fdf27d7d5dde18ea47dcc94ccdae5080e382eb040e835cded01a13d88c2",
+  "sources_sha256": "5206bab130e97e924a4af41c2a33732b05a5e0aa60d022d5f1cdc568a1d56e42",
+  "files": {
+    "summary.json": "609fd67b9d8311e4add60e6378470b5041a36b55d2512cd9ad908dab12647000",
+    "steps.jsonl": "23c6349f8b78c884b7fea8c877a75032d141550f545980beda6db2a148a3a722",
+    "chunks.jsonl": "a51196ac00fa6772541360056e3d54513fd1a291517a30647975ca2a30aef606",
+    "video.mp4": "bc1be5325dfe1c1a5338ea04fe0d07ca970b9352e1cd4727d13a46166969b38a"
+  }
+}

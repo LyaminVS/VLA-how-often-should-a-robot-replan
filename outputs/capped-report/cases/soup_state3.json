@@ -1,0 +1,73 @@
+{
+  "title": "Transport continues without the can",
+  "pair_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket/state3/seed11",
+  "episode_ids": [
+    "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k10",
+    "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__dvac_cap_10",
+    "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__dvac_cap_50"
+  ],
+  "figure": "outputs/capped-report/cases/soup_state3.png",
+  "figure_sha256": "735703533dd046e2e1fee2ca0bc3db570548b1c1d416cc29bba019b4f8663cbd",
+  "observation": "At steps 59-100, fixed K=10 and cap 10 carry the can above the table; with cap 50 it stays at its starting location while the empty gripper moves toward the basket. Fixed K=10 and cap 10 finish at steps 139 and 143. Cap 50 does not recover in the inspected frames and times out at step 280.",
+  "hypothesis": "The cap-50 sequence is consistent with an unsuccessful pickup followed by continued transport motion. The images do not identify the contact error or show that a particular extra observation would have prevented it.",
+  "reviewer": "assistant",
+  "human_review": false,
+  "selection_reasons": [
+    "cap10_success_cap50_failure"
+  ],
+  "posthoc_outcome_selected": true,
+  "frame_selection_reason": "The can is visible below the cap-10 gripper, while it remains on the table under cap 50, before either episode has ended.",
+  "source_frames": [
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__dvac_cap_10",
+      "method": "dvac_cap_10",
+      "shared_step": 80,
+      "source_frame_index": 80,
+      "source_time_s": 4.0,
+      "held_terminal_frame": false,
+      "source_video": "/home/kaban/vla-replan/outputs/capped/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__dvac_cap_10/video.mp4",
+      "source_video_sha256": "dd8467050371622828cc7fc5b4d9fb0ba7502845e438de7dba79f8af0dbf6094",
+      "decoded_frame_rgb_sha256": "666e03c0cfbf90ab61bdcb604362881257ec97788e0e6f898136779affb38d0f",
+      "source_summary_sha256": "83b8783831cd81740756966fcd334ead82dc2893e3bcf69888c1b4a4ff31620f",
+      "source_steps_sha256": "0fdd8be3fec48d2beff7994e4c5c1770a1313af3169b1c138ac41f5b1a108319",
+      "source_chunks_sha256": "673f95eb2d4803b9d3c14b4560a26ab19310e11c36cb5cb81b1b3b972d97167e",
+      "chosen_k": 10
+    },
+    {
+      "episode_id": "libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__dvac_cap_50",
+      "method": "dvac_cap_50",
+      "shared_step": 80,
+      "source_frame_index": 80,
+      "source_time_s": 4.0,
+      "held_terminal_frame": false,
+      "source_video": "/home/kaban/vla-replan/outputs/capped/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__dvac_cap_50/video.mp4",
+      "source_video_sha256": "0a164b4dc7932d548248bd19bc7f6b6798d417e5fee78967d6edb7d2314878e2",
+      "decoded_frame_rgb_sha256": "177014e6236947e807a5e94b211c50bc0f7a3bff0cb2e6933daebf405aa6500d",
+      "source_summary_sha256": "f0f3c5d31abee5448ded90e865c106f834f3d4506602e2c516b76d2ab5008e8e",
+      "source_steps_sha256": "356b647689ce26e03ebac26c2216579840c47bc83eb5a66bc32f79b8c882ac95",
+      "source_chunks_sha256": "0acfdcc7da04bbfa9d03fe04bff82e33967585809256f754b677408353a1d43d",
+      "chosen_k": 50
+    }
+  ],
+  "source_input_sha256": {
+    "/home/kaban/vla-replan/outputs/validation/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k10/summary.json": "eeff086a1a555fb6943454388355521ab946d513ab85744e4ed8cbd112a4e8c3",
+    "/home/kaban/vla-replan/outputs/validation/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k10/steps.jsonl": "5da37914550d1693fab7724cf5d7fce639bc01ffb126a035920b94b4dac742fd",
+    "/home/kaban/vla-replan/outputs/validation/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k10/chunks.jsonl": "eb62ec405d11d9569be43471632283089f5ddf02484d84b5b9743c33358d21ba",
+    "/home/kaban/vla-replan/outputs/validation/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__k10/video.mp4": "9761bc320aea2e088084ee75e6e13927b87d799557042f855e12b9c6ec01c963",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__dvac_cap_10/summary.json": "83b8783831cd81740756966fcd334ead82dc2893e3bcf69888c1b4a4ff31620f",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__dvac_cap_10/steps.jsonl": "0fdd8be3fec48d2beff7994e4c5c1770a1313af3169b1c138ac41f5b1a108319",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__dvac_cap_10/chunks.jsonl": "673f95eb2d4803b9d3c14b4560a26ab19310e11c36cb5cb81b1b3b972d97167e",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__dvac_cap_10/video.mp4": "dd8467050371622828cc7fc5b4d9fb0ba7502845e438de7dba79f8af0dbf6094",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__dvac_cap_50/summary.json": "f0f3c5d31abee5448ded90e865c106f834f3d4506602e2c516b76d2ab5008e8e",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__dvac_cap_50/steps.jsonl": "356b647689ce26e03ebac26c2216579840c47bc83eb5a66bc32f79b8c882ac95",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__dvac_cap_50/chunks.jsonl": "0acfdcc7da04bbfa9d03fe04bff82e33967585809256f754b677408353a1d43d",
+    "/home/kaban/vla-replan/outputs/capped/episodes/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__s3__r11__dvac_cap_50/video.mp4": "0a164b4dc7932d548248bd19bc7f6b6798d417e5fee78967d6edb7d2314878e2"
+  },
+  "all_270_verified_before_publish": true,
+  "verification_manifest_sha256": "e3620ff2e58f6584e9a892971b25dbef42d3eb9d023ea8bb82e05e022ce1b333",
+  "verification_json_sha256": "e28d2fe53e7d629d26d9ce5e9730e8170ec202ec11d837f7f6e6de5adb07bfc6",
+  "final_review_json_sha256": "449d98e0996be5d53b67d96c1553ef381b8fb31320f01887c2dc991151bae58c",
+  "origin_review_path": "outputs/capped-report/preview/assistant-review.json",
+  "origin_review_sha256": "0ead33a2fd9310369a6c3955f884f191ed2b4cb0a9531c573bfbb399590bdf78",
+  "origin_illustration_path": "outputs/capped-report/preview/preview_soup_state3_illustration.png"
+}
