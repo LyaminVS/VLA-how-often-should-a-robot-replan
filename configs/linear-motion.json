@@ -1,0 +1,71 @@
+{
+  "base": {
+    "model_id": "HuggingFaceVLA/smolvla_libero",
+    "model_revision": "6721902bc4d61e50a3bfdb11dfb4cb626f05d102",
+    "backbone_id": "HuggingFaceTB/SmolVLM2-500M-Instruct",
+    "backbone_revision": "7b375e1b73b11138ff12fe22c8f2822d8fe03467",
+    "tasks": [
+      {
+        "suite": "libero_object",
+        "name": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+        "max_steps": 280
+      }
+    ],
+    "intervals": [
+      1,
+      5,
+      10,
+      25,
+      50
+    ],
+    "initial_states": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "policy_seeds": [
+      11
+    ],
+    "order_seed": 20261025,
+    "chunk_size": 50,
+    "num_denoising_steps": 10,
+    "control_hz": 20,
+    "settle_steps": 10,
+    "precision": "fp32",
+    "record_video": true,
+    "warmup_calls": 2,
+    "name": "continuous-one-way-motion"
+  },
+  "order_seed": 20261025,
+  "intervention": "Idealized conveyor-like drive: prescribe only free-joint world-x velocity before each physics substep, smoothstep ramp 0.5 to 1.0s. No position writes, no return. Other five free-joint velocities and all contacts remain physical. Permanently release drive on simultaneous contact with both fingerpad groups; this proxy does not establish stable lifted grasp. Static control has no velocity or position writes.",
+  "primary": "Task success versus execution interval K, five signed drive speeds, eight identical initial states per point.",
+  "secondary": [
+    "Policy calls including failed episodes",
+    "Measured actual can velocity and distance; friction makes actual velocity lower than imposed pre-substep command",
+    "First unilateral finger contact vs bilateral grasp proxy; latched release",
+    "Paired success differences vs free static baseline"
+  ],
+  "limits": [
+    "One task, one policy seed and eight initial-state clusters; exploratory uncertainty is large",
+    "Idealized driven velocity disturbance, not a real conveyor or calibrated external force",
+    "The prescribed velocity is not the realized speed after friction and contact; report both",
+    "Drive release uses bilateral fingerpad contact as grasp proxy, not proof of secure grasp",
+    "Simulator pauses during inference; not real-time deployment",
+    "Policies can differ before motion onset; evaluates whole closed-loop execution schemes"
+  ],
+  "speeds_cm_s": [
+    -2,
+    -1.5,
+    0,
+    1.5,
+    2
+  ],
+  "axis": "world_x",
+  "onset_s": 0.5,
+  "ramp_s": 0.5
+}

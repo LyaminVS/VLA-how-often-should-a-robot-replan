@@ -1,0 +1,71 @@
+{
+  "base": {
+    "model_id": "HuggingFaceVLA/smolvla_libero",
+    "model_revision": "6721902bc4d61e50a3bfdb11dfb4cb626f05d102",
+    "backbone_id": "HuggingFaceTB/SmolVLM2-500M-Instruct",
+    "backbone_revision": "7b375e1b73b11138ff12fe22c8f2822d8fe03467",
+    "tasks": [
+      {
+        "suite": "libero_object",
+        "name": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+        "max_steps": 280
+      }
+    ],
+    "intervals": [
+      5,
+      10,
+      50
+    ],
+    "initial_states": [
+      17,
+      18,
+      19,
+      20
+    ],
+    "policy_seeds": [
+      11
+    ],
+    "order_seed": 20261024,
+    "chunk_size": 50,
+    "num_denoising_steps": 10,
+    "control_hz": 20,
+    "settle_steps": 10,
+    "precision": "fp32",
+    "record_video": true,
+    "warmup_calls": 2,
+    "name": "paired-amplitude-sweep"
+  },
+  "amplitudes_cm": [
+    4
+  ],
+  "period_s": 4,
+  "order_seed": 20261024,
+  "force_controller": {
+    "start_delay_s": 0.5,
+    "ramp_s": 1.0,
+    "kp_n_per_m": 100.0,
+    "kd_ns_per_m": 0.5,
+    "max_force_n": 1.0,
+    "force_application_offset_z_m": -0.03,
+    "force_axis": "x",
+    "stop_on_contact": true
+  },
+  "analysis": {
+    "primary": "Exploratory phase-sensitivity follow-up: same four starts and K5/10/50 at4cm, compare with zero-phase grid",
+    "secondary": [
+      "actual precontact object displacement",
+      "first finger contact time",
+      "command variation full and first60",
+      "tracking error",
+      "no pose writes after contact"
+    ],
+    "physical_clusters": 4,
+    "policy_seeds_per_start": 1,
+    "interpretation": "exploratory paired stress test; not a power-calibrated benchmark",
+    "no_pooling_with_prior_cuda_data": true
+  },
+  "intervention": "kinematic trajectory at4cm,period4s,phase+pi/2; released at first finger contact",
+  "supersedes": "4 completed force-controller pilot episodes in outputs/vla_perturbation_sweep, excluded from this grid; changed by user request for visible actual object motion",
+  "trajectory_phase_rad": 1.5707963267948966,
+  "registration_note": "Chosen after inspecting zero-phase trajectories: can returns near starting x around2.5s, near contact. All12shifted-phase outcomes will be reported, not pooled with primary60."
+}

@@ -1,0 +1,665 @@
+{
+  "base": {
+    "model_id": "HuggingFaceVLA/smolvla_libero",
+    "model_revision": "6721902bc4d61e50a3bfdb11dfb4cb626f05d102",
+    "backbone_id": "HuggingFaceTB/SmolVLM2-500M-Instruct",
+    "backbone_revision": "7b375e1b73b11138ff12fe22c8f2822d8fe03467",
+    "tasks": [
+      {
+        "suite": "libero_object",
+        "name": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+        "max_steps": 280
+      }
+    ],
+    "intervals": [
+      1,
+      5,
+      10,
+      25,
+      50
+    ],
+    "initial_states": [
+      30,
+      31,
+      32
+    ],
+    "policy_seeds": [
+      11
+    ],
+    "order_seed": 20261025,
+    "chunk_size": 50,
+    "num_denoising_steps": 10,
+    "control_hz": 20,
+    "settle_steps": 10,
+    "precision": "fp32",
+    "record_video": true,
+    "warmup_calls": 2,
+    "name": "pilot-frozen-planar-confirmation"
+  },
+  "order_seed": 2026102506,
+  "positions_cm": [
+    [
+      -1.5,
+      0
+    ],
+    [
+      1.5,
+      1.5
+    ]
+  ],
+  "motions": [
+    {
+      "id": "static",
+      "label": "Free static",
+      "axis": 0,
+      "speed_cm_s": 0
+    },
+    {
+      "id": "x_positive",
+      "label": "X positive",
+      "axis": 0,
+      "speed_cm_s": 1.5
+    },
+    {
+      "id": "x_negative",
+      "label": "X negative",
+      "axis": 0,
+      "speed_cm_s": -1.5
+    },
+    {
+      "id": "y_positive",
+      "label": "Y positive",
+      "axis": 1,
+      "speed_cm_s": 1.5
+    },
+    {
+      "id": "y_negative",
+      "label": "Y negative",
+      "axis": 1,
+      "speed_cm_s": -1.5
+    }
+  ],
+  "noise_mode": "time_indexed",
+  "pilot_freeze": {
+    "frozen_utc": "2026-10-25T02:59:42.241451+00:00",
+    "selection_rule": "Baseline-viable actual placements with different world X and Y; one uniform speed yielding successes and failures at K10/state0; no selection on any ranking of K or on heldout policy outcomes",
+    "positions_cm": [
+      [
+        -1.5,
+        0
+      ],
+      [
+        1.5,
+        1.5
+      ]
+    ],
+    "speed_cm_s": 1.5,
+    "pilot_selected_successes": 6,
+    "pilot_selected_moving_episodes": 8,
+    "pilots": [
+      {
+        "source": "outputs/vla_planar_pilot/case_00/summary.json",
+        "sha256": "7c05684671fdbe13c5f74c2af1bd7ab95f5a43b2a19336278104355b39927b30",
+        "offset_cm": [
+          -3,
+          -3
+        ],
+        "axis": 0,
+        "drive_cm_s": 0,
+        "k": 10,
+        "success": false
+      },
+      {
+        "source": "outputs/vla_planar_pilot/case_01/summary.json",
+        "sha256": "f163cc77006fa3ca45ca104753fa47051e9409f6ae5a9445a85221d17babbba8",
+        "offset_cm": [
+          -3,
+          -3
+        ],
+        "axis": 0,
+        "drive_cm_s": 1.5,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot/case_02/summary.json",
+        "sha256": "ed10d6a43d68b1153f1c6912c712de4e14b7a5b12aea15eb1a88cf7078c53c10",
+        "offset_cm": [
+          -3,
+          -3
+        ],
+        "axis": 1,
+        "drive_cm_s": 1.5,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot/case_03/summary.json",
+        "sha256": "393814ee03a5acc1fc3e883ac951af4ae7a44ac892378fff7354609dffb34fbd",
+        "offset_cm": [
+          -3,
+          -3
+        ],
+        "axis": 0,
+        "drive_cm_s": -1.5,
+        "k": 10,
+        "success": false
+      },
+      {
+        "source": "outputs/vla_planar_pilot/case_04/summary.json",
+        "sha256": "db959cf0078e4fecf3a93809586f6dc688764e98f72420754b19814c124b655b",
+        "offset_cm": [
+          -3,
+          -3
+        ],
+        "axis": 1,
+        "drive_cm_s": -1.5,
+        "k": 10,
+        "success": false
+      },
+      {
+        "source": "outputs/vla_planar_pilot/case_05/summary.json",
+        "sha256": "30a8a1b229b8ebb36ec18558cbc59ab0ce70d08a06f77d9e452aa68b084c9d47",
+        "offset_cm": [
+          3,
+          3
+        ],
+        "axis": 0,
+        "drive_cm_s": 0,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot/case_06/summary.json",
+        "sha256": "8c19fa4537d73f41f5ed5f72831c3173b2a0a164ec9db4402366ae42f9ba0c5f",
+        "offset_cm": [
+          3,
+          3
+        ],
+        "axis": 0,
+        "drive_cm_s": 1.5,
+        "k": 10,
+        "success": false
+      },
+      {
+        "source": "outputs/vla_planar_pilot/case_07/summary.json",
+        "sha256": "81abea2204a92add41080ea8d343b978d3fcf009adb73442dc79a34bd793a110",
+        "offset_cm": [
+          3,
+          3
+        ],
+        "axis": 1,
+        "drive_cm_s": 1.5,
+        "k": 10,
+        "success": false
+      },
+      {
+        "source": "outputs/vla_planar_pilot/case_08/summary.json",
+        "sha256": "28dfaa821b805513e82e022a75d5c633a4dd027456d6c9107918cf8f0e1c70cc",
+        "offset_cm": [
+          3,
+          3
+        ],
+        "axis": 0,
+        "drive_cm_s": -1.5,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot/case_09/summary.json",
+        "sha256": "0e0475c1e91d07e9521df83493fcff55b68c1b92d87f54631bcd2e9ee46bc2cf",
+        "offset_cm": [
+          3,
+          3
+        ],
+        "axis": 1,
+        "drive_cm_s": -1.5,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round2/case_00/summary.json",
+        "sha256": "e03fa5db9e41b328abac55c044beb83e5805a06832bd68fedc80c7b9c08edc7b",
+        "offset_cm": [
+          -1.5,
+          -1.5
+        ],
+        "axis": 0,
+        "drive_cm_s": 0,
+        "k": 10,
+        "success": false
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round2/case_01/summary.json",
+        "sha256": "9dd44e53dab9aa735efa26feaa95f9d3cdc482f05a0773f88a7211ed57699e6a",
+        "offset_cm": [
+          1.5,
+          1.5
+        ],
+        "axis": 0,
+        "drive_cm_s": 0,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round2/case_02/summary.json",
+        "sha256": "a38ba60d987f4fc623e397a4a8af28f80be7ac5eee4eaa97785d090408ec34f2",
+        "offset_cm": [
+          1.5,
+          1.5
+        ],
+        "axis": 0,
+        "drive_cm_s": 0.5,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round2/case_03/summary.json",
+        "sha256": "4d912673165ea3e2cc8f247cc10b102c89b8b092e0a92dab672176d12195f0b6",
+        "offset_cm": [
+          1.5,
+          1.5
+        ],
+        "axis": 1,
+        "drive_cm_s": 0.5,
+        "k": 10,
+        "success": false
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round2/case_04/summary.json",
+        "sha256": "4f5865b9538583eba8bee19fe0353803e4bd2cf04089f7b1b012851d1cdf7b75",
+        "offset_cm": [
+          1.5,
+          1.5
+        ],
+        "axis": 0,
+        "drive_cm_s": -0.5,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round2/case_05/summary.json",
+        "sha256": "43f419d188ffd6b40f58336a3012cd4e100918f8b2383e55149ae7747c5db9bf",
+        "offset_cm": [
+          1.5,
+          1.5
+        ],
+        "axis": 1,
+        "drive_cm_s": -0.5,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round2/case_06/summary.json",
+        "sha256": "15becb895938116b12e1ce4e8b77881cfc1ffd113f98b23046ec887d77a26ae1",
+        "offset_cm": [
+          1.5,
+          1.5
+        ],
+        "axis": 0,
+        "drive_cm_s": 1.0,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round2/case_07/summary.json",
+        "sha256": "e17256fee2c7bc9b0eb8af41b864e4115a51b42494f9c59cae21314801aea8e6",
+        "offset_cm": [
+          1.5,
+          1.5
+        ],
+        "axis": 1,
+        "drive_cm_s": 1.0,
+        "k": 10,
+        "success": false
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round2/case_08/summary.json",
+        "sha256": "1344a58739ac4f2b05a078d4b362e90e46edd8e5fb04a8df7a71738e298f1b77",
+        "offset_cm": [
+          1.5,
+          1.5
+        ],
+        "axis": 0,
+        "drive_cm_s": -1.0,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round2/case_09/summary.json",
+        "sha256": "5009975c79a5d9de185230077bd3c923cc03f83d7e7c10ab31a5f9017add20e9",
+        "offset_cm": [
+          1.5,
+          1.5
+        ],
+        "axis": 1,
+        "drive_cm_s": -1.0,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round2/case_10/summary.json",
+        "sha256": "3876f7470c7f1db16d769ff78b8f4a100e3a4c0706b9e1346851196b9450e0ec",
+        "offset_cm": [
+          1.5,
+          1.5
+        ],
+        "axis": 0,
+        "drive_cm_s": 1.5,
+        "k": 10,
+        "success": false
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round2/case_11/summary.json",
+        "sha256": "bdea5695103a4709a98ed143fb44fbcfa427933a916fb481fbd16a9bf2d109ae",
+        "offset_cm": [
+          1.5,
+          1.5
+        ],
+        "axis": 1,
+        "drive_cm_s": 1.5,
+        "k": 10,
+        "success": false
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round2/case_12/summary.json",
+        "sha256": "a956c7ba7e3be2224b4da4678e3e2d5613b6ffb6c4db27160fe2d332c7b27048",
+        "offset_cm": [
+          1.5,
+          1.5
+        ],
+        "axis": 0,
+        "drive_cm_s": -1.5,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round2/case_13/summary.json",
+        "sha256": "394e65bfb69589d22a0ddbe4cce49fe0648f6290d0f6c74b307373f14d16c773",
+        "offset_cm": [
+          1.5,
+          1.5
+        ],
+        "axis": 1,
+        "drive_cm_s": -1.5,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round3/case_00/summary.json",
+        "sha256": "431bac9f1a4eae10fbc8347fbdf5efbbb5fafddac894febc9b147844f36ca7b3",
+        "offset_cm": [
+          -1.5,
+          0
+        ],
+        "axis": 0,
+        "drive_cm_s": 0,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round3/case_01/summary.json",
+        "sha256": "d50b0d3fb0a102ee1c180c8358d52435e28f351753b92a001eb8b0431915bd48",
+        "offset_cm": [
+          1.5,
+          0
+        ],
+        "axis": 0,
+        "drive_cm_s": 0,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round3/case_02/summary.json",
+        "sha256": "994721269b28c2444d2ee1ea634661767d1e43c2744d81d8f003bccbb79b3f1d",
+        "offset_cm": [
+          0,
+          -1.5
+        ],
+        "axis": 0,
+        "drive_cm_s": 0,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round3/case_03/summary.json",
+        "sha256": "0dce7b59860f3a0b1b22dfd3ac9d43c72602056210fbc92fe6670f0cfe3e51df",
+        "offset_cm": [
+          0,
+          1.5
+        ],
+        "axis": 0,
+        "drive_cm_s": 0,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round4/case_00/summary.json",
+        "sha256": "9e57ae779a16627bad68759677ee70ae0199f10361e4e487d2649ea3c69956d7",
+        "offset_cm": [
+          -1.5,
+          0
+        ],
+        "axis": 0,
+        "drive_cm_s": 1.0,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round4/case_01/summary.json",
+        "sha256": "a9f98dc2dffaa3eab654879740fc63b213175f44dd60747f2ac929b6f82d10cd",
+        "offset_cm": [
+          -1.5,
+          0
+        ],
+        "axis": 0,
+        "drive_cm_s": -1.0,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round4/case_02/summary.json",
+        "sha256": "0f5e583efafce65cba68abc02a159d3f90444673c7dd0cd07bcc9aa10220f5a2",
+        "offset_cm": [
+          -1.5,
+          0
+        ],
+        "axis": 1,
+        "drive_cm_s": 1.0,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round4/case_03/summary.json",
+        "sha256": "89005cade993661105dcd5b0a08ade0246c40ed7fa017b1c61ec9f4f72b30e4a",
+        "offset_cm": [
+          -1.5,
+          0
+        ],
+        "axis": 1,
+        "drive_cm_s": -1.0,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round4/case_04/summary.json",
+        "sha256": "b03df22cd6bb35ba6e3ed68bf07c277da032200d9e3bf282022955f65f086510",
+        "offset_cm": [
+          0,
+          1.5
+        ],
+        "axis": 0,
+        "drive_cm_s": 1.0,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round4/case_05/summary.json",
+        "sha256": "b5b06b73141d06bfa4a7ca130a89740ade5fc535045de41481875ad8e8fe138f",
+        "offset_cm": [
+          0,
+          1.5
+        ],
+        "axis": 0,
+        "drive_cm_s": -1.0,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round4/case_06/summary.json",
+        "sha256": "bcc3a2edabaf988d16bb84e48cb4b820d9b4c665fcace00f0436068cb21444c2",
+        "offset_cm": [
+          0,
+          1.5
+        ],
+        "axis": 1,
+        "drive_cm_s": 1.0,
+        "k": 10,
+        "success": false
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round4/case_07/summary.json",
+        "sha256": "8c1f30df3683404c25b779a89f3f5ba6e4b174aebe41961ca027c216097b3353",
+        "offset_cm": [
+          0,
+          1.5
+        ],
+        "axis": 1,
+        "drive_cm_s": -1.0,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round4/case_08/summary.json",
+        "sha256": "9777d0d8b9c3b7c5e4f9a7af575fb918c1f9240a056bd4d8beedcf897c3ba6cb",
+        "offset_cm": [
+          -1.5,
+          0
+        ],
+        "axis": 0,
+        "drive_cm_s": 1.0,
+        "k": 1,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round4/case_09/summary.json",
+        "sha256": "c13dbab3e0dcf0d48a00dcea1e60ce50487f3b6f0ab10500071920c4968928eb",
+        "offset_cm": [
+          -1.5,
+          0
+        ],
+        "axis": 0,
+        "drive_cm_s": 1.0,
+        "k": 50,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round4/case_10/summary.json",
+        "sha256": "bd1b98bf36105c38b4f9e9afd4beb0ffc26a12b5a403e1e29bb18ce8cca8888e",
+        "offset_cm": [
+          0,
+          1.5
+        ],
+        "axis": 1,
+        "drive_cm_s": 1.0,
+        "k": 1,
+        "success": false
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round4/case_11/summary.json",
+        "sha256": "af6ffd2d4951e84aaafd3c7fe8f405dd573ad463d0e6def076a5d1a7dd41ca35",
+        "offset_cm": [
+          0,
+          1.5
+        ],
+        "axis": 1,
+        "drive_cm_s": 1.0,
+        "k": 50,
+        "success": false
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round5/case_00/summary.json",
+        "sha256": "881e29790b8381e2a973dd51a8f41e2e18a79d9d66d4fa832ed2b5846bdd69e6",
+        "offset_cm": [
+          -1.5,
+          0
+        ],
+        "axis": 0,
+        "drive_cm_s": 1.5,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round5/case_01/summary.json",
+        "sha256": "4674b3d8b3656669a990d338664fddae52618e9ac4aa6e3e0466732252201b09",
+        "offset_cm": [
+          -1.5,
+          0
+        ],
+        "axis": 0,
+        "drive_cm_s": -1.5,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round5/case_02/summary.json",
+        "sha256": "43e8fcb6e589da2c485445283c7efb8abd38d7a02f368cc9a33c1e3039759a19",
+        "offset_cm": [
+          -1.5,
+          0
+        ],
+        "axis": 1,
+        "drive_cm_s": 1.5,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round5/case_03/summary.json",
+        "sha256": "f1051394cd2c9d0a42bc1295c3e06c759d3aba67d200af7a3715b0b8cdab30b7",
+        "offset_cm": [
+          -1.5,
+          0
+        ],
+        "axis": 1,
+        "drive_cm_s": -1.5,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round5/case_04/summary.json",
+        "sha256": "f10e7b8210718f070f66bf9e743e03e9bc08aa8f779010b63480f7bfb6200506",
+        "offset_cm": [
+          0,
+          1.5
+        ],
+        "axis": 0,
+        "drive_cm_s": 1.5,
+        "k": 10,
+        "success": true
+      },
+      {
+        "source": "outputs/vla_planar_pilot_round5/case_05/summary.json",
+        "sha256": "8f236207abd0c2262ef205d60c9a44a14c20f44435d9ea81b6b599fde4d0bc09",
+        "offset_cm": [
+          0,
+          1.5
+        ],
+        "axis": 0,
+        "drive_cm_s": -1.5,
+        "k": 10,
+        "success": true
+      }
+    ],
+    "noise_decision": "Preserve standard time-indexed fresh latent sampling, independent of pilot success. Constant-noise diagnostic fails too and can change baseline performance; it is not silently substituted as a fix.",
+    "noise_diagnostic_summary_sha256": "3b2cff3df6d548ef5f82950b15be6fa26b8b7ebf50d109758d066a8a274b35bd"
+  },
+  "limits": [
+    "One task, one policy seed, three robot-state clusters crossed with two actual can placements: six paired scenarios, not 150 independent starts.",
+    "Pilot parameters selected using state0 only, then frozen before all-K confirmation on states30..32.",
+    "Time-indexed latent resampling: K changes feedback and resampling frequency; this is an end-to-end execution comparison, not a pure feedback-delay intervention.",
+    "Prescribed velocity is idealized, not a real conveyor force. Actual free speed is about 0.914cm/s for drive1.5cm/s.",
+    "Release at bilateral fingerpad contact is a grasp proxy, not proof of stable lifting.",
+    "Simulator pauses during inference, so simulation interval is not wall-clock latency.",
+    "Old single-shift, sinusoidal and one-axis200 data are diagnostics and are not pooled with these150."
+  ]
+}
