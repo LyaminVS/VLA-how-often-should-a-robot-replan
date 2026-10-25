@@ -1,0 +1,15 @@
+{
+  "source_sha256": "eb164137a9efdaa89e1e8fcca4ae86ae2f37a6ba97b5a5b2c223f84cb9101a6a",
+  "outputs": {
+    "success-vs-calls-simple.png": "10fde3cebf646460cd0f8b59112784810d6098a55366da9b1176c43261f60372",
+    "success-vs-calls-simple.svg": "24495cf6d7b8045416c3cf404262c199ba83245290c8feefe61c0ee1b05392a2",
+    "success-vs-calls-simple.pdf": "5954cef42af5eee054a7209efda3b35f8f66abd7b280c44f682a9089c5ab9054"
+  },
+  "line_semantics": "Solid segments connect settings, including the analytically shared K=1/C=1 endpoint; no fitted curve.",
+  "shared_endpoint": {
+    "label": "K=1 = C=1",
+    "source_method": "fixed_1",
+    "independent_c1_episodes": 0,
+    "reason": "Both execute exactly one action then replan with the same underlying policy; runtime overhead may differ."
+  }
+}
