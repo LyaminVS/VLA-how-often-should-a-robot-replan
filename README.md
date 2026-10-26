@@ -256,7 +256,6 @@ the success counts.
 ## Implementation and evidence
 
 - [Main comparison report](output/pdf/vla-capped-replanning-report.pdf)
-- [Detailed results](outputs/capped-report/report.md)
 - [Experimental protocol](docs/capped-protocol.md)
 - [Reproduction guide](docs/capped-reproduction.md)
 - [Verification record](outputs/capped-report/verification.json)
