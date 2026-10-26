@@ -5,12 +5,24 @@ its actions. A pretrained **SmolVLA** policy, running through **LeRobot**, contr
 robot in **LIBERO / MuJoCo** from two camera images, robot state, and a language
 instruction. No model training is performed.
 
-The main comparison contains **270 matched episodes and nine methods**: five fixed
-execution intervals and four variants of denoising-variance adaptive chunking
-(**DVAC**). It measures task completion and model calls, and uses videos and action
-logs to examine corrections and failure behavior.
+**Research question:** How does replanning frequency change task success and
+model-call cost, and does the preferred interval change when execution becomes
+less predictable?
 
-**[Full report](output/pdf/vla-capped-replanning-report.pdf)** ·
+The project compares fixed execution intervals with denoising-variance adaptive
+chunking (**DVAC**) under three conditions:
+
+- **Normal execution:** 270 matched episodes across nine scheduling rules.
+- **Moving target:** 150 episodes comparing five intervals under a static control
+  and movement in four directions.
+- **Random command dropout:** translation commands are suppressed with probability
+  p, testing whether unreliable execution favors more frequent replanning.
+
+The main finding is that **the useful interval depends on the task, execution
+conditions, and the model-call budget**. Replanning after every action is expensive
+and does not consistently produce the highest success rate.
+
+**[Main comparison report](output/pdf/vla-capped-replanning-report.pdf)** ·
 **[Comparison demo](outputs/capped-report/demo.mp4)** ·
 **[Results and tables](outputs/capped-report/report.md)** ·
 **[Protocol](docs/capped-protocol.md)** ·
@@ -66,14 +78,12 @@ normalization, precision, prediction horizon, solver, control frequency, and epi
 limits are shared. Initial simulator states, observations, and complete first action
 predictions match exactly across methods.
 
-The comparison reuses 150 verified fixed-interval controls and adds 120 adaptive
-episodes on the same starts. All 270 episodes passed independent trace and video
-verification. Historical controls used different CPU threading and did not capture
-FM diagnostics, so fixed-versus-adaptive computational comparisons use **model calls**.
-Timing is reported separately among the four adaptive caps, which share measurement
-conditions. No old-versus-new wall-time speedup is claimed.
+All 270 episodes passed trace and video verification. Computational comparisons
+use **model calls**, averaged over successful and unsuccessful episodes. This
+counts policy invocations, not the ten internal flow-matching steps per invocation.
+It does not imply an equivalent wall-clock speedup.
 
-## Results
+## Normal execution: success versus model calls
 
 Each method has ten episodes per task. Model calls are averaged over all 30 episodes;
 failed episodes are included. Calls per 100 actions use the ratio of total calls to
@@ -154,31 +164,91 @@ stochastic regeneration, establish equivalence from an interval containing zero,
 demonstrate real-time control of a physical robot. LIBERO success follows its native
 predicate and may occur before release; post-release stability is not evaluated.
 
-## Supplementary comparisons
+## Moving target: does motion favor shorter intervals?
 
-**Uncapped DVAC, 48 episodes.** A separate comparison uses states 15 and 16, seeds
-11 and 22, and fixed K=5/10/25 versus DVAC. It includes six physical settings and
-shared diagnostic instrumentation across its four methods. Its episodes are **not
-pooled into the main 270-episode comparison**. See the
-[adaptive report](output/pdf/vla-dvac-report.pdf),
-[results](outputs/dvac-report/report.md), [demo](outputs/dvac-report/demo.mp4), and
-[protocol](docs/dvac-protocol.md).
+The presentation's moving-target experiment uses the soup-can task with **three
+held-out robot states and two initial can positions**. Each of these six scenarios
+is evaluated with K = 1, 5, 10, 25, 50 under five conditions: a free static control
+and motion along +X, -X, +Y, or -Y. This gives **6 × 5 × 5 = 150 episodes**.
 
-**Moving target, 135 episodes.** A soup-can experiment compares an unforced control
-with two oscillating force-reference periods, using states 10–14, seeds 11/22/33,
-and K=5/10/50. The external force is removed permanently at first finger contact;
-ordinary contact physics continues. Contact is not itself proof of a grasp.
-Its matched controls and analysis remain separate. See the
-[report](output/pdf/vla-replanning-complete-report.pdf),
-[demo](outputs/moving-target-report/demo.mp4),
-[protocol](docs/moving-target-protocol.md), and
-[visual review](outputs/moving-target-report/demo-review.json).
+The commanded target speed is 1.5 cm/s; measured free-motion speed is approximately
+0.91 cm/s. Motion starts smoothly, and the external drive stops when bilateral
+finger contact occurs. Parameters are fixed before evaluation on the held-out
+states. X and Y are perpendicular directions along the tabletop.
 
-The original fixed-interval [report](output/pdf/vla-replanning-report.pdf),
-[paired video cases](outputs/expanded/demo.mp4),
-[complete fixed-outcome plot](outputs/expanded/report/state-outcomes.png), and
-[annotations](outputs/expanded/report/annotations.csv), with their
-[discussion](docs/report-outline.md), are also preserved.
+| Target condition | K=1 | K=5 | K=10 | K=25 | K=50 |
+|---|---:|---:|---:|---:|---:|
+| Free static control | 6/6 | 6/6 | 6/6 | 5/6 | 5/6 |
+| +X | 3/6 | 5/6 | 3/6 | 3/6 | 3/6 |
+| -X | 6/6 | 5/6 | 6/6 | 5/6 | 4/6 |
+| +Y | 3/6 | 2/6 | 2/6 | 3/6 | 2/6 |
+| -Y | 4/6 | 6/6 | 5/6 | 5/6 | 4/6 |
+
+These counts reproduce the moving-target chart in the final defense presentation.
+**Direction matters:** K=5 performs better than K=1 for +X, while K=1 and K=10 both
+complete all six -X cases. Target motion does not create a universal advantage for
+K=1. With only six scenarios per condition, these are descriptive findings.
+
+The presentation demo aligns the five intervals in simulation time, shows model-call
+counters, and holds the final frame after each episode ends. Video playback speed
+must not be interpreted as inference speed.
+
+## Random command dropout: does unreliable execution favor shorter intervals?
+
+At each control step, with probability **p**, the commanded XYZ translation is set
+to zero. Rotation and gripper commands remain unchanged, and simulation time still
+advances. The policy receives no explicit dropout notification: it sees the resulting
+state at its next observation.
+
+The comparison uses the same three tasks and 30 starts per method, with shared
+dropout masks at corresponding control steps. The presentation shows p=0.10 and
+p=0.30 against the p=0 reference; p=0.20 is left pending. The tested rules are fixed
+K=1, 5, 10, 25, 50 and DVAC caps C=5, 10, 25, 50. C=1 shares the K=1 baseline;
+it is not a separate run. Mean calls include all episodes, including failures.
+
+Measured findings highlighted in the defense are:
+
+- At **p=0.30**, K=1 has the highest observed completion count: **23/30**, with
+  **187.8 calls** per episode. K=10 completes **19/30** with **21.9 calls**.
+  The higher observed success therefore costs about **8.6 times as many calls**.
+- Averaged over limits 5, 10, 25, and 50, success decreases by **36.7 percentage
+  points for DVAC**, versus **16.7 points for fixed intervals**, from p=0 to p=0.30.
+  This describes the tested settings, not a general guarantee about either method.
+
+Some dropout summaries used in the presentation contain manually adjusted
+**illustrative data**, including the K=1 value at p=0.10. Those values are not
+experimental evidence and are not used to support the measured findings above.
+
+## Conclusions and limitations
+
+- **Frequent replanning is not always better.** Under normal execution, fixed K=5
+  completes 26/30 episodes with 31.3 calls, compared with 23/30 and 162.0 calls for K=1.
+- **Adaptive scheduling can offer a useful trade-off.** DVAC C=50 completes 25/30
+  with 9.5 calls. The experiment evaluates the complete scheduling rule; it does not
+  prove that FM variance identifies the optimal moment to replan.
+- **Execution conditions change the trade-off.** K=1 has the highest observed
+  success at p=0.30, at a substantial call cost. DVAC loses more success on average
+  under dropout, while moving-target results depend strongly on motion direction.
+
+The study covers one pretrained policy in simulation, three main tasks, and a
+limited set of intervals. Small differences in completion counts do not establish
+superiority. FM disagreement is a heuristic, not a calibrated failure probability.
+The disturbances model only selected execution problems, and no real-robot
+validation is performed. The simulator pauses for inference, so these experiments
+do not establish real-time deployment performance.
+
+## Additional archived experiments
+
+Earlier experiments are retained as separate evidence, not pooled into the
+presentation's main comparisons:
+
+- [Uncapped DVAC report](output/pdf/vla-dvac-report.pdf): 48 episodes using states
+  15 and 16, seeds 11 and 22, and four scheduling rules.
+- [Earlier moving-target demo](outputs/moving-target-report/demo.mp4) and
+  [protocol](docs/moving-target-protocol.md): 135 episodes with oscillating force
+  references. This is a different experiment from the 150-episode directional test.
+- [Original fixed-interval report](output/pdf/vla-replanning-report.pdf) and
+  [paired videos](outputs/expanded/demo.mp4).
 
 ## Evidence and reproduction
 
@@ -192,7 +262,8 @@ starts, source hashes, and video alignment. The
 the verified evidence. All 30 matched blocks are visible in the
 [outcome matrix](outputs/capped-report/outcome_matrix.csv).
 
-The implementation is in `vla_replan/`, `adaptive_replan/`, and `capped_replan/`;
+The implementation is in `vla_replan/`, `adaptive_replan/`, `capped_replan/`,
+`moving_target/`, and `action_dropout/`;
 configurations are in `configs/` and analysis tools in `scripts/`. Model weights and
 virtual environments are excluded from the repository.
 
