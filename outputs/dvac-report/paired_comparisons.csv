@@ -1,4 +1,0 @@
-reference_method,paired_seed_runs,dvac_only_success,fixed_only_success,both_success,both_failure,success_rate_difference,model_calls_mean_paired_difference,steps_mean_paired_difference,inference_s_mean_paired_difference,selector_s_mean_paired_difference,simulation_s_mean_paired_difference,compute_s_mean_paired_difference,episode_wall_s_mean_paired_difference,sim_time_s_mean_paired_difference
-fixed_5,12,0,2,9,1,-0.16666666666666666,-18.083333333333332,25.333333333333332,-14.244278975081974,0.0004966152484181899,0.7521385940053733,-13.491643765828181,-13.77392742016688,1.2666666666666666
-fixed_10,12,1,1,8,2,0.0,-6.0,6.083333333333333,-4.684785069916718,0.0004966152484181899,0.09780795117300538,-4.586480503495295,-4.826226280832846,0.30416666666666653
-fixed_25,12,4,1,5,2,0.25,1.5833333333333333,-40.0,1.2913379851676534,0.0004966152484181899,-1.3203985026536127,-0.02856390223754109,-0.733709841499755,-2.0

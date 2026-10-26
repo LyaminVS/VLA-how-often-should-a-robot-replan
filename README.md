@@ -253,13 +253,10 @@ the success counts.
 | DVAC C=25 | 14.1 | 14.1 | 20.4 |
 | DVAC C=50 | 9.5 | 11.5 | 16.9 |
 
-## Implementation and evidence
+## Implementation and reproduction
 
-- [Main comparison report](output/pdf/vla-capped-replanning-report.pdf)
 - [Experimental protocol](docs/capped-protocol.md)
 - [Reproduction guide](docs/capped-reproduction.md)
-- [Verification record](outputs/capped-report/verification.json)
-- [Main analysis](outputs/capped-report/analysis.json)
 
 The implementation is in `vla_replan/`, `adaptive_replan/`, `capped_replan/`,
 `moving_target/`, and `action_dropout/`. Configurations are in `configs/`; collection
@@ -267,9 +264,7 @@ and analysis scripts are in `scripts/`. Model weights and virtual environments a
 excluded from the repository.
 
 The main and dropout graph images are extracted from the final defense presentation.
-Task, call-count, and moving-target plots reproduce its chart values. Earlier
-reports remain available as separate experiments and do not describe every extension
-in this README.
+Task, call-count, and moving-target plots reproduce its chart values.
 
 ## Sources
 
