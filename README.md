@@ -9,6 +9,15 @@ A pretrained **SmolVLA** policy controls a robot in **LIBERO / MuJoCo** through
 normal execution, target motion, and random command dropout. No model training or
 fine-tuning is performed.
 
+## Demonstration
+
+[Watch the side-by-side comparison (MP4)](outputs/capped-report/demo.mp4)
+
+Fixed K=10, DVAC C=10, and DVAC C=50 run from the same initial state on each of
+three tasks. The video shows the instruction, execution interval, model-call count,
+replanning moments, and outcome. Panels are synchronized in simulation time;
+playback does not represent inference speed.
+
 ## One observation produces 50 candidate actions
 
 For example, the task instruction is:
