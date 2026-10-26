@@ -167,7 +167,7 @@ Rotation and gripper commands still run; simulation time advances. The policy se
 the resulting state at its next scheduled observation, without an explicit failure
 flag.
 
-- **Probabilities:** p=0.1, 0.2, 0.3; p=0 is the reference.
+- **Probabilities:** p=0.1, 0.3; p=0 is the reference.
 - **Comparison:** three tasks × ten starts, fixed K and adaptive DVAC.
 - **Measures:** task success and mean model calls over all episodes.
 - **Matching:** the same starts and dropout masks at corresponding control steps.
@@ -224,34 +224,34 @@ all episodes, including failures.
 
 ## Appendix: dropout success counts
 
-| Method | p=0 | p=0.10 | p=0.20 | p=0.30 |
-|---|---:|---:|---:|---:|
-| Fixed K=1 | 23/30 | 23/30 | — | 23/30 |
-| Fixed K=5 | 26/30 | 27/30 | — | 15/30 |
-| Fixed K=10 | 24/30 | 21/30 | — | 19/30 |
-| Fixed K=25 | 11/30 | 12/30 | — | 12/30 |
-| Fixed K=50 | 9/30 | 10/30 | — | 4/30 |
-| DVAC C=5 | 27/30 | 25/30 | — | 19/30 |
-| DVAC C=10 | 25/30 | 24/30 | — | 17/30 |
-| DVAC C=25 | 25/30 | 24/30 | — | 17/30 |
-| DVAC C=50 | 25/30 | 13/30 | — | 5/30 |
+| Method | p=0 | p=0.10 | p=0.30 |
+|---|---:|---:|---:|
+| Fixed K=1 | 23/30 | 23/30 | 23/30 |
+| Fixed K=5 | 26/30 | 27/30 | 15/30 |
+| Fixed K=10 | 24/30 | 21/30 | 19/30 |
+| Fixed K=25 | 11/30 | 12/30 | 12/30 |
+| Fixed K=50 | 9/30 | 10/30 | 4/30 |
+| DVAC C=5 | 27/30 | 25/30 | 19/30 |
+| DVAC C=10 | 25/30 | 24/30 | 17/30 |
+| DVAC C=25 | 25/30 | 24/30 | 17/30 |
+| DVAC C=50 | 25/30 | 13/30 | 5/30 |
 
 ## Appendix: dropout model calls
 
 Mean model calls across all completed episodes, including failures; read alongside
 the success counts.
 
-| Method | p=0 | p=0.10 | p=0.20 | p=0.30 |
-|---|---:|---:|---:|---:|
-| Fixed K=1 | 162.0 | 186.4 | — | 187.8 |
-| Fixed K=5 | 31.3 | 33.3 | — | 45.3 |
-| Fixed K=10 | 15.5 | 18.6 | — | 21.9 |
-| Fixed K=25 | 9.6 | 9.8 | — | 10.2 |
-| Fixed K=50 | 5.1 | 5.0 | — | 5.7 |
-| DVAC C=5 | 40.2 | 50.2 | — | 65.1 |
-| DVAC C=10 | 26.4 | 30.9 | — | 39.1 |
-| DVAC C=25 | 14.1 | 14.1 | — | 20.4 |
-| DVAC C=50 | 9.5 | 11.5 | — | 16.9 |
+| Method | p=0 | p=0.10 | p=0.30 |
+|---|---:|---:|---:|
+| Fixed K=1 | 162.0 | 186.4 | 187.8 |
+| Fixed K=5 | 31.3 | 33.3 | 45.3 |
+| Fixed K=10 | 15.5 | 18.6 | 21.9 |
+| Fixed K=25 | 9.6 | 9.8 | 10.2 |
+| Fixed K=50 | 5.1 | 5.0 | 5.7 |
+| DVAC C=5 | 40.2 | 50.2 | 65.1 |
+| DVAC C=10 | 26.4 | 30.9 | 39.1 |
+| DVAC C=25 | 14.1 | 14.1 | 20.4 |
+| DVAC C=50 | 9.5 | 11.5 | 16.9 |
 
 ## Implementation and evidence
 
