@@ -73,3 +73,7 @@ outputs/**/attempts/
 !outputs/capped-check/
 !outputs/capped-check/**
 !outputs/capped-plan.json
+
+# One standalone demonstration linked from the README.
+!outputs/demo/
+!outputs/demo/soup-transfer.mp4

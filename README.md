@@ -11,12 +11,11 @@ fine-tuning is performed.
 
 ## Demonstration
 
-[Watch the side-by-side comparison (MP4)](outputs/capped-report/demo.mp4)
+[Watch the robot transfer a soup can into the basket (MP4)](outputs/demo/soup-transfer.mp4)
 
-Fixed K=10, DVAC C=10, and DVAC C=50 run from the same initial state on each of
-three tasks. The video shows the instruction, execution interval, model-call count,
-replanning moments, and outcome. Panels are synchronized in simulation time;
-playback does not represent inference speed.
+One successful simulator episode using DVAC with C=10: the robot picks up the
+soup can and places it in the basket. This is a single example, not an aggregate
+comparison of methods. Video playback follows simulation time.
 
 ## One observation produces 50 candidate actions
 
