@@ -58,11 +58,11 @@ Here, x is the noisy action block, t is flow time, and v is predicted flow veloc
 Each estimate contains 50 × 7 coordinates. For each future action j, DVAC sums the
 population variance across its seven normalized coordinates:
 
-$$V_j = \sum_{d=1}^{7} \operatorname{Var}_i(z_{i,j,d}).$$
+$$V_j = \sum_{d=1}^{7} \mathrm{Var}_i(z_{i,j,d}).$$
 
 W stores variance values from up to five previous calls. The threshold is:
 
-$$\tau = \operatorname{mean}(W) + 2\operatorname{std}(W).$$
+$$\tau = \mathrm{mean}(W) + 2\mathrm{std}(W).$$
 
 Let j* be the first **zero-based** action index with V_j greater than the threshold.
 The execution interval is:
